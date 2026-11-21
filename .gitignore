@@ -64,7 +64,23 @@ assets/voices/Model/Hotaru Shiomi/
 /.secrets/
 # 网盘/浏览器下载产生的半成品大文件
 *.downloading
-# 模型权重（体积大，按平台各自下载）
+# 模型权重 / 推理产物：体积大且平台相关，一律按需下载，绝不入库
 *.ckpt
 *.pth
 *.safetensors
+*.onnx
+*.pt
+*.gguf
+*.npy
+*.npz
+*.pkl
+# 运行与构建日志（system-daemon 构建、调试输出等）
+*.log
+
+# 工具缓存
+.ruff_cache/
+.mypy_cache/
+/.cache/
+**/.cache/
+coverage/
+htmlcov/

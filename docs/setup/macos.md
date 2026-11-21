@@ -224,6 +224,35 @@ macOS 首次使用麦克风会弹权限请求；开发模式（`pnpm dev`）下�
 不建议在 mac 上跑 CosyVoice（无 CUDA）。用 `edge-tts`（免费、跨平台）或
 `siliconflow`（云端克隆音色）即可。
 
+### 6.4 Live2D 角色资源（Hotaru）走压缩包
+
+`Hotaru Shiomi` 是 62 MB / 280 余个文件的二进制美术资源，且几乎不再变动，
+因此**不进 git**（`.gitignore` 已排除 `shell/src/renderer/public/live2d/Hotaru Shiomi/`）。
+仓库只带官方示例模型 `hiyori`，缺 Hotaru 时桌宠照常运行，只是「外观」页里选不到它
+（`model_dict.json` 里的条目仍在，选中会加载失败）。
+
+**Windows 侧打包**：
+
+```powershell
+# 仓库根目录
+.\scripts\setup\mac\pack_live2d_assets.ps1
+# 默认输出到 .env-local\transfer\yuiro-live2d-hotaru-<日期>.zip（已被忽略）
+# 同时生成同名 .sha256
+```
+
+**mac 侧解包**：
+
+```bash
+./scripts/setup/mac/unpack_live2d_assets.sh ~/Downloads/yuiro-live2d-hotaru-20261121.zip
+```
+
+脚本会先校验 SHA256，再解压到
+`shell/src/renderer/public/live2d/Hotaru Shiomi/`；若该目录已存在，会先备份到
+`.env-local/backup/` 而不是直接覆盖。完成后刷新壳层窗口即可。
+
+> 这套流程同样适用于以后新增的任何大体积角色资源：**资源进压缩包，代码进仓库**。
+> 注意不要用 `git add -f` 强行加入，否则历史会被永久污染。
+
 ---
 
 ## 7. 平台差异与已知限制

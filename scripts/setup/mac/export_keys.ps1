@@ -1,4 +1,4 @@
-# 把本机 keychain 里的 Yuiro API key 导出为 .secrets/mac-keys.env（Windows 侧，迁移用）。
+﻿# 把本机 keychain 里的 Yuiro API key 导出为 .secrets/mac-keys.env（Windows 侧，迁移用）。
 #
 # 输出目录 .secrets/ 已在 .gitignore 中，绝不入库；屏幕只打印导出了哪些项。
 #
