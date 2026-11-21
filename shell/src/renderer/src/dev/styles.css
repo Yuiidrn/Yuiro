@@ -1,0 +1,169 @@
+/* ===========================================================================
+ * Yuiro 调试台 — 设计 token 与全局基础样式
+ *
+ * 视觉基调：Neuro-sama 直播弹幕风 —— 圆润气泡、柔和暖色、低对比、可爱不幼稚。
+ * 颜色以「米黄（cream）」为底，配暖琥珀主色 + 蜜桃粉副色。
+ * 日间 / 夜间双模式：切换 <html data-theme="light|dark">。
+ * 所有子组件共用这里的 CSS 变量，因此一次定义全局生效。
+ * ======================================================================== */
+
+/* ---------- 日间（默认）：米黄奶油 ---------- */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #fbf4e6;
+  --card: #fffdf7;
+  --card-head: #f8efdd;
+  --border: #e9dbc0;
+  --border-soft: #f2e8d5;
+
+  --text: #4a3b2a;
+  --text-soft: #6e5c46;
+  --muted: #a08d72;
+
+  --accent: #e09a3e;
+  --accent-soft: rgba(224, 154, 62, 0.16);
+  --accent-2: #ef9a9a;
+  --accent-2-soft: rgba(239, 154, 154, 0.18);
+
+  --ok: #6fa86b;
+  --warn: #d9963c;
+  --err: #d9695c;
+
+  --input: #fffdf7;
+  --btn-hover-bg: rgba(74, 59, 42, 0.06);
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --shadow-soft: 0 2px 10px rgba(120, 95, 60, 0.08);
+  --shadow-lift: 0 6px 20px rgba(120, 95, 60, 0.14);
+
+  --dur-fast: 150ms;
+}
+
+/* ---------- 夜间：暖调深色（保留米黄的暖底，不用纯黑） ---------- */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #221e19;
+  --card: #2b2620;
+  --card-head: #332d25;
+  --border: #423a2e;
+  --border-soft: #373026;
+
+  --text: #f2e8d8;
+  --text-soft: #cdbfa9;
+  --muted: #93836d;
+
+  --accent: #efb366;
+  --accent-soft: rgba(239, 179, 102, 0.16);
+  --accent-2: #e79a9a;
+  --accent-2-soft: rgba(231, 154, 154, 0.18);
+
+  --ok: #84b873;
+  --warn: #e3b458;
+  --err: #e08073;
+
+  --input: #1e1a15;
+  --btn-hover-bg: rgba(255, 255, 255, 0.07);
+
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.28);
+  --shadow-lift: 0 6px 20px rgba(0, 0, 0, 0.38);
+}
+
+/* ---------- 基础重置 ---------- */
+* { box-sizing: border-box; }
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-rounded, 'Segoe UI Variable', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+/* 滚动条走暖色系，避免默认滚动条破坏整体感 */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ===========================================================================
+ * 全局通用原件
+ * 新模板直接复用；子组件有自己的 scoped 样式（优先级更高），
+ * 它们通过上面的 CSS 变量统一换肤，不受这里的类影响。
+ * ======================================================================== */
+
+/* 气泡卡：圆润 + 柔和投影，呼应 Neuro 弹幕气泡 */
+.bubble {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow var(--dur-fast) ease;
+}
+.bubble:hover { box-shadow: var(--shadow-lift); }
+
+/* 按钮：胶囊形，圆润可爱 */
+.btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  transition: background var(--dur-fast) ease, transform var(--dur-fast) ease;
+}
+.btn:hover:not(:disabled) { background: var(--btn-hover-bg); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { opacity: 0.45; cursor: default; }
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 88%, #000);
+}
+
+.btn-danger { background: var(--err); border-color: var(--err); color: #fff; }
+
+/* 小胶囊标签 */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--accent-soft);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.pill-ok { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
+.pill-warn { background: color-mix(in srgb, var(--warn) 20%, transparent); color: var(--warn); }
+.pill-err { background: color-mix(in srgb, var(--err) 18%, transparent); color: var(--err); }
+.pill-mute { background: var(--card-head); color: var(--muted); }
+
+/* 提示文字 */
+.hint { font-size: 12px; color: var(--muted); line-height: 1.6; }

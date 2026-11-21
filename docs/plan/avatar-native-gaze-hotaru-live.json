@@ -1,0 +1,30 @@
+{
+  "role": "hotaru",
+  "scope": "native Windows pointer movement and hold expiry with current preferences; no click or microphone",
+  "started": true,
+  "returnedToIdle": true,
+  "active": {
+    "owns": true,
+    "weight": 0.9994605713316068,
+    "focusX": -6.033184759126431e-05,
+    "focusY": -0.020447124589598527
+  },
+  "quiet": {
+    "gaze": {
+      "owns": false,
+      "weight": 0.0011496090702239903,
+      "focusX": -2.8963208066054952e-05,
+      "focusY": -0.009815948748217018
+    },
+    "state": {
+      "expression": "exp_idle01",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0
+    }
+  },
+  "holdMs": 2800,
+  "cursorRestored": true,
+  "restoredRole": "hotaru",
+  "clickPoolRestored": true
+}

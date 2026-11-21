@@ -1,0 +1,44 @@
+{
+  "kind": "controlled display content; real dual Live2D models/native windows; no chat/music/account actions",
+  "models": [
+    "桃瀬ひより (Hiyori)",
+    "Hotaru Shiomi"
+  ],
+  "roles": [
+    {
+      "role": "hiyori",
+      "markdown": {
+        "strong": 1,
+        "lists": 2,
+        "unsafeTags": 0,
+        "unsafeLinks": false,
+        "executed": false,
+        "tail": true,
+        "scrollbar": "thin"
+      },
+      "preview_did_not_resize_pet": true,
+      "island_hot_update": true,
+      "wide_reply_no_model_overlap": true,
+      "client_only_card": true,
+      "random_candidate_preview": true
+    },
+    {
+      "role": "hotaru",
+      "markdown": {
+        "strong": 1,
+        "lists": 2,
+        "unsafeTags": 0,
+        "unsafeLinks": false,
+        "executed": false,
+        "tail": true,
+        "scrollbar": "thin"
+      },
+      "preview_did_not_resize_pet": true,
+      "island_hot_update": true,
+      "wide_reply_no_model_overlap": true,
+      "client_only_card": true,
+      "random_candidate_preview": true
+    }
+  ],
+  "preferences_restored": true
+}

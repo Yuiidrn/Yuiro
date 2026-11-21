@@ -1,0 +1,68 @@
+[
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "murmur",
+      "artist": "163braces",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "play",
+    "status": "error",
+    "result": "目标曲目已变化，拒绝执行本次控制"
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "murmur",
+      "artist": "163braces",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "murmur",
+      "artist": "163braces",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "stop",
+    "status": "error",
+    "result": "目标曲目已变化，拒绝执行本次控制"
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "murmur",
+      "artist": "163braces",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  }
+]

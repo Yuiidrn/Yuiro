@@ -1,0 +1,64 @@
+{
+  "models": {
+    "feiniu": {
+      "hidden": true,
+      "name": "肥牛 (Feiniu)",
+      "author": "community (my-neuro 肥牛)",
+      "type": "live2d",
+      "modelPath": "/live2d/肥牛/feiniu.model3.json",
+      "license": "community model",
+      "origin": "my-neuro/live-2d/2D/肥牛"
+    },
+    "mao_pro": {
+      "hidden": true,
+      "name": "Mao Pro",
+      "author": "Live2D Inc. / sample (mao)",
+      "type": "live2d",
+      "modelPath": "/live2d/mao_pro/runtime/mao_pro.model3.json",
+      "license": "Live2D Free Material License (sample)",
+      "origin": "Open-LLM-VTuber/live2d-models/mao_pro"
+    },
+    "hiyori": {
+      "name": "桃瀬ひより (Hiyori)",
+      "author": "Live2D Inc. / official sample",
+      "type": "live2d",
+      "modelPath": "/live2d/hiyori/Hiyori.model3.json",
+      "license": "Live2D Free Material License (official sample)",
+      "origin": "Live2D/CubismWebSamples/Samples/Resources/Hiyori"
+    },
+    "hotaru": {
+      "name": "Hotaru Shiomi",
+      "author": "外部资源（本地）",
+      "type": "live2d",
+      "modelPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "license": "外部资源，请自行确认授权后再使用/分发",
+      "origin": "Hotaru Shiomi/016_casual_spring_01（67 动作 / 46 表情，moc3 v5）"
+    },
+    "hotaru_live": {
+      "name": "Hotaru Shiomi（Live）",
+      "type": "live2d",
+      "modelPath": "/live2d/Hotaru Shiomi/016_live_01/016_live_01.model3.json",
+      "hidden": true,
+      "origin": "同一模型的另一个外观变体，避免模型列表出现重复条目"
+    },
+    "hotaru_child": {
+      "name": "Hotaru Shiomi（Child）",
+      "type": "live2d",
+      "modelPath": "/live2d/Hotaru Shiomi/016_child_casual_spring_01_still/016_child_casual_spring_01_still.model3.json",
+      "hidden": true
+    },
+    "hotaru_live_mode": {
+      "name": "Hotaru Shiomi（Live Mode）",
+      "type": "live2d",
+      "modelPath": "/live2d/Hotaru Shiomi/016_live-mode_live_01/016_live-mode_live_01.model3.json",
+      "hidden": true
+    },
+    "hotaru_live_mode_low": {
+      "name": "Hotaru Shiomi（Live Mode Low）",
+      "type": "live2d",
+      "modelPath": "/live2d/Hotaru Shiomi/016_live-mode_live_01_low/016_live-mode_live_01_low.model3.json",
+      "hidden": true
+    }
+  },
+  "default": "hiyori"
+}

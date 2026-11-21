@@ -1,0 +1,43 @@
+{
+  "wide": {
+    "preview": {
+      "x": 254.75961303710938,
+      "y": 204.0985565185547,
+      "w": 351.41827392578125,
+      "h": 420
+    },
+    "parameters": {
+      "x": 626.1779174804688,
+      "y": 204.0985565185547,
+      "w": 287.5240478515625,
+      "h": 420
+    },
+    "columns": "351.418px 287.524px"
+  },
+  "narrow": {
+    "preview": {
+      "x": 254.75961303710938,
+      "y": 234.35096740722656,
+      "w": 410.48077392578125,
+      "h": 761.5264282226562
+    },
+    "parameters": {
+      "x": 254.75961303710938,
+      "y": 1015.87744140625,
+      "w": 410.48077392578125,
+      "h": 1989.1827392578125
+    },
+    "columns": "410.481px"
+  },
+  "parameter_scroll_keeps_preview_visible": true,
+  "font_hot_update": true,
+  "preview_and_model_share_scale": true,
+  "final_geometry": {
+    "previewX": 254.75961303710938,
+    "previewY": 204.0985565185547,
+    "previewWidth": 351.41827392578125,
+    "parametersX": 626.1779174804688,
+    "parametersY": 204.0985565185547
+  },
+  "settings_restored": true
+}

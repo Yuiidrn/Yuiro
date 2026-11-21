@@ -1,0 +1,155 @@
+{
+  "scope": "deterministic production VoicePipeline scheduling, first translation40ms/later1ms, first synthesis10ms/later150ms; no cloud or renderer",
+  "results": [
+    {
+      "requests": [
+        {
+          "text": "second",
+          "ms": 17.84
+        },
+        {
+          "text": "third",
+          "ms": 17.94
+        },
+        {
+          "text": "first",
+          "ms": 183.87
+        }
+      ],
+      "played": [
+        {
+          "text": "first",
+          "ms": 199.61
+        },
+        {
+          "text": "second",
+          "ms": 199.62
+        },
+        {
+          "text": "third",
+          "ms": 199.63
+        }
+      ]
+    },
+    {
+      "requests": [
+        {
+          "text": "second",
+          "ms": 15.85
+        },
+        {
+          "text": "third",
+          "ms": 16.01
+        },
+        {
+          "text": "first",
+          "ms": 171.44
+        }
+      ],
+      "played": [
+        {
+          "text": "first",
+          "ms": 186.9
+        },
+        {
+          "text": "second",
+          "ms": 186.92
+        },
+        {
+          "text": "third",
+          "ms": 186.93
+        }
+      ]
+    },
+    {
+      "requests": [
+        {
+          "text": "second",
+          "ms": 14.25
+        },
+        {
+          "text": "third",
+          "ms": 14.32
+        },
+        {
+          "text": "first",
+          "ms": 171.31
+        }
+      ],
+      "played": [
+        {
+          "text": "first",
+          "ms": 186.77
+        },
+        {
+          "text": "second",
+          "ms": 186.79
+        },
+        {
+          "text": "third",
+          "ms": 186.79
+        }
+      ]
+    },
+    {
+      "requests": [
+        {
+          "text": "second",
+          "ms": 15.74
+        },
+        {
+          "text": "third",
+          "ms": 15.81
+        },
+        {
+          "text": "first",
+          "ms": 172.86
+        }
+      ],
+      "played": [
+        {
+          "text": "first",
+          "ms": 188.72
+        },
+        {
+          "text": "second",
+          "ms": 188.73
+        },
+        {
+          "text": "third",
+          "ms": 188.73
+        }
+      ]
+    },
+    {
+      "requests": [
+        {
+          "text": "second",
+          "ms": 14.95
+        },
+        {
+          "text": "third",
+          "ms": 15.0
+        },
+        {
+          "text": "first",
+          "ms": 170.7
+        }
+      ],
+      "played": [
+        {
+          "text": "first",
+          "ms": 186.09
+        },
+        {
+          "text": "second",
+          "ms": 186.12
+        },
+        {
+          "text": "third",
+          "ms": 186.12
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "real natural language request through current Agent; records only own response lengths and avatar events; no microphone/ASR",
+  "initial": "hotaru",
+  "rows": [
+    {
+      "role": "hiyori",
+      "reply": true,
+      "events": [
+        {
+          "type": "avatar:intent",
+          "source": "agent",
+          "performance": "greet",
+          "emotion": "happy",
+          "at_ms": 5086.299999952316
+        },
+        {
+          "type": "chat:assistant",
+          "chars": 43,
+          "at_ms": 6628.799999952316
+        }
+      ],
+      "finalPresence": "idle"
+    },
+    {
+      "role": "hotaru",
+      "reply": true,
+      "events": [
+        {
+          "type": "avatar:intent",
+          "source": "agent",
+          "performance": "greet",
+          "emotion": "happy",
+          "at_ms": 5145.700000047684
+        },
+        {
+          "type": "chat:assistant",
+          "chars": 75,
+          "at_ms": 7719.700000047684
+        }
+      ],
+      "finalPresence": "idle"
+    }
+  ]
+}

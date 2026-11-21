@@ -1,0 +1,468 @@
+{
+  "date": "2026-11-09",
+  "surface": "actual built Electron dev.html",
+  "pages": [
+    {
+      "model": "hiyori",
+      "page": 1,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6312
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6327
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6316
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6292
+        },
+        {
+          "top": 22,
+          "bottom": 228,
+          "pixels": 6442
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6847
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6920
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6872
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6871
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6288
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6285
+        },
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6280
+        }
+      ]
+    },
+    {
+      "model": "hiyori",
+      "page": 2,
+      "cards": 1,
+      "bounds": [
+        {
+          "top": 23,
+          "bottom": 228,
+          "pixels": 6278
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 1,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7493
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7490
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7240
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7468
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7354
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6956
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7582
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6906
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6713
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7107
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6906
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6919
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 2,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7558
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7321
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7013
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7213
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7269
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7050
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7179
+        },
+        {
+          "top": 41,
+          "bottom": 226,
+          "pixels": 6986
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6722
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7169
+        },
+        {
+          "top": 41,
+          "bottom": 226,
+          "pixels": 6790
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 6956
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 3,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 45,
+          "bottom": 225,
+          "pixels": 7023
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6755
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6637
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7056
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6865
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6732
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7065
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6977
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6738
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7019
+        },
+        {
+          "top": 41,
+          "bottom": 226,
+          "pixels": 6814
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 6892
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 4,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 45,
+          "bottom": 225,
+          "pixels": 7142
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7055
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6922
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6995
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7000
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7136
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7193
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7044
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7144
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7054
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7022
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7171
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 5,
+      "cards": 12,
+      "bounds": [
+        {
+          "top": 44,
+          "bottom": 225,
+          "pixels": 7629
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7853
+        },
+        {
+          "top": 43,
+          "bottom": 226,
+          "pixels": 7856
+        },
+        {
+          "top": 44,
+          "bottom": 225,
+          "pixels": 7682
+        },
+        {
+          "top": 43,
+          "bottom": 226,
+          "pixels": 7539
+        },
+        {
+          "top": 43,
+          "bottom": 226,
+          "pixels": 7361
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 7117
+        },
+        {
+          "top": 42,
+          "bottom": 226,
+          "pixels": 6677
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6675
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6922
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6931
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6887
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "page": 6,
+      "cards": 7,
+      "bounds": [
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7140
+        },
+        {
+          "top": 41,
+          "bottom": 225,
+          "pixels": 7195
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7032
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7188
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6958
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 6956
+        },
+        {
+          "top": 42,
+          "bottom": 225,
+          "pixels": 7271
+        }
+      ]
+    }
+  ],
+  "configurationUnchanged": true,
+  "warmReadyObservationMs": 535.1,
+  "limitations": [
+    "Warm observation begins after fixed 2s reload delay; not total reload latency",
+    "Bounds prove complete figure capture, not animation naturalness"
+  ]
+}

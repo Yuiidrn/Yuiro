@@ -1,0 +1,139 @@
+{
+  "scope": "actual built desktop and debug UI, role-aware local settings; 12s selected-motion observation",
+  "hiyoriSamples": [
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794236344213
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794236344213
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794236344213
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    },
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 1,
+      "until": 0,
+      "at": 1794236354709
+    }
+  ],
+  "hiyoriRestored": {
+    "fixed": "Idle#0",
+    "hotaru": "",
+    "state": {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Idle",
+      "motionIndex": 0,
+      "until": 0,
+      "at": 1794236364467
+    }
+  },
+  "hotaruRestored": {
+    "fixed": "Idle#0",
+    "hotaru": "",
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794236369082
+    }
+  }
+}

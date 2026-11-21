@@ -1,0 +1,17 @@
+[1/9] 生成 C++/WinRT 投影头 (cppwinrt -in local)
+[2/9] Building CXX object CMakeFiles\yuiro.dir\src\capability\terminal.cpp.obj
+[3/9] Building CXX object CMakeFiles\yuiro.dir\src\main.cpp.obj
+[4/9] Building CXX object CMakeFiles\yuiro.dir\src\security\policy.cpp.obj
+[5/9] Building CXX object CMakeFiles\yuiro.dir\src\capability\files.cpp.obj
+[6/9] Building CXX object CMakeFiles\yuiro.dir\src\mcp\server_stdio.cpp.obj
+[7/9] Building CXX object CMakeFiles\yuiro.dir\src\capability\process.cpp.obj
+[8/9] Building CXX object CMakeFiles\yuiro.dir\src\capability\media.cpp.obj
+[9/9] Linking CXX executable yuiro.exe
+FAILED: yuiro.exe 
+C:\WINDOWS\system32\cmd.exe /C "cd . && "C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\yuiro.dir --rc="D:\Windows Kits\10\bin\10.0.28000.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.28000.0\x64\mt.exe" --manifests  -- D:\cppVenv\VS2022\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64\link.exe /nologo CMakeFiles\yuiro.dir\src\main.cpp.obj CMakeFiles\yuiro.dir\src\capability\process.cpp.obj CMakeFiles\yuiro.dir\src\capability\files.cpp.obj CMakeFiles\yuiro.dir\src\capability\terminal.cpp.obj CMakeFiles\yuiro.dir\src\capability\media.cpp.obj CMakeFiles\yuiro.dir\src\security\policy.cpp.obj CMakeFiles\yuiro.dir\src\mcp\server_stdio.cpp.obj  /out:yuiro.exe /implib:yuiro.lib /pdb:yuiro.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  shell32.lib  user32.lib  windowsapp.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "D:\cppVenv\VS2022\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64\link.exe /nologo CMakeFiles\yuiro.dir\src\main.cpp.obj CMakeFiles\yuiro.dir\src\capability\process.cpp.obj CMakeFiles\yuiro.dir\src\capability\files.cpp.obj CMakeFiles\yuiro.dir\src\capability\terminal.cpp.obj CMakeFiles\yuiro.dir\src\capability\media.cpp.obj CMakeFiles\yuiro.dir\src\security\policy.cpp.obj CMakeFiles\yuiro.dir\src\mcp\server_stdio.cpp.obj /out:yuiro.exe /implib:yuiro.lib /pdb:yuiro.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console shell32.lib user32.lib windowsapp.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\yuiro.dir/intermediate.manifest CMakeFiles\yuiro.dir/manifest.res" failed (exit code 1168) with the following output:
+
+LINK : fatal error LNK1168: 无法打开 yuiro.exe 进行写入
+
+
+ninja: build stopped: subcommand failed.

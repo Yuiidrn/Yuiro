@@ -1,0 +1,1410 @@
+{
+  "scope": "real formal role switching and natural text through current Agent/TTS/Avatar; no microphone/ASR or subjective acoustic acceptance; observer times are not physical latency",
+  "rows": [
+    {
+      "role": "hiyori",
+      "checks": {
+        "agentIntent": true,
+        "startedReceipt": true,
+        "audioIdentity": true,
+        "speakingAndMouth": true,
+        "finalIdle": true,
+        "configUnchanged": true
+      },
+      "passed": true,
+      "frames": [
+        {
+          "type": "avatar:intent",
+          "source": "agent",
+          "performance": "greet",
+          "session_id": "1d22beb6a0174d83a4b1f21f2608214e",
+          "generation": 1,
+          "intent_id": "ee667be5839e4c8eb270096f3867c7cb",
+          "phase": null,
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 4227.0
+        },
+        {
+          "type": "avatar:receipt",
+          "source": null,
+          "performance": null,
+          "session_id": "1d22beb6a0174d83a4b1f21f2608214e",
+          "generation": null,
+          "intent_id": "ee667be5839e4c8eb270096f3867c7cb",
+          "phase": "started",
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 4227.0
+        },
+        {
+          "type": "chat:assistant",
+          "source": null,
+          "performance": null,
+          "session_id": null,
+          "generation": null,
+          "intent_id": null,
+          "phase": null,
+          "streaming": null,
+          "chars": 15,
+          "observedMs": 5287.0
+        },
+        {
+          "type": "avatar:receipt",
+          "source": null,
+          "performance": null,
+          "session_id": "1d22beb6a0174d83a4b1f21f2608214e",
+          "generation": null,
+          "intent_id": "ee667be5839e4c8eb270096f3867c7cb",
+          "phase": "finished",
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 6341.1
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "1d22beb6a0174d83a4b1f21f2608214e",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": false,
+          "chars": 0,
+          "observedMs": 13529.3
+        },
+        {
+          "type": "tts:reply_end",
+          "source": null,
+          "performance": null,
+          "session_id": "1d22beb6a0174d83a4b1f21f2608214e",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 13533.1
+        }
+      ],
+      "samples": [
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "think",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "happy",
+            "motion": "Idle",
+            "motionIndex": 6,
+            "until": 1794310256648
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.6154881119728088,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 2.999999992425728e-06,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 2.999999992425728e-06,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.7153287380933762,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.8534894585609436,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.22072932869195938,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 2.999999992425728e-06,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.09941170737147331,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.7563740015029907,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.5206792652606964,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.5527826249599457,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.5174236446619034,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        }
+      ],
+      "postRunRawChecks": {
+        "finalMouthZero": true,
+        "modelMatchesRole": true,
+        "visibleSamples": true
+      }
+    },
+    {
+      "role": "hotaru",
+      "checks": {
+        "agentIntent": true,
+        "startedReceipt": true,
+        "audioIdentity": true,
+        "speakingAndMouth": true,
+        "finalIdle": true,
+        "configUnchanged": true
+      },
+      "passed": true,
+      "frames": [
+        {
+          "type": "avatar:intent",
+          "source": "agent",
+          "performance": "greet",
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": "cb86f3023f7842a19e5a4abca9441833",
+          "phase": null,
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 1596.1
+        },
+        {
+          "type": "avatar:receipt",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": null,
+          "intent_id": "cb86f3023f7842a19e5a4abca9441833",
+          "phase": "started",
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 1596.2
+        },
+        {
+          "type": "chat:assistant",
+          "source": null,
+          "performance": null,
+          "session_id": null,
+          "generation": null,
+          "intent_id": null,
+          "phase": null,
+          "streaming": null,
+          "chars": 22,
+          "observedMs": 2651.2
+        },
+        {
+          "type": "avatar:receipt",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": null,
+          "intent_id": "cb86f3023f7842a19e5a4abca9441833",
+          "phase": "finished",
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 5028.2
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 5819.9
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 5820.1
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 6083.4
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 6601.1
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 6601.2
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 7134.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 7656.4
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 7656.7
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 7917.2
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 8180.8
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 8180.9
+        },
+        {
+          "type": "tts:reply_audio",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": true,
+          "chars": 0,
+          "observedMs": 8181.0
+        },
+        {
+          "type": "tts:reply_end",
+          "source": null,
+          "performance": null,
+          "session_id": "803f4e7cad604d6cbfb7b542b629cc68",
+          "generation": 1,
+          "intent_id": null,
+          "phase": null,
+          "streaming": null,
+          "chars": 0,
+          "observedMs": 8181.0
+        }
+      ],
+      "samples": [
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_puzzled01",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "thinking",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "exp_bsmile01",
+            "motion": "Motion",
+            "motionIndex": 4,
+            "until": 1794310275893
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 1,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.02421202976256609,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.0005883348203497007,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 1,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.10945801064372063,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 6.056209349480923e-05,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.0008252189727500081,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.002407099585980177,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 1,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.5360465347766876,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.4614160805940628,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 5.7585983086028136e-05,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.00020049542945344,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 1,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.6017109453678131,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 1,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.21660858392715454,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.6869712173938751,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.5884058475494385,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.6142989099025726,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "speaking",
+          "mouth": 0.39073196053504944,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        },
+        {
+          "presence": "idle",
+          "mouth": 0,
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "avatar": {
+            "expression": "",
+            "motion": "",
+            "motionIndex": null,
+            "until": 0
+          },
+          "visibility": "visible"
+        }
+      ],
+      "postRunRawChecks": {
+        "finalMouthZero": true,
+        "modelMatchesRole": true,
+        "visibleSamples": true
+      }
+    }
+  ],
+  "restoredRole": "hotaru",
+  "finalReadback": {
+    "role": "hotaru",
+    "mic": false,
+    "presence": "idle",
+    "until": 0
+  }
+}

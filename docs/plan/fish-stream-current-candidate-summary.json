@@ -1,0 +1,31 @@
+{
+  "scope": "Three unmodified production-provider short-text requests, not end-to-end speech or latency SLA; adjacent yield gaps are provider-generator observations, not acoustic stops",
+  "rows": [
+    {
+      "sample": 1,
+      "firstPlayableChunkMs": 2976.4,
+      "completeMs": 5864.8,
+      "audioDurationMs": 3436.6,
+      "maximumAdjacentYieldGapMs": 775.8,
+      "chunks": 8
+    },
+    {
+      "sample": 2,
+      "firstPlayableChunkMs": 1721.6,
+      "completeMs": 4698.4,
+      "audioDurationMs": 3297.2,
+      "maximumAdjacentYieldGapMs": 1080.9,
+      "chunks": 7
+    },
+    {
+      "sample": 3,
+      "firstPlayableChunkMs": 3324.5,
+      "completeMs": 13754.0,
+      "audioDurationMs": 3390.1,
+      "maximumAdjacentYieldGapMs": 3246.5,
+      "chunks": 8
+    }
+  ],
+  "candidateFilesChecked": 545,
+  "candidateChangedFiles": []
+}

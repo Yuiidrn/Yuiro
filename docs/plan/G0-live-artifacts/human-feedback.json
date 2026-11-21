@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-23",
+  "source": "user_live_listening_feedback_in_this_chat",
+  "audible": true,
+  "response_verbatim": "有声音，但语言或长尾不自然",
+  "voice_naturalness_passed": false,
+  "cause_status": "not_proven; configured zh speech with ja reference transcript is a candidate cause",
+  "visual_reviewed": false,
+  "note": "No model/profile asset marked reviewed based on this audio feedback."
+}

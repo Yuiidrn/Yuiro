@@ -1,0 +1,177 @@
+{
+  "kind": "real Electron/Engine roles + native OS clicks; presentation fixtures identified",
+  "roles": [
+    {
+      "role": "hiyori",
+      "island_removed": true,
+      "single_owner": {
+        "webgl": false,
+        "sockets": 0
+      },
+      "initial_bounds": {
+        "pet": {
+          "x": 1000,
+          "y": 150,
+          "width": 548,
+          "height": 731
+        },
+        "speech": {
+          "x": 1394,
+          "y": 314,
+          "width": 221,
+          "height": 163
+        },
+        "results": {
+          "x": 835,
+          "y": 314,
+          "width": 292,
+          "height": 203
+        }
+      },
+      "visible_content": {
+        "title": "来源展示验收（固定样本）",
+        "date": "2026-10-24",
+        "items": 1
+      },
+      "after_native_drag": {
+        "pet": {
+          "x": 1082,
+          "y": 184,
+          "width": 550,
+          "height": 733
+        },
+        "speech": {
+          "x": 1475,
+          "y": 348,
+          "width": 221,
+          "height": 163
+        },
+        "results": {
+          "x": 917,
+          "y": 348,
+          "width": 292,
+          "height": 203
+        }
+      },
+      "hot_update": {
+        "width": 280,
+        "bg": "rgba(255, 255, 255, 0.65)"
+      },
+      "close_geometry": {
+        "viewport": {
+          "w": 280,
+          "h": 79,
+          "dpr": 1.2999999523162842
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 280,
+          "height": 78.47355651855469,
+          "top": 0,
+          "right": 280,
+          "bottom": 78.47355651855469,
+          "left": 0
+        }
+      },
+      "native_dismiss": true,
+      "native_source_pick": {
+        "cleared": true,
+        "logged": true
+      },
+      "stale_actions_forwarded": 0,
+      "switch_cleanup": {
+        "role": "hotaru",
+        "card": null,
+        "speech": false
+      },
+      "native_windows_hidden": true
+    },
+    {
+      "role": "hotaru",
+      "island_removed": true,
+      "single_owner": {
+        "webgl": false,
+        "sockets": 0
+      },
+      "initial_bounds": {
+        "pet": {
+          "x": 1082,
+          "y": 184,
+          "width": 550,
+          "height": 733
+        },
+        "speech": {
+          "x": 1478,
+          "y": 340,
+          "width": 364,
+          "height": 102
+        },
+        "results": {
+          "x": 917,
+          "y": 340,
+          "width": 292,
+          "height": 203
+        }
+      },
+      "visible_content": {
+        "title": "来源展示验收（固定样本）",
+        "date": "2026-10-24",
+        "items": 1
+      },
+      "after_native_drag": {
+        "pet": {
+          "x": 1164,
+          "y": 218,
+          "width": 552,
+          "height": 735
+        },
+        "speech": {
+          "x": 1545,
+          "y": 374,
+          "width": 364,
+          "height": 102
+        },
+        "results": {
+          "x": 1000,
+          "y": 374,
+          "width": 292,
+          "height": 203
+        }
+      },
+      "hot_update": {
+        "width": 280,
+        "bg": "rgba(255, 255, 255, 0.65)"
+      },
+      "close_geometry": {
+        "viewport": {
+          "w": 280,
+          "h": 79,
+          "dpr": 1.2999999523162842
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 280,
+          "height": 78.47355651855469,
+          "top": 0,
+          "right": 280,
+          "bottom": 78.47355651855469,
+          "left": 0
+        }
+      },
+      "native_dismiss": true,
+      "native_source_pick": {
+        "cleared": true,
+        "logged": true
+      },
+      "stale_actions_forwarded": 0,
+      "switch_cleanup": {
+        "role": "hiyori",
+        "card": null,
+        "speech": false
+      },
+      "native_windows_hidden": true
+    }
+  ]
+}

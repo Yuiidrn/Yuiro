@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuiro 日记</title>
+    <!-- connect-src 放行引擎的 HTTP(调试接口) 与 WS(日记消息)；media-src blob: 供录音预览 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://127.0.0.1:* ws://127.0.0.1:*; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob: data:" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/diary/main.ts"></script>
+  </body>
+</html>

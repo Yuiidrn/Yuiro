@@ -1,0 +1,25 @@
+{
+  "kind": "real Agent search -> native detached card -> Engine media:play -> mpv progress -> chat stop",
+  "fixture": false,
+  "roles": [
+    {
+      "role": "hiyori",
+      "status": "running"
+    }
+  ],
+  "preflight": {
+    "status": "ok",
+    "count": 3
+  },
+  "player_baseline": {
+    "status": "stopped",
+    "title": "",
+    "position": 0,
+    "duration": 0,
+    "volume": null
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "Real Agent search did not return a music card within 90 seconds"
+  }
+}

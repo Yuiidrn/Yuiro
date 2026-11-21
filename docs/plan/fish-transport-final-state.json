@@ -1,0 +1,12 @@
+{
+  "engineHealth": {
+    "status": "ok",
+    "version": "0.1.0"
+  },
+  "desktop": {
+    "role": "hotaru",
+    "mic": false,
+    "presence": "idle"
+  },
+  "productionTransport": "HTTP with per-event-loop pooled client; original network path"
+}

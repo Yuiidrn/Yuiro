@@ -1,0 +1,73 @@
+{
+  "kind": "real Agent search -> native detached card -> Engine media:play -> mpv progress -> chat stop",
+  "fixture": false,
+  "roles": [
+    {
+      "role": "hiyori",
+      "status": "running",
+      "search_seconds": 15.95,
+      "candidates": [
+        {
+          "name": "Life",
+          "artist": "Tobu",
+          "album": "Life",
+          "duration_s": 204,
+          "song_id": 28830410,
+          "encrypted_id": "A6914C8AF4244D4FBF36CB77AC50F48B",
+          "playable": true
+        },
+        {
+          "name": "Life",
+          "artist": "Tobu",
+          "album": "EDM For Videos",
+          "duration_s": 184,
+          "song_id": 536723032,
+          "encrypted_id": "D7A5CFBDC256D4C553D30F791734D84C",
+          "playable": true
+        },
+        {
+          "name": "LIFE",
+          "artist": "谢帝",
+          "album": "社区生活",
+          "duration_s": 167,
+          "song_id": 1956540682,
+          "encrypted_id": "D7C714871AB6F2191CF9A4AD857B0582",
+          "playable": true
+        },
+        {
+          "name": "LIFE",
+          "artist": "Neuro-sama",
+          "album": "LIFE",
+          "duration_s": 213,
+          "song_id": 2657613721,
+          "encrypted_id": "4B4C2E613E4FCEA18EB2EDD6E8178927",
+          "playable": false
+        },
+        {
+          "name": "인생",
+          "artist": "尹泰华、JAEHA",
+          "album": "미스트롯 : 포유 PART21",
+          "duration_s": 252,
+          "song_id": 3449114851,
+          "encrypted_id": "3A6A6CDB60C7DFFF61B386D229D9D221",
+          "playable": false
+        }
+      ]
+    }
+  ],
+  "preflight": {
+    "status": "ok",
+    "count": 3
+  },
+  "player_baseline": {
+    "status": "stopped",
+    "title": "",
+    "position": 0,
+    "duration": 0,
+    "volume": null
+  },
+  "error": {
+    "type": "AssertionError",
+    "message": "Yuiro 结果"
+  }
+}

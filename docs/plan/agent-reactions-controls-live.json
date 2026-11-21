@@ -1,0 +1,17 @@
+{
+  "scope": "Actual rebuilt AppearanceStudio controls visible; no settings changed",
+  "controls": [
+    {
+      "text": "Agent任务微反应（关注、成功回应、待确认；按角色保存）",
+      "inputType": "checkbox"
+    },
+    {
+      "text": "Agent反应冷却 14秒",
+      "inputType": "range"
+    },
+    {
+      "text": "Agent动作时长上限 4.0秒",
+      "inputType": "range"
+    }
+  ]
+}

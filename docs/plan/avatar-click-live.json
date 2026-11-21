@@ -1,0 +1,21 @@
+{
+  "scope": "real built renderer DOM mouse dispatch with contour hit; not native OS passthrough test",
+  "point": {
+    "x": 289.9166751305265,
+    "y": 193.30000683344355,
+    "path": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "expected": "Motion"
+  },
+  "click": {
+    "expression": "",
+    "motion": "Motion",
+    "motionIndex": 0,
+    "until": 1793496131972
+  },
+  "drag": {
+    "expression": "",
+    "motion": "",
+    "motionIndex": null,
+    "until": 0
+  }
+}

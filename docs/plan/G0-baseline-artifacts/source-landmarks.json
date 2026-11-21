@@ -1,0 +1,1955 @@
+{
+  "engine/yuiro/main.py": [
+    {
+      "symbol": "_force_utf8_console",
+      "line": 29,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_probe_embedder_files",
+      "line": 88,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_build_memory",
+      "line": 130,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_build_system_backend",
+      "line": 172,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_build_agent",
+      "line": 196,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_interaction_reward",
+      "line": 259,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_agent_reply",
+      "line": 286,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_llm_reply_stream",
+      "line": 443,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_llm_reply",
+      "line": 465,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_play_audio",
+      "line": 483,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_emit_event",
+      "line": 509,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_build_renderer",
+      "line": 539,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_log_reference_language",
+      "line": 567,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_build_voice_pipeline",
+      "line": 603,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "lifespan",
+      "line": 750,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_build_proactive",
+      "line": 863,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_greet_push",
+      "line": 877,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_emotion_decay_loop",
+      "line": 887,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_note_memory_idle",
+      "line": 916,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_note_memory_session_end",
+      "line": 931,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_memory_maintenance_loop",
+      "line": 942,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_warmup_pipeline",
+      "line": 964,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_warmup_netease_daemon",
+      "line": 987,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_on_pipeline_progress",
+      "line": 1046,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_avatar_on_task_completed",
+      "line": 1096,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_push_task_planned",
+      "line": 1115,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_push_agent_activity",
+      "line": 1135,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_push_agent_result",
+      "line": 1174,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_presence_speak",
+      "line": 1199,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_render_display_text",
+      "line": 1207,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_speak_reply",
+      "line": 1224,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_presence_broadcast",
+      "line": 1286,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_authorized",
+      "line": 1359,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_cancel_turn",
+      "line": 1372,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_schedule_cancel",
+      "line": 1397,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_send_session_ready",
+      "line": 1405,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_direct_media_play",
+      "line": 1419,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_handle_diary_message",
+      "line": 1470,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_maybe_closing_review",
+      "line": 1563,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_diary_send",
+      "line": 1587,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "control_channel",
+      "line": 1596,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "audio_channel",
+      "line": 1745,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "health",
+      "line": 1838,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_drain",
+      "line": 328,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "progress_callback",
+      "line": 615,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_session_sweeper",
+      "line": 754,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "chat_worker",
+      "line": 1626,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "pcm_worker",
+      "line": 1789,
+      "kind": "AsyncFunctionDef"
+    }
+  ],
+  "engine/yuiro/debug_api.py": [
+    {
+      "symbol": "netease_probe",
+      "line": 50,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "LogEntry",
+      "line": 86,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "LogRing",
+      "line": 93,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "_emit",
+      "line": 111,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_looks_like_dev_doc",
+      "line": 126,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_state_config",
+      "line": 135,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_rebuild_responder",
+      "line": 139,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_text_defaults",
+      "line": 297,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get_config",
+      "line": 321,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "put_config",
+      "line": 334,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "reload_config",
+      "line": 364,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_systemd_approval_mode",
+      "line": 381,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "put_systemd_approval_mode",
+      "line": 387,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "put_llm_key",
+      "line": 409,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_llm_key",
+      "line": 435,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "delete_llm_key",
+      "line": 442,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "put_search_key",
+      "line": 459,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_search_key",
+      "line": 481,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "delete_search_key",
+      "line": 488,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_import_ready",
+      "line": 499,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get_runtime_state",
+      "line": 506,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "list_events",
+      "line": 515,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "list_turns",
+      "line": 531,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_status",
+      "line": 582,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_llm",
+      "line": 640,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_tts",
+      "line": 669,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_asr",
+      "line": 777,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_transcribe",
+      "line": 819,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_vad",
+      "line": 857,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_memory",
+      "line": 897,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_test_systemd",
+      "line": 907,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "test_provider",
+      "line": 936,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "logs_tail",
+      "line": 950,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "logs_clear",
+      "line": 960,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_memory",
+      "line": 969,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "clear_memory",
+      "line": 993,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "upsert_fact",
+      "line": 1042,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "delete_fact",
+      "line": 1072,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_build_eval_responder",
+      "line": 1093,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "eval_personality_scenarios",
+      "line": 1118,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "eval_personality",
+      "line": 1135,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "presence_state",
+      "line": 1182,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "presence_nudge",
+      "line": 1191,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "presence_system_event",
+      "line": 1209,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "list_sessions",
+      "line": 1232,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "archive_session",
+      "line": 1245,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "transaction_list",
+      "line": 1261,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "transaction_rollback",
+      "line": 1271,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_diary_pair",
+      "line": 1283,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_diary_brief",
+      "line": 1291,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "diary_list",
+      "line": 1306,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_stats",
+      "line": 1334,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_detail",
+      "line": 1343,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_submit",
+      "line": 1355,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_delete",
+      "line": 1381,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_set_privacy",
+      "line": 1393,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "diary_review",
+      "line": 1413,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "search_status",
+      "line": 1423,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "capability_scope",
+      "line": 1451,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "capability_check",
+      "line": 1463,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "avatar_performances",
+      "line": 1487,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "avatar_perform",
+      "line": 1496,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_task_view",
+      "line": 1505,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "task_list",
+      "line": 1521,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "task_approve",
+      "line": 1531,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "task_reject",
+      "line": 1547,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "task_retry",
+      "line": 1560,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "memory_consolidate",
+      "line": 1573,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "memory_relationship",
+      "line": 1588,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "memory_showcase",
+      "line": 1597,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "list_explicit_memory",
+      "line": 1638,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "delete_explicit_memory",
+      "line": 1648,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "run_memory_forget",
+      "line": 1660,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "search_memory",
+      "line": 1670,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "delete_episode",
+      "line": 1700,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "ingest_knowledge",
+      "line": 1736,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "get_knowledge",
+      "line": 1784,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "clear_knowledge",
+      "line": 1803,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "emit_startup_summary",
+      "line": 1817,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 94,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "emit",
+      "line": 97,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "tail",
+      "line": 100,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "clear",
+      "line": 104,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_respond",
+      "line": 1100,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_clear",
+      "line": 1005,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_echo",
+      "line": 1156,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_delete",
+      "line": 1712,
+      "kind": "FunctionDef"
+    }
+  ],
+  "engine/yuiro/agent/__init__.py": [
+    {
+      "symbol": "ToolSchema",
+      "line": 90,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "LLMChunk",
+      "line": 95,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "LLMProvider",
+      "line": 105,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "OpenAIProvider",
+      "line": 123,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "_keyword_route",
+      "line": 317,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "AgentLoop",
+      "line": 376,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "ServiceContext",
+      "line": 1394,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "SubagentTool",
+      "line": 1420,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "build_agent_loop",
+      "line": 1464,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "stream_text",
+      "line": 113,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 131,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "stream_text",
+      "line": 147,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_is_app_name",
+      "line": 354,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 385,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_should_abort",
+      "line": 437,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_task_progress_line",
+      "line": 469,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_emit_activity",
+      "line": 487,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_emit_result_card",
+      "line": 539,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_build_messages",
+      "line": 583,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "clear_session_memory",
+      "line": 689,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_context_messages",
+      "line": 706,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "send",
+      "line": 755,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_update_state",
+      "line": 1378,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_legacy_describe_removed",
+      "line": 1390,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 1401,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "from_defaults",
+      "line": 1408,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 1428,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "schema",
+      "line": 1431,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "run",
+      "line": 1447,
+      "kind": "AsyncFunctionDef"
+    }
+  ],
+  "engine/yuiro/audio/__init__.py": [
+    {
+      "symbol": "VADEvent",
+      "line": 19,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "VADEngine",
+      "line": 25,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "ASRProvider",
+      "line": 170,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "SenseVoiceASR",
+      "line": 271,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "is_noise_transcript",
+      "line": 400,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_strip_sensevoice_tags",
+      "line": 434,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "FSMNVAD",
+      "line": 441,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "TranscriptBuffer",
+      "line": 562,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "split_sentences",
+      "line": 628,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "TTSTaskManager",
+      "line": 705,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "VoicePipeline",
+      "line": 774,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 33,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_load_model",
+      "line": 58,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_speech_frame",
+      "line": 65,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_smoothed_speech",
+      "line": 83,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "feed",
+      "line": 93,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_merge_event",
+      "line": 117,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_step",
+      "line": 124,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "reset",
+      "line": 161,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 181,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_configure_cuda_runtime",
+      "line": 201,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_load_model",
+      "line": 219,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "warmup",
+      "line": 229,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_transcribe_kwargs",
+      "line": 240,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "transcribe",
+      "line": 250,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 284,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_resolve_device",
+      "line": 306,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_configure_cuda_runtime",
+      "line": 316,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_load_model",
+      "line": 334,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "warmup",
+      "line": 358,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "transcribe",
+      "line": 366,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 452,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_load_model",
+      "line": 476,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_speech_frames",
+      "line": 494,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "feed",
+      "line": 519,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "reset",
+      "line": 554,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 571,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_total_len",
+      "line": 581,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "push",
+      "line": 584,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_delayed_flush",
+      "line": 594,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "flush",
+      "line": 603,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "dispose",
+      "line": 612,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 716,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "enqueue",
+      "line": 728,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "wait_next",
+      "line": 742,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "finish",
+      "line": 755,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "interrupt",
+      "line": 765,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 796,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "set_renderer",
+      "line": 893,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "renderer",
+      "line": 902,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_render_text",
+      "line": 905,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_default_play",
+      "line": 918,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_set_state",
+      "line": 925,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "is_ready",
+      "line": 932,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_model_progress",
+      "line": 935,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "warmup",
+      "line": 943,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_build_vad",
+      "line": 963,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_build_asr",
+      "line": 967,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_emit",
+      "line": 970,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_start_trace",
+      "line": 976,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get_trace",
+      "line": 985,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "mark_playback_started",
+      "line": 989,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_finalize_trace",
+      "line": 995,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_audio",
+      "line": 1003,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_barge_min_db",
+      "line": 1022,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_spawn_speech_end",
+      "line": 1037,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_run_speech_end",
+      "line": 1076,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_process_audio_chunk",
+      "line": 1088,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_speech_end",
+      "line": 1208,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "speak_text",
+      "line": 1435,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_sentences_for",
+      "line": 1452,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_speak",
+      "line": 1467,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_speak_stream",
+      "line": 1497,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_speak_impl",
+      "line": 1507,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "interrupt",
+      "line": 1669,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_reap",
+      "line": 1063,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_feed",
+      "line": 1545,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_enqueue_one",
+      "line": 1559,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_sentence",
+      "line": 1342,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_turn",
+      "line": 1349,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_sentences",
+      "line": 1355,
+      "kind": "AsyncFunctionDef"
+    }
+  ],
+  "engine/yuiro/runtime/session.py": [
+    {
+      "symbol": "SessionState",
+      "line": 21,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "AgentSession",
+      "line": 28,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "SessionManager",
+      "line": 55,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "next_generation",
+      "line": 41,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "invalidate",
+      "line": 47,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 62,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get",
+      "line": 72,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "create",
+      "line": 75,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get_or_create",
+      "line": 80,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "sweep",
+      "line": 98,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "revive",
+      "line": 130,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "archive",
+      "line": 155,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "list_sessions",
+      "line": 169,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "attach_control",
+      "line": 208,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "attach_audio",
+      "line": 216,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 224,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "detach_control",
+      "line": 237,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "detach_audio",
+      "line": 244,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_maybe_suspend",
+      "line": 251,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 256,
+      "kind": "FunctionDef"
+    }
+  ],
+  "engine/yuiro/runtime/contract.py": [
+    {
+      "symbol": "RuntimeContract",
+      "line": 20,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "RuntimeRegistry",
+      "line": 40,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "runtime_name",
+      "line": 23,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 27,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "state",
+      "line": 31,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "on_session_close",
+      "line": 35,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 43,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "register",
+      "line": 47,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "names",
+      "line": 60,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "get",
+      "line": 63,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_broadcast",
+      "line": 67,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "close_session",
+      "line": 81,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "cancel_session",
+      "line": 85,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "snapshot",
+      "line": 90,
+      "kind": "FunctionDef"
+    }
+  ],
+  "engine/yuiro/runtime/adapters.py": [
+    {
+      "symbol": "AgentRuntimeAdapter",
+      "line": 14,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "TaskRuntimeAdapter",
+      "line": 45,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "SpeechRuntimeAdapter",
+      "line": 74,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 17,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "runtime_name",
+      "line": 20,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 23,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_session_close",
+      "line": 33,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "state",
+      "line": 39,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 53,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "runtime_name",
+      "line": 56,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 59,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_session_close",
+      "line": 66,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "state",
+      "line": 69,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 77,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "runtime_name",
+      "line": 80,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 83,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_session_close",
+      "line": 90,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "state",
+      "line": 93,
+      "kind": "FunctionDef"
+    }
+  ],
+  "engine/yuiro/avatar/runtime.py": [
+    {
+      "symbol": "AvatarRuntime",
+      "line": 32,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 33,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "update_expression_map",
+      "line": 56,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "update_motion_map",
+      "line": 61,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "update_performance_map",
+      "line": 65,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "update_motion_slots",
+      "line": 69,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "expression_for",
+      "line": 78,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "resolve_motion_slot",
+      "line": 82,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "current",
+      "line": 86,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "performances",
+      "line": 90,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "push_emotion",
+      "line": 95,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "push_action",
+      "line": 114,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "perform",
+      "line": 130,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_expired",
+      "line": 165,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_apply",
+      "line": 172,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "runtime_name",
+      "line": 194,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "cancel",
+      "line": 197,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "on_session_close",
+      "line": 203,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "state",
+      "line": 207,
+      "kind": "FunctionDef"
+    }
+  ],
+  "engine/yuiro/memory/__init__.py": [
+    {
+      "symbol": "Memory",
+      "line": 33,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "_fallback_vector",
+      "line": 42,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_embed_worker",
+      "line": 62,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "Embedder",
+      "line": 129,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "Retriever",
+      "line": 299,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "FactsStore",
+      "line": 378,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "MemorySystem",
+      "line": 398,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "KnowledgeStore",
+      "line": 1327,
+      "kind": "ClassDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 36,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_safe_send",
+      "line": 67,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 132,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "is_ready",
+      "line": 161,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_drain_ready",
+      "line": 166,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_log_degraded",
+      "line": 191,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "wait_ready",
+      "line": 198,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "embed_many",
+      "line": 215,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_embed_one_batch",
+      "line": 237,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "embed",
+      "line": 252,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 277,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 302,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "add",
+      "line": 308,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "retrieve",
+      "line": 313,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 367,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 381,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "upsert",
+      "line": 384,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "query",
+      "line": 389,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 393,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 455,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_extract_facts",
+      "line": 484,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_is_plausible_fact_value",
+      "line": 510,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_has_fact_signal",
+      "line": 539,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_salience",
+      "line": 548,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_extract_explicit",
+      "line": 555,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_remember_explicit",
+      "line": 571,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "remember",
+      "line": 584,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_compose_episode",
+      "line": 614,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_write_episode",
+      "line": 630,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_remember_async",
+      "line": 639,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_extract_episode_and_facts",
+      "line": 662,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_spawn",
+      "line": 730,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_decay_for",
+      "line": 750,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_needs_confirmation",
+      "line": 758,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_gate_facts",
+      "line": 779,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_apply_facts",
+      "line": 802,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_normalize_key",
+      "line": 863,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "list_explicit",
+      "line": 869,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "delete_explicit",
+      "line": 876,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "forget",
+      "line": 891,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "consolidate",
+      "line": 912,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "tidy",
+      "line": 1000,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_pick_merge_pair",
+      "line": 1116,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_summarize_stale",
+      "line": 1127,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_forget_sync",
+      "line": 1150,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "retrieve",
+      "line": 1196,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "forget_text",
+      "line": 1291,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 1320,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "__init__",
+      "line": 1338,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_ensure_tables",
+      "line": 1345,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_chunk_text",
+      "line": 1363,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "ingest",
+      "line": 1416,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_insert_chunk",
+      "line": 1428,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "ingest_file",
+      "line": 1448,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "ingest_dir",
+      "line": 1454,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "_vector_search",
+      "line": 1468,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_fts_search",
+      "line": 1480,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "retrieve",
+      "line": 1493,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "symbol": "stats",
+      "line": 1517,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "sources",
+      "line": 1523,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "clear",
+      "line": 1540,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "close",
+      "line": 1554,
+      "kind": "FunctionDef"
+    },
+    {
+      "symbol": "_do",
+      "line": 1306,
+      "kind": "FunctionDef"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "scope": "Actual App control handler + Avatar presence/props + WebAudio via synthetic incoming control events; formal role service switches, silent WAV and synthetic volume envelope. No supplier/ASR/microphone or acoustic proof.",
+  "rows": [
+    {
+      "role": "hiyori",
+      "empty": false,
+      "stalePreviousRoleRejected": null,
+      "waiting": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "thinking",
+          "expression": "think",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319676177
+        },
+        "mic": false
+      },
+      "playing": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 1,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "speaking",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319676466
+        },
+        "mic": false
+      },
+      "ended": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319677859
+        },
+        "mic": false
+      }
+    },
+    {
+      "role": "hiyori",
+      "empty": true,
+      "stalePreviousRoleRejected": null,
+      "waiting": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "thinking",
+          "expression": "think",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319677877
+        },
+        "mic": false
+      },
+      "playing": null,
+      "ended": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319678144
+        },
+        "mic": false
+      }
+    },
+    {
+      "role": "hotaru",
+      "empty": false,
+      "stalePreviousRoleRejected": true,
+      "waiting": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "thinking",
+          "expression": "exp_puzzled01",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319678599
+        },
+        "mic": false
+      },
+      "playing": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 1,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "speaking",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319679069
+        },
+        "mic": false
+      },
+      "ended": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319680076
+        },
+        "mic": false
+      }
+    },
+    {
+      "role": "hotaru",
+      "empty": true,
+      "stalePreviousRoleRejected": true,
+      "waiting": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "thinking",
+          "expression": "exp_puzzled01",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319680118
+        },
+        "mic": false
+      },
+      "playing": null,
+      "ended": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319680569
+        },
+        "mic": false
+      }
+    },
+    {
+      "role": "hiyori",
+      "empty": false,
+      "stalePreviousRoleRejected": true,
+      "waiting": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "thinking",
+          "expression": "think",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319680922
+        },
+        "mic": false
+      },
+      "playing": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 1,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "speaking",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319681361
+        },
+        "mic": false
+      },
+      "ended": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319682368
+        },
+        "mic": false
+      }
+    },
+    {
+      "role": "hiyori",
+      "empty": true,
+      "stalePreviousRoleRejected": true,
+      "waiting": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "thinking",
+          "expression": "think",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319682381
+        },
+        "mic": false
+      },
+      "playing": null,
+      "ended": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0,
+          "at": 1794319682818
+        },
+        "mic": false
+      }
+    }
+  ],
+  "final": {
+    "role": "hotaru",
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "mouth": 0,
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794319683611
+    },
+    "mic": false
+  },
+  "hookRemoved": true
+}

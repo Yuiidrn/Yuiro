@@ -1,0 +1,18 @@
+{
+  "scope": "Actual authenticated config validation/hot-reload/test endpoint with single paid synthesis; no playback/microphone; transport restored, no audio/config contents saved in report",
+  "initialTransport": "http",
+  "invalidTransportStatus": 400,
+  "test": {
+    "httpStatus": 200,
+    "status": "ok",
+    "transport": "websocket",
+    "latencyWholeClipMs": 2548.7,
+    "wavBytes": 368684,
+    "sampleRate": 44100,
+    "hasAudio": true
+  },
+  "passed": true,
+  "restoredTransport": "http",
+  "completeSectionsRestored": true,
+  "hiyoriFileUnchanged": true
+}

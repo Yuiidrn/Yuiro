@@ -1,0 +1,121 @@
+{
+  "scope": "Actual Electron WebAudio with current production composable and presence reducer; silent fixtures in isolated instances, no microphone/cloud, not integrated avatar rendering or supplier TTFA.",
+  "rows": [
+    {
+      "role": "hiyori",
+      "empty": false,
+      "waiting": "thinking",
+      "beforeEnd": "speaking",
+      "ended": "idle",
+      "events": [
+        {
+          "type": "tts:playback_waiting",
+          "state": "thinking"
+        },
+        {
+          "type": "tts:playback_start",
+          "state": "speaking"
+        },
+        {
+          "type": "tts:playback_end",
+          "state": "idle"
+        },
+        {
+          "type": "tts:playback_cancelled",
+          "state": "idle"
+        },
+        {
+          "type": "mic:stop",
+          "state": "idle"
+        }
+      ],
+      "mouth": 0,
+      "contextsClosed": true
+    },
+    {
+      "role": "hiyori",
+      "empty": true,
+      "waiting": "thinking",
+      "beforeEnd": "thinking",
+      "ended": "idle",
+      "events": [
+        {
+          "type": "tts:playback_waiting",
+          "state": "thinking"
+        },
+        {
+          "type": "tts:playback_empty",
+          "state": "idle"
+        },
+        {
+          "type": "tts:playback_cancelled",
+          "state": "idle"
+        },
+        {
+          "type": "mic:stop",
+          "state": "idle"
+        }
+      ],
+      "mouth": 0,
+      "contextsClosed": true
+    },
+    {
+      "role": "hotaru",
+      "empty": false,
+      "waiting": "thinking",
+      "beforeEnd": "speaking",
+      "ended": "idle",
+      "events": [
+        {
+          "type": "tts:playback_waiting",
+          "state": "thinking"
+        },
+        {
+          "type": "tts:playback_start",
+          "state": "speaking"
+        },
+        {
+          "type": "tts:playback_end",
+          "state": "idle"
+        },
+        {
+          "type": "tts:playback_cancelled",
+          "state": "idle"
+        },
+        {
+          "type": "mic:stop",
+          "state": "idle"
+        }
+      ],
+      "mouth": 0,
+      "contextsClosed": true
+    },
+    {
+      "role": "hotaru",
+      "empty": true,
+      "waiting": "thinking",
+      "beforeEnd": "thinking",
+      "ended": "idle",
+      "events": [
+        {
+          "type": "tts:playback_waiting",
+          "state": "thinking"
+        },
+        {
+          "type": "tts:playback_empty",
+          "state": "idle"
+        },
+        {
+          "type": "tts:playback_cancelled",
+          "state": "idle"
+        },
+        {
+          "type": "mic:stop",
+          "state": "idle"
+        }
+      ],
+      "mouth": 0,
+      "contextsClosed": true
+    }
+  ]
+}

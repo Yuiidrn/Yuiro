@@ -1,0 +1,83 @@
+{
+  "scope": "Current expression/blink adapter build; bounded visible idle only",
+  "results": [
+    {
+      "role": "hotaru",
+      "seconds": 300.16860000002384,
+      "samples": 300,
+      "frameIntervalMs": {
+        "count": 41774,
+        "p50": 6.099999999976717,
+        "p95": 12.200000000011642,
+        "max": 24.60000000000582
+      },
+      "eyes": {
+        "frames": 41793,
+        "min": 0,
+        "max": 1,
+        "closures": 66,
+        "closed": false
+      },
+      "motions": [
+        [
+          "",
+          null
+        ],
+        [
+          "Motion",
+          19
+        ]
+      ],
+      "minOccupied": 313,
+      "distinctAlphaHashes": 300,
+      "allVisible": true,
+      "allIdle": true
+    },
+    {
+      "role": "hiyori",
+      "seconds": 300.13930000001193,
+      "samples": 300,
+      "frameIntervalMs": {
+        "count": 49469,
+        "p50": 6.099999999976717,
+        "p95": 6.199999999953434,
+        "max": 20.300000000046566
+      },
+      "eyes": {
+        "frames": 49492,
+        "min": 0,
+        "max": 1,
+        "closures": 99,
+        "closed": false
+      },
+      "motions": [
+        [
+          "",
+          null
+        ],
+        [
+          "Idle",
+          0
+        ]
+      ],
+      "minOccupied": 268,
+      "distinctAlphaHashes": 300,
+      "allVisible": true,
+      "allIdle": true
+    }
+  ],
+  "manifestFiles": 30,
+  "changedFiles": [],
+  "finalState": {
+    "role": "hotaru",
+    "mic": false,
+    "sampling": false,
+    "eyeHook": false,
+    "presence": "idle"
+  },
+  "limitations": [
+    "rAF intervals are not GPU times or speech latency",
+    "Eye closure transitions are not exact SDK blink counts",
+    "No microphone, human naturalness, multi-hour or voice stress validation"
+  ]
+}

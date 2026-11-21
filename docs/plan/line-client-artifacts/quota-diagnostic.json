@@ -1,0 +1,20 @@
+[
+  {
+    "role": "hiyori",
+    "model": "qwen3.8-flash",
+    "http": 403,
+    "code": "insufficient_quota",
+    "message": "Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console.",
+    "request_id": "f4a1ba0f-96db-9f0f-be9e-341610715f60",
+    "has_response": false
+  },
+  {
+    "role": "hotaru",
+    "model": "qwen3.8-max",
+    "http": 200,
+    "code": null,
+    "message": "",
+    "request_id": "91915910-5426-9415-8cff-2a6788d72e0b",
+    "has_response": true
+  }
+]

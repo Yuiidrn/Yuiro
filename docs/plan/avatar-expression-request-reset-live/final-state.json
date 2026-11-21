@@ -1,0 +1,17 @@
+{
+  "before": {
+    "mic": false,
+    "presence": "idle",
+    "role": "hotaru"
+  },
+  "after": {
+    "mic": false,
+    "presence": "idle",
+    "role": "hotaru",
+    "scripts": [
+      "index-BNQm6MSm.js"
+    ],
+    "eyeSampling": false
+  },
+  "expectedAsset": "index-BNQm6MSm.js"
+}

@@ -1,0 +1,541 @@
+{
+  "scope": "actual built renderer handler injection with 300ms silent WAV; audio frame to avatar status snapshot, not network/LLM/TTS/end-to-end or visual draw latency",
+  "samples": [
+    {
+      "startMs": 34.5,
+      "endMs": 853
+    },
+    {
+      "startMs": 10.899999976158142,
+      "endMs": 309.5999999642372
+    },
+    {
+      "startMs": 10.5,
+      "endMs": 318.4000000357628
+    },
+    {
+      "startMs": 9.899999976158142,
+      "endMs": 311.69999998807907
+    },
+    {
+      "startMs": 8.900000035762787,
+      "endMs": 319.69999998807907
+    },
+    {
+      "startMs": 9.300000011920929,
+      "endMs": 326.80000001192093
+    },
+    {
+      "startMs": 7.800000011920929,
+      "endMs": 315.19999998807907
+    },
+    {
+      "startMs": 7.399999976158142,
+      "endMs": 311.30000001192093
+    },
+    {
+      "startMs": 8.800000011920929,
+      "endMs": 325.30000001192093
+    },
+    {
+      "startMs": 7.100000023841858,
+      "endMs": 311.5
+    },
+    {
+      "startMs": 11.5,
+      "endMs": 305
+    },
+    {
+      "startMs": 9.799999952316284,
+      "endMs": 321.39999997615814
+    },
+    {
+      "startMs": 9.5,
+      "endMs": 329.10000002384186
+    },
+    {
+      "startMs": 11.100000023841858,
+      "endMs": 302
+    },
+    {
+      "startMs": 6.899999976158142,
+      "endMs": 320.39999997615814
+    },
+    {
+      "startMs": 9.099999964237213,
+      "endMs": 308
+    },
+    {
+      "startMs": 8,
+      "endMs": 319.19999998807907
+    },
+    {
+      "startMs": 9.400000035762787,
+      "endMs": 322.4000000357628
+    },
+    {
+      "startMs": 8,
+      "endMs": 320.9000000357628
+    },
+    {
+      "startMs": 9.899999976158142,
+      "endMs": 319.5999999642372
+    }
+  ],
+  "frameToSpeakingMs": {
+    "n": 20,
+    "p50": 9.300000011920929,
+    "p95": 11.5,
+    "max": 34.5
+  },
+  "frameToIdleMs": {
+    "n": 20,
+    "p50": 319.19999998807907,
+    "p95": 329.10000002384186,
+    "max": 853
+  },
+  "percentileMethod": "nearest rank; all 20 samples including first",
+  "role": "hotaru",
+  "audioClocks": [
+    {
+      "phase": "start",
+      "wallMs": 3067.800000011921,
+      "contextTime": 0,
+      "baseLatency": 0.01,
+      "outputLatency": 0,
+      "outputTimestamp": {
+        "contextTime": 0,
+        "performanceTime": 0
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 3886,
+      "contextTime": 0.31056689342403626,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 0.258258,
+        "performanceTime": 3877.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 3982.899999976158,
+      "contextTime": 0.4092517006802721,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 0.358428,
+        "performanceTime": 3978.100000023842
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 4281.600000023842,
+      "contextTime": 0.7111111111111111,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 0.658865,
+        "performanceTime": 4278.5
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 4371.899999976158,
+      "contextTime": 0.8010884353741496,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 0.7489859999999999,
+        "performanceTime": 4368.600000023842
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 4679.800000011921,
+      "contextTime": 1.1087528344671203,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 1.058349,
+        "performanceTime": 4678
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 4769.300000011921,
+      "contextTime": 1.1987301587301586,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 1.148275,
+        "performanceTime": 4768
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 5070.899999976158,
+      "contextTime": 1.5005895691609978,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 1.448874,
+        "performanceTime": 5068.600000023842
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 5158.300000011921,
+      "contextTime": 1.5905668934240362,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 1.538589,
+        "performanceTime": 5158.300000011921
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 5468.800000011921,
+      "contextTime": 1.9011337868480727,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 1.8484369999999999,
+        "performanceTime": 5468
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 5548.300000011921,
+      "contextTime": 1.979501133786848,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 1.928135,
+        "performanceTime": 5547.800000011921
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 5865.699999988079,
+      "contextTime": 2.2900680272108844,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 2.2386179999999998,
+        "performanceTime": 5858.199999988079
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 5954.300000011921,
+      "contextTime": 2.380045351473923,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 2.328502,
+        "performanceTime": 5948.100000023842
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 6261.399999976158,
+      "contextTime": 2.690612244897959,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 2.638423,
+        "performanceTime": 6258.100000023842
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 6342.199999988079,
+      "contextTime": 2.7689795918367346,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 2.7184939999999997,
+        "performanceTime": 6338.199999988079
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 6645.800000011921,
+      "contextTime": 3.0708390022675736,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 3.0184360000000003,
+        "performanceTime": 6638
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 6729,
+      "contextTime": 3.1608163265306124,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 3.1082319999999997,
+        "performanceTime": 6727.899999976158
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 7045.100000023842,
+      "contextTime": 3.4684807256235826,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 3.418254,
+        "performanceTime": 7037.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 7129.300000011921,
+      "contextTime": 3.5584580498866214,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 3.508247,
+        "performanceTime": 7127.899999976158
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 7433.5,
+      "contextTime": 3.8603174603174604,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 3.8082110000000005,
+        "performanceTime": 7427.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 7516.399999976158,
+      "contextTime": 3.938684807256236,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 3.888566,
+        "performanceTime": 7508.199999988079
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 7809.600000023842,
+      "contextTime": 4.2405442176870745,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 4.188263,
+        "performanceTime": 7807.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 7900.600000023842,
+      "contextTime": 4.330521541950113,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 4.278993,
+        "performanceTime": 7898.699999988079
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 8212.100000023842,
+      "contextTime": 4.64108843537415,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 4.588243,
+        "performanceTime": 8207.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 8298.800000011921,
+      "contextTime": 4.731065759637188,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 4.678598000000001,
+        "performanceTime": 8298.300000011921
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 8618.399999976158,
+      "contextTime": 5.050340136054421,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 4.998641000000001,
+        "performanceTime": 8618.300000011921
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 8707.600000023842,
+      "contextTime": 5.128707482993197,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 5.078523,
+        "performanceTime": 8698.199999988079
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 8998.699999988079,
+      "contextTime": 5.430566893424036,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 5.3783009999999996,
+        "performanceTime": 8997.899999976158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 9075,
+      "contextTime": 5.500226757369615,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 5.448288,
+        "performanceTime": 9067.899999976158
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 9388.199999988079,
+      "contextTime": 5.819501133786848,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 5.768313,
+        "performanceTime": 9388
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 9463.699999988079,
+      "contextTime": 5.889160997732426,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 5.838204,
+        "performanceTime": 9457.899999976158
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 9762.399999976158,
+      "contextTime": 6.191020408163265,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 6.138622,
+        "performanceTime": 9758.199999988079
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 9854.5,
+      "contextTime": 6.280997732426304,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 6.228665,
+        "performanceTime": 9848.300000011921
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 10165.600000023842,
+      "contextTime": 6.588662131519274,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 6.538374,
+        "performanceTime": 10158
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 10238.399999976158,
+      "contextTime": 6.661224489795918,
+      "baseLatency": 0.01,
+      "outputLatency": 0.041,
+      "outputTimestamp": {
+        "contextTime": 6.618617,
+        "performanceTime": 10238.300000011921
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 10551.300000011921,
+      "contextTime": 6.980498866213152,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 6.928538,
+        "performanceTime": 10548.199999988079
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 10629.5,
+      "contextTime": 7.058866213151927,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 7.008267,
+        "performanceTime": 10627.899999976158
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 10942.199999988079,
+      "contextTime": 7.369433106575964,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 7.318362000000001,
+        "performanceTime": 10938
+      }
+    },
+    {
+      "phase": "start",
+      "wallMs": 11038.899999976158,
+      "contextTime": 7.471020408163265,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 7.418394,
+        "performanceTime": 11038.100000023842
+      }
+    },
+    {
+      "phase": "ended",
+      "wallMs": 11348.5,
+      "contextTime": 7.778684807256236,
+      "baseLatency": 0.01,
+      "outputLatency": 0.042,
+      "outputTimestamp": {
+        "contextTime": 7.728323999999999,
+        "performanceTime": 11348
+      }
+    }
+  ]
+}

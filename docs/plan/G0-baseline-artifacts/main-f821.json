@@ -1,0 +1,44 @@
+{
+  "exit_code": 1,
+  "diagnostics": [
+    {
+      "cell": null,
+      "code": "F821",
+      "end_location": {
+        "column": 50,
+        "row": 130
+      },
+      "filename": "D:\\Project\\Yuii\\desktop-pet\\Yuiro\\engine\\yuiro\\main.py",
+      "fix": null,
+      "location": {
+        "column": 38,
+        "row": 130
+      },
+      "message": "Undefined name `MemorySystem`",
+      "name": "undefined-name",
+      "noqa_row": 130,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+    },
+    {
+      "cell": null,
+      "code": "F821",
+      "end_location": {
+        "column": 17,
+        "row": 860
+      },
+      "filename": "D:\\Project\\Yuii\\desktop-pet\\Yuiro\\engine\\yuiro\\main.py",
+      "fix": null,
+      "location": {
+        "column": 11,
+        "row": 860
+      },
+      "message": "Undefined name `daemon`",
+      "name": "undefined-name",
+      "noqa_row": 860,
+      "severity": "error",
+      "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+    }
+  ],
+  "limits": "scoped F821 only, not whole-repository lint"
+}

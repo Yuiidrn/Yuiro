@@ -1,0 +1,138 @@
+{
+  "scope": "same renderer baseline feature off/on; 240 ticker intervals; CPU submission timing is not GPU completion or previous-revision baseline",
+  "results": [
+    {
+      "model": "hiyori",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "shy",
+        "playful",
+        "think",
+        "bored"
+      ],
+      "samples": [
+        {
+          "reactiveEnabled": false,
+          "frame_interval_ms": {
+            "count": 240,
+            "p50": 6.299999952316284,
+            "p95": 16,
+            "max": 49.5
+          },
+          "cpu_render_submission_ms": {
+            "count": 240,
+            "p50": 3.6999999284744263,
+            "p95": 7.5,
+            "max": 11.299999952316284
+          }
+        },
+        {
+          "reactiveEnabled": true,
+          "frame_interval_ms": {
+            "count": 240,
+            "p50": 6.099999904632568,
+            "p95": 10.300000071525574,
+            "max": 78.29999995231628
+          },
+          "cpu_render_submission_ms": {
+            "count": 240,
+            "p50": 2.899999976158142,
+            "p95": 5.200000047683716,
+            "max": 75.60000002384186
+          }
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "exp_angry01",
+        "exp_angry02",
+        "exp_angry03",
+        "exp_anxiety01",
+        "exp_bsmile01",
+        "exp_bsmile02",
+        "exp_cry01",
+        "exp_cry02",
+        "exp_cry03",
+        "exp_cry04",
+        "exp_cry05",
+        "exp_cry06",
+        "exp_cry07",
+        "exp_heart01",
+        "exp_idle01",
+        "exp_idle02",
+        "exp_idle03",
+        "exp_idle04",
+        "exp_kime01",
+        "exp_kime02",
+        "exp_kirakira01",
+        "exp_pale01",
+        "exp_pale02",
+        "exp_panic01",
+        "exp_panic02",
+        "exp_puzzled01",
+        "exp_puzzled02",
+        "exp_question01",
+        "exp_sad01",
+        "exp_sad02",
+        "exp_sad03",
+        "exp_shadow01",
+        "exp_shy01",
+        "exp_sing01",
+        "exp_smile01",
+        "exp_smile02",
+        "exp_smile03",
+        "exp_smile04",
+        "exp_smile05",
+        "exp_smile06",
+        "exp_smile07",
+        "exp_spin01",
+        "exp_surprised01",
+        "exp_surprised02",
+        "exp_thinking01",
+        "exp_thinking02"
+      ],
+      "samples": [
+        {
+          "reactiveEnabled": false,
+          "frame_interval_ms": {
+            "count": 240,
+            "p50": 8.5,
+            "p95": 14.399999976158142,
+            "max": 19.300000071525574
+          },
+          "cpu_render_submission_ms": {
+            "count": 240,
+            "p50": 7.700000047683716,
+            "p95": 10.399999976158142,
+            "max": 13.100000023841858
+          }
+        },
+        {
+          "reactiveEnabled": true,
+          "frame_interval_ms": {
+            "count": 240,
+            "p50": 9,
+            "p95": 15.299999952316284,
+            "max": 22.90000009536743
+          },
+          "cpu_render_submission_ms": {
+            "count": 240,
+            "p50": 8.100000023841858,
+            "p95": 10.700000047683716,
+            "max": 20.200000047683716
+          }
+        }
+      ]
+    }
+  ],
+  "restored": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+}

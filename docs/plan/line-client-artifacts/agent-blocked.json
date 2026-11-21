@@ -1,0 +1,17 @@
+{
+  "kind": "real Live2D/native connector + real Agent -> client UI search -> card -> official playback/pause",
+  "baseline_paused": true,
+  "roles": [
+    {
+      "role": "hiyori",
+      "line_no_background": true,
+      "one_open_curve": true,
+      "curve_click_through": true,
+      "typography_hot_update": true,
+      "mode_switch": true
+    }
+  ],
+  "preferences_restored": true,
+  "completed": false,
+  "blocker": "LLM HTTP 403: free quota exhausted; no tool execution"
+}

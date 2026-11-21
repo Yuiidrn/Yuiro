@@ -1,0 +1,34 @@
+{
+  "client": "3.1.41.205529",
+  "protocol": "base64 JSON song/id/cmd=play",
+  "readback": "client current track store, separate from dispatched ID",
+  "runs": [
+    {
+      "iteration": 1,
+      "song_id": "36308916",
+      "duration": 290,
+      "preview": false,
+      "playing_confirmed": true,
+      "paused_confirmed": true,
+      "dispatch_to_verified_ms": 3337
+    },
+    {
+      "iteration": 2,
+      "song_id": "36308916",
+      "duration": 290,
+      "preview": false,
+      "playing_confirmed": true,
+      "paused_confirmed": true,
+      "dispatch_to_verified_ms": 2833
+    },
+    {
+      "iteration": 3,
+      "song_id": "36308916",
+      "duration": 290,
+      "preview": false,
+      "playing_confirmed": true,
+      "paused_confirmed": true,
+      "dispatch_to_verified_ms": 2816
+    }
+  ]
+}

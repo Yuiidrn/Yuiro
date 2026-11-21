@@ -1,0 +1,77 @@
+{
+  "scope": "Actual built SDK local preview; state lifecycle and timer isolation. No microphone/cloud, not human naturalness or formal character-service switching.",
+  "rows": [
+    {
+      "role": "hiyori",
+      "scope": "temporary high priority / deferred base / cancel",
+      "held": {
+        "expression": "happy",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318556304
+      },
+      "deferred": {
+        "expression": "happy",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318556304
+      },
+      "released": {
+        "expression": "sad",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "cancelled": {
+        "expression": "sad",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    },
+    {
+      "role": "hotaru",
+      "scope": "temporary high priority / deferred base / cancel",
+      "held": {
+        "expression": "exp_bsmile01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318559497
+      },
+      "deferred": {
+        "expression": "exp_bsmile01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318559497
+      },
+      "released": {
+        "expression": "exp_angry01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "cancelled": {
+        "expression": "exp_angry01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    },
+    {
+      "scope": "old model release timer cannot reset new model",
+      "before": {
+        "expression": "happy",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318566487
+      },
+      "after": {
+        "expression": "happy",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1794318566487
+      }
+    }
+  ],
+  "restoredPreview": "hotaru"
+}

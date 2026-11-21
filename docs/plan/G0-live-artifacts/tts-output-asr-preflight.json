@@ -1,0 +1,9 @@
+{
+  "fixture_duration_s": 1.36,
+  "result": {
+    "ok": true,
+    "text": "にこや。",
+    "duration_ms": 1658
+  },
+  "scope": "actual already-warm ASR only; no diary save or Agent turn"
+}

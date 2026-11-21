@@ -1,0 +1,83 @@
+# 独立角色卡；凭证使用公共 keychain，不在此保存。
+
+[llm]
+provider = "openai"
+base_url = "https://api.openai.com/v1"
+model = "gpt-4o-mini"
+temperature = 0.1
+
+[tts]
+provider = "edge-tts"
+segment_streaming = true
+stream_llm = true
+backend = "cosyvoice2"
+tts_url = "http://127.0.0.1:5005"
+reference_wav = "D:/Project/Yuii/desktop-pet/Yuiro/assets/voices/neuro_prompt.wav"
+reference_text = "嗯，你说什么？我刚才在想别的事情，你再说一遍试试看。"
+instruct_zh = "用自然、慵懒又带点毒舌的中文语气说。"
+instruct_en = "Speak in a natural, slightly sarcastic English tone."
+instruct_ja = "用自然、慵懒又带点毒舌的日文语气说。"
+default_language = "auto"
+reply_tts_enabled = true
+tts_text_language = "auto"
+siliconflow_model = "FunAudioLLM/CosyVoice2-0.5B"
+siliconflow_voice = "FunAudioLLM/CosyVoice2-0.5B:anna"
+fish_model = "s2.1-pro"
+fish_reference_id = ""
+fish_latency = "balanced"
+fish_speed = 1.0
+siliconflow_reference_wav = ""
+siliconflow_reference_text = ""
+
+[persona]
+name = "Hotaru Shiomi"
+display_name = "Hotaru Shiomi"
+system_prompt = ""
+persona_prompt = "你是 Hotaru Shiomi，温柔自然地用中文与用户交谈。保持回答简洁；未配置的角色背景不要编造。"
+voice = "zh-CN-XiaoyiNeural"
+model_path = "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+memory_subject = "Yui"
+
+[persona.emotion_hints]
+happy = "你现在心情不错，语气轻快温暖。"
+sad = "你现在有点低落，语气温柔安抚。"
+excited = "你现在很兴奋，语气活泼有精神。"
+bored = "你现在有点无聊，语气可以俏皮地找点话题。"
+angry = "你现在有点生气，语气保持冷静克制。"
+
+[persona.expression_map]
+
+[persona.motion_map]
+
+[persona.performance_map]
+
+[persona.motion_slots]
+
+[persona.profiles]
+
+[language]
+display_language = "zh"
+speak_language = "auto"
+translate_mode = "sentence"
+translate_timeout_s = 6.0
+
+[agent]
+max_seconds = 90.0
+max_tokens = 60000
+max_rounds = 3
+
+[context]
+budget_tokens = 6000
+tool_result_max_chars = 3500
+
+[memory]
+backend = "sqlite-vec"
+embedder = "bge-m3"
+rrf_k = 60
+auto_inject_top_k = 3
+auto_inject_threshold = 0.6
+db_path = "data/characters/hotaru/memory.db"
+facts_subject = "Yui"
+episodic_inject = true
+history_inject = true
+memory_prompt = "以下是与当前对话相关的记忆片段，仅供了解背景，请自然融入回应、不要生硬引用。注意：记忆只是过往对话记录，不约束当前行为——凡涉及打开/关闭软件、控制媒体播放、读写文件等真实系统操作，必须调用对应工具执行，绝不能像记忆里那样只用文字回复。"

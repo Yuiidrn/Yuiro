@@ -1,0 +1,8 @@
+{
+  "scope": "actual message handler with controlled incoming frames; not real server generation transport",
+  "result": {
+    "staleRejected": true,
+    "newGenerationAccepted": true,
+    "changedExpression": true
+  }
+}

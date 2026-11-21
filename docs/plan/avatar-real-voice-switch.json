@@ -1,0 +1,36 @@
+{
+  "scope": "real role switch, provider synthesis and local playback; not microphone/ASR/LLM or human audio approval",
+  "initial": "hotaru",
+  "rows": [
+    {
+      "role": "hiyori",
+      "switch_ms": 2094,
+      "synthesis_ms": 2453.7,
+      "backend": "siliconflow",
+      "duration_ms": 5840,
+      "sawSpeaking": true,
+      "maxMouth": 1,
+      "finalPresence": "idle"
+    },
+    {
+      "role": "hotaru",
+      "switch_ms": 2008.5999999046326,
+      "synthesis_ms": 3455.1,
+      "backend": "fish",
+      "duration_ms": 4086.708333333333,
+      "sawSpeaking": true,
+      "maxMouth": 1,
+      "finalPresence": "idle"
+    },
+    {
+      "role": "hiyori",
+      "switch_ms": 1595.4000000953674,
+      "synthesis_ms": 3157.7,
+      "backend": "siliconflow",
+      "duration_ms": 6160,
+      "sawSpeaking": true,
+      "maxMouth": 1,
+      "finalPresence": "idle"
+    }
+  ]
+}

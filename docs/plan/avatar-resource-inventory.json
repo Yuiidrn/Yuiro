@@ -1,0 +1,1467 @@
+{
+  "scope": "static manifest/semantic inference; not visual certification of all clips",
+  "models": [
+    {
+      "role": "hiyori",
+      "manifest": {
+        "path": "/live2d/hiyori/Hiyori.model3.json",
+        "model3": "D:\\Project\\Yuii\\desktop-pet\\Yuiro\\shell\\src\\renderer\\public\\live2d\\hiyori\\Hiyori.model3.json",
+        "mocVersion": 3,
+        "expressions": [
+          {
+            "name": "happy",
+            "slot": "happy"
+          },
+          {
+            "name": "sad",
+            "slot": "sad"
+          },
+          {
+            "name": "angry",
+            "slot": "angry"
+          },
+          {
+            "name": "surprised",
+            "slot": "surprised"
+          },
+          {
+            "name": "shy",
+            "slot": "shy"
+          },
+          {
+            "name": "playful",
+            "slot": "playful"
+          },
+          {
+            "name": "think",
+            "slot": "thinking"
+          },
+          {
+            "name": "bored",
+            "slot": ""
+          }
+        ],
+        "motions": [
+          {
+            "group": "Idle",
+            "index": 0,
+            "file": "motions/Hiyori_m01.motion3.json",
+            "loop": true,
+            "durationMs": 4700,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 1,
+            "file": "motions/Hiyori_m02.motion3.json",
+            "loop": true,
+            "durationMs": 5930,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 2,
+            "file": "motions/Hiyori_m03.motion3.json",
+            "loop": true,
+            "durationMs": 4200,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 3,
+            "file": "motions/Hiyori_m05.motion3.json",
+            "loop": true,
+            "durationMs": 8570,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 4,
+            "file": "motions/Hiyori_m06.motion3.json",
+            "loop": true,
+            "durationMs": 5370,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 5,
+            "file": "motions/Hiyori_m07.motion3.json",
+            "loop": true,
+            "durationMs": 1900,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 6,
+            "file": "motions/Hiyori_m08.motion3.json",
+            "loop": true,
+            "durationMs": 2100,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 7,
+            "file": "motions/Hiyori_m09.motion3.json",
+            "loop": true,
+            "durationMs": 1600,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "Idle",
+            "index": 8,
+            "file": "motions/Hiyori_m10.motion3.json",
+            "loop": true,
+            "durationMs": 4170,
+            "slot": "idle",
+            "direction": ""
+          },
+          {
+            "group": "TapBody",
+            "index": 0,
+            "file": "motions/Hiyori_m04.motion3.json",
+            "loop": true,
+            "durationMs": 4430,
+            "slot": "",
+            "direction": ""
+          },
+          {
+            "group": "Extra",
+            "index": 0,
+            "file": "motions/micoff.motion3.json",
+            "loop": true,
+            "durationMs": 1100,
+            "slot": "",
+            "direction": ""
+          },
+          {
+            "group": "Extra",
+            "index": 1,
+            "file": "motions/micon.motion3.json",
+            "loop": true,
+            "durationMs": 1100,
+            "slot": "",
+            "direction": ""
+          },
+          {
+            "group": "Extra",
+            "index": 2,
+            "file": "motions/singing.motion3.json",
+            "loop": true,
+            "durationMs": 4700,
+            "slot": "sing",
+            "direction": ""
+          }
+        ],
+        "index": {
+          "expression": {
+            "happy": [
+              "happy"
+            ],
+            "sad": [
+              "sad"
+            ],
+            "angry": [
+              "angry"
+            ],
+            "surprised": [
+              "surprised"
+            ],
+            "shy": [
+              "shy"
+            ],
+            "playful": [
+              "playful"
+            ],
+            "thinking": [
+              "think"
+            ]
+          },
+          "motion": {
+            "idle": [
+              {
+                "group": "Idle",
+                "index": 0
+              },
+              {
+                "group": "Idle",
+                "index": 1
+              },
+              {
+                "group": "Idle",
+                "index": 2
+              },
+              {
+                "group": "Idle",
+                "index": 3
+              },
+              {
+                "group": "Idle",
+                "index": 4
+              },
+              {
+                "group": "Idle",
+                "index": 5
+              },
+              {
+                "group": "Idle",
+                "index": 6
+              },
+              {
+                "group": "Idle",
+                "index": 7
+              },
+              {
+                "group": "Idle",
+                "index": 8
+              }
+            ],
+            "sing": [
+              {
+                "group": "Extra",
+                "index": 2
+              }
+            ]
+          },
+          "idle": [
+            {
+              "group": "Idle",
+              "index": 7,
+              "durationMs": 1600
+            },
+            {
+              "group": "Idle",
+              "index": 5,
+              "durationMs": 1900
+            },
+            {
+              "group": "Idle",
+              "index": 6,
+              "durationMs": 2100
+            },
+            {
+              "group": "Idle",
+              "index": 8,
+              "durationMs": 4170
+            },
+            {
+              "group": "Idle",
+              "index": 2,
+              "durationMs": 4200
+            },
+            {
+              "group": "Idle",
+              "index": 0,
+              "durationMs": 4700
+            },
+            {
+              "group": "Idle",
+              "index": 4,
+              "durationMs": 5370
+            },
+            {
+              "group": "Idle",
+              "index": 1,
+              "durationMs": 5930
+            },
+            {
+              "group": "Idle",
+              "index": 3,
+              "durationMs": 8570
+            }
+          ]
+        },
+        "coverage": {
+          "expression": {
+            "happy": 1,
+            "sad": 1,
+            "angry": 1,
+            "surprised": 1,
+            "shy": 1,
+            "playful": 1,
+            "thinking": 1
+          },
+          "motion": {
+            "idle": 9,
+            "sing": 1
+          },
+          "unmappedExpressions": [
+            "bored"
+          ],
+          "unmappedMotions": [
+            "TapBody#0 (motions/Hiyori_m04.motion3.json)",
+            "Extra#0 (motions/micoff.motion3.json)",
+            "Extra#1 (motions/micon.motion3.json)"
+          ],
+          "unmappedExpressionCount": 1,
+          "unmappedMotionCount": 3,
+          "hasLipSync": true,
+          "hasEyeBlink": true
+        },
+        "warnings": [
+          "3 个动作无法从文件名推断语义（可在档案里用 motion_slots 指定）",
+          "1 个表情无法从名字推断语义（可在档案里用 expression_map 指定）"
+        ]
+      }
+    },
+    {
+      "role": "hotaru",
+      "manifest": {
+        "path": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "model3": "D:\\Project\\Yuii\\desktop-pet\\Yuiro\\shell\\src\\renderer\\public\\live2d\\Hotaru Shiomi\\016_casual_spring_01\\016_casual_spring_01.model3.json",
+        "mocVersion": 5,
+        "expressions": [
+          {
+            "name": "exp_angry01",
+            "slot": "angry"
+          },
+          {
+            "name": "exp_angry02",
+            "slot": "angry"
+          },
+          {
+            "name": "exp_angry03",
+            "slot": "angry"
+          },
+          {
+            "name": "exp_anxiety01",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_bsmile01",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_bsmile02",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_cry01",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry02",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry03",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry04",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry05",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry06",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_cry07",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_heart01",
+            "slot": "shy"
+          },
+          {
+            "name": "exp_idle01",
+            "slot": "neutral"
+          },
+          {
+            "name": "exp_idle02",
+            "slot": "neutral"
+          },
+          {
+            "name": "exp_idle03",
+            "slot": "neutral"
+          },
+          {
+            "name": "exp_idle04",
+            "slot": "neutral"
+          },
+          {
+            "name": "exp_kime01",
+            "slot": "playful"
+          },
+          {
+            "name": "exp_kime02",
+            "slot": "playful"
+          },
+          {
+            "name": "exp_kirakira01",
+            "slot": "playful"
+          },
+          {
+            "name": "exp_pale01",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_pale02",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_panic01",
+            "slot": "surprised"
+          },
+          {
+            "name": "exp_panic02",
+            "slot": "surprised"
+          },
+          {
+            "name": "exp_puzzled01",
+            "slot": "thinking"
+          },
+          {
+            "name": "exp_puzzled02",
+            "slot": "thinking"
+          },
+          {
+            "name": "exp_question01",
+            "slot": "thinking"
+          },
+          {
+            "name": "exp_sad01",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_sad02",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_sad03",
+            "slot": "sad"
+          },
+          {
+            "name": "exp_shadow01",
+            "slot": "neutral"
+          },
+          {
+            "name": "exp_shy01",
+            "slot": "shy"
+          },
+          {
+            "name": "exp_sing01",
+            "slot": "playful"
+          },
+          {
+            "name": "exp_smile01",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile02",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile03",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile04",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile05",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile06",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_smile07",
+            "slot": "happy"
+          },
+          {
+            "name": "exp_spin01",
+            "slot": "playful"
+          },
+          {
+            "name": "exp_surprised01",
+            "slot": "surprised"
+          },
+          {
+            "name": "exp_surprised02",
+            "slot": "surprised"
+          },
+          {
+            "name": "exp_thinking01",
+            "slot": "thinking"
+          },
+          {
+            "name": "exp_thinking02",
+            "slot": "thinking"
+          }
+        ],
+        "motions": [
+          {
+            "group": "Motion",
+            "index": 0,
+            "file": "motions/misc_tear01.motion3.json",
+            "loop": false,
+            "durationMs": 2000,
+            "slot": "comfort",
+            "direction": ""
+          },
+          {
+            "group": "Motion",
+            "index": 1,
+            "file": "motions/mtn_angry01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2900,
+            "slot": "angry",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 2,
+            "file": "motions/mtn_angry01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2900,
+            "slot": "angry",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 3,
+            "file": "motions/mtn_angry01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2900,
+            "slot": "angry",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 4,
+            "file": "motions/mtn_bye01_C.motion3.json",
+            "loop": false,
+            "durationMs": 3533,
+            "slot": "greet",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 5,
+            "file": "motions/mtn_bye01_L.motion3.json",
+            "loop": false,
+            "durationMs": 3533,
+            "slot": "greet",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 6,
+            "file": "motions/mtn_bye01_R.motion3.json",
+            "loop": false,
+            "durationMs": 3533,
+            "slot": "greet",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 7,
+            "file": "motions/mtn_check01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2433,
+            "slot": "look",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 8,
+            "file": "motions/mtn_check01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2433,
+            "slot": "look",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 9,
+            "file": "motions/mtn_check01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2433,
+            "slot": "look",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 10,
+            "file": "motions/mtn_cry01_C.motion3.json",
+            "loop": false,
+            "durationMs": 4467,
+            "slot": "comfort",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 11,
+            "file": "motions/mtn_cry01_L.motion3.json",
+            "loop": false,
+            "durationMs": 4467,
+            "slot": "comfort",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 12,
+            "file": "motions/mtn_cry01_R.motion3.json",
+            "loop": false,
+            "durationMs": 4467,
+            "slot": "comfort",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 13,
+            "file": "motions/mtn_denial01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 14,
+            "file": "motions/mtn_denial01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 15,
+            "file": "motions/mtn_denial01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 16,
+            "file": "motions/mtn_denial02_C.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 17,
+            "file": "motions/mtn_denial02_L.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 18,
+            "file": "motions/mtn_denial02_R.motion3.json",
+            "loop": false,
+            "durationMs": 2933,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 19,
+            "file": "motions/mtn_idle01_C.motion3.json",
+            "loop": false,
+            "durationMs": 6000,
+            "slot": "idle",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 20,
+            "file": "motions/mtn_idle01_L.motion3.json",
+            "loop": false,
+            "durationMs": 6000,
+            "slot": "idle",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 21,
+            "file": "motions/mtn_idle01_R.motion3.json",
+            "loop": false,
+            "durationMs": 6000,
+            "slot": "idle",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 22,
+            "file": "motions/mtn_kime01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2967,
+            "slot": "celebrate",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 23,
+            "file": "motions/mtn_kime01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2967,
+            "slot": "celebrate",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 24,
+            "file": "motions/mtn_kime01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2967,
+            "slot": "celebrate",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 25,
+            "file": "motions/mtn_look01_C.motion3.json",
+            "loop": false,
+            "durationMs": 4300,
+            "slot": "look",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 26,
+            "file": "motions/mtn_look01_L.motion3.json",
+            "loop": false,
+            "durationMs": 4300,
+            "slot": "look",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 27,
+            "file": "motions/mtn_look01_R.motion3.json",
+            "loop": false,
+            "durationMs": 4300,
+            "slot": "look",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 28,
+            "file": "motions/mtn_nervous01_C.motion3.json",
+            "loop": false,
+            "durationMs": 3733,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 29,
+            "file": "motions/mtn_nervous01_L.motion3.json",
+            "loop": false,
+            "durationMs": 3733,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 30,
+            "file": "motions/mtn_nervous01_R.motion3.json",
+            "loop": false,
+            "durationMs": 3733,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 31,
+            "file": "motions/mtn_nod01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 32,
+            "file": "motions/mtn_nod01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 33,
+            "file": "motions/mtn_nod01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 34,
+            "file": "motions/mtn_nod02_C.motion3.json",
+            "loop": false,
+            "durationMs": 2100,
+            "slot": "nod",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 35,
+            "file": "motions/mtn_nod02_L.motion3.json",
+            "loop": false,
+            "durationMs": 2100,
+            "slot": "nod",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 36,
+            "file": "motions/mtn_nod02_R.motion3.json",
+            "loop": false,
+            "durationMs": 2100,
+            "slot": "nod",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 37,
+            "file": "motions/mtn_nod03_C.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 38,
+            "file": "motions/mtn_nod03_L.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 39,
+            "file": "motions/mtn_nod03_R.motion3.json",
+            "loop": false,
+            "durationMs": 2567,
+            "slot": "nod",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 40,
+            "file": "motions/mtn_question01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2333,
+            "slot": "thinking",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 41,
+            "file": "motions/mtn_question01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2333,
+            "slot": "thinking",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 42,
+            "file": "motions/mtn_question01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2333,
+            "slot": "thinking",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 43,
+            "file": "motions/mtn_sad01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2767,
+            "slot": "comfort",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 44,
+            "file": "motions/mtn_sad01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2767,
+            "slot": "comfort",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 45,
+            "file": "motions/mtn_sad01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2767,
+            "slot": "comfort",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 46,
+            "file": "motions/mtn_serious01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2167,
+            "slot": "angry",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 47,
+            "file": "motions/mtn_serious01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2167,
+            "slot": "angry",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 48,
+            "file": "motions/mtn_serious01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2167,
+            "slot": "angry",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 49,
+            "file": "motions/mtn_sing01_C.motion3.json",
+            "loop": false,
+            "durationMs": 4100,
+            "slot": "sing",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 50,
+            "file": "motions/mtn_sing01_L.motion3.json",
+            "loop": false,
+            "durationMs": 4100,
+            "slot": "sing",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 51,
+            "file": "motions/mtn_sing01_R.motion3.json",
+            "loop": false,
+            "durationMs": 4100,
+            "slot": "sing",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 52,
+            "file": "motions/mtn_smile01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2633,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 53,
+            "file": "motions/mtn_smile01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2633,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 54,
+            "file": "motions/mtn_smile01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2633,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 55,
+            "file": "motions/mtn_smile02_C.motion3.json",
+            "loop": false,
+            "durationMs": 2700,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 56,
+            "file": "motions/mtn_smile02_L.motion3.json",
+            "loop": false,
+            "durationMs": 2700,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 57,
+            "file": "motions/mtn_smile02_R.motion3.json",
+            "loop": false,
+            "durationMs": 2700,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 58,
+            "file": "motions/mtn_smile03_C.motion3.json",
+            "loop": false,
+            "durationMs": 3100,
+            "slot": "",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 59,
+            "file": "motions/mtn_smile03_L.motion3.json",
+            "loop": false,
+            "durationMs": 3100,
+            "slot": "",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 60,
+            "file": "motions/mtn_smile03_R.motion3.json",
+            "loop": false,
+            "durationMs": 3100,
+            "slot": "",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 61,
+            "file": "motions/mtn_surprised01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2033,
+            "slot": "surprise",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 62,
+            "file": "motions/mtn_surprised01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2033,
+            "slot": "surprise",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 63,
+            "file": "motions/mtn_surprised01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2033,
+            "slot": "surprise",
+            "direction": "R"
+          },
+          {
+            "group": "Motion",
+            "index": 64,
+            "file": "motions/mtn_thinking01_C.motion3.json",
+            "loop": false,
+            "durationMs": 2600,
+            "slot": "thinking",
+            "direction": "C"
+          },
+          {
+            "group": "Motion",
+            "index": 65,
+            "file": "motions/mtn_thinking01_L.motion3.json",
+            "loop": false,
+            "durationMs": 2600,
+            "slot": "thinking",
+            "direction": "L"
+          },
+          {
+            "group": "Motion",
+            "index": 66,
+            "file": "motions/mtn_thinking01_R.motion3.json",
+            "loop": false,
+            "durationMs": 2600,
+            "slot": "thinking",
+            "direction": "R"
+          }
+        ],
+        "index": {
+          "expression": {
+            "angry": [
+              "exp_angry01",
+              "exp_angry02",
+              "exp_angry03"
+            ],
+            "sad": [
+              "exp_anxiety01",
+              "exp_cry01",
+              "exp_cry02",
+              "exp_cry03",
+              "exp_cry04",
+              "exp_cry05",
+              "exp_cry06",
+              "exp_cry07",
+              "exp_pale01",
+              "exp_pale02",
+              "exp_sad01",
+              "exp_sad02",
+              "exp_sad03"
+            ],
+            "happy": [
+              "exp_bsmile01",
+              "exp_bsmile02",
+              "exp_smile01",
+              "exp_smile02",
+              "exp_smile03",
+              "exp_smile04",
+              "exp_smile05",
+              "exp_smile06",
+              "exp_smile07"
+            ],
+            "shy": [
+              "exp_heart01",
+              "exp_shy01"
+            ],
+            "neutral": [
+              "exp_idle01",
+              "exp_idle02",
+              "exp_idle03",
+              "exp_idle04",
+              "exp_shadow01"
+            ],
+            "playful": [
+              "exp_kime01",
+              "exp_kime02",
+              "exp_kirakira01",
+              "exp_sing01",
+              "exp_spin01"
+            ],
+            "surprised": [
+              "exp_panic01",
+              "exp_panic02",
+              "exp_surprised01",
+              "exp_surprised02"
+            ],
+            "thinking": [
+              "exp_puzzled01",
+              "exp_puzzled02",
+              "exp_question01",
+              "exp_thinking01",
+              "exp_thinking02"
+            ]
+          },
+          "motion": {
+            "comfort": [
+              {
+                "group": "Motion",
+                "index": 0
+              },
+              {
+                "group": "Motion",
+                "index": 10
+              },
+              {
+                "group": "Motion",
+                "index": 11
+              },
+              {
+                "group": "Motion",
+                "index": 12
+              },
+              {
+                "group": "Motion",
+                "index": 43
+              },
+              {
+                "group": "Motion",
+                "index": 44
+              },
+              {
+                "group": "Motion",
+                "index": 45
+              }
+            ],
+            "angry": [
+              {
+                "group": "Motion",
+                "index": 1
+              },
+              {
+                "group": "Motion",
+                "index": 2
+              },
+              {
+                "group": "Motion",
+                "index": 3
+              },
+              {
+                "group": "Motion",
+                "index": 46
+              },
+              {
+                "group": "Motion",
+                "index": 47
+              },
+              {
+                "group": "Motion",
+                "index": 48
+              }
+            ],
+            "greet": [
+              {
+                "group": "Motion",
+                "index": 4
+              },
+              {
+                "group": "Motion",
+                "index": 5
+              },
+              {
+                "group": "Motion",
+                "index": 6
+              }
+            ],
+            "look": [
+              {
+                "group": "Motion",
+                "index": 7
+              },
+              {
+                "group": "Motion",
+                "index": 8
+              },
+              {
+                "group": "Motion",
+                "index": 9
+              },
+              {
+                "group": "Motion",
+                "index": 25
+              },
+              {
+                "group": "Motion",
+                "index": 26
+              },
+              {
+                "group": "Motion",
+                "index": 27
+              }
+            ],
+            "idle": [
+              {
+                "group": "Motion",
+                "index": 19
+              },
+              {
+                "group": "Motion",
+                "index": 20
+              },
+              {
+                "group": "Motion",
+                "index": 21
+              }
+            ],
+            "celebrate": [
+              {
+                "group": "Motion",
+                "index": 22
+              },
+              {
+                "group": "Motion",
+                "index": 23
+              },
+              {
+                "group": "Motion",
+                "index": 24
+              }
+            ],
+            "nod": [
+              {
+                "group": "Motion",
+                "index": 31
+              },
+              {
+                "group": "Motion",
+                "index": 32
+              },
+              {
+                "group": "Motion",
+                "index": 33
+              },
+              {
+                "group": "Motion",
+                "index": 34
+              },
+              {
+                "group": "Motion",
+                "index": 35
+              },
+              {
+                "group": "Motion",
+                "index": 36
+              },
+              {
+                "group": "Motion",
+                "index": 37
+              },
+              {
+                "group": "Motion",
+                "index": 38
+              },
+              {
+                "group": "Motion",
+                "index": 39
+              }
+            ],
+            "thinking": [
+              {
+                "group": "Motion",
+                "index": 40
+              },
+              {
+                "group": "Motion",
+                "index": 41
+              },
+              {
+                "group": "Motion",
+                "index": 42
+              },
+              {
+                "group": "Motion",
+                "index": 64
+              },
+              {
+                "group": "Motion",
+                "index": 65
+              },
+              {
+                "group": "Motion",
+                "index": 66
+              }
+            ],
+            "sing": [
+              {
+                "group": "Motion",
+                "index": 49
+              },
+              {
+                "group": "Motion",
+                "index": 50
+              },
+              {
+                "group": "Motion",
+                "index": 51
+              }
+            ],
+            "surprise": [
+              {
+                "group": "Motion",
+                "index": 61
+              },
+              {
+                "group": "Motion",
+                "index": 62
+              },
+              {
+                "group": "Motion",
+                "index": 63
+              }
+            ]
+          },
+          "idle": [
+            {
+              "group": "Motion",
+              "index": 19,
+              "durationMs": 6000
+            },
+            {
+              "group": "Motion",
+              "index": 20,
+              "durationMs": 6000
+            },
+            {
+              "group": "Motion",
+              "index": 21,
+              "durationMs": 6000
+            }
+          ]
+        },
+        "coverage": {
+          "expression": {
+            "angry": 3,
+            "sad": 13,
+            "happy": 9,
+            "shy": 2,
+            "neutral": 5,
+            "playful": 5,
+            "surprised": 4,
+            "thinking": 5
+          },
+          "motion": {
+            "comfort": 7,
+            "angry": 6,
+            "greet": 3,
+            "look": 6,
+            "idle": 3,
+            "celebrate": 3,
+            "nod": 9,
+            "thinking": 6,
+            "sing": 3,
+            "surprise": 3
+          },
+          "unmappedExpressions": [],
+          "unmappedMotions": [
+            "Motion#13 (motions/mtn_denial01_C.motion3.json)",
+            "Motion#14 (motions/mtn_denial01_L.motion3.json)",
+            "Motion#15 (motions/mtn_denial01_R.motion3.json)",
+            "Motion#16 (motions/mtn_denial02_C.motion3.json)",
+            "Motion#17 (motions/mtn_denial02_L.motion3.json)",
+            "Motion#18 (motions/mtn_denial02_R.motion3.json)",
+            "Motion#28 (motions/mtn_nervous01_C.motion3.json)",
+            "Motion#29 (motions/mtn_nervous01_L.motion3.json)",
+            "Motion#30 (motions/mtn_nervous01_R.motion3.json)",
+            "Motion#52 (motions/mtn_smile01_C.motion3.json)",
+            "Motion#53 (motions/mtn_smile01_L.motion3.json)",
+            "Motion#54 (motions/mtn_smile01_R.motion3.json)",
+            "Motion#55 (motions/mtn_smile02_C.motion3.json)",
+            "Motion#56 (motions/mtn_smile02_L.motion3.json)",
+            "Motion#57 (motions/mtn_smile02_R.motion3.json)",
+            "Motion#58 (motions/mtn_smile03_C.motion3.json)",
+            "Motion#59 (motions/mtn_smile03_L.motion3.json)",
+            "Motion#60 (motions/mtn_smile03_R.motion3.json)"
+          ],
+          "unmappedExpressionCount": 0,
+          "unmappedMotionCount": 18,
+          "hasLipSync": true,
+          "hasEyeBlink": true
+        },
+        "warnings": [
+          "18 个动作无法从文件名推断语义（可在档案里用 motion_slots 指定）"
+        ]
+      }
+    }
+  ]
+}

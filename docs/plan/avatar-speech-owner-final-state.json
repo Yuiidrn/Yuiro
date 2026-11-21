@@ -1,0 +1,7 @@
+{
+  "role": "hotaru",
+  "mic": false,
+  "presence": "idle",
+  "latestShell": true,
+  "scope": "post-engine restart readback; no microphone or provider request, no new subjective acceptance"
+}

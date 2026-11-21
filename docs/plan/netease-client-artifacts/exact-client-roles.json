@@ -1,0 +1,32 @@
+{
+  "candidate_source": "real API; controlled projection, no LLM claim",
+  "input": "native Windows mouse",
+  "roles": [
+    {
+      "role": "hiyori",
+      "song_id": "36308916",
+      "native_pick_ms": 5610,
+      "play_pause_resume": true,
+      "builtin_stop_did_not_control_client": true,
+      "switch_to": "hotaru",
+      "switch_ms": 2482,
+      "switch_paused_owned_song": true,
+      "switch_cleared_card_and_owner": true,
+      "stale_ws_control_refused": true,
+      "old_detached_key_tested": false
+    },
+    {
+      "role": "hotaru",
+      "song_id": "36308916",
+      "native_pick_ms": 2324,
+      "play_pause_resume": true,
+      "builtin_stop_did_not_control_client": true,
+      "switch_to": "hiyori",
+      "switch_ms": 1912,
+      "switch_paused_owned_song": true,
+      "switch_cleared_card_and_owner": true,
+      "stale_ws_control_refused": true,
+      "old_detached_key_tested": true
+    }
+  ]
+}

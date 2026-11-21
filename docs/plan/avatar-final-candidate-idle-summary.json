@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-10",
+  "scope": "current candidate 300 seconds per role; rAF not GPU time; no audio or human naturalness rating",
+  "summary": [
+    {
+      "role": "hotaru",
+      "seconds": 300.1648000000119,
+      "frames": {
+        "count": 33742,
+        "p50": 6.100000000093132,
+        "p95": 12.200000000186265,
+        "max": 24.300000000046566
+      },
+      "pixelSamples": 300,
+      "nonempty": 300,
+      "uniqueAlphaHashes": 300,
+      "visibility": [
+        "visible"
+      ],
+      "presence": [
+        "idle"
+      ],
+      "unexpectedFixedIdleSamples": 0
+    },
+    {
+      "role": "hiyori",
+      "seconds": 300.1195,
+      "frames": {
+        "count": 49496,
+        "p50": 6.099999999860302,
+        "p95": 6.199999999953434,
+        "max": 18.300000000046566
+      },
+      "pixelSamples": 300,
+      "nonempty": 300,
+      "uniqueAlphaHashes": 300,
+      "visibility": [
+        "visible"
+      ],
+      "presence": [
+        "idle"
+      ],
+      "unexpectedFixedIdleSamples": 0
+    }
+  ],
+  "restored": "hotaru",
+  "fingerprintedFilesUnchanged": true,
+  "restoredRuntime": {
+    "role": "hotaru",
+    "recording": false,
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794242848648
+    },
+    "visible": "visible"
+  }
+}

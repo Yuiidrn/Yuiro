@@ -1,0 +1,17 @@
+{
+  "final_ui": {
+    "role": "hiyori",
+    "model": true,
+    "ws": 1,
+    "cardCleared": true,
+    "ownerCleared": true
+  },
+  "reverse_stale_detached_client_play_refused": true,
+  "client_song_id": "36308916",
+  "client_status": "Paused",
+  "can_stop": false,
+  "user_confirmation": "原版正常，最后无残留",
+  "python_passed": 904,
+  "python_skipped": 0,
+  "frontend_typecheck_build": true
+}

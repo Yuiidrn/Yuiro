@@ -1,0 +1,92 @@
+{
+  "scope": "real current text Agent/TTS and formal character switching while actual WebAudio active; no page reload or microphone; source.stop calls are not acoustic stop latency",
+  "rows": [
+    {
+      "source": "hiyori",
+      "target": "hotaru",
+      "before": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0.00044155106297694147,
+        "presence": "speaking",
+        "avatar": {
+          "expression": "",
+          "motion": "Idle",
+          "motionIndex": 0,
+          "until": 0
+        },
+        "mic": false
+      },
+      "activeAudioBeforeSwitch": {
+        "at": 543230.9000000358,
+        "rows": [
+          {
+            "id": 0,
+            "start": 0,
+            "end": 10.161625,
+            "clock": 0.2613333333333333
+          }
+        ]
+      },
+      "audioAfterSwitch": {
+        "sameDocument": true,
+        "rows": [
+          {
+            "id": 0,
+            "start": 0,
+            "end": 10.161625,
+            "clock": 1.5813333333333333,
+            "stops": [
+              {
+                "clock": 0.30933333333333335,
+                "wall": 543280.6000000238
+              }
+            ]
+          }
+        ]
+      },
+      "final": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "presence": "idle",
+        "avatar": {
+          "expression": "exp_idle01",
+          "motion": "",
+          "motionIndex": null,
+          "until": 0
+        },
+        "mic": false
+      },
+      "checks": {
+        "sameDocument": true,
+        "oldNodeStopped": true,
+        "targetModel": true,
+        "mouthZero": true,
+        "idle": true,
+        "performanceReleased": true,
+        "micClosed": true
+      },
+      "passed": true,
+      "postRunRawChecks": {
+        "oldNodesQuiescent": true
+      }
+    }
+  ],
+  "hotaruConfigUnchanged": true,
+  "errorType": "RuntimeError",
+  "restored": {
+    "role": "hotaru",
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "mouth": 0,
+    "presence": "idle",
+    "avatar": {
+      "expression": "",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0
+    },
+    "mic": false
+  },
+  "hotaruFinalConfigUnchanged": true
+}

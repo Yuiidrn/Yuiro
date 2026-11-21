@@ -1,0 +1,108 @@
+{
+  "kind": "real Live2D/native connector + real Agent -> client UI search -> card -> official playback/pause",
+  "baseline_paused": true,
+  "roles": [
+    {
+      "role": "hiyori",
+      "line_no_background": true,
+      "one_open_curve": true,
+      "curve_click_through": true,
+      "typography_hot_update": true,
+      "mode_switch": true,
+      "agent_search_seconds": 6.25,
+      "candidates": [
+        {
+          "song_id": "36308916",
+          "name": "Monody",
+          "artist": "TheFatRat / Laura Brehm",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "442495638",
+          "name": "Monody (Radio Edit)",
+          "artist": "TheFatRat / Laura Brehm",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "427373450",
+          "name": "Monody (Floatinurboat Remix)",
+          "artist": "Floatinurboat",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "1446452470",
+          "name": "Monody (A FatRat Orchestration)",
+          "artist": "Rush Garcia",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "2042008908",
+          "name": "Monday",
+          "artist": "窦靖童",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "2689107828",
+          "name": "Monody (Rolling Sky Version)",
+          "artist": "Cheetah Mobile / TheFatRat",
+          "source": "netease_client_ui"
+        }
+      ],
+      "playing_original": true,
+      "paused": true,
+      "no_builtin_playback": true
+    },
+    {
+      "role": "hotaru",
+      "line_no_background": true,
+      "one_open_curve": true,
+      "curve_click_through": true,
+      "typography_hot_update": true,
+      "mode_switch": true,
+      "agent_search_seconds": 5.05,
+      "candidates": [
+        {
+          "song_id": "36308916",
+          "name": "Monody",
+          "artist": "TheFatRat / Laura Brehm",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "442495638",
+          "name": "Monody (Radio Edit)",
+          "artist": "TheFatRat / Laura Brehm",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "427373450",
+          "name": "Monody (Floatinurboat Remix)",
+          "artist": "Floatinurboat",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "1446452470",
+          "name": "Monody (A FatRat Orchestration)",
+          "artist": "Rush Garcia",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "2042008908",
+          "name": "Monday",
+          "artist": "窦靖童",
+          "source": "netease_client_ui"
+        },
+        {
+          "song_id": "2689107828",
+          "name": "Monody (Rolling Sky Version)",
+          "artist": "Cheetah Mobile / TheFatRat",
+          "source": "netease_client_ui"
+        }
+      ],
+      "playing_original": true,
+      "paused": true,
+      "no_builtin_playback": true
+    }
+  ],
+  "role_cleanup": true,
+  "preferences_restored": true
+}

@@ -1,0 +1,99 @@
+{
+  "scope": "actual built renderer handler injection with 300ms silent WAV; audio frame to avatar status snapshot, not network/LLM/TTS/end-to-end or visual draw latency",
+  "samples": [
+    {
+      "startMs": 18.600000023841858,
+      "endMs": 842.5
+    },
+    {
+      "startMs": 1.600000023841858,
+      "endMs": 309.69999998807907
+    },
+    {
+      "startMs": 1.699999988079071,
+      "endMs": 296.5
+    },
+    {
+      "startMs": 1.199999988079071,
+      "endMs": 297.30000001192093
+    },
+    {
+      "startMs": 1.399999976158142,
+      "endMs": 303.5
+    },
+    {
+      "startMs": 1.5,
+      "endMs": 308.69999998807907
+    },
+    {
+      "startMs": 4.199999988079071,
+      "endMs": 294.9000000357628
+    },
+    {
+      "startMs": 1.399999976158142,
+      "endMs": 303.19999998807907
+    },
+    {
+      "startMs": 1.4000000357627869,
+      "endMs": 307.80000001192093
+    },
+    {
+      "startMs": 1.2000000476837158,
+      "endMs": 314.2000000476837
+    },
+    {
+      "startMs": 1.300000011920929,
+      "endMs": 312.10000002384186
+    },
+    {
+      "startMs": 3.700000047683716,
+      "endMs": 308.5
+    },
+    {
+      "startMs": 1.4000000357627869,
+      "endMs": 302
+    },
+    {
+      "startMs": 1.300000011920929,
+      "endMs": 305.10000002384186
+    },
+    {
+      "startMs": 1.4000000357627869,
+      "endMs": 296.19999998807907
+    },
+    {
+      "startMs": 1.199999988079071,
+      "endMs": 298.10000002384186
+    },
+    {
+      "startMs": 1.100000023841858,
+      "endMs": 302.4000000357628
+    },
+    {
+      "startMs": 1.100000023841858,
+      "endMs": 302.10000002384186
+    },
+    {
+      "startMs": 1.199999988079071,
+      "endMs": 308.30000001192093
+    },
+    {
+      "startMs": 1.199999988079071,
+      "endMs": 297.19999998807907
+    }
+  ],
+  "frameToSpeakingMs": {
+    "n": 20,
+    "p50": 1.399999976158142,
+    "p95": 4.199999988079071,
+    "max": 18.600000023841858
+  },
+  "frameToIdleMs": {
+    "n": 20,
+    "p50": 303.19999998807907,
+    "p95": 314.2000000476837,
+    "max": 842.5
+  },
+  "percentileMethod": "nearest rank; all 20 samples including first",
+  "role": "hiyori"
+}

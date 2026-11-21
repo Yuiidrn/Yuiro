@@ -1,0 +1,85 @@
+{
+  "scope": "actual Hotaru local preview expression candidates, about 700ms settle; no config change or live pet performance; not full semantic certification",
+  "rows": [
+    {
+      "expression": "exp_puzzled01",
+      "state": {
+        "expression": "exp_puzzled01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_puzzled01.png"
+    },
+    {
+      "expression": "exp_thinking01",
+      "state": {
+        "expression": "exp_thinking01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_thinking01.png"
+    },
+    {
+      "expression": "exp_anxiety01",
+      "state": {
+        "expression": "exp_anxiety01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_anxiety01.png"
+    },
+    {
+      "expression": "exp_sad01",
+      "state": {
+        "expression": "exp_sad01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_sad01.png"
+    },
+    {
+      "expression": "exp_panic01",
+      "state": {
+        "expression": "exp_panic01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_panic01.png"
+    },
+    {
+      "expression": "exp_surprised01",
+      "state": {
+        "expression": "exp_surprised01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_surprised01.png"
+    },
+    {
+      "expression": "exp_bsmile01",
+      "state": {
+        "expression": "exp_bsmile01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_bsmile01.png"
+    },
+    {
+      "expression": "exp_smile01",
+      "state": {
+        "expression": "exp_smile01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "frame": "docs\\plan\\avatar-expression-candidates\\exp_smile01.png"
+    }
+  ]
+}

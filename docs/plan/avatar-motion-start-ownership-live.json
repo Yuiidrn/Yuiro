@@ -1,0 +1,70 @@
+{
+  "scope": "Actual built local preview; normal and explicit-cancel state lifecycle. Deterministic delayed SDK completion covered separately by production-function test; no microphone/cloud/visual rating.",
+  "rows": [
+    {
+      "role": "hiyori",
+      "cancelled": false,
+      "started": {
+        "expression": "",
+        "motion": "Idle",
+        "motionIndex": 7,
+        "until": 1794318131217
+      },
+      "ended": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    },
+    {
+      "role": "hiyori",
+      "cancelled": true,
+      "started": {
+        "expression": "",
+        "motion": "Idle",
+        "motionIndex": 7,
+        "until": 1794318134088
+      },
+      "ended": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    },
+    {
+      "role": "hotaru",
+      "cancelled": false,
+      "started": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 0,
+        "until": 1794318137608
+      },
+      "ended": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    },
+    {
+      "role": "hotaru",
+      "cancelled": true,
+      "started": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 0,
+        "until": 1794318140886
+      },
+      "ended": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      }
+    }
+  ],
+  "restoredPreview": "hotaru"
+}

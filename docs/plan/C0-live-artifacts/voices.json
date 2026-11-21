@@ -1,0 +1,290 @@
+{
+  "kind": "real_configured_LLM_TTS_renderer_playback_and_switch",
+  "limits": "AudioContext application playback, not physical speaker measurement or subjective approval",
+  "samples": [
+    {
+      "case": "voice-1-hiyori",
+      "role": "hiyori",
+      "config": {
+        "id": "hiyori",
+        "revision": 18,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "d32a13ada0f172728a59c10e5961afcc254d8c6b1999450e7b7866b60479d363",
+          "persona": "4b0420c60e48e7bf0fc4043637d5f0dd55afd2bff44ed0d310a124f8ab4b91a0",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "82404584a4cc8bf75f6c7900e796eae6cdef74f3094a38d334d3fa471f4db0de",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "siliconflow",
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "model": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "switch_trigger_pet_clock_ms": 975338.5,
+      "switch_target": "hotaru",
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 965275.9000000004,
+          "chars": 34
+        },
+        {
+          "type": "tts:reply_audio",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 974802.8000000007,
+          "wav_chars": 1340700
+        },
+        {
+          "type": "start",
+          "id": 9,
+          "role": "hiyori",
+          "origin_role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 974809.5,
+          "duration_s": 11.4
+        },
+        {
+          "type": "stop",
+          "id": 9,
+          "at": 975351.3000000007,
+          "role": "hiyori"
+        },
+        {
+          "type": "character:switching",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 975351.7000000011
+        },
+        {
+          "type": "ended",
+          "id": 9,
+          "at": 975357,
+          "role": "hiyori"
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 19,
+        "session": "45c26972d53e49cb9e1e1d9b787b8278",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    },
+    {
+      "case": "voice-2-hotaru",
+      "role": "hotaru",
+      "config": {
+        "id": "hotaru",
+        "revision": 19,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "5749dd86e57170acc0abb52c6269effd75f2f57696f98d5826b301c0acc4d98f",
+          "persona": "59a98609d13a66b0344ea0ced2ce366c68b85a2b9818da05a2c9a26126fc1abc",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "98cbce8a2d732540c5b651f1827caf2cb423c898d2f7eadd6bc774350fca2b4b",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "siliconflow",
+        "voice": "zh-CN-XiaoyiNeural",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      },
+      "switch_trigger_pet_clock_ms": 980285.9000000004,
+      "switch_target": "hiyori",
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 977948.3000000007,
+          "chars": 8
+        },
+        {
+          "type": "tts:reply_audio",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 979704.2000000011,
+          "wav_chars": 117992
+        },
+        {
+          "type": "tts:reply_end",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 979704.4000000004
+        },
+        {
+          "type": "start",
+          "id": 10,
+          "role": "hotaru",
+          "origin_role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 979711,
+          "duration_s": 1.8399773242630386
+        },
+        {
+          "type": "stop",
+          "id": 10,
+          "at": 980299.4000000004,
+          "role": "hotaru"
+        },
+        {
+          "type": "character:switching",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 980301
+        },
+        {
+          "type": "ended",
+          "id": 10,
+          "at": 980307.7000000011,
+          "role": "hotaru"
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 20,
+        "session": "b6ac2310e2bc43e990e63a8c5d99b2c0",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    },
+    {
+      "case": "voice-3-hiyori",
+      "role": "hiyori",
+      "config": {
+        "id": "hiyori",
+        "revision": 20,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "d32a13ada0f172728a59c10e5961afcc254d8c6b1999450e7b7866b60479d363",
+          "persona": "4b0420c60e48e7bf0fc4043637d5f0dd55afd2bff44ed0d310a124f8ab4b91a0",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "82404584a4cc8bf75f6c7900e796eae6cdef74f3094a38d334d3fa471f4db0de",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "siliconflow",
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "model": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "diagnostic_stop": true,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 983329.3000000007,
+          "chars": 8
+        },
+        {
+          "type": "tts:reply_audio",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 989492.1000000015,
+          "wav_chars": 335592
+        },
+        {
+          "type": "tts:reply_end",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 989492.2000000011
+        },
+        {
+          "type": "start",
+          "id": 11,
+          "role": "hiyori",
+          "origin_role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 989498,
+          "duration_s": 5.239977324263038
+        },
+        {
+          "type": "stop",
+          "id": 11,
+          "at": 989654.3000000007,
+          "role": "hiyori"
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 20,
+        "session": "b6ac2310e2bc43e990e63a8c5d99b2c0",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    }
+  ]
+}

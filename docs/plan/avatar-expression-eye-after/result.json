@@ -1,0 +1,107 @@
+{
+  "scope": "actual native Cubism Model.update boundary parameter values, local preview only, no microphone or service calls; sampled neutral/selected expression/reset",
+  "rows": [
+    {
+      "role": "hiyori",
+      "phase": "neutral",
+      "expression": "",
+      "frames": 1351,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hiyori-neutral.png",
+      "passed": true
+    },
+    {
+      "role": "hiyori",
+      "phase": "expression",
+      "expression": "happy",
+      "frames": 199,
+      "sampleSeconds": 1.2,
+      "leftRange": [
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "rightRange": [
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hiyori-expression.png",
+      "passed": true
+    },
+    {
+      "role": "hiyori",
+      "phase": "reset",
+      "expression": "",
+      "frames": 1354,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hiyori-reset.png",
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "neutral",
+      "expression": "",
+      "frames": 1174,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hotaru-neutral.png",
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "expression",
+      "expression": "exp_bsmile01",
+      "frames": 174,
+      "sampleSeconds": 1.2,
+      "leftRange": [
+        0,
+        0
+      ],
+      "rightRange": [
+        0,
+        0
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hotaru-expression.png",
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "reset",
+      "expression": "",
+      "frames": 1244,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-after\\hotaru-reset.png",
+      "passed": true
+    }
+  ]
+}

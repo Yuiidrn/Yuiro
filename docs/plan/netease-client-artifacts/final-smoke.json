@@ -1,0 +1,27 @@
+{
+  "engine_shell_final": {
+    "role": "hiyori",
+    "ws": 1,
+    "model": true,
+    "cardCleared": true
+  },
+  "official_read_only_state": {
+    "aumid": "cloudmusic.exe",
+    "status": "Paused",
+    "title": "Monody",
+    "artist": "TheFatRat",
+    "position": 0,
+    "can_play": true,
+    "can_pause": false,
+    "can_stop": false
+  },
+  "user_audio_confirmation": "原版正常，暂停后无声",
+  "tests": {
+    "python_passed": 883,
+    "python_skipped": 0,
+    "typecheck": true,
+    "build": true,
+    "detached_contour_c0_checks": true
+  },
+  "scope": "existing Runtime; no default official backend; no silent version or player replacement"
+}

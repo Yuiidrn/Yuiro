@@ -1,0 +1,61 @@
+{
+  "kind": "native song selection; fixture status is NOT real playback acceptance",
+  "preflight": {
+    "status": "need_login",
+    "message": "网易云登录已失效。请让用户用手机网易云 App 扫码登录（桌宠会弹出二维码），登录后即可继续。"
+  },
+  "roles": [
+    {
+      "role": "hiyori",
+      "fixture": true,
+      "real_playback_accepted": false,
+      "card": {
+        "kind": "song",
+        "count": 1,
+        "first": {
+          "name": "UI 路由验收曲目",
+          "artist": "测试样本",
+          "song_id": "fixture-song-001",
+          "encrypted_id": "fixture-encrypted-001"
+        }
+      },
+      "sent": [
+        {
+          "type": "media:play",
+          "name": "UI 路由验收曲目",
+          "kind": "song",
+          "encrypted_id": "fixture-encrypted-001",
+          "song_id": "fixture-song-001"
+        }
+      ],
+      "card_cleared": true,
+      "status": "native click and exact IDs passed; fixture intercepted before network"
+    },
+    {
+      "role": "hotaru",
+      "fixture": true,
+      "real_playback_accepted": false,
+      "card": {
+        "kind": "song",
+        "count": 1,
+        "first": {
+          "name": "UI 路由验收曲目",
+          "artist": "测试样本",
+          "song_id": "fixture-song-001",
+          "encrypted_id": "fixture-encrypted-001"
+        }
+      },
+      "sent": [
+        {
+          "type": "media:play",
+          "name": "UI 路由验收曲目",
+          "kind": "song",
+          "encrypted_id": "fixture-encrypted-001",
+          "song_id": "fixture-song-001"
+        }
+      ],
+      "card_cleared": true,
+      "status": "native click and exact IDs passed; fixture intercepted before network"
+    }
+  ]
+}

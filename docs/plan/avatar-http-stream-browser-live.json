@@ -1,0 +1,192 @@
+{
+  "streamingScheduling": true,
+  "scope": "production composable transpiled in existing Electron page, real WebAudio and localhost WS, production _play_audio and VoicePipeline; isolated role fixtures, silent WAV with synthetic nonzero mouth envelope; no microphone/cloud/model-switch or acoustic proof",
+  "results": [
+    {
+      "role": "hiyori",
+      "interrupt": false,
+      "busyAfterSentAll": true,
+      "busyAfterFinished": false,
+      "browser": {
+        "events": [
+          "tts:audio",
+          "tts:end",
+          "tts:playback_start",
+          "tts:playback_end",
+          "tts:playback_cancelled",
+          "mic:stop"
+        ],
+        "mouthAfterInterrupt": null,
+        "finalMouth": 0
+      },
+      "receipts": [
+        {
+          "type": "audio:playback_started",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433500.9616734
+        },
+        {
+          "type": "audio:playback_finished",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433501.936231
+        }
+      ]
+    },
+    {
+      "role": "hiyori",
+      "interrupt": true,
+      "busyAfterSentAll": true,
+      "busyBeforeVad": true,
+      "vadAt": 433502.1815874,
+      "busyAfterFinished": false,
+      "browser": {
+        "events": [
+          "tts:audio",
+          "tts:end",
+          "tts:playback_start",
+          "vad:state",
+          "tts:playback_cancelled",
+          "tts:interrupted",
+          "tts:playback_cancelled",
+          "mic:stop"
+        ],
+        "mouthAfterInterrupt": 0,
+        "finalMouth": 0
+      },
+      "receipts": [
+        {
+          "type": "audio:playback_started",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433502.0264499
+        },
+        {
+          "type": "audio:playback_finished",
+          "accepted": false,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433502.1948134
+        }
+      ],
+      "vadToFinishReceiptMs": 13.23
+    },
+    {
+      "role": "hotaru",
+      "interrupt": false,
+      "busyAfterSentAll": true,
+      "busyAfterFinished": false,
+      "browser": {
+        "events": [
+          "tts:audio",
+          "tts:end",
+          "tts:playback_start",
+          "tts:playback_end",
+          "tts:playback_cancelled",
+          "mic:stop"
+        ],
+        "mouthAfterInterrupt": null,
+        "finalMouth": 0
+      },
+      "receipts": [
+        {
+          "type": "audio:playback_started",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433502.2873109
+        },
+        {
+          "type": "audio:playback_finished",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433503.2753582
+        }
+      ]
+    },
+    {
+      "role": "hotaru",
+      "interrupt": true,
+      "busyAfterSentAll": true,
+      "busyBeforeVad": true,
+      "vadAt": 433503.531667,
+      "busyAfterFinished": false,
+      "browser": {
+        "events": [
+          "tts:audio",
+          "tts:end",
+          "tts:playback_start",
+          "vad:state",
+          "tts:playback_cancelled",
+          "tts:interrupted",
+          "tts:playback_cancelled",
+          "mic:stop"
+        ],
+        "mouthAfterInterrupt": 0,
+        "finalMouth": 0
+      },
+      "receipts": [
+        {
+          "type": "audio:playback_started",
+          "accepted": true,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433503.3750595
+        },
+        {
+          "type": "audio:playback_finished",
+          "accepted": false,
+          "keys": [
+            "character_id",
+            "generation",
+            "playback_id",
+            "session_id",
+            "type"
+          ],
+          "at": 433503.5398963
+        }
+      ],
+      "vadToFinishReceiptMs": 8.23
+    }
+  ]
+}

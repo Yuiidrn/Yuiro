@@ -1,0 +1,167 @@
+{
+  "scope": "three actual production FishAudioProvider HTTP streaming requests using unchanged Hotaru voice/model/latency/speed, fixed short Japanese text; independently decodeable WAV chunks with RMS; no translation, playback or microphone; not controlled A/B or latency SLA",
+  "rows": [
+    {
+      "sample": 1,
+      "firstPlayableChunkMs": 1580.9,
+      "completeMs": 2555.0,
+      "durationMs": 3436.6,
+      "chunks": [
+        {
+          "ms": 1580.9,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1771.9,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1856.3,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2261.7,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2485.0,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2542.5,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2552.2,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2552.8,
+          "frames": 3376,
+          "sampleRate": 44100,
+          "rmsSlices": 4
+        }
+      ]
+    },
+    {
+      "sample": 2,
+      "firstPlayableChunkMs": 855.9,
+      "completeMs": 1983.8,
+      "durationMs": 3390.1,
+      "chunks": [
+        {
+          "ms": 855.9,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1100.8,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1207.7,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1710.4,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1791.5,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1940.9,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1981.2,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1981.7,
+          "frames": 1328,
+          "sampleRate": 44100,
+          "rmsSlices": 2
+        }
+      ]
+    },
+    {
+      "sample": 3,
+      "firstPlayableChunkMs": 1112.6,
+      "completeMs": 2128.0,
+      "durationMs": 3343.7,
+      "chunks": [
+        {
+          "ms": 1112.6,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1329.3,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1521.4,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 1875.2,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2064.6,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2124.3,
+          "frames": 21168,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        },
+        {
+          "ms": 2125.4,
+          "frames": 20448,
+          "sampleRate": 44100,
+          "rmsSlices": 24
+        }
+      ]
+    }
+  ]
+}

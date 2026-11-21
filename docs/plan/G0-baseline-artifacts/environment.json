@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-10-23T03:20:31.450606+00:00",
+  "head": "e2af077b03f204a4394b9eaedc530f4d337c4c9e",
+  "dirty": "M docs/goal/2026-10-23-unified-architecture-engineering-goal.md\n M docs/goal/README.md\n?? docs/plan/G0-baseline-artifacts/\n?? scripts/diag/g0_baseline.py\n?? scripts/diag/g0_frontend_probe.cjs",
+  "python": "3.13.11 (main, Jan 14 2026, 19:29:23) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "ports": {
+    "8200": {
+      "tcp_listening": false
+    },
+    "5000": {
+      "tcp_listening": false
+    },
+    "5005": {
+      "tcp_listening": false
+    },
+    "9100": {
+      "tcp_listening": false
+    }
+  },
+  "config_file_present": true,
+  "config_nonsecret_allowlist": {
+    "server": {
+      "host": "127.0.0.1",
+      "port": 8200
+    },
+    "llm": {
+      "provider": "qwen",
+      "model": "qwen3.8-flash"
+    },
+    "hard_of_hearing": {
+      "provider": "silero",
+      "barge_in_enabled": false
+    },
+    "asr": {
+      "provider": "funasr-sensevoice",
+      "model": "iic/SenseVoiceSmall",
+      "device": "cuda"
+    },
+    "tts": {
+      "provider": "siliconflow",
+      "stream_llm": true,
+      "segment_streaming": true,
+      "reply_tts_enabled": true
+    },
+    "language": {
+      "display_language": "zh",
+      "speak_language": "zh"
+    },
+    "memory": {
+      "embedder": "models/bge-m3",
+      "backend": "sqlite-vec"
+    },
+    "systemd": {
+      "backend": "native",
+      "approval_mode": "auto"
+    }
+  },
+  "limits": "TOML values only; env overrides, credentials and live app state not inspected"
+}

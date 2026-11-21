@@ -1,0 +1,19 @@
+{
+  "single_field_baseline_matches": [
+    {
+      "field": "reply_tts_enabled",
+      "baseline_field_present": true,
+      "baseline_value_equals_shared": true
+    },
+    {
+      "field": "reply_tts_enabled",
+      "baseline_field_present": true,
+      "baseline_value_equals_shared": true
+    },
+    {
+      "field": "reply_tts_enabled",
+      "baseline_field_present": true,
+      "baseline_value_equals_shared": true
+    }
+  ]
+}

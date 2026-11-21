@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "ok": true,
+  "textLength": 94,
+  "durationMs": 1156,
+  "note": "",
+  "scope": "existing 6.42s reference audio through running ASR-only endpoint; not microphone/VAD/LLM/Avatar",
+  "fixture": "assets\\voices\\Model\\Neuro\\参考音频.wav",
+  "wallMs": 1259
+}

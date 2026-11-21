@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "surface": "Electron built dev.html via CDP 9222",
+  "models": 2,
+  "model_image_widths": [
+    180,
+    180
+  ],
+  "motion_thumbnails": 12,
+  "expression_thumbnails": 1,
+  "hiyori_motion_thumbnails": 1,
+  "agent_page_cards": 12,
+  "agent_preview_thumbnails": 1,
+  "desktop_preview_enabled": false,
+  "config_unchanged_after_preview": true,
+  "viewport_css_px": 968,
+  "document_width_css_px": 968,
+  "stage_height_css_px": 367.22357177734375,
+  "click_pool_panel": true,
+  "python_tests": {
+    "passed": 956,
+    "seconds": 62.6
+  },
+  "checks": [
+    "shell typecheck",
+    "shell build",
+    "avatar_expression_baseline_test.cjs",
+    "targeted ruff",
+    "git diff --check"
+  ],
+  "limits": [
+    "Static samples at approximately 450ms, not full-motion visual review",
+    "No new cloud LLM end-to-end acceptance in this increment",
+    "Naturalness approval and final long soak remain outstanding"
+  ]
+}

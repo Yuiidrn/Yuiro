@@ -1,0 +1,496 @@
+{
+  "models": [
+    {
+      "role": "hiyori",
+      "mask": {
+        "opaque": {
+          "x": 210.05409471193948,
+          "y": 207.85456037521362
+        },
+        "transparent": {
+          "x": 141.86899590492249,
+          "y": 104.47715997695923
+        },
+        "occupied": 1379,
+        "w": 192,
+        "h": 256,
+        "path": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 5,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": 140.92196007259528,
+        "y": 105.22646657571623,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 0,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 1292,
+      "permanent_island_removed": true,
+      "faded_clicks_reaching_underlay": 1,
+      "click_trace": [
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 104.47715997695923
+          },
+          "screen": {
+            "x": 1135,
+            "y": 416
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 105.22646657571623,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 104.47715997695923
+          },
+          "screen": {
+            "x": 1135,
+            "y": 416
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 105.22646657571623,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 104.47715997695923
+          },
+          "screen": {
+            "x": 1135,
+            "y": 416
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 105.22646657571623,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 104.47715997695923
+          },
+          "screen": {
+            "x": 1135,
+            "y": 416
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 105.22646657571623,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 104.47715997695923
+          },
+          "screen": {
+            "x": 1135,
+            "y": 416
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 105.22646657571623,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": true,
+            "model": true,
+            "passthrough": true
+          }
+        }
+      ],
+      "performance": {
+        "samples": 1708,
+        "totalMs": 4899.299999773502,
+        "maxMs": 36.900000005960464,
+        "lastMs": 2.9000000059604645,
+        "lastAt": 221355.29999999702,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 24,
+      "window_avg_ms": 2.9416666670391955,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.5,
+          "max_ms": 6.899999991059303
+        },
+        "sampling_enabled": {
+          "frames": 248,
+          "p95_ms": 7.299999997019768,
+          "max_ms": 10.599999994039536
+        }
+      }
+    },
+    {
+      "role": "hotaru",
+      "mask": {
+        "opaque": {
+          "x": 210.05409471193948,
+          "y": 207.85456037521362
+        },
+        "transparent": {
+          "x": 141.86899590492249,
+          "y": 97.87860250473022
+        },
+        "occupied": 1748,
+        "w": 192,
+        "h": 256,
+        "path": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 5,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": 140.92196007259528,
+        "y": 97.54570259208731,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 0,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 1738,
+      "permanent_island_removed": true,
+      "faded_clicks_reaching_underlay": 1,
+      "click_trace": [
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 97.87860250473022
+          },
+          "screen": {
+            "x": 1135,
+            "y": 407
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 97.54570259208731,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 97.87860250473022
+          },
+          "screen": {
+            "x": 1135,
+            "y": 407
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 97.54570259208731,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 97.87860250473022
+          },
+          "screen": {
+            "x": 1135,
+            "y": 407
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 97.54570259208731,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 97.87860250473022
+          },
+          "screen": {
+            "x": 1135,
+            "y": 407
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 97.54570259208731,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 141.86899590492249,
+            "y": 97.87860250473022
+          },
+          "screen": {
+            "x": 1135,
+            "y": 407
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 140.92196007259528,
+            "y": 97.54570259208731,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": false,
+            "passthrough": true
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Chrome Legacy Window",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": false,
+            "model": true,
+            "passthrough": false
+          }
+        },
+        {
+          "requested": {
+            "x": 210.05409471193948,
+            "y": 207.85456037521362
+          },
+          "screen": {
+            "x": 1224,
+            "y": 550
+          },
+          "top": "Yuiro 点击穿透验收探针",
+          "input": {
+            "x": 209.0852994555354,
+            "y": 207.38062755798092,
+            "ui": false,
+            "dragging": false,
+            "fade": true,
+            "model": true,
+            "passthrough": true
+          }
+        }
+      ],
+      "performance": {
+        "samples": 1786,
+        "totalMs": 5181.899999797344,
+        "maxMs": 36.900000005960464,
+        "lastMs": 3.5,
+        "lastAt": 233181.5,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 24,
+      "window_avg_ms": 3.5375000008692346,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.799999997019768,
+          "max_ms": 7.299999997019768
+        },
+        "sampling_enabled": {
+          "frames": 248,
+          "p95_ms": 8.400000005960464,
+          "max_ms": 10.299999997019768
+        }
+      }
+    }
+  ],
+  "native_probe": "WM_LBUTTONDOWN on own underlay window",
+  "devicePixelRatio": 1.2999999523162842
+}

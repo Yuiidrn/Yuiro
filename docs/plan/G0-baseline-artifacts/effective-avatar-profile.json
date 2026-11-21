@@ -1,0 +1,66 @@
+{
+  "model_path": "/live2d/hiyori/Hiyori.model3.json",
+  "active_profile": [
+    "hiyori",
+    {
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "note": "桃瀬ひより（Neuro-sama v1 展示时用的官方示例模型）",
+      "expression_map": {
+        "happy": "happy",
+        "sad": "sad",
+        "angry": "angry",
+        "excited": "surprised",
+        "bored": "bored",
+        "thinking": "think"
+      },
+      "performance_map": {
+        "celebrate": "playful, Idle#4",
+        "greet": "happy, Idle#6",
+        "surprise": "surprised, Idle#8",
+        "comfort": "sad, Idle#2",
+        "thinking": "think, Extra#0",
+        "bored": "bored, Extra#0",
+        "sing": "playful, Extra#2",
+        "shy": "shy"
+      },
+      "motion_slots": {
+        "greet": "Idle#6",
+        "celebrate": "Idle#4",
+        "comfort": "Idle#2",
+        "surprise": "Idle#8",
+        "thinking": "Extra#0",
+        "sing": "Extra#2",
+        "look": "Idle#8"
+      }
+    }
+  ],
+  "expression_map": {
+    "happy": "happy",
+    "sad": "sad",
+    "angry": "angry",
+    "excited": "surprised",
+    "bored": "bored",
+    "thinking": "think"
+  },
+  "motion_map": {},
+  "performance_map": {
+    "celebrate": "playful, Idle#4",
+    "greet": "happy, Idle#6",
+    "surprise": "surprised, Idle#8",
+    "comfort": "sad, Idle#2",
+    "thinking": "think, Extra#0",
+    "bored": "bored, Extra#0",
+    "sing": "playful, Extra#2",
+    "shy": "shy"
+  },
+  "motion_slots": {
+    "greet": "Idle#6",
+    "celebrate": "Idle#4",
+    "comfort": "Idle#2",
+    "surprise": "Idle#8",
+    "thinking": "Extra#0",
+    "sing": "Extra#2",
+    "look": "Idle#8"
+  },
+  "review_status": "existing_mapping_only_no_visual_approval"
+}

@@ -1,0 +1,20 @@
+{
+  "audio_started_before_switch": false,
+  "events": [
+    {
+      "type": "chat:assistant",
+      "role": "hotaru",
+      "case": "cancel-pending-fish",
+      "at": 15004608.8,
+      "chars": 10
+    },
+    {
+      "type": "character:switching",
+      "role": "hotaru",
+      "case": "cancel-pending-fish",
+      "at": 15004850
+    }
+  ],
+  "fish_cancellation_logged": true,
+  "late_audio_starts": []
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "visible alpha bounds of preview captures; different animation phases, not face detection or subjective quality score",
+  "rows": [
+    {
+      "role": "hiyori",
+      "avatar-dynamic-preview": {
+        "width": 180,
+        "height": 180,
+        "visibleBounds": [
+          48,
+          55,
+          125,
+          151
+        ]
+      },
+      "avatar-dynamic-preview-after": {
+        "width": 180,
+        "height": 180,
+        "visibleBounds": [
+          27,
+          15,
+          139,
+          173
+        ]
+      }
+    },
+    {
+      "role": "hotaru",
+      "avatar-dynamic-preview": {
+        "width": 180,
+        "height": 180,
+        "visibleBounds": [
+          59,
+          86,
+          121,
+          155
+        ]
+      },
+      "avatar-dynamic-preview-after": {
+        "width": 180,
+        "height": 180,
+        "visibleBounds": [
+          30,
+          16,
+          149,
+          173
+        ]
+      }
+    }
+  ]
+}

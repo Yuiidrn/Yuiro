@@ -1,0 +1,69 @@
+{
+  "scope": "Actual model assets through production inference and resolver; not visual approval of all resources",
+  "results": [
+    {
+      "role": "hiyori",
+      "motionCount": 13,
+      "removedAutomaticComfort": [],
+      "comfortFallback": "no automatic motion",
+      "explicitResourcesRemainSelectable": true
+    },
+    {
+      "role": "hotaru",
+      "motionCount": 67,
+      "removedAutomaticComfort": [
+        {
+          "group": "Motion",
+          "index": 0,
+          "file": "motions/misc_tear01.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 10,
+          "file": "motions/mtn_cry01_C.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 11,
+          "file": "motions/mtn_cry01_L.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 12,
+          "file": "motions/mtn_cry01_R.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 43,
+          "file": "motions/mtn_sad01_C.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 44,
+          "file": "motions/mtn_sad01_L.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        },
+        {
+          "group": "Motion",
+          "index": 45,
+          "file": "motions/mtn_sad01_R.motion3.json",
+          "oldSlot": "comfort",
+          "newSlot": ""
+        }
+      ],
+      "comfortFallback": "no automatic motion",
+      "explicitResourcesRemainSelectable": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "latency_ms": 2239.4,
+  "voice": "ad0099b0c27a470eb2a11e9a37b14e4c",
+  "backend": "fish",
+  "lang": "ja",
+  "text": "こんにちは、Yuiroです。これは音声テストです。",
+  "reference_lang": "unknown",
+  "wav_bytes": 368684,
+  "sample_rate": 44100,
+  "slice_ms": 20,
+  "volumes_count": 209,
+  "provider": "tts",
+  "playing": true,
+  "duration": 4.179592,
+  "screenshot_captured": false,
+  "after_switch": {
+    "paused": true,
+    "events": [
+      "pause"
+    ],
+    "old_audio_removed": true
+  }
+}

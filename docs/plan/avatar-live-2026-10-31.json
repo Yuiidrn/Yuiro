@@ -1,0 +1,120 @@
+{
+  "scope": "renderer-only real SDK model loads and controlled intents; no engine conversation or visual approval",
+  "results": [
+    {
+      "model": "hiyori",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "shy",
+        "playful",
+        "think",
+        "bored"
+      ],
+      "motions": [
+        {
+          "group": "Idle",
+          "count": 9
+        },
+        {
+          "group": "TapBody",
+          "count": 1
+        },
+        {
+          "group": "Extra",
+          "count": 3
+        }
+      ],
+      "during": {
+        "expression": "surprised",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1793458347533
+      },
+      "after": {
+        "expression": "sad",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "elapsed": 301.89999997615814
+    },
+    {
+      "model": "hotaru",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "exp_angry01",
+        "exp_angry02",
+        "exp_angry03",
+        "exp_anxiety01",
+        "exp_bsmile01",
+        "exp_bsmile02",
+        "exp_cry01",
+        "exp_cry02",
+        "exp_cry03",
+        "exp_cry04",
+        "exp_cry05",
+        "exp_cry06",
+        "exp_cry07",
+        "exp_heart01",
+        "exp_idle01",
+        "exp_idle02",
+        "exp_idle03",
+        "exp_idle04",
+        "exp_kime01",
+        "exp_kime02",
+        "exp_kirakira01",
+        "exp_pale01",
+        "exp_pale02",
+        "exp_panic01",
+        "exp_panic02",
+        "exp_puzzled01",
+        "exp_puzzled02",
+        "exp_question01",
+        "exp_sad01",
+        "exp_sad02",
+        "exp_sad03",
+        "exp_shadow01",
+        "exp_shy01",
+        "exp_sing01",
+        "exp_smile01",
+        "exp_smile02",
+        "exp_smile03",
+        "exp_smile04",
+        "exp_smile05",
+        "exp_smile06",
+        "exp_smile07",
+        "exp_spin01",
+        "exp_surprised01",
+        "exp_surprised02",
+        "exp_thinking01",
+        "exp_thinking02"
+      ],
+      "motions": [
+        {
+          "group": "Motion",
+          "count": 67
+        }
+      ],
+      "during": {
+        "expression": "exp_panic01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 1793458347977
+      },
+      "after": {
+        "expression": "exp_anxiety01",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "elapsed": 304.7999999523163
+    }
+  ],
+  "restored": "/live2d/hiyori/Hiyori.model3.json"
+}

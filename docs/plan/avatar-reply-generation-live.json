@@ -1,0 +1,21 @@
+{
+  "scope": "real text reply with paired updated engine/renderer; no microphone or stale injection",
+  "events": [
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1
+    },
+    {
+      "type": "tts:reply_end",
+      "sessionMatches": true,
+      "generation": 1
+    }
+  ],
+  "presence": [
+    "thinking",
+    "idle",
+    "speaking"
+  ],
+  "passed": true
+}

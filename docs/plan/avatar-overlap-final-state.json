@@ -1,0 +1,21 @@
+{
+  "pet": {
+    "mic": false,
+    "role": "hotaru",
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794318190697
+    },
+    "asset": "index-BSDbt4w7.js"
+  },
+  "dev": {
+    "helperRemoved": true,
+    "dirty": false,
+    "role": "hotaru"
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "capture": "real desktop ImageGrab, temporary development-only content protection opt-out",
+  "long_text": "local presentation fixture; songs from real client /搜歌",
+  "roles": [
+    {
+      "role": "hiyori",
+      "before_model": {
+        "x": 540.269950858261,
+        "y": -5.261491089653262,
+        "width": 456.0610811182565,
+        "height": 639.3314845581868
+      },
+      "cases": [
+        {
+          "edge": "center",
+          "model": {
+            "x": 513.5299461787389,
+            "y": 66.31957670241013,
+            "width": 509.54150579879916,
+            "height": 716.5037370799594
+          },
+          "surfaces": [
+            {
+              "x": 864,
+              "y": 10,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 235,
+              "y": 166,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "cream",
+          "scroll": true,
+          "model_to_reply_height": 2.33,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "right",
+          "model": {
+            "x": 1310.529946178739,
+            "y": 66.31957670241013,
+            "width": 509.54150579879916,
+            "height": 716.5037370799594
+          },
+          "surfaces": [
+            {
+              "x": 1652,
+              "y": 10,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 1032,
+              "y": 166,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "cream",
+          "scroll": true,
+          "model_to_reply_height": 2.33,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "bottom-right",
+          "model": {
+            "x": 1310.529946178739,
+            "y": 196.31957670241013,
+            "width": 509.54150579879916,
+            "height": 716.5037370799594
+          },
+          "surfaces": [
+            {
+              "x": 1647,
+              "y": 119,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 1032,
+              "y": 296,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "cream",
+          "scroll": true,
+          "model_to_reply_height": 2.33,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "top-left",
+          "model": {
+            "x": 99.52994617873894,
+            "y": 37.31957670241013,
+            "width": 509.54150579879916,
+            "height": 716.5037370799594
+          },
+          "surfaces": [
+            {
+              "x": 438,
+              "y": 10,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 620,
+              "y": 327,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "cream",
+          "scroll": true,
+          "model_to_reply_height": 2.33,
+          "no_overlap": true,
+          "model_fully_visible": true
+        }
+      ],
+      "theme": {
+        "skin": "cream",
+        "dock": "#e09a3e"
+      },
+      "dev_skin": "cream",
+      "card_skin": "cream"
+    },
+    {
+      "role": "hotaru",
+      "before_model": {
+        "x": 540.1627736622916,
+        "y": -27.389251453403695,
+        "width": 455.2761222867278,
+        "height": 683.5870052856877
+      },
+      "cases": [
+        {
+          "edge": "center",
+          "model": {
+            "x": 519.5571940098465,
+            "y": 50.582857809695604,
+            "width": 497.48701013658416,
+            "height": 747.9771748653885
+          },
+          "surfaces": [
+            {
+              "x": 856,
+              "y": 26,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 241,
+              "y": 154,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "lily",
+          "scroll": true,
+          "model_to_reply_height": 2.44,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "right",
+          "model": {
+            "x": 1316.5571940098464,
+            "y": 50.582857809695604,
+            "width": 497.48701013658416,
+            "height": 747.9771748653885
+          },
+          "surfaces": [
+            {
+              "x": 1652,
+              "y": 26,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 1038,
+              "y": 154,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "lily",
+          "scroll": true,
+          "model_to_reply_height": 2.44,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "bottom-right",
+          "model": {
+            "x": 1316.5571940098464,
+            "y": 180.5828578096956,
+            "width": 497.48701013658416,
+            "height": 747.9771748653885
+          },
+          "surfaces": [
+            {
+              "x": 1652,
+              "y": 156,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 1038,
+              "y": 284,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "lily",
+          "scroll": true,
+          "model_to_reply_height": 2.44,
+          "no_overlap": true,
+          "model_fully_visible": true
+        },
+        {
+          "edge": "top-left",
+          "model": {
+            "x": 105.55719400984647,
+            "y": 21.582857809695604,
+            "width": 497.48701013658416,
+            "height": 747.9771748653885
+          },
+          "surfaces": [
+            {
+              "x": 441,
+              "y": 10,
+              "width": 258,
+              "height": 307
+            },
+            {
+              "x": 613,
+              "y": 327,
+              "width": 268,
+              "height": 338
+            }
+          ],
+          "skin": "lily",
+          "scroll": true,
+          "model_to_reply_height": 2.44,
+          "no_overlap": true,
+          "model_fully_visible": true
+        }
+      ],
+      "theme": {
+        "skin": "lily",
+        "dock": "#58776a"
+      },
+      "dev_skin": "lily",
+      "card_skin": "lily"
+    }
+  ],
+  "before_layout": {
+    "width": 446,
+    "height": 586,
+    "fillRatio": 1.1,
+    "xOffset": 0,
+    "yOffset": 0.45
+  },
+  "switch_clean": true,
+  "completed": true,
+  "model_first_kept": true
+}

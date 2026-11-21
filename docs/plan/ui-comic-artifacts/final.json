@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-26",
+  "final": {
+    "role": "hotaru",
+    "ready": true,
+    "ws": 1,
+    "replyCleared": true,
+    "musicCleared": true,
+    "sourceCleared": true
+  },
+  "backend_full_passed": 907,
+  "bridge_followup_passed": 22,
+  "typecheck": true,
+  "build": true,
+  "controlled_dual_role_ui": true,
+  "real_music_retested": false,
+  "client_only_playback_ui": true,
+  "metadata_cli_removed": false,
+  "debug": {
+    "role": "hotaru",
+    "revision": 0,
+    "draft": false
+  }
+}

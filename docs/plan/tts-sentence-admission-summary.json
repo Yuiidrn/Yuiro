@@ -1,0 +1,45 @@
+{
+  "scope": "Synthetic token cadence through production _drain, not translation/provider/acoustic latency",
+  "rows": [
+    {
+      "case": "short-prefix",
+      "samplesPerCondition": 5,
+      "beforeMedianAdmissionMs": 343.335,
+      "afterMedianAdmissionMs": 41.801,
+      "beforeInputChunksAtAdmission": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "afterInputChunksAtAdmission": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "case": "normal",
+      "samplesPerCondition": 5,
+      "beforeMedianAdmissionMs": 20.553,
+      "afterMedianAdmissionMs": 21.067,
+      "beforeInputChunksAtAdmission": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "afterInputChunksAtAdmission": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

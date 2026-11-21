@@ -1,0 +1,76 @@
+{
+  "kind": "real_config_roundtrip_and_stale_save",
+  "checks": [
+    {
+      "name": "hotaru_unchanged_after_hiyori_edits",
+      "passed": true
+    },
+    {
+      "name": "stale_hiyori_save_rejected",
+      "passed": true,
+      "status": 409
+    },
+    {
+      "name": "hiyori_custom_performance_absent_in_hotaru",
+      "passed": true
+    },
+    {
+      "name": "hiyori_saved_edits_restored_on_return",
+      "passed": true
+    },
+    {
+      "name": "hiyori_custom_performance_restored",
+      "passed": true
+    },
+    {
+      "name": "shared_settings_unchanged",
+      "passed": true
+    },
+    {
+      "name": "temporary_hiyori_edits_removed",
+      "passed": true
+    }
+  ],
+  "hiyori": {
+    "id": "hiyori",
+    "revision": 10,
+    "digests": {
+      "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+      "tts": "d32a13ada0f172728a59c10e5961afcc254d8c6b1999450e7b7866b60479d363",
+      "persona": "4b0420c60e48e7bf0fc4043637d5f0dd55afd2bff44ed0d310a124f8ab4b91a0",
+      "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+      "memory": "82404584a4cc8bf75f6c7900e796eae6cdef74f3094a38d334d3fa471f4db0de",
+      "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+    },
+    "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+    "llm": {
+      "provider": "qwen",
+      "model": "qwen3.8-flash"
+    },
+    "tts": "siliconflow",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "model": "/live2d/hiyori/Hiyori.model3.json"
+  },
+  "hotaru": {
+    "id": "hotaru",
+    "revision": 11,
+    "digests": {
+      "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+      "tts": "5749dd86e57170acc0abb52c6269effd75f2f57696f98d5826b301c0acc4d98f",
+      "persona": "59a98609d13a66b0344ea0ced2ce366c68b85a2b9818da05a2c9a26126fc1abc",
+      "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+      "memory": "98cbce8a2d732540c5b651f1827caf2cb423c898d2f7eadd6bc774350fca2b4b",
+      "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+    },
+    "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+    "llm": {
+      "provider": "qwen",
+      "model": "qwen3.8-flash"
+    },
+    "tts": "siliconflow",
+    "voice": "zh-CN-XiaoyiNeural",
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+  }
+}

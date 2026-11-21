@@ -1,0 +1,26 @@
+{
+  "mode": "real API; controlled card projection; DOM click; media sends intercepted",
+  "roles": [
+    {
+      "role": "hiyori",
+      "unavailable_click_no_play": true,
+      "card_retained": true,
+      "official_button": true,
+      "stale_action_tested": false
+    },
+    {
+      "role": "hotaru",
+      "unavailable_click_no_play": true,
+      "card_retained": true,
+      "official_button": true,
+      "stale_action_tested": true
+    },
+    {
+      "role": "hiyori",
+      "unavailable_click_no_play": true,
+      "card_retained": true,
+      "official_button": true,
+      "stale_action_tested": true
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "success": true,
+  "state": {
+    "song_id": "36308916",
+    "name": "Monody",
+    "artist": "TheFatRat / Laura Brehm",
+    "status": "playing",
+    "backend": "netease_client",
+    "playback_id": "d0273898bce94af6b53ebe56e35ad1e3",
+    "can_stop": false
+  },
+  "elapsed_ms": 9892,
+  "events": [
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_closed",
+      "song_id": "",
+      "status": "closed"
+    },
+    {
+      "action": "client_launch",
+      "ok": true
+    },
+    {
+      "action": "client_state",
+      "ok": false,
+      "error": "网易云未建立本地连接；请先退出网易云，再选择“网易云客户端”重试。不会自动关闭其他播放器。"
+    },
+    {
+      "action": "client_state",
+      "ok": false,
+      "error": "网易云主页面不唯一或尚未就绪，未执行播放"
+    },
+    {
+      "action": "client_state",
+      "ok": false,
+      "error": "当前网易云版本的歌曲状态不兼容，未执行播放"
+    },
+    {
+      "action": "client_state",
+      "ok": false,
+      "error": "当前网易云版本的歌曲状态不兼容，未执行播放"
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": ""
+    },
+    {
+      "action": "open_song",
+      "ok": true,
+      "song_id": "36308916"
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": ""
+    },
+    {
+      "action": "now_playing",
+      "ok": false,
+      "error": "{\n  \"status\": \"无媒体会话在使用\",\n  \"sessions\": [],\n  \"hint\": \"请用 action=list_sessions 查看当前所有媒体会话的 AUMID\"\n}"
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": ""
+    },
+    {
+      "action": "now_playing",
+      "ok": true,
+      "status": "Paused",
+      "title": "Monody"
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": "36308916"
+    },
+    {
+      "action": "now_playing",
+      "ok": true,
+      "status": "Paused",
+      "title": "Monody"
+    },
+    {
+      "action": "play",
+      "ok": true
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": "36308916"
+    },
+    {
+      "action": "now_playing",
+      "ok": true,
+      "status": "Playing",
+      "title": "Monody"
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": "36308916"
+    },
+    {
+      "action": "now_playing",
+      "ok": true,
+      "status": "Playing",
+      "title": "Monody"
+    },
+    {
+      "action": "pause",
+      "ok": true
+    },
+    {
+      "action": "client_state",
+      "ok": true,
+      "source": "client_store",
+      "song_id": "36308916"
+    },
+    {
+      "action": "now_playing",
+      "ok": true,
+      "status": "Paused",
+      "title": "Monody"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "normal_capture_protection": {
+    "Yuiro": 17,
+    "Yuiro 回复": 17,
+    "Yuiro 结果": 17
+  },
+  "temporary_backdrop_removed": true,
+  "after_click_through": 17,
+  "after_interactive": 17,
+  "layout": {
+    "width": 601,
+    "height": 666,
+    "fillRatio": 1,
+    "xOffset": 0,
+    "yOffset": 0.5
+  },
+  "role": "hotaru",
+  "skin": "lily",
+  "head_anchor": 0.28,
+  "cleared": true
+}

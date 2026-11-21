@@ -1,0 +1,51 @@
+{
+  "scope": "actual native cursor movement and hold/release; temporary 700ms hold restored",
+  "results": [
+    {
+      "model": "hiyori",
+      "active": {
+        "owns": true,
+        "weight": 0.9540790267778532,
+        "focusX": -0.04658310351415235,
+        "focusY": 0.0002646018674544828
+      },
+      "quiet": {
+        "gaze": {
+          "owns": false,
+          "weight": 0.021524775228363595,
+          "focusX": -0.006940991240404328,
+          "focusY": 3.942629635310186e-05
+        },
+        "state": {
+          "expression": "",
+          "motion": "Idle",
+          "motionIndex": 6,
+          "until": 0
+        }
+      }
+    },
+    {
+      "model": "hotaru",
+      "active": {
+        "owns": true,
+        "weight": 0.9492071661351016,
+        "focusX": -0.045202410963609364,
+        "focusY": 0.0001792849748152454
+      },
+      "quiet": {
+        "gaze": {
+          "owns": false,
+          "weight": 0.0215247752283638,
+          "focusX": -0.006391600625802366,
+          "focusY": 2.5350814985258556e-05
+        },
+        "state": {
+          "expression": "exp_idle01",
+          "motion": "Motion",
+          "motionIndex": 19,
+          "until": 0
+        }
+      }
+    }
+  ]
+}

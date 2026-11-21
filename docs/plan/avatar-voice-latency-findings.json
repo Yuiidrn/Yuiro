@@ -1,0 +1,29 @@
+{
+  "source": "engine_start.out.log, trace 9a9f8dad and Fish HTTP stage logs from the confirmed Hotaru microphone sample",
+  "scope": "single sample; elapsed offsets relative to speech_start, not percentile baseline",
+  "marksMs": {
+    "speech_end": 1672,
+    "agent_start": 1847,
+    "asr_final": 1840,
+    "llm_start": 1840,
+    "memory_retrieve": 11326,
+    "llm_first_token": 14181,
+    "llm_final": 14820,
+    "lang_render": 15331,
+    "tts_first_audio": 28772,
+    "playback_started": 28960,
+    "tts_end": 28832
+  },
+  "fishRequestMs": [
+    13372.6,
+    4008.6,
+    1902.5
+  ],
+  "asrLoggedMs": 167,
+  "limits": [
+    "memory_retrieve includes earlier work because no retrieval-start mark existed",
+    "llm_start is pipeline entry, not provider request start",
+    "single Fish request timing does not prove persistent cold-start behavior",
+    "new marks require engine restart before live verification"
+  ]
+}

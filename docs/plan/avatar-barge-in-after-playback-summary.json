@@ -1,0 +1,43 @@
+{
+  "scope": "Hotaru real user second test, not acoustic latency benchmark",
+  "userFeedback": "打断效果已经很不错了；主要剩余问题是TTS首句返回时快时慢",
+  "interrupts": [
+    {
+      "vadToInterruptMs": 18.97,
+      "hadPlaybackBefore": false,
+      "lastSentAllBeforeInterrupt": false
+    },
+    {
+      "vadToInterruptMs": 10.96,
+      "hadPlaybackBefore": true,
+      "lastSentAllBeforeInterrupt": false
+    },
+    {
+      "vadToInterruptMs": 18.14,
+      "hadPlaybackBefore": true,
+      "lastSentAllBeforeInterrupt": true
+    },
+    {
+      "vadToInterruptMs": 17.28,
+      "hadPlaybackBefore": true,
+      "lastSentAllBeforeInterrupt": false
+    },
+    {
+      "vadToInterruptMs": 10.95,
+      "hadPlaybackBefore": true,
+      "lastSentAllBeforeInterrupt": true
+    },
+    {
+      "vadToInterruptMs": 12.12,
+      "hadPlaybackBefore": true,
+      "lastSentAllBeforeInterrupt": false
+    }
+  ],
+  "restoredConfig": {
+    "role": "hotaru",
+    "revision": 0,
+    "barge": false
+  },
+  "microphoneClosed": true,
+  "result": "Hotaru本轮打断听感通过；不外推Hiyori或声学分位数"
+}

@@ -1,0 +1,171 @@
+{
+  "cases": [
+    {
+      "cards": [
+        {
+          "type": "agent:result",
+          "session_id": "31e5f07c3dd44e0c8af91d2bda036bdb",
+          "generation": 1,
+          "character_id": "hiyori",
+          "character_revision": 1,
+          "kind": "source",
+          "title": "联网搜索结果",
+          "items": [
+            {
+              "title": "Your First API Call | DeepSeek API Docs",
+              "url": "https://api-docs.deepseek.com/quick_start/faq",
+              "snippet": "# Your First API Call\n\nThe DeepSeek API uses an API format compatible with OpenAI/Anthropic. By modifying the configuration, you can use the OpenAI/Anthropic SDK or softwares compatible with the OpenAI/Anthropic API to access the DeepSeek API.\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.",
+              "published_at": "",
+              "site_name": "DeepSeek"
+            },
+            {
+              "title": "首次调用 API | DeepSeek API Docs",
+              "url": "https://api-docs.deepseek.com/zh-cn/",
+              "snippet": "# 首次调用 API\n\nDeepSeek API 使用与 OpenAI/Anthropic 兼容的 API 格式，通过修改配置，您可以使用 OpenAI/Anthropic SDK 来访问 DeepSeek API，或使用与 OpenAI/Anthropic API 兼容的软件。\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.deepseek.com \nbase_url (Anthropic) | https://api.deepseek.com/anthropic \napi_key | 申请一个 API key \nmodel ",
+              "published_at": "",
+              "site_name": "DeepSeek"
+            },
+            {
+              "title": "deepseek-docs/content/en/api/deepseek-api.md at main · thevibeworks/deepseek-docs",
+              "url": "https://github.com/thevibeworks/deepseek-docs/blob/main/content/en/api/deepseek-api.md",
+              "snippet": "# deepseek-api.md\n...\ntitle | DeepSeek API \n---|---\ndescription | The DeepSeek API. To use the DeepSeek API, please [create an API key first](https://platform.deepseek.com/api_keys). \nsource | https://api-docs.deepseek.com/api/deepseek-api \nfetched | 2026-08-02 \n\nVersion: 1.0.0\n...\nTo use the DeepSe",
+              "published_at": "2026-08-02T16:00:00+00:00",
+              "site_name": "GitHub"
+            }
+          ],
+          "note": ""
+        }
+      ],
+      "rendered": null,
+      "source_items": 0,
+      "snippets": 0,
+      "dates": 0,
+      "starts": 5,
+      "reply": true,
+      "end": true,
+      "case": "hiyori-sources",
+      "expected_card": true
+    },
+    {
+      "cards": [],
+      "rendered": null,
+      "source_items": 0,
+      "snippets": 0,
+      "dates": 0,
+      "starts": 1,
+      "reply": true,
+      "end": true,
+      "case": "hiyori-answer_only",
+      "expected_card": false
+    },
+    {
+      "cards": [
+        {
+          "type": "agent:result",
+          "session_id": "5acf8711eacd4daaa7033521d64d69e6",
+          "generation": 1,
+          "character_id": "hotaru",
+          "character_revision": 4,
+          "kind": "source",
+          "title": "联网搜索结果",
+          "items": [
+            {
+              "title": "Your First API Call | DeepSeek API Docs",
+              "url": "https://api-docs.deepseek.com/quick_start/faq",
+              "snippet": "# Your First API Call\n\nThe DeepSeek API uses an API format compatible with OpenAI/Anthropic. By modifying the configuration, you can use the OpenAI/Anthropic SDK or softwares compatible with the OpenAI/Anthropic API to access the DeepSeek API.\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.",
+              "published_at": "",
+              "site_name": "DeepSeek"
+            },
+            {
+              "title": "首次调用 API | DeepSeek API Docs",
+              "url": "https://api-docs.deepseek.com/zh-cn/",
+              "snippet": "# 首次调用 API\n\nDeepSeek API 使用与 OpenAI/Anthropic 兼容的 API 格式，通过修改配置，您可以使用 OpenAI/Anthropic SDK 来访问 DeepSeek API，或使用与 OpenAI/Anthropic API 兼容的软件。\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.deepseek.com \nbase_url (Anthropic) | https://api.deepseek.com/anthropic \napi_key | 申请一个 API key \nmodel ",
+              "published_at": "",
+              "site_name": "DeepSeek"
+            },
+            {
+              "title": "",
+              "url": "https://raw.githubusercontent.com/thevibeworks/deepseek-docs/main/content/zh-cn/api/deepseek-api.md",
+              "snippet": "title: \"DeepSeek API\"\ndescription: \"使用 DeepSeek API 之前，请先 [创建 API 密钥](https://platform.deepseek.com/api_keys)。\"\nsource: https://api-docs.deepseek.com/zh-cn/api/deepseek-api\nfetched: 2026-08-23\n\nVersion: 1.0.0\n\n# DeepSeek API\n...\n## Authentication\n\n- HTTP: Bearer Auth\n\n| Security Scheme Type: | http ",
+              "published_at": "",
+              "site_name": "GitHub"
+            }
+          ],
+          "note": ""
+        }
+      ],
+      "rendered": {
+        "title": "联网搜索结果",
+        "kind": "source",
+        "items": [
+          {
+            "title": "Your First API Call | DeepSeek API Docs",
+            "url": "https://api-docs.deepseek.com/quick_start/faq",
+            "snippet": "# Your First API Call\n\nThe DeepSeek API uses an API format compatible with OpenAI/Anthropic. By modifying the configuration, you can use the OpenAI/Anthropic SDK or softwares compatible with the OpenAI/Anthropic API to access the DeepSeek API.\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.",
+            "published_at": "",
+            "site_name": "DeepSeek"
+          },
+          {
+            "title": "首次调用 API | DeepSeek API Docs",
+            "url": "https://api-docs.deepseek.com/zh-cn/",
+            "snippet": "# 首次调用 API\n\nDeepSeek API 使用与 OpenAI/Anthropic 兼容的 API 格式，通过修改配置，您可以使用 OpenAI/Anthropic SDK 来访问 DeepSeek API，或使用与 OpenAI/Anthropic API 兼容的软件。\n\nPARAM | VALUE \n---|---\nbase_url (OpenAI) | https://api.deepseek.com \nbase_url (Anthropic) | https://api.deepseek.com/anthropic \napi_key | 申请一个 API key \nmodel ",
+            "published_at": "",
+            "site_name": "DeepSeek"
+          },
+          {
+            "title": "",
+            "url": "https://raw.githubusercontent.com/thevibeworks/deepseek-docs/main/content/zh-cn/api/deepseek-api.md",
+            "snippet": "title: \"DeepSeek API\"\ndescription: \"使用 DeepSeek API 之前，请先 [创建 API 密钥](https://platform.deepseek.com/api_keys)。\"\nsource: https://api-docs.deepseek.com/zh-cn/api/deepseek-api\nfetched: 2026-08-23\n\nVersion: 1.0.0\n\n# DeepSeek API\n...\n## Authentication\n\n- HTTP: Bearer Auth\n\n| Security Scheme Type: | http ",
+            "published_at": "",
+            "site_name": "GitHub"
+          }
+        ],
+        "note": ""
+      },
+      "source_items": 3,
+      "snippets": 3,
+      "dates": 3,
+      "starts": 4,
+      "reply": true,
+      "end": true,
+      "case": "hotaru-sources",
+      "expected_card": true
+    },
+    {
+      "cards": [],
+      "rendered": null,
+      "source_items": 0,
+      "snippets": 0,
+      "dates": 0,
+      "starts": 1,
+      "reply": true,
+      "end": true,
+      "case": "hotaru-answer_only",
+      "expected_card": false
+    }
+  ],
+  "switch_checks": [
+    {
+      "from": "hiyori",
+      "to": "hotaru",
+      "real_switch_cleared": true,
+      "synthetic_old_identity_rejected": true
+    },
+    {
+      "from": "hotaru",
+      "to": "hiyori",
+      "real_switch_cleared": true,
+      "synthetic_old_identity_rejected": true
+    }
+  ],
+  "restored": {
+    "hiyori": {
+      "enabled": false,
+      "error": ""
+    },
+    "hotaru": {
+      "enabled": true,
+      "error": ""
+    }
+  }
+}

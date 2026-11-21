@@ -1,0 +1,108 @@
+{
+  "scope": "150-second idle soak per renderer model; CPU submissions not GPU time; model-only switch, no server role or voice",
+  "results": [
+    {
+      "model": "hiyori",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "shy",
+        "playful",
+        "think",
+        "bored"
+      ],
+      "samples": [
+        {
+          "reactiveEnabled": true,
+          "frame_interval_ms": {
+            "count": 24725,
+            "p50": 6.099999904632568,
+            "p95": 6.600000023841858,
+            "max": 24.600000023841858
+          },
+          "cpu_render_submission_ms": {
+            "count": 24725,
+            "p50": 2.200000047683716,
+            "p95": 3.200000047683716,
+            "max": 16.100000023841858
+          }
+        }
+      ]
+    },
+    {
+      "model": "hotaru",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "exp_angry01",
+        "exp_angry02",
+        "exp_angry03",
+        "exp_anxiety01",
+        "exp_bsmile01",
+        "exp_bsmile02",
+        "exp_cry01",
+        "exp_cry02",
+        "exp_cry03",
+        "exp_cry04",
+        "exp_cry05",
+        "exp_cry06",
+        "exp_cry07",
+        "exp_heart01",
+        "exp_idle01",
+        "exp_idle02",
+        "exp_idle03",
+        "exp_idle04",
+        "exp_kime01",
+        "exp_kime02",
+        "exp_kirakira01",
+        "exp_pale01",
+        "exp_pale02",
+        "exp_panic01",
+        "exp_panic02",
+        "exp_puzzled01",
+        "exp_puzzled02",
+        "exp_question01",
+        "exp_sad01",
+        "exp_sad02",
+        "exp_sad03",
+        "exp_shadow01",
+        "exp_shy01",
+        "exp_sing01",
+        "exp_smile01",
+        "exp_smile02",
+        "exp_smile03",
+        "exp_smile04",
+        "exp_smile05",
+        "exp_smile06",
+        "exp_smile07",
+        "exp_spin01",
+        "exp_surprised01",
+        "exp_surprised02",
+        "exp_thinking01",
+        "exp_thinking02"
+      ],
+      "samples": [
+        {
+          "reactiveEnabled": true,
+          "frame_interval_ms": {
+            "count": 17802,
+            "p50": 8,
+            "p95": 12.700000047683716,
+            "max": 27.399999976158142
+          },
+          "cpu_render_submission_ms": {
+            "count": 17802,
+            "p50": 7.299999952316284,
+            "p95": 9.299999952316284,
+            "max": 22.200000047683716
+          }
+        }
+      ]
+    }
+  ],
+  "restored": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+}

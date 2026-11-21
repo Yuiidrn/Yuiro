@@ -1,0 +1,39 @@
+{
+  "scope": "Maximum two standalone actual official MessagePack WS requests; same Hotaru voice/model/latency/speed and combined text, PCM16 at 44100, first480ms matches HTTP local block threshold; no production replacement/playback/microphone or translation",
+  "simulatedTextLeadMs": 1500,
+  "rows": [
+    {
+      "mode": "whole-text",
+      "audioMessages": 5,
+      "pcmBytes": 307200,
+      "connectMs": 863.9,
+      "textReadyMs": 1567.3,
+      "connectionReadyBeforeText": true,
+      "firstRawAudioMs": 2015.4,
+      "first480msPlayableMs": 2108.0,
+      "finishReason": "stop",
+      "completeMs": 2972.5,
+      "audioDurationMs": 3483.0,
+      "maximumAudioMessageGapMs": 588.1,
+      "passed": true,
+      "first480msAfterTextReadyMs": 540.7
+    },
+    {
+      "mode": "first-phrase-then-remainder",
+      "audioMessages": 7,
+      "pcmBytes": 266240,
+      "connectMs": 393.7,
+      "textReadyMs": 1501.4,
+      "connectionReadyBeforeText": true,
+      "firstRawAudioMs": 1904.6,
+      "remainderSentAfterFirstAudioMs": 1904.6,
+      "first480msPlayableMs": 2021.4,
+      "finishReason": "stop",
+      "completeMs": 2958.2,
+      "audioDurationMs": 3018.6,
+      "maximumAudioMessageGapMs": 376.8,
+      "passed": true,
+      "first480msAfterTextReadyMs": 520.0
+    }
+  ]
+}

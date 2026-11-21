@@ -1,0 +1,19 @@
+{
+  "scope": "local deterministic scheduler fixture only, not real Fish latency percentiles",
+  "results": [
+    {
+      "version": "before",
+      "n": 5,
+      "firstRequestMedianMs": 171.44,
+      "firstDeliveryMedianMs": 186.9,
+      "allDeliveryMedianMs": 186.93
+    },
+    {
+      "version": "after",
+      "n": 5,
+      "firstRequestMedianMs": 46.4,
+      "firstDeliveryMedianMs": 62.26,
+      "allDeliveryMedianMs": 218.51
+    }
+  ]
+}

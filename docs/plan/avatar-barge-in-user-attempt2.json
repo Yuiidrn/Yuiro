@@ -1,0 +1,302 @@
+{
+  "scope": "actual renderer microphone and engine WS events; audio bytes not persisted; user consented live phrase",
+  "initial": {
+    "role": "hotaru",
+    "recording": false
+  },
+  "ready": true,
+  "pcm": {
+    "frames": 1318,
+    "bytes": 3917096,
+    "maxRms": 0.24338926530281446
+  },
+  "events": [
+    {
+      "ms": 16593,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "active"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "inactive"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:start"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:text",
+      "text": "插画打断测试。"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:start"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:start"
+    },
+    {
+      "ms": 19137,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:synthesize"
+    },
+    {
+      "ms": 25784,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 25784,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:text"
+    },
+    {
+      "ms": 29849,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 29849,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 30936,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 31943,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 31943,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:ready"
+    },
+    {
+      "ms": 31943,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:end"
+    },
+    {
+      "ms": 33980,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 43122,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 53336,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "active"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "inactive"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:start"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:text",
+      "text": "插话打断测试。"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:start"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:start"
+    },
+    {
+      "ms": 55882,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:synthesize"
+    },
+    {
+      "ms": 57413,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 57414,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:text"
+    },
+    {
+      "ms": 59980,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 59980,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 62023,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "active"
+    },
+    {
+      "ms": 62023,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:interrupted"
+    },
+    {
+      "ms": 63041,
+      "direction": "webSocketFrameReceived",
+      "type": "vad:state",
+      "state": "inactive"
+    },
+    {
+      "ms": 63041,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:start"
+    },
+    {
+      "ms": 63041,
+      "direction": "webSocketFrameReceived",
+      "type": "asr:text",
+      "text": "打断。"
+    },
+    {
+      "ms": 63041,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 63044,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:start"
+    },
+    {
+      "ms": 63044,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:start"
+    },
+    {
+      "ms": 63045,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:synthesize"
+    },
+    {
+      "ms": 65590,
+      "direction": "webSocketFrameReceived",
+      "type": "avatar:intent"
+    },
+    {
+      "ms": 65590,
+      "direction": "webSocketFrameReceived",
+      "type": "llm:text"
+    },
+    {
+      "ms": 66625,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 66625,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 72769,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 72770,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 72773,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 73279,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 73283,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:audio"
+    },
+    {
+      "ms": 73283,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:ready"
+    },
+    {
+      "ms": 73283,
+      "direction": "webSocketFrameReceived",
+      "type": "tts:end"
+    },
+    {
+      "ms": 87994,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 90533,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    },
+    {
+      "ms": 99700,
+      "direction": "webSocketFrameSent",
+      "type": "audio:playback_started"
+    }
+  ],
+  "states": [],
+  "final": {
+    "recording": false,
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794281676750
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "read_only": true,
+  "base_url": "https://openncm.music.163.com",
+  "parameters": {
+    "trialScene": "cli",
+    "withUrl": true,
+    "bitrate": 128,
+    "search_qualityFlag": false
+  },
+  "account": {
+    "profile_read": true,
+    "unexpired_membership_records": 1,
+    "uses_cli_device": true
+  },
+  "engine_appid_matches_cli": true,
+  "cli_detail_help": [],
+  "cli_search": {
+    "ok": true,
+    "original_playFlag": false
+  },
+  "songs": [
+    {
+      "label": "Monody original",
+      "song_id": 36308916,
+      "has_play_url": false,
+      "bitrate_returned": 0,
+      "playable": false,
+      "availability": "api_unavailable",
+      "availability_note": "当前 API 通道不可播，不代表官方客户端无版权或账号无会员",
+      "playback_backend": "builtin",
+      "rights_flags": {
+        "playFlag": false,
+        "visible": false,
+        "vipFlag": false,
+        "vipPlayFlag": false,
+        "payPlayFlag": false,
+        "songFee": 0,
+        "freeTrailFlag": false
+      }
+    },
+    {
+      "label": "Monody remix",
+      "song_id": 1452906755,
+      "has_play_url": true,
+      "bitrate_returned": 128000,
+      "playable": true,
+      "availability": "api_available",
+      "availability_note": "当前 API 标记可播，完整取流仍需确认",
+      "playback_backend": "builtin",
+      "rights_flags": {
+        "playFlag": true,
+        "visible": true,
+        "vipFlag": false,
+        "vipPlayFlag": false,
+        "payPlayFlag": false,
+        "songFee": 8,
+        "freeTrailFlag": false
+      }
+    }
+  ]
+}

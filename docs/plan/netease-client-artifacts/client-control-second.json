@@ -1,0 +1,104 @@
+{
+  "mode": "exact client AUMID and expected title; explicit pause separate from stop",
+  "events": [
+    {
+      "action": "now_playing",
+      "status": "ok",
+      "result": {
+        "aumid": "cloudmusic.exe",
+        "status": "Playing",
+        "title": "Monody",
+        "artist": "TheFatRat",
+        "position": 0,
+        "can_play": false,
+        "can_pause": true,
+        "can_stop": false
+      },
+      "at": 1792829889.6596022
+    },
+    {
+      "action": "pause",
+      "status": "ok",
+      "result": "已通过 SMTC 对 cloudmusic.exe 执行：暂停",
+      "at": 1792829890.098428
+    },
+    {
+      "action": "now_playing",
+      "status": "ok",
+      "result": {
+        "aumid": "cloudmusic.exe",
+        "status": "Paused",
+        "title": "Monody",
+        "artist": "TheFatRat",
+        "position": 0,
+        "can_play": true,
+        "can_pause": false,
+        "can_stop": false
+      },
+      "at": 1792829890.6160326
+    },
+    {
+      "action": "play",
+      "status": "ok",
+      "result": "已通过 SMTC 对 cloudmusic.exe 执行：播放",
+      "at": 1792829891.2674806
+    },
+    {
+      "action": "now_playing",
+      "status": "ok",
+      "result": {
+        "aumid": "cloudmusic.exe",
+        "status": "Playing",
+        "title": "Monody",
+        "artist": "TheFatRat",
+        "position": 0,
+        "can_play": false,
+        "can_pause": true,
+        "can_stop": false
+      },
+      "at": 1792829894.7196667
+    },
+    {
+      "action": "stop",
+      "status": "ok",
+      "result": "已通过 SMTC 对 cloudmusic.exe 执行：停止",
+      "at": 1792829895.1229484
+    },
+    {
+      "action": "now_playing",
+      "status": "ok",
+      "result": {
+        "aumid": "cloudmusic.exe",
+        "status": "Playing",
+        "title": "Monody",
+        "artist": "TheFatRat",
+        "position": 0,
+        "can_play": false,
+        "can_pause": true,
+        "can_stop": false
+      },
+      "at": 1792829895.5403867
+    },
+    {
+      "action": "pause",
+      "status": "ok",
+      "result": "已通过 SMTC 对 cloudmusic.exe 执行：暂停",
+      "at": 1792829895.9724538
+    },
+    {
+      "action": "now_playing",
+      "status": "ok",
+      "result": {
+        "aumid": "cloudmusic.exe",
+        "status": "Paused",
+        "title": "Monody",
+        "artist": "TheFatRat",
+        "position": 0,
+        "can_play": true,
+        "can_pause": false,
+        "can_stop": false
+      },
+      "at": 1792829896.4514477
+    }
+  ]
+}

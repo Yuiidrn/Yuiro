@@ -1,0 +1,8 @@
+{
+  "role": "hotaru",
+  "barge": false,
+  "replyTts": true,
+  "mic": false,
+  "presence": "idle",
+  "diagnosticRemoved": true
+}

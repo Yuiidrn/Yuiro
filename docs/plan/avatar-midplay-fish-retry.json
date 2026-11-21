@@ -1,0 +1,20 @@
+{
+  "scope": "real provider audio playing during official character switch; no microphone/ASR/LLM or human approval",
+  "initial": "hotaru",
+  "rows": [
+    {
+      "source": "hotaru",
+      "target": "hiyori",
+      "before": {
+        "presence": "speaking",
+        "mouth": 0.0017518240195752324
+      },
+      "after": {
+        "presence": "idle",
+        "mouth": 0
+      },
+      "observed_ms": 558.7000000476837,
+      "includes_wait_ms": 500
+    }
+  ]
+}

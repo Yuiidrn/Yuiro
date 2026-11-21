@@ -1,0 +1,14 @@
+{
+  "before": {
+    "mic": false,
+    "role": "hotaru",
+    "presence": "idle",
+    "asset": "index-BNQm6MSm.js"
+  },
+  "after": {
+    "mic": false,
+    "role": "hotaru",
+    "presence": "idle",
+    "asset": "index-BSDbt4w7.js"
+  }
+}

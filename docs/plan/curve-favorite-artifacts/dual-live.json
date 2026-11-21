@@ -1,0 +1,104 @@
+{
+  "kind": "real card click + real Agent favorite/rec + native client readback",
+  "roles": [
+    {
+      "role": "hiyori",
+      "song_id": "36308916",
+      "original_liked": false,
+      "playing_then_paused": true,
+      "card_write_readback_seconds": 3.9,
+      "agent_restore_seconds": 5.05,
+      "favorite_restored": true,
+      "agent_daily_candidates": [
+        {
+          "song_id": "2158321858",
+          "name": "東京",
+          "artist": "雪国",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "2750093403",
+          "name": "しないで",
+          "artist": "あたらよ",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "2690868006",
+          "name": "幸福是痛的开始",
+          "artist": "氟西汀海",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "2095818111",
+          "name": "国",
+          "artist": "ひとひら",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "2110332500",
+          "name": "Fragments of Light (Aether Gazer Soundtrack)",
+          "artist": "Aether Gazer / reche",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "3432793472",
+          "name": "Cozy",
+          "artist": "Kirara Magic / Yuuna Nini",
+          "source": "netease_client_daily"
+        }
+      ],
+      "recommend_did_not_change_song": true
+    },
+    {
+      "role": "hotaru",
+      "song_id": "36308916",
+      "original_liked": false,
+      "playing_then_paused": true,
+      "card_write_readback_seconds": 3.92,
+      "agent_restore_seconds": 3.87,
+      "favorite_restored": true,
+      "agent_daily_candidates": [
+        {
+          "song_id": "3434615710",
+          "name": "Oath (zensei ゼンセー Remix)",
+          "artist": "Said The Sky / Stefi Novo / zensei ゼンセー",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "1838743757",
+          "name": "Oracle (feat. nayuta)",
+          "artist": "Room97 / nayuta",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "1867083451",
+          "name": "Whole",
+          "artist": "Sam Tompkins",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "1959410216",
+          "name": "0bsol3scence (feat. Mas Kimura & MEG)",
+          "artist": "FUZI / Neru / MEG",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "3395189823",
+          "name": "ユラリユレル",
+          "artist": "NOMELON NOLEMON",
+          "source": "netease_client_daily"
+        },
+        {
+          "song_id": "3347018674",
+          "name": "Wilderness",
+          "artist": "MitiS / KC",
+          "source": "netease_client_daily"
+        }
+      ],
+      "recommend_did_not_change_song": true
+    }
+  ],
+  "role_cards_cleared": true,
+  "final_favorite_restored": true,
+  "original_role_restored": "hiyori"
+}

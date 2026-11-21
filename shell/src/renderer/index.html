@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yuiro</title>
+    <!-- connect-src 必须同时放行 **http** 与 ws 的本地回环：
+         引擎的调试/状态接口走 HTTP（/api/...），而 WS 走 /ws/... ——
+         此前只写了 ws://127.0.0.1:*，导致桌宠窗口里**所有 fetch 都被 CSP 拒绝**
+         （联网开关、模型路径、表演库、会话列表、计划批准按钮），
+         又被各自的 catch 静默吞掉 → 用户看到的是"点了没反应/引擎未连接"。
+         dev.html / diary.html 早已放行 http，这里补齐以保持一致。 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://127.0.0.1:* ws://127.0.0.1:*; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+    <!-- Live2D Cubism 专有核心（须在业务脚本前加载，提供全局 Live2DCubismCore） -->
+    <script src="/lib/live2dcubismcore.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

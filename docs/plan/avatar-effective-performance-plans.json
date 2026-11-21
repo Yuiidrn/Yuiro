@@ -1,0 +1,625 @@
+{
+  "scope": "Current effective persona profile + production backend PerformanceResolver + actual main manifest + production frontend resolver; no configuration writes",
+  "roles": [
+    {
+      "role": "hiyori",
+      "model": "/live2d/hiyori/Hiyori.model3.json",
+      "plans": [
+        {
+          "name": "angry",
+          "intent": {
+            "name": "angry",
+            "emotion": "angry",
+            "expression": "angry",
+            "expression_slot": "angry",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "生气（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "angry",
+            "from": "concrete"
+          },
+          "motion": null
+        },
+        {
+          "name": "bored",
+          "intent": {
+            "name": "bored",
+            "emotion": "bored",
+            "expression": "bored",
+            "expression_slot": "neutral",
+            "motion": "Extra",
+            "motion_index": 0,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "无聊（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "bored",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Extra",
+            "index": 0,
+            "durationMs": 1100,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "celebrate",
+          "intent": {
+            "name": "celebrate",
+            "emotion": "excited",
+            "expression": "playful",
+            "expression_slot": "playful",
+            "motion": "Idle",
+            "motion_index": 4,
+            "motion_slot": "celebrate",
+            "duration_ms": 5670,
+            "note": "庆祝（任务完成 / 用户报喜）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "playful",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Idle",
+            "index": 4,
+            "durationMs": 5370,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "comfort",
+          "intent": {
+            "name": "comfort",
+            "emotion": "sad",
+            "expression": "sad",
+            "expression_slot": "sad",
+            "motion": "Idle",
+            "motion_index": 2,
+            "motion_slot": "comfort",
+            "duration_ms": 4500,
+            "note": "安抚（失败 / 用户受挫）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "sad",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Idle",
+            "index": 2,
+            "durationMs": 4200,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "excited",
+          "intent": {
+            "name": "excited",
+            "emotion": "excited",
+            "expression": "surprised",
+            "expression_slot": "surprised",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "兴奋（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "surprised",
+            "from": "concrete"
+          },
+          "motion": null
+        },
+        {
+          "name": "greet",
+          "intent": {
+            "name": "greet",
+            "emotion": "happy",
+            "expression": "happy",
+            "expression_slot": "happy",
+            "motion": "Idle",
+            "motion_index": 6,
+            "motion_slot": "greet",
+            "duration_ms": 2600,
+            "note": "打招呼（用户回来）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "happy",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Idle",
+            "index": 6,
+            "durationMs": 2100,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "happy",
+          "intent": {
+            "name": "happy",
+            "emotion": "happy",
+            "expression": "happy",
+            "expression_slot": "happy",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "开心（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "happy",
+            "from": "concrete"
+          },
+          "motion": null
+        },
+        {
+          "name": "idle",
+          "intent": {
+            "name": "idle",
+            "emotion": "neutral",
+            "expression": "",
+            "expression_slot": "neutral",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "待机（回落默认）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "sad",
+          "intent": {
+            "name": "sad",
+            "emotion": "sad",
+            "expression": "sad",
+            "expression_slot": "sad",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "低落（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "sad",
+            "from": "concrete"
+          },
+          "motion": null
+        },
+        {
+          "name": "shy",
+          "intent": {
+            "name": "shy",
+            "emotion": "shy",
+            "expression": "shy",
+            "expression_slot": "shy",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "害羞",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "shy",
+            "from": "concrete"
+          },
+          "motion": null
+        },
+        {
+          "name": "sing",
+          "intent": {
+            "name": "sing",
+            "emotion": "happy",
+            "expression": "playful",
+            "expression_slot": "playful",
+            "motion": "Extra",
+            "motion_index": 2,
+            "motion_slot": "sing",
+            "duration_ms": 5000,
+            "note": "唱歌",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "playful",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Extra",
+            "index": 2,
+            "durationMs": 4700,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "surprise",
+          "intent": {
+            "name": "surprise",
+            "emotion": "excited",
+            "expression": "surprised",
+            "expression_slot": "surprised",
+            "motion": "Idle",
+            "motion_index": 8,
+            "motion_slot": "surprise",
+            "duration_ms": 4470,
+            "note": "惊讶",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "surprised",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Idle",
+            "index": 8,
+            "durationMs": 4170,
+            "from": "concrete"
+          }
+        },
+        {
+          "name": "thinking",
+          "intent": {
+            "name": "thinking",
+            "emotion": "thinking",
+            "expression": "think",
+            "expression_slot": "thinking",
+            "motion": "Extra",
+            "motion_index": 0,
+            "motion_slot": "thinking",
+            "duration_ms": 2600,
+            "note": "思考中（表情 + 微动作）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "think",
+            "from": "concrete"
+          },
+          "motion": {
+            "group": "Extra",
+            "index": 0,
+            "durationMs": 1100,
+            "from": "concrete"
+          }
+        }
+      ]
+    },
+    {
+      "role": "hotaru",
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "plans": [
+        {
+          "name": "angry",
+          "intent": {
+            "name": "angry",
+            "emotion": "angry",
+            "expression": "",
+            "expression_slot": "angry",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "生气（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "bored",
+          "intent": {
+            "name": "bored",
+            "emotion": "bored",
+            "expression": "",
+            "expression_slot": "neutral",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "无聊（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "celebrate",
+          "intent": {
+            "name": "celebrate",
+            "emotion": "excited",
+            "expression": "",
+            "expression_slot": "playful",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "celebrate",
+            "duration_ms": 2600,
+            "note": "庆祝（任务完成 / 用户报喜）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": {
+            "group": "Motion",
+            "index": 22,
+            "durationMs": 2967,
+            "from": "slot"
+          }
+        },
+        {
+          "name": "comfort",
+          "intent": {
+            "name": "comfort",
+            "emotion": "sad",
+            "expression": "",
+            "expression_slot": "sad",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "comfort",
+            "duration_ms": 2600,
+            "note": "安抚（失败 / 用户受挫）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "excited",
+          "intent": {
+            "name": "excited",
+            "emotion": "excited",
+            "expression": "",
+            "expression_slot": "surprised",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "兴奋（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "greet",
+          "intent": {
+            "name": "greet",
+            "emotion": "happy",
+            "expression": "",
+            "expression_slot": "happy",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "greet",
+            "duration_ms": 2600,
+            "note": "打招呼（用户回来）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": {
+            "group": "Motion",
+            "index": 4,
+            "durationMs": 3533,
+            "from": "slot"
+          }
+        },
+        {
+          "name": "happy",
+          "intent": {
+            "name": "happy",
+            "emotion": "happy",
+            "expression": "",
+            "expression_slot": "happy",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "开心（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "idle",
+          "intent": {
+            "name": "idle",
+            "emotion": "neutral",
+            "expression": "",
+            "expression_slot": "neutral",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "待机（回落默认）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "sad",
+          "intent": {
+            "name": "sad",
+            "emotion": "sad",
+            "expression": "",
+            "expression_slot": "sad",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "低落（仅表情）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "shy",
+          "intent": {
+            "name": "shy",
+            "emotion": "shy",
+            "expression": "",
+            "expression_slot": "shy",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "",
+            "duration_ms": 2600,
+            "note": "害羞",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": null
+        },
+        {
+          "name": "sing",
+          "intent": {
+            "name": "sing",
+            "emotion": "happy",
+            "expression": "",
+            "expression_slot": "playful",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "sing",
+            "duration_ms": 2600,
+            "note": "唱歌",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": {
+            "group": "Motion",
+            "index": 49,
+            "durationMs": 4100,
+            "from": "slot"
+          }
+        },
+        {
+          "name": "surprise",
+          "intent": {
+            "name": "surprise",
+            "emotion": "excited",
+            "expression": "",
+            "expression_slot": "surprised",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "surprise",
+            "duration_ms": 2600,
+            "note": "惊讶",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": {
+            "group": "Motion",
+            "index": 61,
+            "durationMs": 2033,
+            "from": "slot"
+          }
+        },
+        {
+          "name": "thinking",
+          "intent": {
+            "name": "thinking",
+            "emotion": "thinking",
+            "expression": "",
+            "expression_slot": "thinking",
+            "motion": "",
+            "motion_index": null,
+            "motion_slot": "thinking",
+            "duration_ms": 2600,
+            "note": "思考中（表情 + 微动作）",
+            "builtin": true,
+            "extra": {}
+          },
+          "expression": {
+            "name": "",
+            "from": "reset"
+          },
+          "motion": {
+            "group": "Motion",
+            "index": 40,
+            "durationMs": 2333,
+            "from": "slot"
+          }
+        }
+      ]
+    }
+  ],
+  "validForWireResolution": false,
+  "limitation": "Exploratory raw Performance metadata only; AvatarRuntime transforms empty expression to None when a slot exists. Do not use this raw-metadata resolver output as authoritative runtime resource selection."
+}

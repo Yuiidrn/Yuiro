@@ -1,0 +1,39 @@
+{
+  "scope": "Hotaru real microphone test; no physical acoustic stop measurement",
+  "userFeedback": "总体效果还不错，但还是有些瑕疵和反应延迟；说停一下后旧声音仍拖了一会儿",
+  "interrupts": [
+    {
+      "interruptEpochMs": 1794282327571.017,
+      "precedingMouthInput": 0.2154451310634613,
+      "nextZeroMouthSampleMs": 38.0,
+      "presenceAtZero": "idle"
+    },
+    {
+      "interruptEpochMs": 1794282399644.163,
+      "precedingMouthInput": 0.7175869345664978,
+      "nextZeroMouthSampleMs": 10.8,
+      "presenceAtZero": "idle"
+    },
+    {
+      "interruptEpochMs": 1794282425207.597,
+      "precedingMouthInput": 0.2158719152212143,
+      "nextZeroMouthSampleMs": 49.4,
+      "presenceAtZero": "idle"
+    },
+    {
+      "interruptEpochMs": 1794282524014.012,
+      "precedingMouthInput": 0.10335791856050491,
+      "nextZeroMouthSampleMs": 41.0,
+      "presenceAtZero": "idle"
+    }
+  ],
+  "historicalConsoleEntriesExcluded": 2,
+  "timingCaution": "Network ms is observer receive time and is buffered by CDP command polling; not an accurate user-onset-to-stop latency. Mouth is renderer prop sampled approximately every 50ms, not physical sound.",
+  "restored": {
+    "character": "hotaru",
+    "barge_in_enabled": false,
+    "microphone": false,
+    "observerGlobalsRemoved": true
+  },
+  "status": "partial; actual interrupt path confirmed, acoustic responsiveness not accepted"
+}

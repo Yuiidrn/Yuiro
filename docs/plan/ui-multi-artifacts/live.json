@@ -1,0 +1,350 @@
+{
+  "kind": "real Agent LLM + netease_search + web search; native geometry/drag; no music playback",
+  "work_area_physical": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "roles": [
+    {
+      "role": "hiyori",
+      "geometry": [
+        {
+          "case": "center",
+          "pet": {
+            "x": 687,
+            "y": 176,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 855.6100045061113,
+            "y": 298.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 1080,
+              "y": 339,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 522,
+              "y": 339,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1080,
+              "y": 757,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "left-top",
+          "pet": {
+            "x": 8,
+            "y": 8,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 176.61000450611132,
+            "y": 130.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 401,
+              "y": 171,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 401,
+              "y": 603,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 22,
+              "y": 439,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "right-top",
+          "pet": {
+            "x": 1366,
+            "y": 8,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 1534.6100045061114,
+            "y": 130.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 1297,
+              "y": 171,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 1297,
+              "y": 603,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 917,
+              "y": 171,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "left-bottom",
+          "pet": {
+            "x": 8,
+            "y": 344,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 176.61000450611132,
+            "y": 466.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 401,
+              "y": 506,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 150,
+              "y": 35,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 457,
+              "y": 179,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "right-bottom",
+          "pet": {
+            "x": 1366,
+            "y": 344,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 1534.6100045061114,
+            "y": 466.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 1297,
+              "y": 506,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 1508,
+              "y": 35,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1128,
+              "y": 179,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "before-drag",
+          "pet": {
+            "x": 687,
+            "y": 176,
+            "width": 546,
+            "height": 728
+          },
+          "model": {
+            "x": 855.6100045061113,
+            "y": 298.65233963938664,
+            "width": 208.7800110149388,
+            "height": 292.8953447538204
+          },
+          "panels": [
+            {
+              "x": 1080,
+              "y": 339,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 522,
+              "y": 339,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1080,
+              "y": 757,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "after-drag",
+          "pet": {
+            "x": 748,
+            "y": 196,
+            "width": 549,
+            "height": 730
+          },
+          "model": {
+            "x": 916.3340470519279,
+            "y": 318.5516122868221,
+            "width": 208.4383088692515,
+            "height": 292.6548065566505
+          },
+          "panels": [
+            {
+              "x": 1140,
+              "y": 358,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 583,
+              "y": 358,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1140,
+              "y": 31,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "after-hot-update",
+          "pet": {
+            "x": 748,
+            "y": 196,
+            "width": 549,
+            "height": 730
+          },
+          "model": {
+            "x": 916.3340470519279,
+            "y": 318.5516122868221,
+            "width": 208.4383088692515,
+            "height": 292.6548065566505
+          },
+          "panels": [
+            {
+              "x": 1140,
+              "y": 358,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 583,
+              "y": 358,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1140,
+              "y": 31,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        }
+      ],
+      "real_response_seconds": 22.41,
+      "reply_chars": 1096,
+      "song_count": 5,
+      "source_count": 3,
+      "types": [
+        "agent:activity",
+        "agent:result",
+        "chat:assistant"
+      ],
+      "song_ids": [
+        "36308916",
+        "442495638",
+        "2649307936",
+        "1452906755",
+        "1452903856"
+      ],
+      "native_drag_delta": [
+        61,
+        20
+      ],
+      "panel_drag_deltas": [
+        [
+          60,
+          19
+        ],
+        [
+          61,
+          19
+        ],
+        [
+          60,
+          -726
+        ]
+      ],
+      "long_reply_scroll": {
+        "scrollHeight": 6630,
+        "clientHeight": 320,
+        "scrollTop": 6310.76953125
+      },
+      "hot_update_ms": 3,
+      "independent_native_dismiss": true
+    },
+    {
+      "role": "hotaru",
+      "geometry": []
+    }
+  ],
+  "preferences_restored": true
+}

@@ -1,0 +1,372 @@
+{
+  "kind": "real_UI_selection_to_Engine_and_renderer_readiness",
+  "clock": "single Python perf_counter; includes CDP dispatch/poll overhead; backend switch_ms separate",
+  "initial": {
+    "title": "Yuiro",
+    "role": "hiyori",
+    "revision": 0,
+    "session": "b66b80f19e3a4935b02e06aa2ecb2610",
+    "ws": 1,
+    "model": "/live2d/hiyori/Hiyori.model3.json",
+    "ready": true,
+    "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+    "modelPresent": true,
+    "loadError": "",
+    "manifestKeys": [
+      "path",
+      "model3",
+      "mocVersion",
+      "expressions",
+      "motions",
+      "index",
+      "coverage",
+      "warnings"
+    ],
+    "avatar": {},
+    "hasBridge": true
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "target": "hotaru",
+      "ui_synced_ms": 126.58,
+      "pet_reconnected_ms": 187.85,
+      "renderer_ready_ms": 565.73,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 1,
+        "session": "ae77df557236469d98d8413c41b62fdd",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hotaru",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 1,
+        "switching": false,
+        "switch_ms": 64.62
+      }
+    },
+    {
+      "sample": 2,
+      "target": "hiyori",
+      "ui_synced_ms": 76.69,
+      "pet_reconnected_ms": 204.87,
+      "renderer_ready_ms": 204.87,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 2,
+        "session": "501e4eac95ab4ff3b2410774fb765f2c",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hiyori",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 2,
+        "switching": false,
+        "switch_ms": 11.8
+      }
+    },
+    {
+      "sample": 3,
+      "target": "hotaru",
+      "ui_synced_ms": 58.34,
+      "pet_reconnected_ms": 183.85,
+      "renderer_ready_ms": 250.62,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 3,
+        "session": "f857374dd1dd4f4daac5e87a3b5186aa",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hotaru",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 3,
+        "switching": false,
+        "switch_ms": 23.5
+      }
+    },
+    {
+      "sample": 4,
+      "target": "hiyori",
+      "ui_synced_ms": 75.43,
+      "pet_reconnected_ms": 195.02,
+      "renderer_ready_ms": 259.78,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 4,
+        "session": "261e6cbeb91a4a0f8bf7f154e65d29b5",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hiyori",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 4,
+        "switching": false,
+        "switch_ms": 11.49
+      }
+    },
+    {
+      "sample": 5,
+      "target": "hotaru",
+      "ui_synced_ms": 73.24,
+      "pet_reconnected_ms": 225.8,
+      "renderer_ready_ms": 225.8,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 5,
+        "session": "49d0f5fdfe8840519845bf024ad5b755",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hotaru",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 5,
+        "switching": false,
+        "switch_ms": 23.24
+      }
+    },
+    {
+      "sample": 6,
+      "target": "hiyori",
+      "ui_synced_ms": 70.65,
+      "pet_reconnected_ms": 192.2,
+      "renderer_ready_ms": 253.13,
+      "pet": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 6,
+        "session": "4e19c43906ae4a4c8dc94428ce445f10",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      },
+      "switch_response": {
+        "status": 200,
+        "active_id": "hiyori",
+        "items": [
+          {
+            "id": "hiyori",
+            "label": "Hiyori"
+          },
+          {
+            "id": "hotaru",
+            "label": "Hotaru Shiomi"
+          }
+        ],
+        "role_sections": [
+          "llm",
+          "tts",
+          "persona",
+          "language",
+          "agent",
+          "context",
+          "memory"
+        ],
+        "revision": 6,
+        "switching": false,
+        "switch_ms": 10.07
+      }
+    }
+  ]
+}

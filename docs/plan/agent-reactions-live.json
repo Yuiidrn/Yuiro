@@ -1,0 +1,93 @@
+{
+  "scope": "Actual built App/SDK via local synthetic activity events; formal role switches, no real tools/cloud/microphone; backend actual result production tests separate",
+  "rows": [
+    {
+      "role": "hiyori",
+      "started": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "think",
+          "motion": "",
+          "motionIndex": null,
+          "until": 1794323111642,
+          "at": 1794323110543
+        },
+        "mic": false
+      },
+      "success": {
+        "role": "hiyori",
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/hiyori/Hiyori.model3.json",
+          "presence": "idle",
+          "expression": "happy",
+          "motion": "Idle",
+          "motionIndex": 6,
+          "until": 1794323113362,
+          "at": 1794323110762
+        },
+        "mic": false
+      },
+      "duplicateRejected": true,
+      "foreignRoleRejected": true,
+      "userPriorityPreserved": true
+    },
+    {
+      "role": "hotaru",
+      "started": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "idle",
+          "expression": "exp_puzzled01",
+          "motion": "Motion",
+          "motionIndex": 40,
+          "until": 1794323114351,
+          "at": 1794323111518
+        },
+        "mic": false
+      },
+      "success": {
+        "role": "hotaru",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "mouth": 0,
+        "state": {
+          "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+          "presence": "idle",
+          "expression": "exp_bsmile01",
+          "motion": "Motion",
+          "motionIndex": 4,
+          "until": 1794323115775,
+          "at": 1794323111742
+        },
+        "mic": false
+      },
+      "duplicateRejected": true,
+      "foreignRoleRejected": true,
+      "userPriorityPreserved": true
+    }
+  ],
+  "final": {
+    "role": "hotaru",
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "mouth": 0,
+    "state": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794323112656
+    },
+    "mic": false
+  },
+  "hooksRemoved": true
+}

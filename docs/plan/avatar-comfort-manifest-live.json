@@ -1,0 +1,66 @@
+{
+  "scope": "Actual restarted Electron main process manifest over existing resources; no config writes",
+  "rows": [
+    {
+      "role": "hiyori",
+      "comfortCandidates": [],
+      "motions": 13,
+      "cryTearSad": []
+    },
+    {
+      "role": "hotaru",
+      "comfortCandidates": [],
+      "motions": 67,
+      "cryTearSad": [
+        {
+          "index": 0,
+          "file": "motions/misc_tear01.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 10,
+          "file": "motions/mtn_cry01_C.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 11,
+          "file": "motions/mtn_cry01_L.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 12,
+          "file": "motions/mtn_cry01_R.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 43,
+          "file": "motions/mtn_sad01_C.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 44,
+          "file": "motions/mtn_sad01_L.motion3.json",
+          "slot": ""
+        },
+        {
+          "index": 45,
+          "file": "motions/mtn_sad01_R.motion3.json",
+          "slot": ""
+        }
+      ]
+    }
+  ],
+  "final": {
+    "role": "hotaru",
+    "mic": false,
+    "avatar": {
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_idle01",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794320092012
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "actual built diary connection and formal role changes, no text/audio/LLM or microphone; controlled async races covered separately by production-function tests",
+  "preExistingWindow": false,
+  "expectedBundle": "diary-D1sbwnTb.js",
+  "rows": [
+    {
+      "role": "hiyori",
+      "connected": true,
+      "draftPresent": false,
+      "latestBundle": true
+    },
+    {
+      "role": "hotaru",
+      "connected": true,
+      "draftPresent": false,
+      "latestBundle": true
+    }
+  ],
+  "initial": {
+    "role": "hotaru",
+    "connected": true,
+    "draftPresent": false,
+    "latestBundle": true
+  },
+  "restored": {
+    "role": "hotaru",
+    "connected": true,
+    "draftPresent": false,
+    "latestBundle": true
+  }
+}

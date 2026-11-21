@@ -1,0 +1,112 @@
+{
+  "scope": "real text reply with paired updated engine/renderer; no microphone or stale injection; event timing includes LLM and translation, not acoustic first sound",
+  "initial": {
+    "role": "hotaru",
+    "recording": false
+  },
+  "events": [
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8259.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8522.6
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8522.9
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8523.1
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8523.3
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": true,
+      "streamIdPresent": true,
+      "ms": 8523.4
+    },
+    {
+      "type": "tts:reply_end",
+      "sessionMatches": true,
+      "generation": 2,
+      "streaming": null,
+      "streamIdPresent": false,
+      "ms": 8523.4
+    }
+  ],
+  "presence": [
+    "thinking",
+    "idle",
+    "speaking"
+  ],
+  "finalPresence": "idle",
+  "observedUnderruns": [],
+  "passed": true,
+  "audioGraphSchedule": [
+    {
+      "when": 0.02,
+      "clock": 0,
+      "duration": 0.48
+    },
+    {
+      "when": 0.5,
+      "clock": 0.029333333333333333,
+      "duration": 0.48
+    },
+    {
+      "when": 0.98,
+      "clock": 0.04,
+      "duration": 0.48
+    },
+    {
+      "when": 1.46,
+      "clock": 0.06133333333333333,
+      "duration": 0.48
+    },
+    {
+      "when": 1.94,
+      "clock": 0.06933333333333333,
+      "duration": 0.48
+    },
+    {
+      "when": 2.42,
+      "clock": 0.08,
+      "duration": 0.2935
+    }
+  ],
+  "audioGraphGapsMs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

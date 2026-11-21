@@ -1,0 +1,7 @@
+{
+  "role": "hotaru",
+  "mic": false,
+  "presence": "idle",
+  "until": 0,
+  "hooksRemoved": true
+}

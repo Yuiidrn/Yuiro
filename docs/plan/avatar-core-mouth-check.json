@@ -1,0 +1,88 @@
+{
+  "scope": "renderer-only real SDK model loads and controlled intents; no engine conversation or visual approval",
+  "results": [
+    {
+      "model": "hiyori",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "shy",
+        "playful",
+        "think",
+        "bored"
+      ],
+      "ids": [
+        "ParamMouthOpenY"
+      ],
+      "frames": 166,
+      "observedOpen": true,
+      "observedClosed": true,
+      "legacySetter": "undefined"
+    },
+    {
+      "model": "hotaru",
+      "loaded": true,
+      "error": "",
+      "expressions": [
+        "exp_angry01",
+        "exp_angry02",
+        "exp_angry03",
+        "exp_anxiety01",
+        "exp_bsmile01",
+        "exp_bsmile02",
+        "exp_cry01",
+        "exp_cry02",
+        "exp_cry03",
+        "exp_cry04",
+        "exp_cry05",
+        "exp_cry06",
+        "exp_cry07",
+        "exp_heart01",
+        "exp_idle01",
+        "exp_idle02",
+        "exp_idle03",
+        "exp_idle04",
+        "exp_kime01",
+        "exp_kime02",
+        "exp_kirakira01",
+        "exp_pale01",
+        "exp_pale02",
+        "exp_panic01",
+        "exp_panic02",
+        "exp_puzzled01",
+        "exp_puzzled02",
+        "exp_question01",
+        "exp_sad01",
+        "exp_sad02",
+        "exp_sad03",
+        "exp_shadow01",
+        "exp_shy01",
+        "exp_sing01",
+        "exp_smile01",
+        "exp_smile02",
+        "exp_smile03",
+        "exp_smile04",
+        "exp_smile05",
+        "exp_smile06",
+        "exp_smile07",
+        "exp_spin01",
+        "exp_surprised01",
+        "exp_surprised02",
+        "exp_thinking01",
+        "exp_thinking02"
+      ],
+      "ids": [
+        "ParamMouthOpenY"
+      ],
+      "frames": 150,
+      "observedOpen": true,
+      "observedClosed": true,
+      "legacySetter": "undefined"
+    }
+  ],
+  "restored": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "production_function_characterization_with_fake_decode_NOT_browser_E2E",
+  "source": "shell/src/renderer/src/composables/useVoiceInput.ts",
+  "extracted": [
+    {
+      "name": "playOne",
+      "line": 208
+    },
+    {
+      "name": "stopPlayback",
+      "line": 250
+    }
+  ],
+  "result": {
+    "lateStarts": 1,
+    "expectedSafeLateStarts": 0,
+    "observedCurrentDefect": true
+  },
+  "limits": "Isolated functions; surrounding Vue/WS/device lifecycle not executed. Known failure is recorded, not fixed."
+}

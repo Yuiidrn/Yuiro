@@ -1,0 +1,90 @@
+{
+  "scope": "actual native Cubism Model.update boundary parameter values, local preview only, no microphone or service calls; combo uses synthetic mouth prop, not real speech",
+  "combo": true,
+  "rows": [
+    {
+      "role": "hiyori",
+      "phase": "combined",
+      "expression": "happy",
+      "frames": 118,
+      "sampleSeconds": 0.7,
+      "leftRange": [
+        0,
+        0.5392982959747314
+      ],
+      "rightRange": [
+        0,
+        0.5392982959747314
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-combo\\hiyori-combined.png",
+      "mouthRange": [
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "passed": true
+    },
+    {
+      "role": "hiyori",
+      "phase": "released",
+      "expression": "",
+      "frames": 118,
+      "sampleSeconds": 0.7,
+      "leftRange": [
+        0.9936588406562805,
+        1
+      ],
+      "rightRange": [
+        0.9936588406562805,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-combo\\hiyori-released.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "combined",
+      "expression": "exp_bsmile01",
+      "frames": 90,
+      "sampleSeconds": 0.7,
+      "leftRange": [
+        0,
+        0
+      ],
+      "rightRange": [
+        0,
+        0
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-combo\\hotaru-combined.png",
+      "mouthRange": [
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "released",
+      "expression": "",
+      "frames": 113,
+      "sampleSeconds": 0.7,
+      "leftRange": [
+        0.30981987714767456,
+        1
+      ],
+      "rightRange": [
+        0.30981987714767456,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-eye-combo\\hotaru-released.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    }
+  ]
+}

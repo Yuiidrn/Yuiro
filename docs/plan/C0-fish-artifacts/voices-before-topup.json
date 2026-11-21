@@ -1,0 +1,261 @@
+{
+  "kind": "real_configured_LLM_TTS_renderer_playback_and_switch",
+  "limits": "AudioContext application playback, not physical speaker measurement or subjective approval",
+  "samples": [
+    {
+      "case": "voice-1-hiyori",
+      "role": "hiyori",
+      "config": {
+        "id": "hiyori",
+        "revision": 4,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "c78e7d947d42559314d47065ff7803a478252ebd59d58723a4ae5fc40dc5a763",
+          "persona": "4b0420c60e48e7bf0fc4043637d5f0dd55afd2bff44ed0d310a124f8ab4b91a0",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "82404584a4cc8bf75f6c7900e796eae6cdef74f3094a38d334d3fa471f4db0de",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "siliconflow",
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "model": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "switch_trigger_pet_clock_ms": 14188102,
+      "switch_target": "hotaru",
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 14180802.400000002,
+          "chars": 40
+        },
+        {
+          "type": "tts:reply_audio",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 14187548.7,
+          "wav_chars": 1321884
+        },
+        {
+          "type": "start",
+          "id": 17,
+          "role": "hiyori",
+          "origin_role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 14187555.2,
+          "duration_s": 11.24
+        },
+        {
+          "type": "stop",
+          "id": 17,
+          "at": 14188112.8,
+          "role": "hiyori"
+        },
+        {
+          "type": "character:switching",
+          "role": "hiyori",
+          "case": "voice-1-hiyori",
+          "at": 14188113.600000001
+        },
+        {
+          "type": "ended",
+          "id": 17,
+          "at": 14188118.400000002,
+          "role": "hiyori"
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 5,
+        "session": "b91babe78b064a27a062028d2e949f4c",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    },
+    {
+      "case": "voice-2-hotaru",
+      "role": "hotaru",
+      "config": {
+        "id": "hotaru",
+        "revision": 5,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "5f9a7ecd74a2b793791737b34f5e26e86328d7dfb7a18079a4a73aae5346e068",
+          "persona": "59a98609d13a66b0344ea0ced2ce366c68b85a2b9818da05a2c9a26126fc1abc",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "98cbce8a2d732540c5b651f1827caf2cb423c898d2f7eadd6bc774350fca2b4b",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "fish",
+        "voice": "zh-CN-XiaoyiNeural",
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      },
+      "error": "timeout",
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 14191285.3,
+          "chars": 8
+        },
+        {
+          "type": "tts:reply_end",
+          "role": "hotaru",
+          "case": "voice-2-hotaru",
+          "at": 14192125
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hotaru",
+        "revision": 5,
+        "session": "b91babe78b064a27a062028d2e949f4c",
+        "ws": 1,
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    },
+    {
+      "case": "voice-3-hiyori",
+      "role": "hiyori",
+      "config": {
+        "id": "hiyori",
+        "revision": 6,
+        "digests": {
+          "llm": "4344cfa9bbf1fd22b802d649204757c8e97cb01c4f89aa1cb80f5959e50d4563",
+          "tts": "9c1b4ea982a86c8383e0810fc3bcfc756cc2326744796f16e7dea24b62350271",
+          "persona": "4b0420c60e48e7bf0fc4043637d5f0dd55afd2bff44ed0d310a124f8ab4b91a0",
+          "language": "593adb75f6f71e9163474f3bf42dc93007a1b6d7110825dbecfd640ded71f05b",
+          "memory": "82404584a4cc8bf75f6c7900e796eae6cdef74f3094a38d334d3fa471f4db0de",
+          "agent": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context": "c61a38cbcc7aa5d5d382f4bae771fcb6c2fddcb96b5ad7055fac3eb0195dedf5"
+        },
+        "shared": "1b2e6cb36ef62a9dd9552d9f10968a6e7c5cf7966826e191f5c90a58f2b8ba3d",
+        "llm": {
+          "provider": "qwen",
+          "model": "qwen3.8-flash"
+        },
+        "tts": "siliconflow",
+        "voice": "zh-CN-XiaoxiaoNeural",
+        "model": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "diagnostic_stop": true,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 14247450.5,
+          "chars": 8
+        },
+        {
+          "type": "tts:reply_audio",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 14252068.600000001,
+          "wav_chars": 179432
+        },
+        {
+          "type": "tts:reply_end",
+          "role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 14252068.8
+        },
+        {
+          "type": "start",
+          "id": 18,
+          "role": "hiyori",
+          "origin_role": "hiyori",
+          "case": "voice-3-hiyori",
+          "at": 14252080.600000001,
+          "duration_s": 2.7999773242630384
+        },
+        {
+          "type": "stop",
+          "id": 18,
+          "at": 14253449.600000001,
+          "role": "hiyori"
+        },
+        {
+          "type": "ended",
+          "id": 18,
+          "at": 14253455.3,
+          "role": "hiyori"
+        }
+      ],
+      "cross_role_starts": [],
+      "final": {
+        "title": "Yuiro",
+        "role": "hiyori",
+        "revision": 6,
+        "session": "647d7415cb6743ac8177a81d8ddcfd89",
+        "ws": 1,
+        "model": "/live2d/hiyori/Hiyori.model3.json",
+        "ready": true,
+        "canvasPath": "/live2d/hiyori/Hiyori.model3.json",
+        "modelPresent": true,
+        "loadError": "",
+        "manifestKeys": [
+          "path",
+          "model3",
+          "mocVersion",
+          "expressions",
+          "motions",
+          "index",
+          "coverage",
+          "warnings"
+        ],
+        "avatar": {},
+        "hasBridge": true
+      }
+    }
+  ]
+}

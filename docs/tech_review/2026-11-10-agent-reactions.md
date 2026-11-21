@@ -1,0 +1,13 @@
+# 工具事实驱动的Agent微反应
+
+原agent.activity只在工具执行前发送，前端按六秒间隔直接触发普通表演；缺少完成/待选择/失败区别，也未带完整会话和角色身份。更丰富的动作首先需要结果可信和归属明确，而非让LLM多调用几次表演工具。
+
+本次沿用现有事件：同一真实工具批次以activity_id关联tool/tool_result。结果仅根据已执行工具返回的status归类；混合失败优先error、待选择为waiting，未知或去重占位done不伪装成功。生成反馈不额外请求LLM，不影响工具权限。转发边界拒绝旧generation/换角期事件，并补session、角色及revision。
+
+前端先验证身份，再将事实交给本地AgentReactions。开始与结果分别去重和冷却，让一次短任务可以先关注、后回应，同时限制密集工具刷动作；不为avatar_perform再加一层自动动作。成功给happy/短greet，待确认给thinking、失败给neutral且不带身体动作；动作时长未知/超上限时只用表情。
+
+Live2DCanvas复用既有lease，自动反应priority=2，单击priority=4、显式Agent表演priority=3，因此自动反应不能打断它们。activity来源不被当作“说话手势”，避免一次presence变化错误取消工具反馈。每角色独立开关、冷却和时长上限沿用现有VueUse跨窗口设置热更新。
+
+验证包含真实AgentLoop+假工具的三种结果、生产转发边界、前端planner及真实偏好composable隔离，后端全量1011 passed；前端typecheck/build通过。双角色真实App/SDK本地入站回放验证开始/成功动作、重复拒收、其他角色拒收与用户优先级；不是实际供应商/真实系统工具端到端验收。新诊断/活动模块/新增测试Ruff通过，未声称全仓lint清零。
+
+本次未改TTS、模型资源或角色配置。供应商首段供给波动仍按既有真实数据保留；新的思考反馈只表达等待，不将等待伪装为说话或任务成功。

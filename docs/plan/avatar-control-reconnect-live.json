@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-09",
+  "scope": "actual built Electron control socket close and engine reconnect; manually replayed stale lifecycle callbacks; no chat or TTS",
+  "reconnected": true,
+  "staleClosePreservesSession": true,
+  "roleUnchanged": true,
+  "presence": "idle",
+  "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+}

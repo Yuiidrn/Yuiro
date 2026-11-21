@@ -1,0 +1,192 @@
+{
+  "scope": "actual local AppearanceStudio preview stage, six selected clips and head frames; not all-assets semantic certification",
+  "activeConfigUnchanged": true,
+  "rows": [
+    {
+      "role": "hiyori",
+      "label": "fixed-idle",
+      "group": "Idle",
+      "index": 0,
+      "durationMs": 4700,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Idle",
+        "motionIndex": 0,
+        "until": 1794309622243
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.4,
+        2.35,
+        4.23
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-fixed-idle-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-fixed-idle-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-fixed-idle-2.png"
+      ]
+    },
+    {
+      "role": "hiyori",
+      "label": "click-short",
+      "group": "Idle",
+      "index": 6,
+      "durationMs": 2100,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Idle",
+        "motionIndex": 6,
+        "until": 1794309624953
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.315,
+        1.05,
+        1.8900000000000001
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-click-short-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-click-short-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hiyori-click-short-2.png"
+      ]
+    },
+    {
+      "role": "hotaru",
+      "label": "tear-effect",
+      "group": "Motion",
+      "index": 0,
+      "durationMs": 2000,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 0,
+        "until": 1794309628127
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.3,
+        1.0,
+        1.8
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-tear-effect-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-tear-effect-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-tear-effect-2.png"
+      ]
+    },
+    {
+      "role": "hotaru",
+      "label": "cry",
+      "group": "Motion",
+      "index": 10,
+      "durationMs": 4467,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 10,
+        "until": 1794309633218
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.4,
+        2.2335,
+        4.0203
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-cry-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-cry-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-cry-2.png"
+      ]
+    },
+    {
+      "role": "hotaru",
+      "label": "greet",
+      "group": "Motion",
+      "index": 4,
+      "durationMs": 3533,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 4,
+        "until": 1794309637393
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.4,
+        1.7665,
+        3.1797
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-greet-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-greet-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-greet-2.png"
+      ]
+    },
+    {
+      "role": "hotaru",
+      "label": "thinking",
+      "group": "Motion",
+      "index": 40,
+      "durationMs": 2333,
+      "accepted": true,
+      "state": {
+        "expression": "",
+        "motion": "Motion",
+        "motionIndex": 40,
+        "until": 1794309640355
+      },
+      "endingState": {
+        "expression": "",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "released": true,
+      "sampleTargetsSeconds": [
+        0.34995000000000004,
+        1.1665,
+        2.0997000000000003
+      ],
+      "frames": [
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-thinking-0.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-thinking-1.png",
+        "docs\\plan\\avatar-dynamic-preview-after\\hotaru-thinking-2.png"
+      ]
+    }
+  ]
+}

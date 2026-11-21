@@ -1,0 +1,16 @@
+{
+  "role": "hiyori",
+  "ready": true,
+  "ws": 1,
+  "repliesCleared": true,
+  "cardsCleared": true,
+  "connector_hidden": true,
+  "client_status": "paused",
+  "client_song_id": "36308916",
+  "models": {
+    "hiyori": "qwen3.8-max",
+    "hotaru": "qwen3.8-max"
+  },
+  "backend_tests": 915,
+  "typecheck_and_build": true
+}

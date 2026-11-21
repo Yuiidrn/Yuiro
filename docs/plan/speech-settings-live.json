@@ -1,0 +1,70 @@
+{
+  "scope": "current built dev store/API save and cross-window pet menu; no microphone, LLM or synthesis; no refresh/reconnect during setting changes",
+  "original": {
+    "role": "hotaru",
+    "revision": 12,
+    "barge": false,
+    "tts": true
+  },
+  "rows": [
+    {
+      "section": "vad",
+      "value": true,
+      "observed": "开",
+      "passed": true
+    },
+    {
+      "section": "vad",
+      "value": false,
+      "observed": "关",
+      "passed": true
+    },
+    {
+      "section": "tts",
+      "value": false,
+      "observed": "关",
+      "passed": true
+    },
+    {
+      "section": "tts",
+      "value": true,
+      "observed": "开",
+      "passed": true
+    },
+    {
+      "direction": "pet-to-dev",
+      "section": "vad",
+      "value": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "direction": "pet-to-dev",
+      "section": "vad",
+      "value": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "direction": "pet-to-dev",
+      "section": "tts",
+      "value": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "direction": "pet-to-dev",
+      "section": "tts",
+      "value": true,
+      "observed": true,
+      "passed": true
+    }
+  ],
+  "dirtyDraftPreserved": true,
+  "configRestored": true,
+  "final": {
+    "sameDocument": true,
+    "mic": false,
+    "role": "hotaru"
+  }
+}

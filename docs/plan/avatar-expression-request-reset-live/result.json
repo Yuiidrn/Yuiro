@@ -1,0 +1,132 @@
+{
+  "scope": "actual native Cubism Model.update boundary parameter values, local preview only, no microphone or service calls; combo uses synthetic mouth prop, not real speech",
+  "combo": false,
+  "rows": [
+    {
+      "role": "hiyori",
+      "phase": "neutral",
+      "expression": "",
+      "frames": 1355,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hiyori-neutral.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hiyori",
+      "phase": "expression",
+      "expression": "happy",
+      "frames": 198,
+      "sampleSeconds": 1.2,
+      "leftRange": [
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "rightRange": [
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hiyori-expression.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hiyori",
+      "phase": "reset",
+      "expression": "",
+      "frames": 1350,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hiyori-reset.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "neutral",
+      "expression": "",
+      "frames": 1082,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hotaru-neutral.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "expression",
+      "expression": "exp_bsmile01",
+      "frames": 168,
+      "sampleSeconds": 1.2,
+      "leftRange": [
+        0,
+        0
+      ],
+      "rightRange": [
+        0,
+        0
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hotaru-expression.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "role": "hotaru",
+      "phase": "reset",
+      "expression": "",
+      "frames": 1050,
+      "sampleSeconds": 8.2,
+      "leftRange": [
+        0,
+        1
+      ],
+      "rightRange": [
+        0,
+        1
+      ],
+      "frame": "docs\\plan\\avatar-expression-request-reset-live\\hotaru-reset.png",
+      "mouthRange": [
+        0,
+        0
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-26",
+  "final": {
+    "role": "hiyori",
+    "modelReady": true,
+    "ws": 1,
+    "replyCleared": true,
+    "musicCleared": true,
+    "sourceCleared": true,
+    "webSearchOn": false,
+    "panels_hidden": true
+  },
+  "hiyori": {
+    "layout_cases": 8,
+    "real_reply_chars": 1096,
+    "native_dismiss": true
+  },
+  "hotaru": {
+    "layout_cases": 8,
+    "original_reply_chars": 84,
+    "stress_chars": 8953,
+    "mode": "explicit typography stress sample from same-role real search/reply",
+    "native_dismiss": true
+  },
+  "role_cleanup": true,
+  "preferences_restored": true,
+  "automated_checks": [
+    "typecheck",
+    "build",
+    "detached coordinator/layout",
+    "UI appearance/timers",
+    "contour",
+    "C0",
+    "live UI customization"
+  ]
+}

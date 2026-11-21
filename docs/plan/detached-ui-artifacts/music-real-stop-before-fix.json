@@ -1,0 +1,143 @@
+{
+  "kind": "real Agent search -> native detached card -> Engine media:play -> mpv progress -> chat stop",
+  "fixture": false,
+  "roles": [
+    {
+      "role": "hiyori",
+      "status": "running",
+      "search_seconds": 5.271,
+      "search_term": "Monody TheFatRat",
+      "candidates": [
+        {
+          "name": "Monody (BIMONTE Remix)",
+          "artist": "TheFatRat、Laura Brehm、BIMONTE",
+          "album": "Classics Remixed",
+          "duration_s": 268,
+          "song_id": 1452906755,
+          "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+          "playable": true
+        },
+        {
+          "name": "Monody (Ephixa Remix)",
+          "artist": "TheFatRat、Laura Brehm、Ephixa",
+          "album": "Classics Remixed",
+          "duration_s": 198,
+          "song_id": 1452903856,
+          "encrypted_id": "64C86BFC2260FC62C0FEBABBC704347A",
+          "playable": true
+        },
+        {
+          "name": "Monody",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Monody",
+          "duration_s": 290,
+          "song_id": 36308916,
+          "encrypted_id": "50823456D9AD17D80AE1CCD5E33621C8",
+          "playable": false
+        },
+        {
+          "name": "Monody",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Unity 10th Anniversary Mixtape",
+          "duration_s": 290,
+          "song_id": 2649307936,
+          "encrypted_id": "3F5761535FE51ECD17C33793CDA19338",
+          "playable": false
+        },
+        {
+          "name": "Monody (Radio Edit)",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Monody (Radio Edit)",
+          "duration_s": 252,
+          "song_id": 442495638,
+          "encrypted_id": "39734D2F79B1982ECC1802C4488D1F14",
+          "playable": false
+        }
+      ],
+      "before_drag": {
+        "pet": {
+          "x": 1264,
+          "y": 100,
+          "width": 555,
+          "height": 738
+        },
+        "results": {
+          "x": 1101,
+          "y": 263,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "after_drag": {
+        "pet": {
+          "x": 1346,
+          "y": 133,
+          "width": 558,
+          "height": 741
+        },
+        "results": {
+          "x": 1183,
+          "y": 297,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "follow_delta_x": 82,
+      "sent": [
+        {
+          "type": "media:play",
+          "name": "Monody (BIMONTE Remix)",
+          "kind": "song",
+          "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+          "song_id": "1452906755"
+        }
+      ],
+      "selected": {
+        "name": "Monody (BIMONTE Remix)",
+        "artist": "TheFatRat、Laura Brehm、BIMONTE",
+        "album": "Classics Remixed",
+        "duration_s": 268,
+        "song_id": 1452906755,
+        "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+        "playable": true
+      },
+      "card_cleared": true,
+      "click_to_play_seconds": 6.441,
+      "playing": {
+        "status": "playing",
+        "title": "Monody (BIMONTE Remix)",
+        "position": 0.4,
+        "duration": 268.4,
+        "ready": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      },
+      "playing_later": {
+        "status": "playing",
+        "title": "Monody (BIMONTE Remix)",
+        "position": 3.8,
+        "duration": 268.4,
+        "ready": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      }
+    }
+  ],
+  "preflight": {
+    "status": "ok",
+    "count": 3
+  },
+  "player_baseline": {
+    "status": "stopped",
+    "title": "",
+    "position": 0,
+    "duration": 0,
+    "volume": null
+  },
+  "error": {
+    "type": "AssertionError",
+    "message": "chat stop did not stop the actual player"
+  }
+}

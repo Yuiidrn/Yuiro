@@ -1,0 +1,20 @@
+{
+  "scope": "one live chat after restart with empty-KB fast path; same prompt as before, not controlled percentile comparison",
+  "marks": {
+    "turn_start": 0.0,
+    "agent_start": 4.0,
+    "memory_retrieve_start": 7.0,
+    "memory_retrieve": 2352.0,
+    "llm_request_start": 2359.0,
+    "llm_provider_first_token": 5807.0,
+    "llm_first_token": 5807.0,
+    "agent_end": 6450.0,
+    "reply_sent": 6451.0,
+    "prompt": 4940.0,
+    "completion": 25.0,
+    "cache_hit": 4608.0,
+    "e2e": 6451.0
+  },
+  "memoryMs": 2345.0,
+  "providerFirstTokenMs": 3448.0
+}

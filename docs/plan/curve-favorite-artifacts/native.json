@@ -1,0 +1,52 @@
+{
+  "song_id": "36308916",
+  "original_liked": false,
+  "write_readback": {
+    "liked": true,
+    "seconds": 6.96
+  },
+  "restored": true,
+  "restore_seconds": 28.18,
+  "daily": {
+    "items": [
+      {
+        "song_id": "1814741563",
+        "name": "Buzz Lightyear",
+        "artist": "By the End of Summer",
+        "source": "netease_client_daily"
+      },
+      {
+        "song_id": "3418771090",
+        "name": "Love Me Right",
+        "artist": "Uforea",
+        "source": "netease_client_daily"
+      },
+      {
+        "song_id": "3347018674",
+        "name": "Wilderness",
+        "artist": "MitiS / KC",
+        "source": "netease_client_daily"
+      },
+      {
+        "song_id": "3432793472",
+        "name": "Cozy",
+        "artist": "Kirara Magic / Yuuna Nini",
+        "source": "netease_client_daily"
+      },
+      {
+        "song_id": "1867083451",
+        "name": "Whole",
+        "artist": "Sam Tompkins",
+        "source": "netease_client_daily"
+      },
+      {
+        "song_id": "2690868006",
+        "name": "幸福是痛的开始",
+        "artist": "氟西汀海",
+        "source": "netease_client_daily"
+      }
+    ],
+    "played": false,
+    "current_id_after": "36308916"
+  }
+}

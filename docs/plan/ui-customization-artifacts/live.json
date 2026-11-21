@@ -1,0 +1,18 @@
+{
+  "kind": "controlled display data; live Vue/Electron and real role switching; no chat/search/music operations",
+  "checks": [
+    "reply font/height/radius/theme hot update",
+    "fresh detached renderer reads persisted preferences",
+    "music live density/buttons; offline preview emits demo only",
+    "source independent size/font/summary/date live update",
+    "source style inheritance",
+    "same-window and cross-window theme following",
+    "changed auto-hide duration applies to current card",
+    "group reset preserves other groups",
+    "preferences continue syncing while settings component is unmounted",
+    "Hiyori/Hotaru share display preferences and clear old content"
+  ],
+  "reply_hot_update_ms": 6,
+  "no_chat_or_media_requests": true,
+  "original_preferences_restored": true
+}

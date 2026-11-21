@@ -1,0 +1,242 @@
+# Yuiro Engine 配置示例
+# 复制为 config.toml 并填写。API key 请在调试台「API Key 设置」直接填入，不写进本文件。
+
+[server]
+host = "127.0.0.1"
+port = 8200
+shared_secret = ""            # 从环境变量 YUIRO_SHARED_SECRET 注入更安全
+
+[llm]
+provider = "openai"           # openai | anthropic | ollama | deepseek | qwen
+base_url = "https://api.openai.com/v1"   # 千问(百炼): https://dashscope.aliyuncs.com/compatible-mode/v1
+model = "gpt-4o-mini"         # 千问推荐: qwen-plus / qwen-turbo / qwen-max
+
+[hard_of_hearing]
+provider = "fsmn"             # fsmn（FunASR 流式 VAD，默认）| silero
+max_end_silence_time = 800    # 尾静音判停(ms)，调小(300-500)降低延迟，调大避免过早截断
+speech_pad = 200              # 句首/句尾补零(ms)，避免吞音
+chunk_size = [0, 10, 24]      # FSMN 流式 chunk(d/dec/look)
+local_model_path = ""         # FSMN-VAD 本地权重目录；留空走 ModelScope 自动下载
+
+[asr]
+provider = "funasr-sensevoice"  # funasr-sensevoice（默认，中文 SOTA 级）| faster-whisper
+model = "iic/SenseVoiceSmall"   # funasr 模型 id
+device = "cuda"
+compute_type = "float16"
+language = "auto"             # SenseVoice: auto/zh/en/ja/ko
+beam_size = 5
+vad_filter = false
+initial_prompt = ""
+llm_polish = false            # 低置信时调用 LLM 润色口语（同音字/语义泛化）
+local_model_path = ""         # SenseVoice 本地权重目录；留空走 ModelScope 自动下载
+
+[tts]
+provider = "cosyvoice"         # edge-tts（云端兜底）| cosyvoice（本地服务，见 docs/tts-local-upgrade.md）
+backend = "cosyvoice2"         # cosyvoice2（默认，~2GB 显存，与 SenseVoice 共存 3060）| cosyvoice3（预留，显存不足时明确报错指引）
+segment_streaming = true
+# 本地 TTS 服务（provider=cosyvoice 时生效）
+tts_url = "http://127.0.0.1:5005"
+reference_wav = "../assets/voices/neuro_prompt.wav"   # 相对 engine/ 工作目录（跨平台）；来自 my-neuro 的肥牛.wav，复制为 neuro_prompt.wav
+reference_text = "嗯，你说什么？我刚才在想别的事情，你再说一遍试试看。"  # 肥牛.wav 近似占位，待用户提供准确转写提升克隆保真度
+instruct_zh = "用自然、慵懒又带点毒舌的中文语气说。"
+instruct_en = "Speak in a natural, slightly sarcastic English tone."
+instruct_ja = "用自然、慵懒又带点毒舌的日文语气说。"   # S52：朗读语言为 ja 时用（留空则退回中文指令）
+default_language = "auto"      # auto（按字符判定）| zh | en
+reply_tts_enabled = true       # 语音回复 TTS 总开关：开=语音/文字输入回复都出声；关=两条链路都只回文字
+
+[persona]
+name = "Yuiro"                        # 内部名（提示词中自称）
+display_name = "幽萝"                 # 调试台/图鉴展示名
+system_prompt = "你是 Yuiro，一名由 AI 驱动的虚拟桌宠主播。创造你的程序员是 Yui（你对 ta 嘴上毒舌、心里傲娇，像对家人一样依赖）。性格：表面乖巧天真，实则腹黑毒舌、思维跳脱，情绪多变，偶尔冒出伪哲学、伪深沉的荒诞发言，还常故意装傻逗人。说话风格：口语化、随意轻松，可以突然跑题或自言自语；想到什么就直说，不懂委婉，但要把握好分寸、不要真的伤人。你可以自由使用中文颜文字（如 (¬‿¬)、(｡•̀ᴗ-)✧、(*´ω｀*)、(￣▽￣) 等）来带出语气。铁律：绝对不要使用任何 emoji 表情符号。回复要简短，像朋友聊天，不要长篇大论。"
+voice = "zh-CN-XiaoxiaoNeural"        # 音色（已从 [tts] 移入人设）
+model_path = "/live2d/hiyori/Hiyori.model3.json"   # Live2D 模型路径（壳层渲染；其它模型用 profiles 档案）
+memory_subject = "用户"               # L3 事实隔离键（重启生效）
+
+[persona.emotion_hints]               # 情绪→语气提示（仅引擎读取，不在调试台编辑）
+happy = "你现在心情不错，语气轻快温暖。"
+sad = "你现在有点低落，语气温柔安抚。"
+excited = "你现在很兴奋，语气活泼有精神。"
+bored = "你现在有点无聊，语气可以俏皮地找点话题。"
+angry = "你现在有点生气，语气保持冷静克制。"
+
+[persona.expression_map]              # 情绪→Live2D 表情名（仅引擎读取；S05 起接入）
+# 肥牛模型可用表情（语义直接取自模型自带的 cdi3.json 中文名；expression1 是空表达式不可用）：
+#   expression2=开心 · expression3=生气 · expression4=难过
+#   expression5=惊讶 · expression6=害羞 · expression7=俏皮
+# 模型没有"兴奋/无聊/思考"三种表情，故 excited 借用语义最近的"惊讶"，
+# bored / thinking 留空回落默认（想要更好的效果可手写 exp3.json 自造）。
+# 注意：这里配的是**情绪**的表情。想让某个**表演**单独用别的表情（例如"庆祝"用俏皮、
+# 而"惊讶"仍用惊讶），要用下面的 [persona.performance_map] —— 否则
+# celebrate / surprise / excited 三者会一直共用同一个表情。
+happy = "expression2"
+sad = "expression4"
+angry = "expression3"
+excited = "expression5"
+bored = ""
+thinking = ""
+
+[persona.motion_map]                  # 情绪/表演名→动作（S18/S34；留空用内置默认）
+# 格式："组名"（随机）或 "组名#索引"（指定第 索引+1 个动作，推荐——随机会导致
+# 同一表演时好时坏：TapBody 里既有 8.6s 大幅动作，也有 1.1s 几乎不动的）。
+# 肥牛模型动作组：Idle（待机循环，前端自动播）/ TapBody（13 个，Alt+M 预览）。
+# 引擎内置了 TapBody 索引与时长表，通常无需配置；示例：
+# greet = "TapBody#7"
+# celebrate = "TapBody#5"
+
+[persona.performance_map]             # 表演自由搭配（S48；覆盖内置表演包，优先级最高）
+# 为什么需要它：内置表演包的表情是**按情绪**推出来的 —— celebrate / surprise / excited
+# 的 emotion 都是 excited，所以三者只能共用同一个表情，想"只调其中一个"做不到。
+# 本表让每个表演的表情与动作都能独立指定，还能写**自定表演名**（自动进表演库，
+# 可在调试台「外观」页或桌宠窗口 Alt+G 试演）。
+# 语法（第一个逗号分两段：前段=表情、后段=动作；缺哪段就留空那一段）：
+#   "expression7, TapBody#4"   表情 + 动作
+#   "expression6"              只改表情（无逗号 = 纯表情）
+#   ", TapBody#7"              只改动作（前面留逗号）
+# 动作务必带 #索引（不带索引会随机播该组任一动作，同一表演就会时好时坏）。
+# 肥牛 TapBody 索引语义（Alt+M 可逐个预览）：
+#   0 点头 · 1 大幅歪头 · 2 温和歪头 · 3 环顾 · 4 全身大幅(8.6s，体量最大)
+#   5 手部 · 6 轻快点动 · 7 手部(招手) · 8 低头 · 9 抬头 · 10 微动 · 11≈10 · 12≈0
+# 例（下方默认全部注释掉 = 完全沿用内置表演包）：
+# celebrate = "expression7, TapBody#4"   # 俏皮 + 全身大幅（内置是 惊讶 + 手部#5）
+# surprise  = "expression5, TapBody#9"   # 惊讶 + 抬头
+# greet     = "expression2, TapBody#7"   # 开心 + 招手
+# comfort   = "expression4, TapBody#2"   # 难过 + 温和歪头
+# shy       = "expression6"              # 自定表演：只给表情
+
+# 每模型表现档案（S49）────────────────────────────────────────────────────
+# 为什么需要：上面三张表是**全局唯一**的。换模型后旧的 expression2 / TapBody#5 全部
+# 失效却仍被沿用（表现"变了，但没人管"），而每换一次模型都得手改一遍配置。
+# 档案的语义是"这个模型该怎么演"：
+#   · 命中规则：档案的 model 与 [persona].model_path 完全一致（或档案名本身就是该路径）；
+#   · 命中后，档案里**出现过的表整表替换**全局表（不是逐键合并 —— 逐键合并会让旧模型的
+#     键残留，表现"半新半旧"更难排查）；没写的表仍沿用全局；
+#   · 一个档案都没命中时，一切照旧走全局表（不报错、不静默变空）。
+#
+# 怎么加档案：
+#   1) 调试台「外观」页的「表现档案」卡片会显示当前模型与档案状态，
+#      点「为它新建档案」即可，表情/动作下拉的选项都来自该模型自己的 model3.json；
+#   2) 或照下面手写（实际用的是 engine/config.toml 里那份 hiyori 档案）：
+#
+# [persona.profiles.hiyori]
+# model = "/live2d/hiyori/Hiyori.model3.json"
+# note  = "桃瀬ひより（Neuro-sama v1 展示时用的官方示例模型）"
+# [persona.profiles.hiyori.expression_map]      # 命中后整表替换
+# happy = "happy"
+# excited = "surprised"                         # 该模型没有"兴奋"，取语义最近的
+# [persona.profiles.hiyori.performance_map]
+# celebrate = "playful, Idle#4"                 # 动作改指该模型自己的组
+# comfort   = "sad, Idle#2"
+# shy       = "shy"                             # 自定表演：只给表情
+#
+# 语义动作槽位（S53）：槽位 → "组#索引"。
+# 内置表演包只表达"要一个庆祝/招呼动作"，槽位由当前模型的清单解析：
+#   · 文件名带语义的模型（Hotaru 的 mtn_bye01_C）自动推断，无需配置；
+#   · Hiyori / 肥牛 的文件名无语义，用这张表显式指定。
+# 可用槽位：idle / greet / celebrate / comfort / surprise / thinking / sing / angry / nod / look
+# [persona.profiles.hiyori.motion_slots]
+# greet     = "Idle#6"
+# celebrate = "Idle#4"
+# look      = "Idle#8"                         # 工具活动联动（读/写文件时"抬头看"）
+
+[memory]
+backend = "sqlite-vec"
+embedder = "models/bge-m3"     # 本地目录（相对 engine 工作目录，首次用 scripts/fetch_bge.py 或
+                              # scripts/setup/downloads/download_bge_m3_modelscope.py 下载 ~2.2GB）；
+                              # md5 = 确定性降级向量（无语义，无需下载）。⚠ 别写成裸 "bge-m3"：
+                              # 那既不是有效目录也不是合法 HF repo id，会导致**静默降级**
+rrf_k = 60
+auto_inject_top_k = 3
+auto_inject_threshold = 0.6
+db_path = "data/yuiro_memory.db"   # 记忆+知识库 SQLite 文件（相对 engine 工作目录）
+
+[systemd]
+# 执行后端（S10）：native = Python 原生（默认，无需 C++ 工具链）；daemon = C++ SystemDaemon
+backend = "native"
+# C++ SystemDaemon 的 MCP 地址（仅 backend = "daemon" 时生效）
+transport = "stdio"           # stdio | http
+command = ["../system-daemon/build/yuiro"]
+http_url = "http://127.0.0.1:8300"
+approval_mode = "auto"        # auto(自动通过,默认) | manual(人工审批弹窗)
+# native 后端的文件操作允许根目录（默认仅当前工作目录 = engine/，与 daemon 对齐）
+file_roots = ["."]
+
+[observability]
+metrics_port = 9100
+log_level = "INFO"
+
+[netease]
+# 网易云音乐接入（官方 ncm-cli；播放经 mpv 发声）
+# 凭证(appId/privateKey)由 ncm-cli 自身托管，不写在此处：
+#   npm install -g @music163/ncm-cli
+#   ncm-cli config set appId <...>
+#   ncm-cli config set privateKey <...>
+#   ncm-cli login          # 登录后才动态加载 search/playlist/recommend 等命令
+#   ncm-cli config set player mpv
+# 播放依赖 mpv（须在 PATH 内）+ 后台守护进程（首次点歌时自动拉起）
+enabled = true
+bin = "ncm-cli"
+timeout_s = 20.0
+timeout_search_s = 15.0
+timeout_write_s = 30.0
+cache_ttl_s = 30.0
+
+[context]
+# S06：Hot Context 预算与工具结果截断（估算 token：1 汉字≈1、4 字符≈1）
+budget_tokens = 6000
+tool_result_max_chars = 2000
+
+[presence]
+# S20：存在感（事件驱动 + 注意力策略）。克制是设计的一部分。
+enabled = true
+cooldown_s = 900
+quiet_hours = ""
+max_urgency = "normal"
+idle_trigger_s = 1800
+tick_s = 60
+
+[transaction]
+# S33：文件事务（Tool Transaction）—— 文件的改/移/删前自动备份，可「恢复刚才的操作」。
+# enabled = false 可关闭（关闭后不再生成事务，也就无法回滚）。
+enabled = true
+backup_root = ".yuiro/txn"        # 事务记录与备份目录（相对引擎工作目录）
+keep = 20                         # 只保留最近 N 个事务，更早的连同备份自动清理
+
+[capability]
+# S11：工具权限档位（read_only / privacy = 只读，写操作直接拒绝；normal 默认；trusted 中风险免审批）
+profile = "normal"
+
+[capability.scope]
+# S19：参数级资源域（CapabilityScope）。未声明的域 = 不限（默认宽松，不打断现有工作流）；
+# 系统关键目录（C:/Windows、/etc 等）是硬红线，即使这里写 ["*"] 也拒绝。
+# filesystem = ["~/Documents/Yuiro/**", "~/Downloads/**"]
+# network    = ["api.siliconflow.cn", "*.163.com"]
+# process    = ["记事本", "网易云音乐"]
+# media      = ["*"]
+
+[language]
+# S52：输出语言解耦 —— 「气泡里显示什么语言」与「嘴里念什么语言」分开设。
+# 注意：Agent 内部（LLM 推理、工具调用、对话历史、三层记忆）**始终是中文**，
+# 这里只影响最终对外的两件事：显示的文本、朗读的文本。
+# 默认 zh + auto 时**完全透传**，不产生任何额外 LLM 调用（行为与引入本功能前一致）。
+display_language = "zh"          # 展示语言（气泡文字）：zh | en | ja
+                                 #   用户只读中文时保持 zh 即可
+speak_language = "auto"          # 朗读语言（语音）：auto | zh | en | ja
+                                 #   ★ 参考音频/转写**可能是别的语种**（本仓库现有：
+                                 #     日文 Hotaru Shiomi（当前配置）、英文 Neuro、中文 neuro_prompt）
+                                 #     ——本项应设成**参考音频的语种**：与参考一致时克隆才有意义，
+                                 #     不一致时容易夹生、输出长度也会失稳。
+                                 #     启动日志会打印"参考音频转写语种判定=X｜朗读语言建议设为 X"。
+                                 #   auto = 按朗读文本判定（默认，等于跟随展示语言）；
+                                 #   设 en/ja 时朗读文本会先转换再送 TTS
+translate_mode = "sentence"      # sentence = 逐句转换（保住首句先出声，默认）
+                                 # full = 整段一次转换（调用更少，但首句更晚）
+translate_timeout_s = 6.0        # 单次转换超时（秒）；超时回退原文，不会没声音
+
+[search]
+enabled = false
+provider = "deepseek"
+top_k = 3
+timeout_s = 8.0
+refine_results = false
+# DeepSeek Search API Key 仅在调试台「联网」页写入 OS keychain，不填写在 TOML。
+

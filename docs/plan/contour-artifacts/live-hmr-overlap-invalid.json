@@ -1,0 +1,164 @@
+{
+  "models": [
+    {
+      "role": "hiyori",
+      "mask": {
+        "opaque": {
+          "x": 166.36619051297507,
+          "y": 60.59695899486542
+        },
+        "transparent": {
+          "x": 34.15464838345846,
+          "y": 36.35817539691925
+        },
+        "occupied": 4081,
+        "w": 192,
+        "h": 256,
+        "path": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 2,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": -86.79481132075472,
+        "y": 41,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 1,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 4389,
+      "island_during_fade": {
+        "open": true,
+        "faded": false
+      },
+      "island_pointer": {
+        "x": 393,
+        "y": 537,
+        "ui": true,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": false
+      },
+      "handle": {
+        "x": 397.08335876464844,
+        "y": 538.1089935302734
+      },
+      "island_clicks_reaching_underlay": 0,
+      "performance": {
+        "samples": 90,
+        "totalMs": 416.39999993145466,
+        "maxMs": 10,
+        "lastMs": 3.2999999970197678,
+        "lastAt": 435929.40000000596,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 23,
+      "window_avg_ms": 4.113043478649596,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.700000002980232,
+          "max_ms": 7.600000008940697
+        },
+        "sampling_enabled": {
+          "frames": 248,
+          "p95_ms": 7.100000008940697,
+          "max_ms": 13.400000005960464
+        }
+      }
+    },
+    {
+      "role": "hotaru",
+      "mask": {
+        "opaque": {
+          "x": 168.56971621513367,
+          "y": 82.63221681118011
+        },
+        "transparent": {
+          "x": 34.15464838345846,
+          "y": 20.933494925498962
+        },
+        "occupied": 5652,
+        "w": 192,
+        "h": 256,
+        "path": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 5,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": 34.91745283018868,
+        "y": 21,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 0,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 5624,
+      "island_during_fade": {
+        "open": true,
+        "faded": false
+      },
+      "island_pointer": {
+        "x": 396.063679245283,
+        "y": 538,
+        "ui": true,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": false
+      },
+      "handle": {
+        "x": 397.08335876464844,
+        "y": 538.1089935302734
+      },
+      "island_clicks_reaching_underlay": 0,
+      "performance": {
+        "samples": 171,
+        "totalMs": 816.1999999880791,
+        "maxMs": 10,
+        "lastMs": 4.800000011920929,
+        "lastAt": 447786.799999997,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 23,
+      "window_avg_ms": 4.913043478260869,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.9000000059604645,
+          "max_ms": 8.199999988079071
+        },
+        "sampling_enabled": {
+          "frames": 248,
+          "p95_ms": 7.5,
+          "max_ms": 11.700000002980232
+        }
+      }
+    }
+  ],
+  "native_probe": "WM_LBUTTONDOWN on own underlay window",
+  "devicePixelRatio": 1.9499999284744263
+}

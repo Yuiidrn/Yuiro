@@ -1,0 +1,27 @@
+{
+  "role": "hotaru",
+  "empty": true,
+  "waiting": "thinking",
+  "beforeEnd": "thinking",
+  "ended": "idle",
+  "events": [
+    {
+      "type": "tts:playback_waiting",
+      "state": "thinking"
+    },
+    {
+      "type": "tts:playback_empty",
+      "state": "idle"
+    },
+    {
+      "type": "tts:playback_cancelled",
+      "state": "idle"
+    },
+    {
+      "type": "mic:stop",
+      "state": "idle"
+    }
+  ],
+  "mouth": 0,
+  "contextsClosed": true
+}

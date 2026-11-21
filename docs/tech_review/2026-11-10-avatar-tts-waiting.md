@@ -1,0 +1,11 @@
+# 首段等待是播放器状态，不是已经说话
+
+文字到达与首段音频实际播放可能相隔较久。旧presence在chat:assistant/llm:text后退回idle，而beginReplyPlayback只复位计数，不发等待事实；语音流式路径的最终文本还可能晚于tts:start，覆盖先前的等待状态。
+
+本轮沿用四态presence，新增本地tts:playback_waiting与tts:playback_empty。文字朗读开始发waiting，语音tts:start/synthesize进入thinking；若最终文本到来时仍在合成或有排队段，则再次依据播放器状态通知waiting。speaking不会被这些通知降级，只有本地播放起始才能进入speaking。
+
+队列已空且引擎确认发送完成时，playedThisTurn为false则发empty，结束等待表现；真正播放过才发playback_end。empty不进入App的“播放完毕收气泡”分支，保留文字估算显示时间。这样不会为了清理表现状态伪装音频已播放，也不依赖假音频或额外供应商请求。
+
+生产presence/composable确定性专项覆盖首段等待、晚到最终文本、speaking保持、空结果、取消、外来角色拒收；播放回执、音频时钟、句序与生命周期专项回归通过。真实Electron/WebAudio使用静音WAV及隔离模块实例，两个角色fixture共四场景，验证事实事件顺序及AudioContext关闭，不等价于主模型整合演出、人耳听感或供应商TTFA测量。首轮固定等待终态断言失败，改为有界等待事件后通过，未知首次原因不归咎供应商。
+
+无后端协议、Runtime架构或角色声音配置变更。首段等待60秒保护仍沿用现有App状态兜底。本补丁改善等待表现语义，不声称缩短首句合成延迟。

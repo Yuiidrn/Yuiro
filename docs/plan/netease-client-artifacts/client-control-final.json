@@ -1,0 +1,73 @@
+[
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Paused",
+      "title": "Monody",
+      "artist": "TheFatRat",
+      "position": 0,
+      "can_play": true,
+      "can_pause": false,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "play",
+    "status": "ok",
+    "result": "已通过 SMTC 对 cloudmusic.exe 执行：播放"
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "Monody",
+      "artist": "TheFatRat",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "stop",
+    "status": "error",
+    "result": "目标会话不支持 stop，未执行，也未改成其他动作"
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Playing",
+      "title": "Monody",
+      "artist": "TheFatRat",
+      "position": 0,
+      "can_play": false,
+      "can_pause": true,
+      "can_stop": false
+    }
+  },
+  {
+    "action": "pause",
+    "status": "ok",
+    "result": "已通过 SMTC 对 cloudmusic.exe 执行：暂停"
+  },
+  {
+    "action": "now_playing",
+    "status": "ok",
+    "result": {
+      "aumid": "cloudmusic.exe",
+      "status": "Paused",
+      "title": "Monody",
+      "artist": "TheFatRat",
+      "position": 0,
+      "can_play": true,
+      "can_pause": false,
+      "can_stop": false
+    }
+  }
+]

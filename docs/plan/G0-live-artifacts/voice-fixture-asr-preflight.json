@@ -1,0 +1,9 @@
+{
+  "fixture_duration_s": 3.195,
+  "result": {
+    "ok": true,
+    "text": "你好，请只回复。你好。",
+    "duration_ms": 1235
+  },
+  "scope": "actual already-warm ASR only; no diary save or Agent turn"
+}

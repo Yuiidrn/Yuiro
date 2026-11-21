@@ -1,0 +1,30 @@
+{
+  "kind": "real dual-model line UI only; no music or LLM calls",
+  "baseline_paused": true,
+  "roles": [
+    {
+      "role": "hiyori",
+      "line_no_background": true,
+      "one_open_curve": true,
+      "curve_click_through": true,
+      "typography_hot_update": true,
+      "mode_switch": true,
+      "curve_compact_length": 113.1,
+      "curve_extended_length": 225.6,
+      "distance_curvature_hot_update": true
+    },
+    {
+      "role": "hotaru",
+      "line_no_background": true,
+      "one_open_curve": true,
+      "curve_click_through": true,
+      "typography_hot_update": true,
+      "mode_switch": true,
+      "curve_compact_length": 113.1,
+      "curve_extended_length": 225.6,
+      "distance_curvature_hot_update": true
+    }
+  ],
+  "role_cleanup": true,
+  "preferences_restored": true
+}

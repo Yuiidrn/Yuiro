@@ -1,0 +1,100 @@
+{
+  "scope": "real text reply with paired updated engine/renderer; no microphone or stale injection; event timing includes LLM and translation, not acoustic first sound",
+  "initial": {
+    "role": "hotaru",
+    "recording": false
+  },
+  "events": [
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 11454.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 14107.5
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 16472.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 18058.8
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 18852.3
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 19912.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 20176.8
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 20704.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 20967.7
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 21495.2
+    },
+    {
+      "type": "tts:reply_audio",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": true,
+      "ms": 21495.3
+    },
+    {
+      "type": "tts:reply_end",
+      "sessionMatches": true,
+      "generation": 1,
+      "streaming": null,
+      "ms": 21495.4
+    }
+  ],
+  "presence": [
+    "thinking",
+    "idle",
+    "speaking"
+  ],
+  "finalPresence": "idle",
+  "passed": true
+}

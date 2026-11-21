@@ -1,0 +1,73 @@
+{
+  "scope": "Bounded visible idle on specified candidate; not entire goal completion",
+  "results": [
+    {
+      "role": "hotaru",
+      "seconds": 300.1493000000119,
+      "samples": 300,
+      "frameIntervalMs": {
+        "count": 47519,
+        "p50": 6.099999999976717,
+        "p95": 6.2000000000116415,
+        "max": 24.29999999998836
+      },
+      "eyes": {
+        "frames": 47544,
+        "min": 0,
+        "max": 1,
+        "closures": 65,
+        "closed": false
+      },
+      "motions": [
+        [
+          "Motion",
+          19
+        ]
+      ],
+      "minOccupied": 312,
+      "distinctAlphaHashes": 299,
+      "allVisible": true,
+      "allIdle": true
+    },
+    {
+      "role": "hiyori",
+      "seconds": 300.08860000002386,
+      "samples": 300,
+      "frameIntervalMs": {
+        "count": 49500,
+        "p50": 6.099999999976717,
+        "p95": 6.199999999953434,
+        "max": 7.400000000023283
+      },
+      "eyes": {
+        "frames": 49515,
+        "min": 0,
+        "max": 1,
+        "closures": 94,
+        "closed": false
+      },
+      "motions": [
+        [
+          "",
+          null
+        ],
+        [
+          "Idle",
+          0
+        ]
+      ],
+      "minOccupied": 269,
+      "distinctAlphaHashes": 300,
+      "allVisible": true,
+      "allIdle": true
+    }
+  ],
+  "manifestFiles": 545,
+  "changedFiles": [],
+  "restored": "hotaru",
+  "limitations": [
+    "rAF intervals are not GPU frame time or speech latency",
+    "Eye closure transitions include motion ownership, not exact automatic blink counts",
+    "No human naturalness, acoustic latency or multi-hour mixed voice stress proof"
+  ]
+}

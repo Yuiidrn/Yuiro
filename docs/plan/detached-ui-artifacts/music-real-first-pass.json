@@ -1,0 +1,331 @@
+{
+  "kind": "real Agent search -> native detached card -> Engine media:play -> mpv progress -> chat stop",
+  "fixture": false,
+  "roles": [
+    {
+      "role": "hiyori",
+      "status": "passed",
+      "search_seconds": 13.047,
+      "search_term": "Monody TheFatRat",
+      "candidates": [
+        {
+          "name": "Monody (BIMONTE Remix)",
+          "artist": "TheFatRat、Laura Brehm、BIMONTE",
+          "album": "Classics Remixed",
+          "duration_s": 268,
+          "song_id": 1452906755,
+          "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+          "playable": true
+        },
+        {
+          "name": "Monody (Ephixa Remix)",
+          "artist": "TheFatRat、Laura Brehm、Ephixa",
+          "album": "Classics Remixed",
+          "duration_s": 198,
+          "song_id": 1452903856,
+          "encrypted_id": "64C86BFC2260FC62C0FEBABBC704347A",
+          "playable": true
+        },
+        {
+          "name": "Monody",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Monody",
+          "duration_s": 290,
+          "song_id": 36308916,
+          "encrypted_id": "50823456D9AD17D80AE1CCD5E33621C8",
+          "playable": false
+        },
+        {
+          "name": "Monody",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Unity 10th Anniversary Mixtape",
+          "duration_s": 290,
+          "song_id": 2649307936,
+          "encrypted_id": "3F5761535FE51ECD17C33793CDA19338",
+          "playable": false
+        },
+        {
+          "name": "Monody (Radio Edit)",
+          "artist": "TheFatRat、Laura Brehm",
+          "album": "Monody (Radio Edit)",
+          "duration_s": 252,
+          "song_id": 442495638,
+          "encrypted_id": "39734D2F79B1982ECC1802C4488D1F14",
+          "playable": false
+        }
+      ],
+      "before_drag": {
+        "pet": {
+          "x": 1264,
+          "y": 100,
+          "width": 557,
+          "height": 741
+        },
+        "results": {
+          "x": 1102,
+          "y": 265,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "after_drag": {
+        "pet": {
+          "x": 1348,
+          "y": 133,
+          "width": 558,
+          "height": 744
+        },
+        "results": {
+          "x": 1185,
+          "y": 299,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "follow_delta_x": 83,
+      "sent": [
+        {
+          "type": "media:play",
+          "name": "Monody (BIMONTE Remix)",
+          "kind": "song",
+          "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+          "song_id": "1452906755"
+        }
+      ],
+      "selected": {
+        "name": "Monody (BIMONTE Remix)",
+        "artist": "TheFatRat、Laura Brehm、BIMONTE",
+        "album": "Classics Remixed",
+        "duration_s": 268,
+        "song_id": 1452906755,
+        "encrypted_id": "784AC11602D9D320154D1DBBCA25ACB7",
+        "playable": true
+      },
+      "card_cleared": true,
+      "click_to_play_seconds": 6.995,
+      "playing": {
+        "status": "playing",
+        "title": "Monody (BIMONTE Remix)",
+        "position": 0.5,
+        "duration": 268.4,
+        "ready": true,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      },
+      "playing_later": {
+        "status": "playing",
+        "title": "Monody (BIMONTE Remix)",
+        "position": 3.5,
+        "duration": 268.4,
+        "ready": true,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      },
+      "stop_seconds": 0.329,
+      "stopped": {
+        "status": "stopped",
+        "title": "",
+        "position": 0.0,
+        "duration": 0.0,
+        "ready": false,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 0,
+        "currentIndex": -1
+      },
+      "second_search_seconds": 3.157,
+      "second_search_term": "Hope Tobu",
+      "second_result_count": 5,
+      "switch_cleanup": {
+        "role": "hotaru",
+        "card_cleared": true,
+        "speech_hidden": true,
+        "stale_forwarded": 0,
+        "result_window_hidden": true
+      },
+      "after_switch_player": {
+        "status": "stopped",
+        "title": "",
+        "position": 0.0,
+        "duration": 0.0,
+        "ready": false,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 0,
+        "currentIndex": -1
+      }
+    },
+    {
+      "role": "hotaru",
+      "status": "passed",
+      "search_seconds": 3.959,
+      "search_term": "Spectre Alan Walker",
+      "candidates": [
+        {
+          "name": "Spectre",
+          "artist": "Alan Walker",
+          "album": "Origins",
+          "duration_s": 231,
+          "song_id": 30064263,
+          "encrypted_id": "97082EA54CC2853FCC88D5466CB23252",
+          "playable": true
+        },
+        {
+          "name": "The Spectre",
+          "artist": "Alan Walker",
+          "album": "The Spectre",
+          "duration_s": 194,
+          "song_id": 506092035,
+          "encrypted_id": "E9044ACD80F2D587D67BC04722A17567",
+          "playable": false
+        },
+        {
+          "name": "The Spectre (Slowed Remix)",
+          "artist": "Alan Walker",
+          "album": "The Spectre (Remixes)",
+          "duration_s": 215,
+          "song_id": 2082609067,
+          "encrypted_id": "18559762013C0B0AE56939F4440A2889",
+          "playable": false
+        },
+        {
+          "name": "Spectre 2.0",
+          "artist": "Alan Walker、Steve Aoki、Lonely Club",
+          "album": "Walkerworld 2.0",
+          "duration_s": 177,
+          "song_id": 2097155567,
+          "encrypted_id": "D1D05CFA7C3E9B01E547D4D2F3A603BF",
+          "playable": false
+        },
+        {
+          "name": "The Spectre (Sped up Remix)",
+          "artist": "Alan Walker",
+          "album": "The Spectre (Remixes)",
+          "duration_s": 176,
+          "song_id": 2082609068,
+          "encrypted_id": "6158B5721F3DCA161B3FD57DF3543A5A",
+          "playable": false
+        }
+      ],
+      "before_drag": {
+        "pet": {
+          "x": 1348,
+          "y": 133,
+          "width": 558,
+          "height": 744
+        },
+        "results": {
+          "x": 1185,
+          "y": 292,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "after_drag": {
+        "pet": {
+          "x": 1431,
+          "y": 167,
+          "width": 561,
+          "height": 746
+        },
+        "results": {
+          "x": 1268,
+          "y": 326,
+          "width": 292,
+          "height": 210
+        }
+      },
+      "follow_delta_x": 83,
+      "sent": [
+        {
+          "type": "media:play",
+          "name": "Spectre",
+          "kind": "song",
+          "encrypted_id": "97082EA54CC2853FCC88D5466CB23252",
+          "song_id": "30064263"
+        }
+      ],
+      "selected": {
+        "name": "Spectre",
+        "artist": "Alan Walker",
+        "album": "Origins",
+        "duration_s": 231,
+        "song_id": 30064263,
+        "encrypted_id": "97082EA54CC2853FCC88D5466CB23252",
+        "playable": true
+      },
+      "card_cleared": true,
+      "click_to_play_seconds": 3.57,
+      "playing": {
+        "status": "playing",
+        "title": "Spectre",
+        "position": 0.3,
+        "duration": 230.6,
+        "ready": true,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      },
+      "playing_later": {
+        "status": "playing",
+        "title": "Spectre",
+        "position": 3.3,
+        "duration": 230.6,
+        "ready": true,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 1,
+        "currentIndex": 0
+      },
+      "stop_seconds": 0.335,
+      "stopped": {
+        "status": "stopped",
+        "title": "",
+        "position": 0.0,
+        "duration": 0.0,
+        "ready": false,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 0,
+        "currentIndex": -1
+      },
+      "second_search_seconds": 4.488,
+      "second_search_term": "Sky High Elektronomia",
+      "second_result_count": 5,
+      "switch_cleanup": {
+        "role": "hiyori",
+        "card_cleared": true,
+        "speech_hidden": true,
+        "stale_forwarded": 0,
+        "result_window_hidden": true
+      },
+      "after_switch_player": {
+        "status": "stopped",
+        "title": "",
+        "position": 0.0,
+        "duration": 0.0,
+        "ready": false,
+        "state_confirmed": true,
+        "volume": null,
+        "queueLength": 0,
+        "currentIndex": -1
+      }
+    }
+  ],
+  "preflight": {
+    "status": "ok",
+    "count": 3
+  },
+  "player_baseline": {
+    "status": "stopped",
+    "title": "",
+    "position": 0,
+    "duration": 0,
+    "volume": null
+  }
+}

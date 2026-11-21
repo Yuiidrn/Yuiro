@@ -1,0 +1,9 @@
+# SDK表情重置的异步竞态
+
+表情回落不能只改UI状态或调用resetExpression。当前SDK的reset只应用默认表情，未撤销正在加载的reserveExpressionIndex；更隐蔽的是选择currentExpression时的早退，同样会留下旧预约。
+
+本轮采用模型实例适配：set/reset先清旧预约，SDK随后按原逻辑创建新预约；卸载使旧预约失效并恢复方法。没有重写加载、表达式融合或Avatar调度，不增加请求。相同索引的旧加载仍可能完成，但目标相同，不会将另一个已取消的表情重新选中。
+
+验证使用已安装SDK的实际ExpressionManager源码，在loadExpression接口控制Promise顺序，覆盖旧故障及reset/current/newer/dispose四种取消路径；不依赖供应商或真实网络抖动来撞竞态。实际双模型参数回归独立记录，不能替代人工自然度。
+
+兼容边界：依赖当前SDK的reserveExpressionIndex、setExpression、resetExpression；结构不支持时安全不安装。未来升级SDK应重新检查此处顺序及原始类专项。相较fork SDK，适配更小，但应保留这一明确版本耦合。

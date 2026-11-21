@@ -1,0 +1,19 @@
+# 中间状态也会改变表演，不能只保护音频
+
+原`tts:audio`有session/character/generation/playback_id护栏，而`tts:end`和`tts:interrupted`直接改变队列、口型与结束信号。即使旧音频被拒绝，旧状态仍能停掉新播放。此次沿用同一会话代际下限保护语音中间状态，pipeline加载通知保持连接级语义。
+
+后端转发还包含await Avatar反馈：若等待期间切换角色或推进generation，等待后的旧状态不能携带新身份下发。现冻结原Session对象和身份，await后复核对象、代际、角色均一致才发送。前端拒绝缺身份及外来状态；音频的playback_id验证继续单独存在，避免无效音频提升下限。
+
+生产函数AST隔离测试避免为测一个转发函数导入main并启动服务；实际执行的仍是工作树生产函数。组件专项直接编译生产组合函数，验证旧中断不stop、旧ASR收尾不清新busy；另真实Electron四场景验证新身份状态正常结束和取消。988项后端回归及前端类型/构建通过，详见[验收计划](../plan/2026-11-10-speech-state-identity.md)。
+
+剩余关键边界是生产者任务身份：如果任务已经过期但尚未进入转发器，仅在转发器读取当前generation仍不够。应在既有语音任务入口绑定不可变身份并传播，连同音频回调、延迟interrupt通知一并审计；不能因本轮测试通过便宣称旧任务绝不污染新角色。该工作继续属于现有Runtime的局部完善。
+
+## 生产任务取消epoch传播
+
+后续已沿用VoicePipeline._turn_gen实现不可变SpeechOwner。ContextVar让ASR/LLM/翻译/合成的asyncio子任务继承原epoch；嵌套入口优先复用继承owner，避免旧任务在_speak入口“刷新身份”。_emit和播放回调前检查，ASR完成/异常分支也在写状态前检查。失效用CancelledError传播，防止普通Exception容错把取消当成成功。没有创建另一套Runtime、另一个generation计数器或复制角色配置。
+
+延迟interrupt通知尤其不能在协程开始执行时捕获身份：同一事件循环内第二次interrupt可能已发生。现在同步调用处捕获owner并传给通知任务；较早通知在真正运行时已过期，会自行取消。
+
+排查同时发现旧trace延迟汇总会按session移除当前trace，可能误伤已开始的新回合。改为原trace对象显式传递和对象所有权检查，新增正常汇总/替换trace测试。这是避免错误测量的必要修复，不用它宣称TTFA变快。
+
+尚未统一的部分是Session generation与语音取消epoch的跨Runtime编排，尤其新文本回合与主动语音等所有来源的取消责任；当前实现只对已进入现有语音作用域并被interrupt失效的任务作保证。详见计划内逐场景证据和限制，仍保留整体未完成状态。

@@ -1,0 +1,15 @@
+{
+  "controls": {
+    "value": "http",
+    "options": [
+      "http",
+      "websocket"
+    ]
+  },
+  "desktop": {
+    "role": "hotaru",
+    "mic": false,
+    "presence": "idle",
+    "asset": "index-BPsrL3y6.js"
+  }
+}

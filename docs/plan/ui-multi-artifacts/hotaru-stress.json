@@ -1,0 +1,349 @@
+{
+  "kind": "real Agent LLM + netease_search + web search; native geometry/drag; no music playback",
+  "work_area_physical": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080
+  },
+  "roles": [
+    {
+      "role": "hotaru",
+      "geometry": [
+        {
+          "case": "center",
+          "pet": {
+            "x": 686,
+            "y": 175,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 855.0998587001766,
+            "y": 287.5350092310841,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 1081,
+              "y": 331,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 522,
+              "y": 331,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1081,
+              "y": 757,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "left-top",
+          "pet": {
+            "x": 8,
+            "y": 8,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 177.09985870017658,
+            "y": 120.53500923108409,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 403,
+              "y": 165,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 403,
+              "y": 596,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 23,
+              "y": 451,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "right-top",
+          "pet": {
+            "x": 1364,
+            "y": 8,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 1533.0998587001766,
+            "y": 120.53500923108409,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 1296,
+              "y": 165,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 1296,
+              "y": 596,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 916,
+              "y": 165,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "left-bottom",
+          "pet": {
+            "x": 8,
+            "y": 342,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 177.09985870017658,
+            "y": 454.5350092310841,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 403,
+              "y": 499,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 150,
+              "y": 23,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 457,
+              "y": 171,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "right-bottom",
+          "pet": {
+            "x": 1364,
+            "y": 342,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 1533.0998587001766,
+            "y": 454.5350092310841,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 1296,
+              "y": 499,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 1506,
+              "y": 23,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1127,
+              "y": 171,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "before-drag",
+          "pet": {
+            "x": 686,
+            "y": 175,
+            "width": 548,
+            "height": 730
+          },
+          "model": {
+            "x": 855.0998587001766,
+            "y": 287.5350092310841,
+            "width": 210.19986523760906,
+            "height": 315.38579541148255
+          },
+          "panels": [
+            {
+              "x": 1081,
+              "y": 331,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 522,
+              "y": 331,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1081,
+              "y": 757,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "after-drag",
+          "pet": {
+            "x": 748,
+            "y": 195,
+            "width": 551,
+            "height": 732
+          },
+          "model": {
+            "x": 916.8254072335013,
+            "y": 307.2441562311075,
+            "width": 209.8587078779705,
+            "height": 314.570663255079
+          },
+          "panels": [
+            {
+              "x": 1142,
+              "y": 351,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 583,
+              "y": 351,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1142,
+              "y": 23,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        },
+        {
+          "case": "after-hot-update",
+          "pet": {
+            "x": 748,
+            "y": 195,
+            "width": 551,
+            "height": 732
+          },
+          "model": {
+            "x": 916.8254072335013,
+            "y": 307.2441562311075,
+            "width": 209.8587078779705,
+            "height": 314.570663255079
+          },
+          "panels": [
+            {
+              "x": 1142,
+              "y": 351,
+              "width": 221,
+              "height": 416
+            },
+            {
+              "x": 583,
+              "y": 351,
+              "width": 292,
+              "height": 416
+            },
+            {
+              "x": 1142,
+              "y": 23,
+              "width": 364,
+              "height": 312
+            }
+          ],
+          "no_overlap": true
+        }
+      ],
+      "original_reply_chars": 84,
+      "long_reply_mode": "explicit typography stress sample from same-role real search/reply",
+      "real_response_seconds": 12.95,
+      "reply_chars": 8953,
+      "song_count": 5,
+      "source_count": 3,
+      "types": [
+        "agent:activity",
+        "agent:result",
+        "chat:assistant"
+      ],
+      "song_ids": [
+        "36308916",
+        "442495638",
+        "2649307936",
+        "1452906755",
+        "1452903856"
+      ],
+      "native_drag_delta": [
+        62,
+        20
+      ],
+      "panel_drag_deltas": [
+        [
+          61,
+          20
+        ],
+        [
+          61,
+          20
+        ],
+        [
+          61,
+          -734
+        ]
+      ],
+      "long_reply_scroll": {
+        "scrollHeight": 32203,
+        "clientHeight": 320,
+        "scrollTop": 31883.84765625
+      },
+      "hot_update_ms": 2,
+      "independent_native_dismiss": true
+    }
+  ],
+  "role_switch_cleanup": true,
+  "preferences_restored": true
+}

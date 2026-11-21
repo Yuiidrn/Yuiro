@@ -1,0 +1,132 @@
+{
+  "models": [
+    {
+      "role": "hiyori",
+      "mask": {
+        "opaque": {
+          "x": 213.07691955566406,
+          "y": 208.42248809337616
+        },
+        "transparent": {
+          "x": 142.41928820041795,
+          "y": 104.76262629032135
+        },
+        "occupied": 1436,
+        "w": 193,
+        "h": 256,
+        "path": "/live2d/hiyori/Hiyori.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 5,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": 142.66510538641685,
+        "y": 104.81448763250883,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 0,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 1408,
+      "permanent_island_removed": true,
+      "faded_clicks_reaching_underlay": 1,
+      "performance": {
+        "samples": 1894,
+        "totalMs": 5797.500000074506,
+        "maxMs": 64.90000000596046,
+        "lastMs": 2.2999999970197678,
+        "lastAt": 246649.40000000596,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 24,
+      "window_avg_ms": 2.445833332836628,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.4000000059604645,
+          "max_ms": 6.799999997019768
+        },
+        "sampling_enabled": {
+          "frames": 248,
+          "p95_ms": 7.0999999940395355,
+          "max_ms": 10.200000002980232
+        }
+      }
+    },
+    {
+      "role": "hotaru",
+      "mask": {
+        "opaque": {
+          "x": 213.07691955566406,
+          "y": 208.42248809337616
+        },
+        "transparent": {
+          "x": 142.41928820041795,
+          "y": 98.1460393667221
+        },
+        "occupied": 1787,
+        "w": 193,
+        "h": 256,
+        "path": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      },
+      "transparent_clicks_reaching_underlay": 5,
+      "transparent_attempts": 5,
+      "transparent_input": {
+        "x": 371,
+        "y": 156,
+        "ui": false,
+        "dragging": false,
+        "fade": false,
+        "model": false,
+        "passthrough": true
+      },
+      "opaque_clicks_reaching_underlay": 2,
+      "opaque_attempts": 3,
+      "fades_on_body": true,
+      "mask_while_faded": 1777,
+      "permanent_island_removed": true,
+      "faded_clicks_reaching_underlay": 1,
+      "performance": {
+        "samples": 1972,
+        "totalMs": 6128.1000000834465,
+        "maxMs": 64.90000000596046,
+        "lastMs": 3.5,
+        "lastAt": 258366.30000001192,
+        "error": ""
+      },
+      "sample_window_ms": 3000,
+      "window_samples": 24,
+      "window_avg_ms": 4.049999998882413,
+      "hot_update": {
+        "threshold": 180,
+        "tolerance": 7,
+        "debug": true,
+        "overlay_visible": true
+      },
+      "frame_benchmark": {
+        "sampling_paused": {
+          "frames": 248,
+          "p95_ms": 6.800000011920929,
+          "max_ms": 7.4000000059604645
+        },
+        "sampling_enabled": {
+          "frames": 244,
+          "p95_ms": 8.300000011920929,
+          "max_ms": 11.799999997019768
+        }
+      }
+    }
+  ],
+  "native_probe": "WM_LBUTTONDOWN on own underlay window",
+  "devicePixelRatio": 1.2999999523162842
+}

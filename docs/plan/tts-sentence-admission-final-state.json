@@ -1,0 +1,13 @@
+{
+  "health": {
+    "status": "ok",
+    "version": "0.1.0"
+  },
+  "desktop": {
+    "role": "hotaru",
+    "mic": false,
+    "presence": "idle"
+  },
+  "productionTransport": "pooled HTTP",
+  "websocketIntegrated": false
+}

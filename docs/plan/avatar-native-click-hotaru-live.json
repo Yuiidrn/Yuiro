@@ -1,0 +1,711 @@
+{
+  "role": "hotaru",
+  "scope": "native Windows cursor and SendInput click, verified owned window and renderer contour",
+  "started": true,
+  "returnedToIdle": true,
+  "samples": [
+    {
+      "ms": 16,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244565061,
+      "at": 1794244551528
+    },
+    {
+      "ms": 233,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 452,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 680,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 891,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 1106,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 1322,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 1536,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 1743,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 1959,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 2178,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 2394,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 2609,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 2828,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 3045,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 3263,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 3480,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "exp_bsmile01",
+      "motion": "Motion",
+      "motionIndex": 4,
+      "until": 1794244555571,
+      "at": 1794244551538
+    },
+    {
+      "ms": 3699,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 3913,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 4131,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 4348,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 4567,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 4787,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 5004,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 5222,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 5428,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 5640,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 5863,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 6074,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 6281,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 6501,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 6714,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 6927,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 7139,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 7356,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 7574,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 7792,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 8011,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 8228,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 8431,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 8638,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 8851,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 9058,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 9272,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 9485,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 9705,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 9922,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 10139,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 10359,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 10577,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 10793,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 11016,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 11226,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 11429,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 11637,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 11854,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 12072,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 12294,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 12508,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 12715,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 12930,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 13148,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 13366,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 13583,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 13801,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 14021,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 14240,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 14453,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 14672,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
+      "until": 0,
+      "at": 1794244555084
+    },
+    {
+      "ms": 14891,
+      "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "presence": "idle",
+      "expression": "",
+      "motion": "Motion",
+      "motionIndex": 19,
+      "until": 0,
+      "at": 1794244566295
+    }
+  ],
+  "cursorRestored": true,
+  "restoredRole": "hotaru",
+  "clickPoolRestored": true
+}

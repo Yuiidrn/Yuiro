@@ -1,0 +1,20 @@
+{
+  "scope": "one live chat sample after engine restart, before empty-knowledge fast path",
+  "marks": {
+    "turn_start": 0.0,
+    "agent_start": 3.0,
+    "memory_retrieve_start": 7.0,
+    "memory_retrieve": 4478.0,
+    "llm_request_start": 4487.0,
+    "llm_provider_first_token": 6883.0,
+    "llm_first_token": 6883.0,
+    "agent_end": 7135.0,
+    "reply_sent": 7136.0,
+    "prompt": 4852.0,
+    "completion": 9.0,
+    "cache_hit": 4096.0,
+    "e2e": 7136.0
+  },
+  "memoryMs": 4471.0,
+  "providerFirstTokenMs": 2396.0
+}

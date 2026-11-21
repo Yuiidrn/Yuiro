@@ -1,0 +1,61 @@
+{
+  "scope": "six maximum paid HTTP requests using current Hotaru voice/model/latency/speed, fixed short Japanese text, no translation/playback/microphone; interleaved fresh vs shared connection, too few samples for latency SLA or causal A/B",
+  "model": "s2.1-pro",
+  "latency": "balanced",
+  "rows": [
+    {
+      "mode": "fresh",
+      "sample": 1,
+      "status": 200,
+      "headersMs": 537.4,
+      "firstBodyChunkMs": 734.5,
+      "completeMs": 2218.7,
+      "bytes": 299052
+    },
+    {
+      "mode": "shared-cold",
+      "sample": 2,
+      "status": 200,
+      "headersMs": 496.6,
+      "firstBodyChunkMs": 501.0,
+      "completeMs": 1952.9,
+      "bytes": 299052
+    },
+    {
+      "mode": "fresh",
+      "sample": 3,
+      "status": 200,
+      "headersMs": 859.4,
+      "firstBodyChunkMs": 1610.7,
+      "completeMs": 5309.8,
+      "bytes": 286764
+    },
+    {
+      "mode": "shared-warm",
+      "sample": 4,
+      "status": 200,
+      "headersMs": 502.4,
+      "firstBodyChunkMs": 675.1,
+      "completeMs": 1837.9,
+      "bytes": 307244
+    },
+    {
+      "mode": "fresh",
+      "sample": 5,
+      "status": 200,
+      "headersMs": 504.1,
+      "firstBodyChunkMs": 507.0,
+      "completeMs": 2250.3,
+      "bytes": 307244
+    },
+    {
+      "mode": "shared-warm",
+      "sample": 6,
+      "status": 200,
+      "headersMs": 527.6,
+      "firstBodyChunkMs": 527.9,
+      "completeMs": 1786.1,
+      "bytes": 303148
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "scope": "actual built renderer handler injection with 300ms silent WAV; audio frame to avatar status snapshot, not network/LLM/TTS/end-to-end or visual draw latency",
+  "samples": [
+    {
+      "startMs": 35.5,
+      "endMs": 767.8000000119209
+    },
+    {
+      "startMs": 10,
+      "endMs": 320.9000000357628
+    },
+    {
+      "startMs": 9,
+      "endMs": 311.69999998807907
+    },
+    {
+      "startMs": 7.600000023841858,
+      "endMs": 303.9000000357628
+    },
+    {
+      "startMs": 8.399999976158142,
+      "endMs": 326.19999998807907
+    },
+    {
+      "startMs": 9.699999988079071,
+      "endMs": 326.10000002384186
+    },
+    {
+      "startMs": 7.899999976158142,
+      "endMs": 307.0999999642372
+    },
+    {
+      "startMs": 10.199999988079071,
+      "endMs": 314.0999999642372
+    },
+    {
+      "startMs": 8.199999988079071,
+      "endMs": 321.10000002384186
+    },
+    {
+      "startMs": 8.800000011920929,
+      "endMs": 320
+    },
+    {
+      "startMs": 9.5,
+      "endMs": 314
+    },
+    {
+      "startMs": 10.300000011920929,
+      "endMs": 305.30000001192093
+    },
+    {
+      "startMs": 9.800000011920929,
+      "endMs": 301.39999997615814
+    },
+    {
+      "startMs": 7.900000035762787,
+      "endMs": 313.19999998807907
+    },
+    {
+      "startMs": 10.899999976158142,
+      "endMs": 320
+    },
+    {
+      "startMs": 7.699999988079071,
+      "endMs": 319.60000002384186
+    },
+    {
+      "startMs": 12,
+      "endMs": 312.60000002384186
+    },
+    {
+      "startMs": 9.899999976158142,
+      "endMs": 318
+    },
+    {
+      "startMs": 9.800000011920929,
+      "endMs": 309.5
+    },
+    {
+      "startMs": 9.399999976158142,
+      "endMs": 317.5999999642372
+    }
+  ],
+  "frameToSpeakingMs": {
+    "n": 20,
+    "p50": 9.5,
+    "p95": 12,
+    "max": 35.5
+  },
+  "frameToIdleMs": {
+    "n": 20,
+    "p50": 314.0999999642372,
+    "p95": 326.19999998807907,
+    "max": 767.8000000119209
+  },
+  "percentileMethod": "nearest rank; all 20 samples including first",
+  "role": "hotaru"
+}

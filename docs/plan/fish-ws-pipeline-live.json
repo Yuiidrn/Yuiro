@@ -1,0 +1,108 @@
+{
+  "scope": "Single isolated production VoicePipeline with real LLM/translation/Fish WS; fixed ASR substitute and captured audio callback, no real microphone/playback/UI/acoustic latency/history writes/config change",
+  "passed": true,
+  "marks": {
+    "llmStart": 46.7,
+    "llmFirstToken": 2251.0,
+    "firstSentence": 2369.3,
+    "llmEnd": 2555.2,
+    "firstAudioDelivered": 4283.9
+  },
+  "segments": [
+    {
+      "ms": 4283.9,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 4489.0,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 4489.0,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 4868.9,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5052.8,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5226.1,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5439.9,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5439.9,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5939.3,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5939.3,
+      "sampleRate": 44100,
+      "bytes": 42380,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    },
+    {
+      "ms": 5939.6,
+      "sampleRate": 44100,
+      "bytes": 19052,
+      "streaming": true,
+      "streamId": "a7ba94b3a8674a8fb6bc98ba1fd80663"
+    }
+  ],
+  "events": [
+    "asr:start",
+    "asr:text",
+    "llm:start",
+    "tts:start",
+    "tts:synthesize",
+    "llm:text",
+    "tts:ready",
+    "tts:end",
+    "tts:interrupted"
+  ],
+  "translationStats": {
+    "calls": 2,
+    "cache_hits": 0,
+    "failures": 0,
+    "skipped": 1
+  },
+  "productionTransportChanged": false
+}

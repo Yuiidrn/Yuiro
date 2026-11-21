@@ -1,0 +1,67 @@
+{
+  "scope": "renderer-only real SDK model loads and controlled intents; no engine conversation or visual approval",
+  "results": [
+    {
+      "model": "hiyori",
+      "loaded": true,
+      "error": "",
+      "pick": {
+        "group": "Extra",
+        "index": 0,
+        "file": "motions/micoff.motion3.json",
+        "loop": true,
+        "durationMs": 1100,
+        "slot": "",
+        "direction": ""
+      },
+      "events": [
+        {
+          "event": "start",
+          "ms": 7.5
+        },
+        {
+          "event": "resolved",
+          "ok": true,
+          "ms": 7.5
+        },
+        {
+          "event": "finish",
+          "ms": 1111.6999999284744
+        }
+      ],
+      "loadedClip": true,
+      "loadErrors": [],
+      "before": {
+        "elapsed": 105.90000000000009,
+        "delta": 0,
+        "ticker": true,
+        "visible": true,
+        "renderable": true
+      },
+      "after": {
+        "elapsed": 3021.0000000000005,
+        "delta": 0,
+        "playing": false,
+        "finished": true,
+        "state": "{\"tag\":\"MotionManager(hiyori)\",\"debug\":false,\"currentPriority\":0,\"reservePriority\":0}"
+      },
+      "state": {
+        "expression": "happy",
+        "motion": "",
+        "motionIndex": null,
+        "until": 0
+      },
+      "expressions": [
+        "happy",
+        "sad",
+        "angry",
+        "surprised",
+        "shy",
+        "playful",
+        "think",
+        "bored"
+      ]
+    }
+  ],
+  "restored": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+}

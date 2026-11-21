@@ -1,0 +1,68 @@
+{
+  "scope": "Related production function/composable regressions for frozen candidate, not all repository tests",
+  "results": [
+    {
+      "script": "avatar_comfort_semantics_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.491,
+      "stdout": "Actual assets: sad/cry/tear excluded from automatic comfort; expressions, explicit actions and comfort/pat/hug inference preserved. Passed. Removed candidates: hiyori:0, hotaru:7",
+      "stderr": ""
+    },
+    {
+      "script": "expression_requests_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.388,
+      "stdout": "Actual installed SDK ExpressionManager: baseline reset race reproduced; reset/current/newer/dispose invalidate pending expressions. Passed.",
+      "stderr": ""
+    },
+    {
+      "script": "expression_blink_order_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.4,
+      "stdout": "Expression/blink production adapter: reproduced overwrite, expression owns eyes, one blink/frame, motion exclusion, time units and idempotent teardown passed.",
+      "stderr": ""
+    },
+    {
+      "script": "motion_start_ownership_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.523,
+      "stdout": "Production playMotion: baseline stale clearing reproduced; repeated resource, cancellation, model/performance change, stale rejection and current failures passed.",
+      "stderr": ""
+    },
+    {
+      "script": "avatar_tts_waiting_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.528,
+      "stdout": "Production presence + voice handlers: text first-audio waiting, late final text, actual speaking preserved, zero audio completion without playback_end, cancel and foreign role rejection passed.",
+      "stderr": ""
+    },
+    {
+      "script": "avatar_expression_baseline_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.545,
+      "stdout": "Avatar baseline: persistent expression, temporary action, neutral and model reset passed.\nAvatar presence: listening/thinking/actual playback/cancellation and reset passed.\nAvatar lease: priority protection, expiration and model reset passed.\nAvatar model URLs: built-file root, spaces and development paths passed.\nAvatar legacy assets: metadata matches actual curves.\nAvatar lips: Cubism4 parameter API, asset IDs, bounds and silence passed.\nAvatar gaze: head anchor, distance cutoff, invalid inputs and amplitude bounds passed.\nAvatar gaze ownership: moving/still timeout/far/reset, head override and preserved breathing passed.\nAvatar click pools: positive defaults, model validation, empty pool, deduplication and drag/hold exclusion passed.\n[drag] end\nClick interaction: role/model persistence, empty pool, UI/right-click/blur exclusion and drag lifecycle passed.\nAppearance catalog: semantic groups, unknown fallback and readable asset labels passed.\nPreview crop: canvas-local origin, fractional DPI, aspect ratio, padding and head region passed.\nControl lifecycle: stale close ignored; current close resets waiting presence and preserves actual speaking. Passed.\nFixed idle: explicit single clip overrides random pool; missing clip stays quiet; legacy rotation filter preserved.\nAppearance finish: stop looping SDK motion before receipt and idle recovery; invalidate pending requests. Passed.\nMicrophone meter: true PCM RMS, silence, invalid samples, gain and saturation passed.\nReply audio identity: current accepted; stale, cross-session and missing identity rejected.\nActual reply handlers: stale frames cannot enqueue or end; accepted newer audio raises generation floor.\nMic stop presence: active reply playback/thinking survives; input-only listening resets.",
+      "stderr": ""
+    },
+    {
+      "script": "voice_playback_receipts_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.478,
+      "stdout": "Production voice queue: sent-all vs played-all, natural end, active/queued cancellation, stale identities, decode failure, minimal receipts passed.",
+      "stderr": ""
+    },
+    {
+      "script": "voice_stream_schedule_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.494,
+      "stdout": "Production streaming queue: contiguous audio-clock scheduling, deferred receipts, per-chunk lips, all-node cancellation and late decode rejection passed.",
+      "stderr": "[voice] 流式音频缓冲欠载 gap_ms=820"
+    },
+    {
+      "script": "voice_input_lifecycle_test.cjs",
+      "exitCode": 0,
+      "seconds": 0.506,
+      "stdout": "Audio clock: stalled clock keeps mouth closed; advancing audio clock drives first volume slice. Passed.\nActual voice composable: mic stop preserves active output/lips; natural end resets lips; dispose cancels output. Passed.",
+      "stderr": ""
+    }
+  ]
+}

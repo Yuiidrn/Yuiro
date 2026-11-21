@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-10",
+  "targeted": {
+    "command": "pytest tests/test_speech_cleanup_ownership.py tests/test_barge_in.py tests/test_tts_streaming.py tests/test_reply_tts.py tests/test_voice_trace.py -q",
+    "passed": 31,
+    "seconds": 1.73
+  },
+  "full": {
+    "command": "pytest tests/ -q",
+    "passed": 963,
+    "seconds": 58.28
+  },
+  "runtime": {
+    "enginePid": 81896,
+    "shellPid": 73000,
+    "role": "hotaru",
+    "recording": false,
+    "presence": "idle"
+  },
+  "scope": "actual VoicePipeline ownership scenario with controlled fake synthesis and real asyncio overlap; not human microphone barge-in"
+}

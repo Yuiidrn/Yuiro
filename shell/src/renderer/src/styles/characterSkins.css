@@ -1,0 +1,12 @@
+/* 角色皮肤只改变表现，不改变权限、提供商或角色数据。 */
+:root[data-skin='lily']{--character-flower:#93aaa1;--character-wash:#ebf1ed;--character-ink:#35434c}
+:root[data-skin='cream']{--character-flower:#d3ae78;--character-wash:#faf0dd;--character-ink:#4a3b2a}
+:root[data-skin='lily']:not([data-theme='dark']){--bg:#f6f8f8;--card:#ffffff;--card-head:#f2f6f3;--border:#d6e1dd;--border-soft:#e7eeea;--text:#35434c;--text-soft:#53676c;--muted:#71837c;--accent:#58776a;--accent-soft:#e7efea;--accent-2:#a09bb5;--accent-2-soft:#eeedf4;--input:#ffffff;--btn-hover-bg:#edf3ef;--ok:#527a65;--warn:#967637;--err:#b45e67;--shadow-soft:0 3px 16px #536d6410;--shadow-lift:0 7px 24px #536d6419}
+:root[data-skin='lily'][data-theme='dark']{--bg:#1b2229;--card:#242d34;--card-head:#2b363c;--border:#435852;--border-soft:#35453f;--text:#edf4f1;--text-soft:#c6d5d0;--muted:#9cafa8;--accent:#bad3c5;--accent-soft:#bad3c520;--accent-2:#c3bcd9;--accent-2-soft:#c3bcd920;--input:#20292f;--btn-hover-bg:#ffffff0d;--ok:#9ac4ab;--warn:#d6bd85;--err:#e5a0aa}
+/* 花纹仅出现在非交互的标题留白，禁止遮盖内容或命中层。 */
+.dev-shell .sidebar{position:relative}
+:root[data-skin='lily'] .dev-shell .sidebar::after{content:'✧';position:absolute;right:18px;bottom:18px;font-size:32px;color:var(--character-flower);opacity:.25;pointer-events:none}
+:root[data-skin='cream'] .dev-shell .sidebar::after{content:'✦';position:absolute;right:18px;bottom:18px;font-size:26px;color:var(--character-flower);opacity:.25;pointer-events:none}
+
+:root[data-skin='lily'] .shell-root{--chat-surface:rgba(255,255,255,.8);--chat-surface-solid:rgba(255,255,255,var(--dock-alpha,.93));--chat-border:#d6e1dd;--chat-text:#35434c;--chat-text-soft:#53676c;--chat-muted:#71837c;--chat-accent:#58776a;--chat-accent-soft:#58776a20;--chat-shadow:0 8px 26px #536d641a;--chat-input-bg:#ffffffaa;--chat-input-text:#35434c;--chat-input-placeholder:#71837c;--msg-user-bg:#58776a;--msg-user-text:#fff;--msg-assistant-bg:#ffffffdd;--msg-assistant-text:#35434c}
+:root[data-skin='lily'] .shell-root[data-theme='dark']{--chat-surface:#242d34cc;--chat-surface-solid:rgba(36,45,52,var(--dock-alpha,.93));--chat-border:#435852;--chat-text:#edf4f1;--chat-text-soft:#c6d5d0;--chat-muted:#9cafa8;--chat-accent:#bad3c5;--chat-accent-soft:#bad3c520;--chat-input-bg:#20292faa;--chat-input-text:#edf4f1;--chat-input-placeholder:#9cafa8;--msg-user-bg:#bad3c5;--msg-user-text:#242d34;--msg-assistant-bg:#242d34cc;--msg-assistant-text:#edf4f1}

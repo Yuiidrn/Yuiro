@@ -1,0 +1,10 @@
+{
+  "scope": "unauthenticated nonbillable GET /openapi.json after actual Fish ConnectError; headers only, not TTS permission or synthesis availability",
+  "proxyEnvironmentPresent": false,
+  "windowsProxyRoutes": {"http": {"host": "127.0.0.1", "port": 7890}, "https": {"host": "127.0.0.1", "port": 7890}},
+  "observations": [
+    {"trustEnvironment": true, "status": 200, "headersMs": 1788.4},
+    {"trustEnvironment": false, "errorType": "ConnectTimeout", "causeType": "ConnectTimeout", "ms": 5023.5}
+  ],
+  "limitations": "single concurrent connectivity comparison; Windows registry proxy can apply without proxy env vars; does not prove proxy causality, sustained health, or a synthesis request will succeed; no routing or key changes"
+}

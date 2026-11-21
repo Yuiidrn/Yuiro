@@ -1,0 +1,30 @@
+{
+  "scope": "Fresh diagnostic process; local secure-store reads only, no network; does not represent warm running-engine overhead; no key material retained in report",
+  "rows": [
+    {
+      "sample": 1,
+      "credentialPresent": true,
+      "readMs": 506.707
+    },
+    {
+      "sample": 2,
+      "credentialPresent": true,
+      "readMs": 0.237
+    },
+    {
+      "sample": 3,
+      "credentialPresent": true,
+      "readMs": 0.175
+    },
+    {
+      "sample": 4,
+      "credentialPresent": true,
+      "readMs": 0.117
+    },
+    {
+      "sample": 5,
+      "credentialPresent": true,
+      "readMs": 0.113
+    }
+  ]
+}

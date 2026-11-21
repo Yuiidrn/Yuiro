@@ -1,0 +1,185 @@
+{
+  "scope": "Actual production nested sentence drain with deterministic synthetic token delays; not provider/translation/audio TTFA",
+  "rows": [
+    {
+      "case": "short-prefix",
+      "sample": 1,
+      "firstAdmissionMs": 346.845,
+      "firstAdmissionInputChunks": 2,
+      "emitted": [
+        {
+          "text": "嗯。我正在帮你核对这件事情。",
+          "ms": 346.845,
+          "inputChunksReceived": 2
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 648.137,
+          "inputChunksReceived": 4
+        }
+      ]
+    },
+    {
+      "case": "short-prefix",
+      "sample": 2,
+      "firstAdmissionMs": 40.956,
+      "firstAdmissionInputChunks": 2,
+      "emitted": [
+        {
+          "text": "嗯。我正在帮你核对这件事情。",
+          "ms": 40.956,
+          "inputChunksReceived": 2
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 341.571,
+          "inputChunksReceived": 4
+        }
+      ]
+    },
+    {
+      "case": "short-prefix",
+      "sample": 3,
+      "firstAdmissionMs": 41.801,
+      "firstAdmissionInputChunks": 2,
+      "emitted": [
+        {
+          "text": "嗯。我正在帮你核对这件事情。",
+          "ms": 41.801,
+          "inputChunksReceived": 2
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 342.846,
+          "inputChunksReceived": 4
+        }
+      ]
+    },
+    {
+      "case": "short-prefix",
+      "sample": 4,
+      "firstAdmissionMs": 41.624,
+      "firstAdmissionInputChunks": 2,
+      "emitted": [
+        {
+          "text": "嗯。我正在帮你核对这件事情。",
+          "ms": 41.624,
+          "inputChunksReceived": 2
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 342.89,
+          "inputChunksReceived": 4
+        }
+      ]
+    },
+    {
+      "case": "short-prefix",
+      "sample": 5,
+      "firstAdmissionMs": 41.85,
+      "firstAdmissionInputChunks": 2,
+      "emitted": [
+        {
+          "text": "嗯。我正在帮你核对这件事情。",
+          "ms": 41.85,
+          "inputChunksReceived": 2
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 343.533,
+          "inputChunksReceived": 4
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "sample": 1,
+      "firstAdmissionMs": 20.815,
+      "firstAdmissionInputChunks": 1,
+      "emitted": [
+        {
+          "text": "我正在帮你核对这件事情。",
+          "ms": 20.815,
+          "inputChunksReceived": 1
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 192.086,
+          "inputChunksReceived": 3
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "sample": 2,
+      "firstAdmissionMs": 21.067,
+      "firstAdmissionInputChunks": 1,
+      "emitted": [
+        {
+          "text": "我正在帮你核对这件事情。",
+          "ms": 21.067,
+          "inputChunksReceived": 1
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 192.962,
+          "inputChunksReceived": 3
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "sample": 3,
+      "firstAdmissionMs": 20.391,
+      "firstAdmissionInputChunks": 1,
+      "emitted": [
+        {
+          "text": "我正在帮你核对这件事情。",
+          "ms": 20.391,
+          "inputChunksReceived": 1
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 191.213,
+          "inputChunksReceived": 3
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "sample": 4,
+      "firstAdmissionMs": 21.102,
+      "firstAdmissionInputChunks": 1,
+      "emitted": [
+        {
+          "text": "我正在帮你核对这件事情。",
+          "ms": 21.102,
+          "inputChunksReceived": 1
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 192.022,
+          "inputChunksReceived": 3
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "sample": 5,
+      "firstAdmissionMs": 21.22,
+      "firstAdmissionInputChunks": 1,
+      "emitted": [
+        {
+          "text": "我正在帮你核对这件事情。",
+          "ms": 21.22,
+          "inputChunksReceived": 1
+        },
+        {
+          "text": "后面的解释还在继续生成，最后再补充一些说明。",
+          "ms": 192.745,
+          "inputChunksReceived": 3
+        }
+      ]
+    }
+  ]
+}

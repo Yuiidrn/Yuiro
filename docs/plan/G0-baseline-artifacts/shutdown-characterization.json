@@ -1,0 +1,6 @@
+{
+  "error": "NameError",
+  "message": "name 'daemon' is not defined",
+  "source_line": 860,
+  "scope": "exact teardown AST, fake app state; startup/real service not executed"
+}

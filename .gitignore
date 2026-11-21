@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+config.toml
+# 本机独立角色卡（含私人提示词/本地资源路径）；由旧配置惰性初始化。
+/engine/characters/
+*.egg-info/
+
+# 本地环境(不占C盘): venv / 模型缓存 / 依赖 全在项目内
+.env-local/
+venv/
+engine/models/
+
+# Node / Electron
+node_modules/
+out/
+dist/
+release/
+
+# C++
+build/
+*.o
+*.obj
+
+# Data / secrets
+*.db
+*.sqlite
+memory.json
+device_id
+audit/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+
+# test output
+.pytest_cache/
+
+# TTS 服务（engine/yuiro/tts_server）：运行日志/样本走本地，不入库
+engine/yuiro/tts_server/*.log
+engine/yuiro/tts_server/*.err
+engine/yuiro/tts_server/samples/
+
+# 事务框架运行数据（engine/.yuiro/txn）：落盘备份/记录走本地，不入库
+engine/.yuiro/txn/
+
+#
+.tmp_cortico/
+shell/src/renderer/public/live2d/Hotaru Shiomi/
+assets/voices/Model/Hotaru Shiomi/
+
+# ---- 2026-11 跨平台迁移收口：运行态 / 工具产物 / 未完成下载 ----
+# 引擎运行数据（对话、记忆库、事件、事务备份、角色数据）：会随本机使用增长，
+# 且含私人对话内容，一律不入库；新机器首次启动会自动创建。
+/engine/data/
+/.yuiro/
+# 静态分析工具（understand）产物
+/.ua/
+# IDE 助手工作目录（本地偏好/计划），按约定保留在本地
+/.codebuddy/
+# 迁移用明文密钥导出目录（见 scripts/setup/mac/export_keys.py）
+/.secrets/
+# 网盘/浏览器下载产生的半成品大文件
+*.downloading
+# 模型权重（体积大，按平台各自下载）
+*.ckpt
+*.pth
+*.safetensors

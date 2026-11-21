@@ -1,0 +1,30 @@
+{
+  "song_id": "36308916",
+  "row_like_controls": [
+    {
+      "title": "喜欢",
+      "pressed": null
+    }
+  ],
+  "playbar_likes": [
+    {
+      "title": "喜欢（Ctrl + L）",
+      "visible": false
+    },
+    {
+      "title": "喜欢（Ctrl + L）",
+      "visible": true
+    }
+  ],
+  "shuffle": [
+    {
+      "title": "随机播放",
+      "visible": false
+    },
+    {
+      "title": "随机播放",
+      "visible": true
+    }
+  ],
+  "writes_performed": false
+}

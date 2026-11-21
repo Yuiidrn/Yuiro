@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-09T14:23:16.759Z",
+  "surface": "isolated hidden Electron renderer; real IndexedDB",
+  "roundtrip": true,
+  "reopened": true,
+  "missing": true,
+  "aborted": true,
+  "elapsedMs": 18,
+  "stalledOpenFallback": true,
+  "fallbackMs": 2014.199999988079
+}

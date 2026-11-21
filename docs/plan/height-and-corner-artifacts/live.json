@@ -1,0 +1,54 @@
+{
+  "original": {
+    "width": 610,
+    "height": 810,
+    "fillRatio": 1,
+    "xOffset": 0,
+    "yOffset": 0.5
+  },
+  "height_cases": [
+    {
+      "requested": 650,
+      "actual": 650,
+      "model_height": 550.0000238418588
+    },
+    {
+      "requested": 810,
+      "actual": 810,
+      "model_height": 710.0000297106241
+    }
+  ],
+  "motifs": [
+    {
+      "skin": "cream",
+      "color": "rgb(138, 90, 18)",
+      "alpha": "0.6",
+      "footerBelowContent": true,
+      "footerHeight": 33.990386962890625,
+      "scroll": true
+    },
+    {
+      "skin": "lily",
+      "color": "rgb(80, 110, 98)",
+      "alpha": "0.6",
+      "footerBelowContent": true,
+      "footerHeight": 33.990386962890625,
+      "scroll": true
+    }
+  ],
+  "automatic_fit_did_not_overwrite": true,
+  "dock_heights": [
+    35.528846740722656,
+    79.53125
+  ],
+  "toggle_off": true,
+  "final_layout": {
+    "width": 610,
+    "height": 810,
+    "fillRatio": 1,
+    "xOffset": 0,
+    "yOffset": 0.5
+  },
+  "repeated_layout_read_stable": true,
+  "model_capture_protection": 17
+}

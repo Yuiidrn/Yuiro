@@ -1,0 +1,11 @@
+{
+  "role": "hiyori",
+  "skin": "cream",
+  "cards_cleared": true,
+  "owner_cleared": true,
+  "song_id": "36308916",
+  "status": "paused",
+  "liked": false,
+  "backend_tests": 924,
+  "typecheck_build": true
+}

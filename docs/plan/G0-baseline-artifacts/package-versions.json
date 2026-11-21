@@ -1,0 +1,10 @@
+{
+  "pytest": "9.1.1",
+  "fastapi": "0.141.1",
+  "numpy": "2.5.2",
+  "ruff": "0.16.3",
+  "openai": "3.1.0",
+  "httpx": "0.28.1",
+  "sqlite-vec": "0.1.9",
+  "persona_model_path_from_TOML_only": "/live2d/hiyori/Hiyori.model3.json"
+}

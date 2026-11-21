@@ -1,0 +1,26 @@
+{
+  "scope": "real provider audio playing during official character switch; no microphone/ASR/LLM or human approval",
+  "initial": "hotaru",
+  "rows": [
+    {
+      "source": "hiyori",
+      "target": "hotaru",
+      "before": {
+        "presence": "speaking",
+        "mouth": 0.3745402516416588
+      },
+      "after": {
+        "presence": "idle",
+        "mouth": 0
+      },
+      "observed_ms": 572.2999999523163,
+      "includes_wait_ms": 500
+    },
+    {
+      "role": "hotaru",
+      "switch_ms": 1539.3999999761581,
+      "status": "error",
+      "detail": "Fish 连接建立失败（需检查DNS、TLS或代理） [ConnectError]；未切换为其他音色"
+    }
+  ]
+}

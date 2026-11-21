@@ -1,0 +1,6 @@
+{
+  "role": "hotaru",
+  "mic": false,
+  "presence": "idle",
+  "scope": "post-engine restart readback only; no microphone/provider request or subjective acceptance"
+}
