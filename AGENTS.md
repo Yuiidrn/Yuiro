@@ -36,6 +36,16 @@
 | `shell/` | Electron + Vue3 + TypeScript | **pnpm**（electron-vite），`shell/package.json` |
 | `system-daemon/` | C++20 CMake | **可选执行后端**（`[systemd].backend = "daemon"` 时启用）；stdio newline-JSON 的 MCP 类协议，能力在 `src/capability/`。**默认后端为 `engine/yuiro/native/`（Python 原生，无需 C++ 工具链）** |
 
+## 环境（macOS）
+
+- 一键安装依赖：`./scripts/setup/mac/bootstrap.sh`（加 `--voice` 追加语音栈）。完整步骤与平台差异见 **`docs/setup/macos.md`**。
+- 加载环境变量：`source config/env.sh`（对应 Windows 的 `config/env.ps1`）。
+- 启动/停止引擎：`./scripts/engine/engine_start.sh`（`--bg` 后台 / `--reload` 热重载）、`./scripts/engine/engine_stop.sh`。venv 在 `.venv`。
+- 壳层：`cd shell && pnpm install && pnpm dev`（`node_modules` 不入库，mac 首次必须装）。
+- API key 不进仓库：Windows 侧 `scripts/setup/mac/export_keys.ps1` 导出到本地 `.secrets/` → mac 侧 `import_keys.py` 写入钥匙串。
+- 平台限制：`system-daemon`（C++/WinRT）与音量/媒体键/SMTC 仅 Windows；mac 保持 `[systemd].backend = "native"`，本地 TTS 用 `edge-tts` 或 `siliconflow`。
+- **仓库是 public**：API key、`engine/config.toml`、`engine/characters/`、`engine/data/`、`.secrets/` 一律不入库。
+
 ## 环境（Windows，必须先做）
 
 - **加载本地环境**：在仓库根目录执行 `. .\config\env.ps1`。它设置 `YUIRO_*` 并把 HF/Torch/npm/electron 缓存全部重定向到项目内 `.env-local/`（**不占 C 盘是硬约定**，别往 `C:\Users\...\AppData` 装东西）。

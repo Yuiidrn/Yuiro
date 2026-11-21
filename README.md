@@ -104,6 +104,7 @@ Yuiro/
 ---
 
 ## 📖 补充文档
+- [macOS 调试运行指南](docs/setup/macos.md) — 跨平台最小闭环 + API key 迁移 + 已知限制
 - [部署/运行指南](docs/init/DEPLOYMENT.md) — 从零跑起 + 当前已验证状态
 - [不占 C 盘约定](docs/init/non-c-drive.md) — 所有环境/缓存/模型走 `.env-local`
 - [API 申请清单](config/API_KEYS.md) — 各云端 API 到哪个网站申请
