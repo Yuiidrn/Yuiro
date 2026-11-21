@@ -94,6 +94,10 @@ embedder = "md5"                          # 没下 BGE-M3 时显式用 md5，避
 `D:/...` 绝对路径（ASR 模型目录、参考音频）。参考音频的默认值已改为相对路径
 `../assets/voices/neuro_prompt.wav`，确实要拷的话把盘符路径逐条改掉。
 
+**人设一致**：`engine/characters/`（角色卡，含私人提示词）不入库，首次启动会按当前
+`[persona]` 自动 seed 一份。若希望与 Windows 侧完全一致，手动把
+`engine/characters/` 整个目录拷过来即可。
+
 ---
 
 ## 4. API Key 迁移（不要提交到仓库）
@@ -230,7 +234,8 @@ macOS 首次使用麦克风会弹权限请求；开发模式（`pnpm dev`）下�
    传应用名（如 `Safari`）或文件路径。
 4. **音量 / 媒体键 / SMTC 在 mac 上直接返回错误串**，不影响其它工具。
 5. **网易云**：`player.py` 已按平台切到 `/tmp/yuiro-mpv.sock`，但整条链路（ncm-cli 登录 +
-   自签名取直链）只在 Windows 验证过；mac 上属于「未实测」。
+   自签名取直链）只在 Windows 验证过；mac 上属于「未实测」。扫码登录需要额外装
+   `uv pip install qrcode Pillow`（默认最小安装不含）。
 6. **打包**：`pnpm build:mac` 已加，但仓库还没有 `electron-builder` 配置文件，
    首次打包需要补 `appId / productName / mac.target / 麦克风用途说明`。日常开发用 `pnpm dev` 即可。
 
