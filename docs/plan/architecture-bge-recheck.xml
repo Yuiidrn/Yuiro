@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="29.336" timestamp="2026-11-23T18:13:04.697891+08:00" hostname="Yuii"><testcase classname="tests.test_agent_memory" name="test_agentloop_memory_roundtrip" time="28.847" /></testsuite></testsuites>

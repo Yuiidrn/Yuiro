@@ -1,0 +1,19 @@
+{
+  "kind": "actual_useVoiceInput_with_controlled_AudioContext",
+  "passed": true,
+  "assertions": [
+    "late-network-frame-rejected",
+    "successor-generation-plays",
+    "late-decode-rejected",
+    "same-generation-after-stop-rejected",
+    "cancel-before-first-frame-request-gate",
+    "legacy-untagged-compatible",
+    "authoritative-session-reset-allows-lower-generation",
+    "send-before-session-ready-rejected",
+    "bounded-decode-ahead",
+    "stop-wakes-decode-budget",
+    "audio-buffer-overflow-explicit",
+    "authoritative-session-closes-old-output-context",
+    "dispose"
+  ]
+}

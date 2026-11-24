@@ -1,0 +1,9 @@
+{
+  "role": "hiyori",
+  "passed": true,
+  "observed": [
+    "chat:busy"
+  ],
+  "elapsed_ms": 50.841,
+  "scope": "real gate refusal before generation; no model/tool/ASR call"
+}

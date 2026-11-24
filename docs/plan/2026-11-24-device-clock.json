@@ -1,0 +1,23 @@
+{
+  "scope": "independent real AudioContext replay, configured generated WAV, no LLM/TTS",
+  "rows": [
+    {
+      "index": 0,
+      "duration_ms": 2720,
+      "ended_ms": 2738.300000011921,
+      "wall_ms": 2753.100000023842,
+      "clock_ms": 2730.6666666666665,
+      "max_stall_ms": 0,
+      "state": "running"
+    },
+    {
+      "index": 1,
+      "duration_ms": 2720,
+      "ended_ms": 2715.5,
+      "wall_ms": 2735.900000035763,
+      "clock_ms": 2738.666666666667,
+      "max_stall_ms": 0,
+      "state": "running"
+    }
+  ]
+}

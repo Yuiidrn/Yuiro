@@ -1,0 +1,68 @@
+{
+  "captured_at_utc": "2026-11-23T10:00:41.898888+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "不用工具，请用六句完整短句介绍散步、喝茶、看书、听歌、做饭和休息。每句十五至二十字，只输出正文。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 1,
+      "ended": 1,
+      "received_segments": 1,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1264.9000000059605
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 2373.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2890.0999999940395
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 3052.9000000059605
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "bed83856",
+      "reply_ms": 2373.7000000178814,
+      "reply_chars": 119,
+      "decode_start_ms": 2889.9000000059605,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 1.6,
+        "memory_retrieve_start": 62.6,
+        "memory_retrieve": 159,
+        "llm_request_start": 162.1,
+        "llm_provider_first_token": 1018.7,
+        "llm_first_token": 1018.7,
+        "first_sentence": 1254.5,
+        "tts_start": 1255.9,
+        "translation_start": 1256.5,
+        "lang_render": 2342.6,
+        "agent_end": 2361.5,
+        "reply_sent": 2362.8,
+        "tts_first_audio": 2863.5
+      },
+      "first_receive_ms": 2890.2000000178814,
+      "decode_end_ms": 2897.800000011921,
+      "first_start_ms": 2898,
+      "stop_ms": 2913.5999999940395,
+      "starts_at_stop": 1,
+      "last_ended_ms": 2922.5,
+      "cancel_ack_ms": 3052.9000000059605,
+      "cancel_server_settle_ms": 135.7,
+      "total_ms": 4478.800000011921,
+      "late_starts": 0
+    }
+  ]
+}

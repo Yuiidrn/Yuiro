@@ -1,0 +1,179 @@
+{
+  "kind": "controlled_dependency_comparison_NOT_real_TTFA",
+  "samples": [
+    {
+      "speech_before": {
+        "first_sentence_ms": 16.85,
+        "generation_done_ms": 171.96,
+        "first_audio_callback_ms": 203.39
+      },
+      "speech_after": {
+        "first_sentence_ms": 15.15,
+        "first_audio_callback_ms": 45.73,
+        "generation_done_ms": 169.12
+      },
+      "observer_before": {
+        "publish_ms": 60.04,
+        "writes_completed": 1
+      },
+      "observer_after": {
+        "publish_ms": 0.22,
+        "writes_completed": 1
+      },
+      "disk_before": {
+        "loop_tick_ms": 50.2
+      },
+      "disk_after": {
+        "loop_tick_ms": 9.1
+      }
+    },
+    {
+      "speech_before": {
+        "first_sentence_ms": 25.1,
+        "generation_done_ms": 181.87,
+        "first_audio_callback_ms": 211.64
+      },
+      "speech_after": {
+        "first_sentence_ms": 16.0,
+        "first_audio_callback_ms": 46.68,
+        "generation_done_ms": 170.82
+      },
+      "observer_before": {
+        "publish_ms": 61.01,
+        "writes_completed": 1
+      },
+      "observer_after": {
+        "publish_ms": 0.25,
+        "writes_completed": 1
+      },
+      "disk_before": {
+        "loop_tick_ms": 50.12
+      },
+      "disk_after": {
+        "loop_tick_ms": 11.05
+      }
+    },
+    {
+      "speech_before": {
+        "first_sentence_ms": 22.09,
+        "generation_done_ms": 176.59,
+        "first_audio_callback_ms": 207.49
+      },
+      "speech_after": {
+        "first_sentence_ms": 15.18,
+        "first_audio_callback_ms": 47.08,
+        "generation_done_ms": 170.78
+      },
+      "observer_before": {
+        "publish_ms": 62.31,
+        "writes_completed": 1
+      },
+      "observer_after": {
+        "publish_ms": 0.31,
+        "writes_completed": 1
+      },
+      "disk_before": {
+        "loop_tick_ms": 50.54
+      },
+      "disk_after": {
+        "loop_tick_ms": 10.99
+      }
+    },
+    {
+      "speech_before": {
+        "first_sentence_ms": 22.67,
+        "generation_done_ms": 175.78,
+        "first_audio_callback_ms": 207.51
+      },
+      "speech_after": {
+        "first_sentence_ms": 15.02,
+        "first_audio_callback_ms": 45.35,
+        "generation_done_ms": 169.42
+      },
+      "observer_before": {
+        "publish_ms": 61.98,
+        "writes_completed": 1
+      },
+      "observer_after": {
+        "publish_ms": 0.28,
+        "writes_completed": 1
+      },
+      "disk_before": {
+        "loop_tick_ms": 50.39
+      },
+      "disk_after": {
+        "loop_tick_ms": 10.52
+      }
+    },
+    {
+      "speech_before": {
+        "first_sentence_ms": 20.79,
+        "generation_done_ms": 177.51,
+        "first_audio_callback_ms": 208.27
+      },
+      "speech_after": {
+        "first_sentence_ms": 15.51,
+        "first_audio_callback_ms": 46.3,
+        "generation_done_ms": 169.93
+      },
+      "observer_before": {
+        "publish_ms": 63.83,
+        "writes_completed": 1
+      },
+      "observer_after": {
+        "publish_ms": 0.53,
+        "writes_completed": 1
+      },
+      "disk_before": {
+        "loop_tick_ms": 50.37
+      },
+      "disk_after": {
+        "loop_tick_ms": 11.05
+      }
+    }
+  ],
+  "actual_disk": [
+    {
+      "before": {
+        "admission_ms": 87.32,
+        "all_written_ms": 87.33,
+        "loop_tick_ms": 103.96,
+        "ordered_100": true
+      },
+      "after": {
+        "admission_ms": 3.11,
+        "all_written_ms": 121.3,
+        "loop_tick_ms": 3.19,
+        "ordered_100": true
+      }
+    },
+    {
+      "before": {
+        "admission_ms": 84.44,
+        "all_written_ms": 84.46,
+        "loop_tick_ms": 99.0,
+        "ordered_100": true
+      },
+      "after": {
+        "admission_ms": 2.45,
+        "all_written_ms": 121.12,
+        "loop_tick_ms": 2.49,
+        "ordered_100": true
+      }
+    },
+    {
+      "before": {
+        "admission_ms": 68.23,
+        "all_written_ms": 68.24,
+        "loop_tick_ms": 80.68,
+        "ordered_100": true
+      },
+      "after": {
+        "admission_ms": 2.76,
+        "all_written_ms": 135.22,
+        "loop_tick_ms": 2.82,
+        "ordered_100": true
+      }
+    }
+  ]
+}

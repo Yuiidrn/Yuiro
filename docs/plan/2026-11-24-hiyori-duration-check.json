@@ -1,0 +1,259 @@
+{
+  "captured_at_utc": "2026-11-24T03:24:19.914108+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短中文回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/hiyori/Hiyori.model3.json",
+    "ready": true,
+    "session": "ceef0ad63ee044b6807d4905e9f32ff0"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 2,
+      "ended": 2,
+      "received_segments": 2,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1231.1000000238419
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1437.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2867
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5146.100000023842
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 5146.300000011921
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 462704,
+      "peak_decode_ahead_seconds": 0,
+      "renderer_max_tick_gap_ms": 142.9000000357628,
+      "observed_character": "hiyori",
+      "trace_id": "b257a859",
+      "reply_ms": 1437.5,
+      "reply_chars": 24,
+      "decode_start_ms": 2866.699999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 4.2,
+        "memory_retrieve_start": 6.1,
+        "memory_retrieve": 191.4,
+        "llm_request_start": 199.1,
+        "llm_provider_first_token": 1113,
+        "llm_first_token": 1113,
+        "first_sentence": 1225.7,
+        "tts_start": 1226.5,
+        "translation_start": 1226.6,
+        "lang_render": 1226.6,
+        "agent_end": 1431.3,
+        "reply_sent": 1432.3,
+        "tts_first_audio": 2851.4,
+        "audio_sent": 2858
+      },
+      "wire_delivery_ms": 10.593994140625,
+      "first_receive_ms": 2867,
+      "decoded_buffers": [
+        {
+          "duration_s": 2.72,
+          "sample_rate": 48000,
+          "frames": 130560
+        },
+        {
+          "duration_s": 3.6,
+          "sample_rate": 48000,
+          "frames": 172800
+        }
+      ],
+      "decode_end_ms": 2872.600000023842,
+      "source_starts": [
+        {
+          "ms": 2872.699999988079,
+          "duration_s": 2.72,
+          "rate": 1
+        },
+        {
+          "ms": 10893.600000023842,
+          "duration_s": 3.6,
+          "rate": 1
+        }
+      ],
+      "first_start_ms": 2873.199999988079,
+      "first_graph_start_ms": 2873.199999988079,
+      "last_ended_ms": 14488.5,
+      "completed": true,
+      "total_ms": 14488.600000023842,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.76,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 2.76,
+          "status": 200
+        },
+        {
+          "ms": 2.5,
+          "status": 200
+        },
+        {
+          "ms": 2.62,
+          "status": 200
+        },
+        {
+          "ms": 2.62,
+          "status": 200
+        },
+        {
+          "ms": 2.5,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.44,
+          "status": 200
+        },
+        {
+          "ms": 2.42,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        },
+        {
+          "ms": 2.67,
+          "status": 200
+        },
+        {
+          "ms": 3.16,
+          "status": 200
+        },
+        {
+          "ms": 2.94,
+          "status": 200
+        },
+        {
+          "ms": 3.0,
+          "status": 200
+        },
+        {
+          "ms": 2.74,
+          "status": 200
+        },
+        {
+          "ms": 2.68,
+          "status": 200
+        },
+        {
+          "ms": 3.07,
+          "status": 200
+        },
+        {
+          "ms": 2.76,
+          "status": 200
+        },
+        {
+          "ms": 2.74,
+          "status": 200
+        },
+        {
+          "ms": 3.06,
+          "status": 200
+        },
+        {
+          "ms": 2.49,
+          "status": 200
+        },
+        {
+          "ms": 2.83,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.86,
+          "status": 200
+        },
+        {
+          "ms": 2.58,
+          "status": 200
+        },
+        {
+          "ms": 2.32,
+          "status": 200
+        },
+        {
+          "ms": 2.62,
+          "status": 200
+        },
+        {
+          "ms": 2.84,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 38546460,
+        "totalSize": 54124544
+      },
+      "heap_after": {
+        "usedSize": 34983300,
+        "totalSize": 53751808
+      }
+    }
+  ],
+  "audio_capture": [
+    {
+      "bytes": 130734,
+      "declared_frames": 2147483520,
+      "sample_rate": 24000
+    },
+    {
+      "bytes": 172974,
+      "declared_frames": 2147483520,
+      "sample_rate": 24000
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "captured_at_utc": "2026-11-24T02:29:17.725422+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短中文回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 15,
+      "ended": 15,
+      "received_segments": 15,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 4951.800000011921
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 4971.900000035763
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 5367.700000047684
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 5378.100000023842
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 5394.700000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5458.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5561
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5674.700000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6243.200000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6250.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6250.700000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6515.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6528.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6709.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6917.700000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7546.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7555.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7563.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7563.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7564
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 7676.900000035763
+        }
+      ],
+      "sent_all": true,
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 37.5,
+        "llm_first_token": 4478.7,
+        "bilingual_ja_ready": 4742.9,
+        "bilingual_pair_ready": 4937.8,
+        "first_sentence": 4938.2,
+        "tts_start": 4940,
+        "bilingual_generation_end": 5351,
+        "reply_sent": 5361.1,
+        "tts_first_audio": 5412,
+        "audio_sent": 5416.4
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "今日は疲れたんだね、ゆっくり休もう。",
+            "zh": "今天辛苦了，好好休息一下吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心してね。",
+            "zh": "我会陪着你，安心放松哦。"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 48,
+          "prompt_tokens": 153,
+          "total_tokens": 201,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 153
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 95,
+        "reply_request_id": "e1d0df4f-b1af-4e26-a5ef-a596ddda797e",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 37.5,
+          "llm_first_token": 4478.7,
+          "bilingual_ja_ready": 4742.9,
+          "bilingual_pair_ready": 4937.8,
+          "first_sentence": 4938.2,
+          "tts_start": 4940,
+          "bilingual_generation_end": 5351
+        }
+      },
+      "trace_id": "9d26597c",
+      "reply_ms": 5394.700000047684,
+      "reply_chars": 26,
+      "decode_start_ms": 5458.700000047684,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.143,
+        "rms_cpu_ms": 0.793,
+        "connected_ms": 4295.672,
+        "first_text_sent_ms": 4909.987,
+        "first_flush_sent_ms": 4910.029,
+        "input_finished_ms": 5349.563,
+        "raw_first_audio_ms": 5356.362,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 5356.521
+      },
+      "first_receive_ms": 5458.900000035763,
+      "decode_end_ms": 5471.800000011921,
+      "first_start_ms": 5472.100000023842,
+      "first_graph_start_ms": 5492.100000023824,
+      "last_ended_ms": 12178.800000011921,
+      "total_ms": 12205.5
+    },
+    {
+      "sample": 2,
+      "starts": 15,
+      "ended": 15,
+      "received_segments": 15,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1107.9000000357628
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1118.2000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1555.300000011921
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1556
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1565.2000000476837
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1566.4000000357628
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1652.7000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1864.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2438
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2448.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2448.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2685.7000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2833
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2849.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3110.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3904.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3921.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3936.2000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3938.800000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 4044.400000035763
+        }
+      ],
+      "sent_all": true,
+      "decode_start_ms": 1555,
+      "trace_id": "6368c573",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.7,
+        "llm_first_token": 712.9,
+        "bilingual_ja_ready": 940.2,
+        "bilingual_pair_ready": 1103,
+        "first_sentence": 1103.3,
+        "tts_start": 1104.3,
+        "tts_first_audio": 1532.3,
+        "audio_sent": 1537.4,
+        "bilingual_generation_end": 1539.9,
+        "reply_sent": 1541.5
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.048,
+        "rms_cpu_ms": 0.443,
+        "connected_ms": 400.352,
+        "first_text_sent_ms": 1104.712,
+        "first_flush_sent_ms": 1104.84,
+        "raw_first_audio_ms": 1530.373,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1530.43
+      },
+      "first_receive_ms": 1555.300000011921,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "今日は疲れたんだね、ゆっくり休もうか。",
+            "zh": "今天辛苦了，我们一起休息吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心してね。",
+            "zh": "我会陪着你，安心放松就好。"
+          }
+        ],
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 153,
+          "total_tokens": 202,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 153
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 97,
+        "reply_request_id": "4f9054fb-7b95-40c5-95e6-89126ddcedc6",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.7,
+          "llm_first_token": 712.9,
+          "bilingual_ja_ready": 940.2,
+          "bilingual_pair_ready": 1103,
+          "first_sentence": 1103.3,
+          "tts_start": 1104.3,
+          "tts_first_audio": 1532.3,
+          "audio_sent": 1537.4,
+          "bilingual_generation_end": 1539.9
+        }
+      },
+      "reply_ms": 1566.4000000357628,
+      "reply_chars": 27,
+      "decode_end_ms": 1566.7000000476837,
+      "first_start_ms": 1566.7000000476837,
+      "first_graph_start_ms": 1586.7000000476655,
+      "last_ended_ms": 8644.700000047684,
+      "total_ms": 8662.600000023842
+    }
+  ]
+}

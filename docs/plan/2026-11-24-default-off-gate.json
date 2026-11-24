@@ -1,0 +1,9 @@
+{
+  "role": "hotaru",
+  "passed": true,
+  "observed": [
+    "chat:busy"
+  ],
+  "elapsed_ms": 216.256,
+  "scope": "real gate refusal before generation; no model/tool/ASR call"
+}

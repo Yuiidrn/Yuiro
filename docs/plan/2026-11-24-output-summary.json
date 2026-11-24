@@ -1,0 +1,569 @@
+{
+  "packets": {
+    "2026-11-24-tts-packets-hotaru.json:240": {
+      "first_callback_ms": {
+        "n": 6,
+        "p50": 848.041,
+        "p95": 1044.304,
+        "max": 1044.304,
+        "min": 814.885
+      },
+      "raw_ttfb_ms": {
+        "n": 6,
+        "p50": 443.251,
+        "p95": 664.018,
+        "max": 664.018,
+        "min": 426.636
+      },
+      "accumulation_ms": {
+        "n": 6,
+        "p50": 0.071,
+        "p95": 0.112,
+        "max": 0.112,
+        "min": 0.049
+      },
+      "split_cpu_ms": {
+        "n": 6,
+        "p50": 0.06,
+        "p95": 0.1,
+        "max": 0.1,
+        "min": 0.038
+      },
+      "rms_cpu_ms": {
+        "n": 6,
+        "p50": 0.272,
+        "p95": 0.465,
+        "max": 0.465,
+        "min": 0.239
+      }
+    },
+    "2026-11-24-tts-packets-hotaru.json:480": {
+      "first_callback_ms": {
+        "n": 6,
+        "p50": 938.21,
+        "p95": 1625.334,
+        "max": 1625.334,
+        "min": 924.542
+      },
+      "raw_ttfb_ms": {
+        "n": 6,
+        "p50": 459.404,
+        "p95": 513.412,
+        "max": 513.412,
+        "min": 442.012
+      },
+      "accumulation_ms": {
+        "n": 6,
+        "p50": 102.78,
+        "p95": 203.055,
+        "max": 203.055,
+        "min": 85.149
+      },
+      "split_cpu_ms": {
+        "n": 6,
+        "p50": 0.09,
+        "p95": 0.169,
+        "max": 0.169,
+        "min": 0.073
+      },
+      "rms_cpu_ms": {
+        "n": 6,
+        "p50": 0.397,
+        "p95": 0.633,
+        "max": 0.633,
+        "min": 0.301
+      }
+    },
+    "2026-11-24-tts-packets-hotaru-400.json:400": {
+      "first_callback_ms": {
+        "n": 4,
+        "p50": 907.056,
+        "p95": 988.029,
+        "max": 988.029,
+        "min": 896.74
+      },
+      "raw_ttfb_ms": {
+        "n": 4,
+        "p50": 508.962,
+        "p95": 581.848,
+        "max": 581.848,
+        "min": 496.333
+      },
+      "accumulation_ms": {
+        "n": 4,
+        "p50": 0.102,
+        "p95": 0.139,
+        "max": 0.139,
+        "min": 0.094
+      },
+      "split_cpu_ms": {
+        "n": 4,
+        "p50": 0.089,
+        "p95": 0.125,
+        "max": 0.125,
+        "min": 0.085
+      },
+      "rms_cpu_ms": {
+        "n": 4,
+        "p50": 0.378,
+        "p95": 0.465,
+        "max": 0.465,
+        "min": 0.301
+      }
+    },
+    "2026-11-24-tts-packets-hotaru-400.json:480": {
+      "first_callback_ms": {
+        "n": 4,
+        "p50": 994.023,
+        "p95": 1557.254,
+        "max": 1557.254,
+        "min": 991.932
+      },
+      "raw_ttfb_ms": {
+        "n": 4,
+        "p50": 458.312,
+        "p95": 493.333,
+        "max": 493.333,
+        "min": 452.149
+      },
+      "accumulation_ms": {
+        "n": 4,
+        "p50": 115.492,
+        "p95": 164.253,
+        "max": 164.253,
+        "min": 114.34
+      },
+      "split_cpu_ms": {
+        "n": 4,
+        "p50": 0.087,
+        "p95": 0.213,
+        "max": 0.213,
+        "min": 0.081
+      },
+      "rms_cpu_ms": {
+        "n": 4,
+        "p50": 0.41,
+        "p95": 0.759,
+        "max": 0.759,
+        "min": 0.335
+      }
+    }
+  },
+  "controlled": {
+    "baseline": {
+      "completed": true,
+      "peak_queue_bytes": 2158736,
+      "peak_decode_ahead_seconds": 2.452000000000453,
+      "first_graph_ms": {
+        "n": 3,
+        "p50": 2325.3,
+        "p95": 2887.4,
+        "max": 2887.4,
+        "min": 2295.2
+      },
+      "ja_field_ms": {
+        "n": 0
+      },
+      "first_readable_ja_ms": {
+        "n": 3,
+        "p50": 1835.7,
+        "p95": 2338.3,
+        "max": 2338.3,
+        "min": 1797.8
+      },
+      "pair_ms": {
+        "n": 0
+      },
+      "translation_ms": {
+        "n": 3,
+        "p50": 974.0,
+        "p95": 1161.2,
+        "max": 1161.2,
+        "min": 905.1
+      },
+      "generation_ms": {
+        "n": 3,
+        "p50": 1424.9,
+        "p95": 1650.8,
+        "max": 1650.8,
+        "min": 1147.5
+      },
+      "generated_reply_tokens": {
+        "n": 3,
+        "p50": 24,
+        "p95": 43,
+        "max": 43,
+        "min": 18
+      },
+      "total_completion_tokens": {
+        "n": 3,
+        "p50": 61,
+        "p95": 96,
+        "max": 96,
+        "min": 42
+      },
+      "total_prompt_tokens": {
+        "n": 3,
+        "p50": 462,
+        "p95": 801,
+        "max": 801,
+        "min": 453
+      },
+      "generation_to_playback_done_ms": {
+        "n": 3,
+        "p50": 15014.3,
+        "p95": 19551.9,
+        "max": 19551.9,
+        "min": 14891.4
+      },
+      "wire_delivery_ms": {
+        "n": 3,
+        "p50": 4.822,
+        "p95": 22.964,
+        "max": 22.964,
+        "min": 4.654
+      }
+    },
+    "ja_first": {
+      "completed": true,
+      "peak_queue_bytes": 1757352,
+      "peak_decode_ahead_seconds": 2.4600000000002638,
+      "first_graph_ms": {
+        "n": 3,
+        "p50": 1798.6,
+        "p95": 1891.4,
+        "max": 1891.4,
+        "min": 1717.0
+      },
+      "ja_field_ms": {
+        "n": 3,
+        "p50": 1099.3,
+        "p95": 1116.2,
+        "max": 1116.2,
+        "min": 951.7
+      },
+      "first_readable_ja_ms": {
+        "n": 3,
+        "p50": 1099.3,
+        "p95": 1116.2,
+        "max": 1116.2,
+        "min": 951.7
+      },
+      "pair_ms": {
+        "n": 3,
+        "p50": 1293.6,
+        "p95": 1372.2,
+        "max": 1372.2,
+        "min": 1225.3
+      },
+      "translation_ms": {
+        "n": 0
+      },
+      "generation_ms": {
+        "n": 3,
+        "p50": 2109.5,
+        "p95": 2677.7,
+        "max": 2677.7,
+        "min": 1667.0
+      },
+      "generated_reply_tokens": {
+        "n": 3,
+        "p50": 62,
+        "p95": 109,
+        "max": 109,
+        "min": 53
+      },
+      "total_completion_tokens": {
+        "n": 3,
+        "p50": 62,
+        "p95": 109,
+        "max": 109,
+        "min": 53
+      },
+      "total_prompt_tokens": {
+        "n": 3,
+        "p50": 154,
+        "p95": 155,
+        "max": 155,
+        "min": 152
+      },
+      "generation_to_playback_done_ms": {
+        "n": 3,
+        "p50": 14153.8,
+        "p95": 16773,
+        "max": 16773,
+        "min": 9223.3
+      },
+      "wire_delivery_ms": {
+        "n": 3,
+        "p50": 17.879,
+        "p95": 22.787,
+        "max": 22.787,
+        "min": 5.137
+      }
+    },
+    "zh_first": {
+      "completed": true,
+      "peak_queue_bytes": 2374128,
+      "peak_decode_ahead_seconds": 2.4680000000007567,
+      "first_graph_ms": {
+        "n": 3,
+        "p50": 1723.5,
+        "p95": 2660.3,
+        "max": 2660.3,
+        "min": 1635.3
+      },
+      "ja_field_ms": {
+        "n": 3,
+        "p50": 1277.4,
+        "p95": 2175.8,
+        "max": 2175.8,
+        "min": 1172.7
+      },
+      "first_readable_ja_ms": {
+        "n": 3,
+        "p50": 1277.4,
+        "p95": 2175.8,
+        "max": 2175.8,
+        "min": 1172.7
+      },
+      "pair_ms": {
+        "n": 3,
+        "p50": 1277.4,
+        "p95": 2175.8,
+        "max": 2175.8,
+        "min": 1172.7
+      },
+      "translation_ms": {
+        "n": 0
+      },
+      "generation_ms": {
+        "n": 3,
+        "p50": 2829.2,
+        "p95": 3194.9,
+        "max": 3194.9,
+        "min": 1777.8
+      },
+      "generated_reply_tokens": {
+        "n": 3,
+        "p50": 83,
+        "p95": 133,
+        "max": 133,
+        "min": 56
+      },
+      "total_completion_tokens": {
+        "n": 3,
+        "p50": 83,
+        "p95": 133,
+        "max": 133,
+        "min": 56
+      },
+      "total_prompt_tokens": {
+        "n": 3,
+        "p50": 154,
+        "p95": 155,
+        "max": 155,
+        "min": 152
+      },
+      "generation_to_playback_done_ms": {
+        "n": 3,
+        "p50": 14585.7,
+        "p95": 20764.5,
+        "max": 20764.5,
+        "min": 9739.8
+      },
+      "wire_delivery_ms": {
+        "n": 3,
+        "p50": 8.296,
+        "p95": 13.104,
+        "max": 13.104,
+        "min": 3.437
+      }
+    }
+  },
+  "soak": {
+    "n": 54,
+    "elapsed_seconds": 1275.53,
+    "failures": 0,
+    "cancels": 12,
+    "late_starts": 0,
+    "cancel_settle_ms": {
+      "n": 12,
+      "p50": 7.4,
+      "p95": 138.6,
+      "max": 138.6,
+      "min": 4.2
+    },
+    "peak_queue_bytes": 2593848,
+    "peak_decode_ahead_seconds": 2.478666666666868,
+    "renderer_max_tick_gap_ms": {
+      "n": 35,
+      "p50": 42.6,
+      "p95": 145.7,
+      "max": 375.3,
+      "min": 33
+    },
+    "health_ping_ms": {
+      "n": 863,
+      "p50": 6.12,
+      "p95": 11.48,
+      "max": 42.64,
+      "min": 4.35
+    },
+    "underruns": 0,
+    "pending_after": {
+      "n": 54,
+      "p50": 0,
+      "p95": 2,
+      "max": 3,
+      "min": 0
+    },
+    "observation_last": {
+      "pending": 0,
+      "peak": 1,
+      "failures": 0,
+      "closed": false
+    },
+    "process_rss_first": [
+      {
+        "pid": 63956,
+        "name": "electron.exe",
+        "rss_bytes": 87744512,
+        "threads": 10
+      },
+      {
+        "pid": 68196,
+        "name": "electron.exe",
+        "rss_bytes": 127557632,
+        "threads": 49
+      },
+      {
+        "pid": 69712,
+        "name": "python.exe",
+        "rss_bytes": 4870144,
+        "threads": 1
+      },
+      {
+        "pid": 69832,
+        "name": "electron.exe",
+        "rss_bytes": 275763200,
+        "threads": 33
+      },
+      {
+        "pid": 78292,
+        "name": "electron.exe",
+        "rss_bytes": 108965888,
+        "threads": 30
+      },
+      {
+        "pid": 79360,
+        "name": "electron.exe",
+        "rss_bytes": 207822848,
+        "threads": 88
+      },
+      {
+        "pid": 84060,
+        "name": "electron.exe",
+        "rss_bytes": 51568640,
+        "threads": 18
+      },
+      {
+        "pid": 85636,
+        "name": "electron.exe",
+        "rss_bytes": 113020928,
+        "threads": 31
+      },
+      {
+        "pid": 86660,
+        "name": "python.exe",
+        "rss_bytes": 1961340928,
+        "threads": 42
+      },
+      {
+        "pid": 87692,
+        "name": "electron.exe",
+        "rss_bytes": 109633536,
+        "threads": 30
+      }
+    ],
+    "process_rss_last": [
+      {
+        "pid": 63956,
+        "name": "electron.exe",
+        "rss_bytes": 87736320,
+        "threads": 8
+      },
+      {
+        "pid": 68196,
+        "name": "electron.exe",
+        "rss_bytes": 127524864,
+        "threads": 50
+      },
+      {
+        "pid": 69712,
+        "name": "python.exe",
+        "rss_bytes": 4947968,
+        "threads": 1
+      },
+      {
+        "pid": 69832,
+        "name": "electron.exe",
+        "rss_bytes": 317640704,
+        "threads": 33
+      },
+      {
+        "pid": 78292,
+        "name": "electron.exe",
+        "rss_bytes": 110841856,
+        "threads": 30
+      },
+      {
+        "pid": 79360,
+        "name": "electron.exe",
+        "rss_bytes": 241074176,
+        "threads": 88
+      },
+      {
+        "pid": 84060,
+        "name": "electron.exe",
+        "rss_bytes": 52166656,
+        "threads": 17
+      },
+      {
+        "pid": 85636,
+        "name": "electron.exe",
+        "rss_bytes": 113561600,
+        "threads": 31
+      },
+      {
+        "pid": 86660,
+        "name": "python.exe",
+        "rss_bytes": 2933174272,
+        "threads": 45
+      },
+      {
+        "pid": 87692,
+        "name": "electron.exe",
+        "rss_bytes": 143314944,
+        "threads": 30
+      }
+    ],
+    "role_mismatches_excluded_from_role_conclusions": [
+      {
+        "sample": 4,
+        "requested_role": "hiyori",
+        "renderer_model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json"
+      }
+    ]
+  },
+  "source_sha256": {
+    "engine/yuiro/main.py": "706d315f96b4daecbc4cb28d017becef61ac520ea3352ff06ccda45a4edf1f38",
+    "engine/yuiro/agent/__init__.py": "003e093168560b3935f982b8dbb3b692e291cd3deebc260fbb4d5cf16fffab93",
+    "engine/yuiro/audio/bilingual.py": "fd0f7b134b21fb40646cc3c4e0e02638ec65d872e2870e45120fd29926a9e93f",
+    "engine/yuiro/audio/fish.py": "8a3762a5cb2e0c8c339a48f89b2bd4620498972f785397a91de27a3970b1d987",
+    "engine/yuiro/audio/fish_websocket.py": "09a294e854e4149b34ba4edd86617a9efde4d581a84fe9afd5af3aeb41f75771",
+    "engine/yuiro/audio/__init__.py": "eba5ad8eef23e87227cd62703e40ed6c028bc2c6edabfe48e64090e29fd46593",
+    "shell/src/renderer/src/App.vue": "badeddb635fe46e45d8251139f556f7590d3e88c0b6cc350b94e849d42813602",
+    "shell/src/renderer/src/composables/useVoiceInput.ts": "caab0c5e6b5c274cac93cb672bcefeadefd3ad8fdc4145a08c0fb25f28bea2f5"
+  }
+}

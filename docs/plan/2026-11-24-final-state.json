@@ -1,0 +1,49 @@
+{
+  "head": "368c188",
+  "health_status": 200,
+  "active_role": "hotaru",
+  "observation": {
+    "pending": 0,
+    "peak": 1,
+    "failures": 0,
+    "closed": false
+  },
+  "engine": {
+    "pid": 78692,
+    "rss_bytes": 1804242944,
+    "private_bytes": 4346593280,
+    "threads": 48
+  },
+  "renderer": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "role": "hotaru",
+    "control_ready": true,
+    "socket_open": true,
+    "microphone": false,
+    "turn_busy": false,
+    "budget": {
+      "queued_bytes": 0,
+      "queue_peak_bytes": 911296,
+      "max_queued_bytes": 16777216,
+      "scheduled": 0,
+      "decode_ahead_seconds": 0,
+      "decode_waiters": 0,
+      "pending": 0,
+      "underruns": 0,
+      "underrun_gap_ms": 0
+    }
+  },
+  "experiment_disabled_verified": true,
+  "regression": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "1091",
+    "time": "76.976",
+    "timestamp": "2026-11-24T11:21:28.289181+08:00",
+    "hostname": "Yuii"
+  },
+  "working_changes": "retained uncommitted; no commit/push"
+}

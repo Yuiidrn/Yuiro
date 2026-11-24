@@ -1,0 +1,648 @@
+{
+  "captured_at_utc": "2026-11-23T09:37:21.013725+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "不用工具，请用六句完整短句介绍散步、喝茶、看书、听歌、做饭和休息。每句十五至二十字，只输出正文。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 74,
+      "ended": 74,
+      "received_segments": 74,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "ms": 2316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4104.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4391.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4396.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4863.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4869.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4877.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5930.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5940.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5940.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5962.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5962.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6004.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6005.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6058.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6380.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6758.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6763.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6764.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7886.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7886.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7893.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7893.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7893.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7946.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7946.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7953.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8119.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8671.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8682.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8683
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9679
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9685
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9685.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9694.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9705.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9723.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9723.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9901.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9956.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10478.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10487.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10488.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11681.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11695.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11696.299999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11696.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11706.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11706.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11716
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11724.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11776.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12106.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12556.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12562
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12562.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13760.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13769.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13769.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13781.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13792.799999982119
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13793.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13803.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13876.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13876.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14160.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14354.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14712.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14726
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14726.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 15560.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 15574.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 15574.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 15575.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 15580.40000000596
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 15806.199999988079
+        }
+      ],
+      "sent_all": true,
+      "reply_ms": 2316,
+      "reply_chars": 116,
+      "decode_start_ms": 4104.5,
+      "first_receive_ms": 4104.5999999940395,
+      "decode_end_ms": 4109.699999988079,
+      "first_start_ms": 4109.799999982119,
+      "last_ended_ms": 39296.29999998212,
+      "total_ms": 39305.29999998212
+    },
+    {
+      "sample": 2,
+      "starts": 72,
+      "ended": 72,
+      "received_segments": 72,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "ms": 1677.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2193.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2381.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2382.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2944.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2960.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2961.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3917.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3927.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3928.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3943.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3944.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4027.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4147.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4371.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4990.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5001.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5003.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5037.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5930.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5939.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5939.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5972.0999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5972.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5972.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6172.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6297.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7045.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7059
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7059.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8101.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8113.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8113.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8127
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8140.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8140.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8229.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8324.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8324.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8336
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8886.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8893.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8894
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10000.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10011.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10012
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10012.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10031.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10120.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10413.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10423
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10423.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10819.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10830.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10831.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12263.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12274.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12275.09999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12289.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12309.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12309.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12325.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12431.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12526.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12602
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13140.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13150.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13151.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 13999.59999999404
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14008.90000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14009.40000000596
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14035.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 14036
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 14131
+        }
+      ],
+      "sent_all": true,
+      "reply_ms": 1677.9000000059605,
+      "reply_chars": 116,
+      "decode_start_ms": 2193.4000000059605,
+      "first_receive_ms": 2193.5999999940395,
+      "decode_end_ms": 2204.4000000059605,
+      "first_start_ms": 2204.5999999940395,
+      "last_ended_ms": 36697.80000001192,
+      "total_ms": 36707.59999999404
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "production_function_with_fake_dependencies_NOT_real_audio_latency",
+  "before": {
+    "blocked_translation_peak": 64,
+    "admitted_while_blocked": 64,
+    "ordered_lossless": true,
+    "active_after": 0,
+    "source_sha256": "9879dd11f22aa8064fb33753c729579067c975ad1ec5dc55aa8022695e259a26"
+  },
+  "after": {
+    "blocked_translation_peak": 4,
+    "admitted_while_blocked": 4,
+    "ordered_lossless": true,
+    "active_after": 0,
+    "source_sha256": "d71d9d9a93d0baca5e5c05e93c1ca7ba0dc1ca5cf46ab6e2f73bdc619c5da514"
+  }
+}

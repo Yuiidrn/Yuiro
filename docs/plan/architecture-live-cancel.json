@@ -1,0 +1,68 @@
+{
+  "captured_at_utc": "2026-11-23T09:50:48.173784+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "不用工具，请用六句完整短句介绍散步、喝茶、看书、听歌、做饭和休息。每句十五至二十字，只输出正文。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 1,
+      "ended": 1,
+      "received_segments": 1,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 6395.4000000059605
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 7362.9000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7931.300000011921
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 8115.5999999940395
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "f7fd6fc2",
+      "reply_ms": 7362.9000000059605,
+      "reply_chars": 101,
+      "decode_start_ms": 7931.199999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 27.9,
+        "memory_retrieve_start": 30.7,
+        "memory_retrieve": 4012.5,
+        "llm_request_start": 4020.1,
+        "llm_provider_first_token": 6254.2,
+        "llm_first_token": 6254.2,
+        "first_sentence": 6389.6,
+        "tts_start": 6391.3,
+        "translation_start": 6391.8,
+        "lang_render": 7351.1,
+        "agent_end": 7357.3,
+        "reply_sent": 7358.2,
+        "tts_first_audio": 7904.9
+      },
+      "first_receive_ms": 7931.300000011921,
+      "decode_end_ms": 7936.300000011921,
+      "first_start_ms": 7936.4000000059605,
+      "stop_ms": 7968.199999988079,
+      "starts_at_stop": 1,
+      "last_ended_ms": 7974.199999988079,
+      "cancel_ack_ms": 8115.5999999940395,
+      "cancel_server_settle_ms": 140.5,
+      "total_ms": 9477.199999988079,
+      "late_starts": 0
+    }
+  ]
+}

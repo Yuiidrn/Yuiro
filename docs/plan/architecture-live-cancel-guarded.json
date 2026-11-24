@@ -1,0 +1,198 @@
+{
+  "captured_at_utc": "2026-11-23T10:30:28.492087+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "请只回复“你好呀。”，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 1,
+      "ended": 1,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1157.9000000059605
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1158.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2481.7000000178814
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2493
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2493.2000000178814
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 2605.7000000178814
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "6a83b16b",
+      "reply_ms": 1158.7000000178814,
+      "reply_chars": 4,
+      "decode_start_ms": 2481.5999999940395,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 1.3,
+        "memory_retrieve_start": 50.7,
+        "memory_retrieve": 104.1,
+        "llm_request_start": 106.7,
+        "llm_provider_first_token": 1080.5,
+        "llm_first_token": 1080.5,
+        "agent_end": 1152.2,
+        "first_sentence": 1152.5,
+        "tts_start": 1153.1,
+        "reply_sent": 1153.5,
+        "translation_start": 1154,
+        "lang_render": 1838.2,
+        "tts_first_audio": 2457.7,
+        "audio_sent": 2460.8
+      },
+      "first_receive_ms": 2481.7000000178814,
+      "decode_end_ms": 2493.300000011921,
+      "first_start_ms": 2493.4000000059605,
+      "stop_ms": 2501.4000000059605,
+      "starts_at_stop": 1,
+      "last_ended_ms": 2507.300000011921,
+      "cancel_ack_ms": 2605.7000000178814,
+      "cancel_server_settle_ms": 100.8,
+      "total_ms": 4012,
+      "late_starts": 0
+    },
+    {
+      "sample": 2,
+      "starts": 1,
+      "ended": 1,
+      "received_segments": 1,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 897.4000000059605
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 903
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1444.0999999940395
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1614.5999999940395
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "919559d4",
+      "reply_ms": 903,
+      "reply_chars": 4,
+      "decode_start_ms": 1444.0999999940395,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 1.3,
+        "memory_retrieve_start": 57.3,
+        "memory_retrieve": 107.9,
+        "llm_request_start": 110.2,
+        "llm_provider_first_token": 812.1,
+        "llm_first_token": 812.1,
+        "agent_end": 890.7,
+        "first_sentence": 891,
+        "tts_start": 891.5,
+        "reply_sent": 891.9,
+        "translation_start": 892.5,
+        "lang_render": 892.5,
+        "tts_first_audio": 1429.9
+      },
+      "first_receive_ms": 1444.0999999940395,
+      "decode_end_ms": 1449.7999999821186,
+      "first_start_ms": 1449.9000000059605,
+      "stop_ms": 1482.5,
+      "starts_at_stop": 1,
+      "last_ended_ms": 1494.9000000059605,
+      "cancel_ack_ms": 1614.5999999940395,
+      "cancel_server_settle_ms": 130.9,
+      "total_ms": 3011.0999999940395,
+      "late_starts": 0
+    },
+    {
+      "sample": 3,
+      "starts": 2,
+      "ended": 2,
+      "received_segments": 2,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1033.699999988079
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1040.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1653.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1653.800000011921
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1782.5999999940395
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "c38ba084",
+      "reply_ms": 1040.800000011921,
+      "reply_chars": 4,
+      "decode_start_ms": 1653.199999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 1.7,
+        "memory_retrieve_start": 59.8,
+        "memory_retrieve": 117.7,
+        "llm_request_start": 126.3,
+        "llm_provider_first_token": 945.1,
+        "llm_first_token": 945.1,
+        "agent_end": 1027.4,
+        "first_sentence": 1027.7,
+        "tts_start": 1028.3,
+        "reply_sent": 1028.8,
+        "translation_start": 1029.8,
+        "lang_render": 1029.8,
+        "tts_first_audio": 1638.6,
+        "audio_sent": 1641.4
+      },
+      "first_receive_ms": 1653.300000011921,
+      "decode_end_ms": 1659.5,
+      "first_start_ms": 1659.5999999940395,
+      "stop_ms": 1689.9000000059605,
+      "starts_at_stop": 2,
+      "last_ended_ms": 1704.800000011921,
+      "cancel_ack_ms": 1782.5999999940395,
+      "cancel_server_settle_ms": 88.3,
+      "total_ms": 3203.5999999940395,
+      "late_starts": 0
+    }
+  ],
+  "controlled_replay": {
+    "kind": "real_renderer_old_frame_replay_after_stop",
+    "late_starts": 0
+  }
+}

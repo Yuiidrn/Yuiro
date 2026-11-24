@@ -1,0 +1,26 @@
+[
+  {
+    "stream_reply": false,
+    "types": [
+      "chat:assistant",
+      "tts:reply_start",
+      "tts:reply_audio",
+      "tts:reply_audio",
+      "tts:reply_audio",
+      "tts:reply_end"
+    ],
+    "passed": true
+  },
+  {
+    "stream_reply": true,
+    "types": [
+      "tts:reply_start",
+      "chat:assistant",
+      "tts:reply_audio",
+      "tts:reply_audio",
+      "tts:reply_audio",
+      "tts:reply_end"
+    ],
+    "passed": true
+  }
+]

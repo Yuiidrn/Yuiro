@@ -1,0 +1,454 @@
+{
+  "captured_at_utc": "2026-11-24T02:15:21.505807+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短中文回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 22,
+      "ended": 22,
+      "received_segments": 22,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 7336.300000011921
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 7492.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9133.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9295.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9305.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9865.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9876.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 9877
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10534.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10546.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10547.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10629.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10630
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 10876.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11067.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11592.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11600.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 11610.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12708.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12721.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12732.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12733.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12733.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 12747.699999988079
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 12859.599999964237
+        }
+      ],
+      "sent_all": true,
+      "trace_id": "b0685de8",
+      "reply_ms": 7492.5,
+      "reply_chars": 32,
+      "decode_start_ms": 9133.300000011921,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 29.4,
+        "memory_retrieve_start": 494.3,
+        "memory_retrieve": 1084.5,
+        "llm_request_start": 1098.9,
+        "llm_provider_first_token": 7051.9,
+        "llm_first_token": 7051.9,
+        "first_sentence": 7319.2,
+        "tts_start": 7323.3,
+        "translation_start": 7324.3,
+        "agent_end": 7480.7,
+        "reply_sent": 7482.4,
+        "lang_render": 8544.3,
+        "tts_first_audio": 9077.7,
+        "audio_sent": 9081.9
+      },
+      "tts_timing": {
+        "first_chunk_ms": 480,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.11299999999999999,
+        "rms_cpu_ms": 1.145,
+        "connected_ms": 3472.698,
+        "first_text_sent_ms": 8519.325,
+        "first_flush_sent_ms": 8519.402,
+        "raw_first_audio_ms": 8974.69,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 9049.513
+      },
+      "first_receive_ms": 9133.5,
+      "decode_end_ms": 9151.5,
+      "first_start_ms": 9151.800000011921,
+      "last_ended_ms": 19750.80000001192,
+      "total_ms": 19759.899999976158
+    },
+    {
+      "sample": 2,
+      "starts": 22,
+      "ended": 22,
+      "received_segments": 22,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1075.5999999642372
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1226.7999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1666.5999999642372
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1760.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1760.7999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2399.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2415.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2415.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3095
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3103
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3103.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3229.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3230.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3248.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3448.7999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4035.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4041.7999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4050
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5049.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5063.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5078.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5091.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5091.899999976158
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 5192.699999988079
+        }
+      ],
+      "sent_all": true,
+      "trace_id": "64b1f762",
+      "reply_ms": 1226.7999999523163,
+      "reply_chars": 32,
+      "decode_start_ms": 1666.3999999761581,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 3.5,
+        "memory_retrieve_start": 79.3,
+        "memory_retrieve": 86.7,
+        "llm_request_start": 89.3,
+        "llm_provider_first_token": 960.7,
+        "llm_first_token": 960.7,
+        "first_sentence": 1063.3,
+        "tts_start": 1064.4,
+        "translation_start": 1065.1,
+        "lang_render": 1065.1,
+        "agent_end": 1211.3,
+        "reply_sent": 1212.9,
+        "tts_first_audio": 1636.4,
+        "audio_sent": 1640.1
+      },
+      "tts_timing": {
+        "first_chunk_ms": 480,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.134,
+        "rms_cpu_ms": 0.45,
+        "connected_ms": 407.235,
+        "first_text_sent_ms": 1063.083,
+        "first_flush_sent_ms": 1063.137,
+        "input_finished_ms": 1211.273,
+        "raw_first_audio_ms": 1485.335,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1631.367
+      },
+      "first_receive_ms": 1666.5999999642372,
+      "decode_end_ms": 1674,
+      "first_start_ms": 1674.0999999642372,
+      "last_ended_ms": 12208.199999988079,
+      "total_ms": 12227.699999988079
+    },
+    {
+      "sample": 3,
+      "starts": 21,
+      "ended": 21,
+      "received_segments": 21,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1367.800000011921
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1521.3999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1873.5999999642372
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2048.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2049.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2610.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2618.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2639.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3107.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3130.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3131.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3427.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3434.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3442.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3559.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4126.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4134.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4135.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4737.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4748
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4758.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4768.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4768.800000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 4893.800000011921
+        }
+      ],
+      "sent_all": true,
+      "trace_id": "0cef2d1d",
+      "reply_ms": 1521.3999999761581,
+      "reply_chars": 32,
+      "decode_start_ms": 1873.3999999761581,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 68.9,
+        "memory_retrieve_start": 136.1,
+        "memory_retrieve": 270.9,
+        "llm_request_start": 344,
+        "llm_provider_first_token": 1229.9,
+        "llm_first_token": 1229.9,
+        "first_sentence": 1333.7,
+        "tts_start": 1335.1,
+        "translation_start": 1335.8,
+        "lang_render": 1335.9,
+        "agent_end": 1481.4,
+        "reply_sent": 1484.5,
+        "tts_first_audio": 1821.5,
+        "audio_sent": 1825.4
+      },
+      "tts_timing": {
+        "first_chunk_ms": 480,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.154,
+        "rms_cpu_ms": 0.72,
+        "connected_ms": 534.855,
+        "first_text_sent_ms": 1268.396,
+        "first_flush_sent_ms": 1268.446,
+        "input_finished_ms": 1417.492,
+        "raw_first_audio_ms": 1659.795,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1752.057
+      },
+      "first_receive_ms": 1873.5999999642372,
+      "decode_end_ms": 1881.800000011921,
+      "first_start_ms": 1882,
+      "last_ended_ms": 11612.5,
+      "total_ms": 11642.399999976158
+    }
+  ]
+}

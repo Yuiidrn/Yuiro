@@ -1,0 +1,17 @@
+{
+  "scope": "Real Engine WS oversize admission; no microphone/provider requests",
+  "oversize_close_code": 1009,
+  "runtime_http_status": 200,
+  "observation": {
+    "pending": 0,
+    "peak": 1,
+    "failures": 0,
+    "closed": false
+  },
+  "runtimes": [
+    "agent",
+    "avatar",
+    "task",
+    "voice"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "yuiro/main.py": {
+    "baseline_count": 50,
+    "current_count": 49,
+    "new": []
+  },
+  "yuiro/agent/__init__.py": {
+    "baseline_count": 22,
+    "current_count": 22,
+    "new": []
+  },
+  "yuiro/audio/__init__.py": {
+    "baseline_count": 4,
+    "current_count": 4,
+    "new": []
+  },
+  "yuiro/config.py": {
+    "baseline_count": 2,
+    "current_count": 2,
+    "new": []
+  }
+}

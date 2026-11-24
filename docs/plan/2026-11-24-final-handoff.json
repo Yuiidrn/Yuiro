@@ -1,0 +1,843 @@
+{
+  "captured_at_utc": "2026-11-24T03:35:41.587608+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短中文回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "87dde4c547c742279c47768ef877a23c"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 21,
+      "ended": 21,
+      "received_segments": 21,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1656.5
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1773
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3369.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3527.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3624.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4199.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4207.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4208
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5434.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5455.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5456
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5477.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5503.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5503.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5518
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5519
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5538
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5702.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6246.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6299.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6299.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6388
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6398.800000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 6539.900000035763
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 488384,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 911296,
+      "peak_decode_ahead_seconds": 2.441587301587303,
+      "renderer_max_tick_gap_ms": 71.89999997615814,
+      "max_graph_stall_ms": 0,
+      "observed_character": "hotaru",
+      "trace_id": "5900aa90",
+      "reply_ms": 1773,
+      "reply_chars": 30,
+      "decode_start_ms": 3369.199999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 41,
+        "memory_retrieve_start": 127.4,
+        "memory_retrieve": 162.1,
+        "llm_request_start": 179,
+        "llm_provider_first_token": 1476.9,
+        "llm_first_token": 1476.9,
+        "first_sentence": 1645.3,
+        "tts_start": 1648.1,
+        "translation_start": 1648.8,
+        "agent_end": 1766.8,
+        "reply_sent": 1768,
+        "lang_render": 2882,
+        "tts_first_audio": 3328.6,
+        "audio_sent": 3332.2
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.087,
+        "rms_cpu_ms": 0.671,
+        "connect_task_enter_ms": 10.174,
+        "key_lookup_ms": 0.574,
+        "key_loaded_ms": 10.77,
+        "connection_start_ms": 11.561,
+        "connected_ms": 442.399,
+        "first_text_sent_ms": 2845.711,
+        "first_flush_sent_ms": 2845.797,
+        "raw_first_audio_ms": 3289.575,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 3289.685
+      },
+      "wire_delivery_ms": 36.801025390625,
+      "first_receive_ms": 3369.300000011921,
+      "decoded_buffers": [
+        {
+          "ms": 3378.900000035763,
+          "duration_s": 0.4,
+          "sample_rate": 44100,
+          "frames": 17640
+        },
+        {
+          "ms": 3542.699999988079,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 3634.600000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 4208.100000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 4219.100000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 4231,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 5456.5,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 5477.699999988079,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 5505,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 5702.900000035763,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 6207.400000035763,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 6679.199999988079,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 7127.199999988079,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 7640.199999988079,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 8100.800000011921,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 8573.600000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 9064.300000011921,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 9533.600000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 10012.800000011921,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 10487.600000023842,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 10987.5,
+          "duration_s": 0.023356009070294784,
+          "sample_rate": 44100,
+          "frames": 1030
+        }
+      ],
+      "decode_end_ms": 3379,
+      "source_starts": [
+        {
+          "ms": 3379.199999988079,
+          "context_s": 0,
+          "duration_s": 0.4,
+          "rate": 1
+        },
+        {
+          "ms": 3542.800000011921,
+          "context_s": 0.13931972789115646,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 3634.699999988079,
+          "context_s": 0.22929705215419502,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 4208.199999988079,
+          "context_s": 0.8010884353741496,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 4219.199999988079,
+          "context_s": 0.809795918367347,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 4231.100000023842,
+          "context_s": 0.8301133786848073,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 5456.600000023842,
+          "context_s": 2.049160997732426,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 5477.900000035763,
+          "context_s": 2.0694784580498866,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 5505.199999988079,
+          "context_s": 2.0985034013605444,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 5703,
+          "context_s": 2.2987755102040817,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 6207.5,
+          "context_s": 2.800907029478458,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 6679.199999988079,
+          "context_s": 3.2711111111111113,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 7127.300000011921,
+          "context_s": 3.7209977324263037,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 7640.300000011921,
+          "context_s": 4.228934240362812,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 8100.800000011921,
+          "context_s": 4.6991383219954646,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 8573.600000023842,
+          "context_s": 5.169342403628118,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 9064.400000035763,
+          "context_s": 5.659863945578231,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 9533.600000023842,
+          "context_s": 6.130068027210885,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 10012.800000011921,
+          "context_s": 6.608979591836735,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 10487.600000023842,
+          "context_s": 7.079183673469387,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 10987.600000023842,
+          "context_s": 7.5784126984126985,
+          "duration_s": 0.023356009070294784,
+          "rate": 1
+        }
+      ],
+      "first_start_ms": 3379.199999988079,
+      "first_graph_start_ms": 3399.199999988079,
+      "audio_context_drift_ms": 2.958730170652416,
+      "audio_context": {
+        "state": "running",
+        "base_latency": 0.01,
+        "output_latency": 0.042,
+        "sample_rate": 44100
+      },
+      "source_ends": [
+        {
+          "ms": 3823.100000023842,
+          "context_s": 0.42086167800453517
+        },
+        {
+          "ms": 4314.300000011921,
+          "context_s": 0.9084807256235827
+        },
+        {
+          "ms": 4793.400000035763,
+          "context_s": 1.390294784580499
+        },
+        {
+          "ms": 5270.5,
+          "context_s": 1.8604988662131519
+        },
+        {
+          "ms": 5762.600000023842,
+          "context_s": 2.3597278911564628
+        },
+        {
+          "ms": 6246.400000035763,
+          "context_s": 2.838639455782313
+        },
+        {
+          "ms": 6702.600000023842,
+          "context_s": 3.3001360544217686
+        },
+        {
+          "ms": 7195.5,
+          "context_s": 3.790657596371882
+        },
+        {
+          "ms": 7665.100000023842,
+          "context_s": 4.260861678004535
+        },
+        {
+          "ms": 8162.5,
+          "context_s": 4.760090702947846
+        },
+        {
+          "ms": 8633.800000011921,
+          "context_s": 5.230294784580499
+        },
+        {
+          "ms": 9111.800000011921,
+          "context_s": 5.709206349206349
+        },
+        {
+          "ms": 9596.800000011921,
+          "context_s": 6.191020408163265
+        },
+        {
+          "ms": 10065.800000011921,
+          "context_s": 6.661224489795918
+        },
+        {
+          "ms": 10545.400000035763,
+          "context_s": 7.1401360544217685
+        },
+        {
+          "ms": 11038.800000011921,
+          "context_s": 7.630657596371882
+        },
+        {
+          "ms": 11509.199999988079,
+          "context_s": 8.100861678004534
+        },
+        {
+          "ms": 11994.100000023842,
+          "context_s": 8.588480725623583
+        },
+        {
+          "ms": 12474.199999988079,
+          "context_s": 9.070294784580499
+        },
+        {
+          "ms": 12943.199999988079,
+          "context_s": 9.540498866213152
+        },
+        {
+          "ms": 12979,
+          "context_s": 9.56952380952381
+        }
+      ],
+      "last_ended_ms": 12979,
+      "completed": true,
+      "total_ms": 12992.100000023842,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 5.85,
+          "status": 200
+        },
+        {
+          "ms": 4.66,
+          "status": 200
+        },
+        {
+          "ms": 8.99,
+          "status": 200
+        },
+        {
+          "ms": 3.28,
+          "status": 200
+        },
+        {
+          "ms": 2.79,
+          "status": 200
+        },
+        {
+          "ms": 3.13,
+          "status": 200
+        },
+        {
+          "ms": 4.31,
+          "status": 200
+        },
+        {
+          "ms": 4.62,
+          "status": 200
+        },
+        {
+          "ms": 3.51,
+          "status": 200
+        },
+        {
+          "ms": 5.01,
+          "status": 200
+        },
+        {
+          "ms": 5.11,
+          "status": 200
+        },
+        {
+          "ms": 5.17,
+          "status": 200
+        },
+        {
+          "ms": 15.87,
+          "status": 200
+        },
+        {
+          "ms": 4.65,
+          "status": 200
+        },
+        {
+          "ms": 4.24,
+          "status": 200
+        },
+        {
+          "ms": 4.16,
+          "status": 200
+        },
+        {
+          "ms": 4.38,
+          "status": 200
+        },
+        {
+          "ms": 4.06,
+          "status": 200
+        },
+        {
+          "ms": 3.99,
+          "status": 200
+        },
+        {
+          "ms": 3.06,
+          "status": 200
+        },
+        {
+          "ms": 3.39,
+          "status": 200
+        },
+        {
+          "ms": 3.84,
+          "status": 200
+        },
+        {
+          "ms": 3.99,
+          "status": 200
+        },
+        {
+          "ms": 3.84,
+          "status": 200
+        },
+        {
+          "ms": 4.34,
+          "status": 200
+        },
+        {
+          "ms": 3.74,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 39318296,
+        "totalSize": 55058432
+      },
+      "heap_after": {
+        "usedSize": 35217496,
+        "totalSize": 55959552
+      }
+    },
+    {
+      "sample": 2,
+      "starts": 1,
+      "ended": 1,
+      "received_segments": 2,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 3605.699999988079
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 3721.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4050.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4126.5
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 4276.5
+        }
+      ],
+      "sent_all": false,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 0,
+      "peak_decode_ahead_seconds": 0.35904761904761884,
+      "renderer_max_tick_gap_ms": 61.80000001192093,
+      "max_graph_stall_ms": 0,
+      "observed_character": "hotaru",
+      "trace_id": "736c07de",
+      "reply_ms": 3722,
+      "reply_chars": 30,
+      "decode_start_ms": 4050.199999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 2.2,
+        "memory_retrieve_start": 113.2,
+        "memory_retrieve": 2647.9,
+        "llm_request_start": 2655.6,
+        "llm_provider_first_token": 3480,
+        "llm_first_token": 3480,
+        "first_sentence": 3594.2,
+        "tts_start": 3595.6,
+        "translation_start": 3596.2,
+        "lang_render": 3596.3,
+        "agent_end": 3711.5,
+        "reply_sent": 3715,
+        "tts_first_audio": 4019.4,
+        "audio_sent": 4023.5
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.059,
+        "rms_cpu_ms": 0.569,
+        "connect_task_enter_ms": 2.1,
+        "key_lookup_ms": 0.525,
+        "key_loaded_ms": 2.643,
+        "connection_start_ms": 2.964,
+        "connected_ms": 460.857,
+        "first_text_sent_ms": 3595.423,
+        "first_flush_sent_ms": 3595.496,
+        "input_finished_ms": 3714.965,
+        "raw_first_audio_ms": 4017.481,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 4017.558
+      },
+      "wire_delivery_ms": 28.14501953125,
+      "first_receive_ms": 4050.5,
+      "decoded_buffers": [
+        {
+          "ms": 4063.5,
+          "duration_s": 0.4,
+          "sample_rate": 44100,
+          "frames": 17640
+        }
+      ],
+      "decode_end_ms": 4063.5,
+      "source_starts": [
+        {
+          "ms": 4063.600000023842,
+          "context_s": 13.699773242630386,
+          "duration_s": 0.4,
+          "rate": 1
+        }
+      ],
+      "first_start_ms": 4063.600000023842,
+      "first_graph_start_ms": 4083.6000000238414,
+      "audio_context_drift_ms": -2.4970521422731053,
+      "audio_context": {
+        "state": "running",
+        "base_latency": 0.01,
+        "output_latency": 0.042,
+        "sample_rate": 44100
+      },
+      "stop_ms": 4125.100000023842,
+      "starts_at_stop": 1,
+      "source_ends": [
+        {
+          "ms": 4142,
+          "context_s": 13.781043083900228
+        }
+      ],
+      "last_ended_ms": 4142,
+      "cancel_ack_ms": 4276.5,
+      "cancel_server_settle_ms": 141.3,
+      "total_ms": 5631.800000011921,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "late_starts": 0,
+      "engine_health_pings": [
+        {
+          "ms": 6.34,
+          "status": 200
+        },
+        {
+          "ms": 2.68,
+          "status": 200
+        },
+        {
+          "ms": 3.69,
+          "status": 200
+        },
+        {
+          "ms": 2.6,
+          "status": 200
+        },
+        {
+          "ms": 4.69,
+          "status": 200
+        },
+        {
+          "ms": 4.28,
+          "status": 200
+        },
+        {
+          "ms": 4.09,
+          "status": 200
+        },
+        {
+          "ms": 4.66,
+          "status": 200
+        },
+        {
+          "ms": 4.17,
+          "status": 200
+        },
+        {
+          "ms": 3.79,
+          "status": 200
+        },
+        {
+          "ms": 2.69,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 35920772,
+        "totalSize": 55959552
+      },
+      "heap_after": {
+        "usedSize": 34351028,
+        "totalSize": 54910976
+      }
+    }
+  ]
+}

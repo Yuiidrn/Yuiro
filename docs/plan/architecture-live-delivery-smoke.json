@@ -1,0 +1,93 @@
+{
+  "captured_at_utc": "2026-11-23T10:05:47.716215+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "请只回复“你好呀。”，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "session:ready",
+          "ms": 3940.9000000059605
+        }
+      ],
+      "sent_all": false,
+      "error": "no_audio_started_within_budget",
+      "total_ms": 60001.09999999404
+    },
+    {
+      "sample": 2,
+      "starts": 3,
+      "ended": 3,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 5049
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 5058.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6386.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6410.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6410.5
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 6528.200000017881
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "852a31bf",
+      "reply_ms": 5058.100000023842,
+      "reply_chars": 4,
+      "decode_start_ms": 6386,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 24.5,
+        "memory_retrieve_start": 79.8,
+        "memory_retrieve": 2291.6,
+        "llm_request_start": 2305.2,
+        "llm_provider_first_token": 4987.1,
+        "llm_first_token": 4987.1,
+        "agent_end": 5042.5,
+        "first_sentence": 5042.9,
+        "tts_start": 5044.6,
+        "reply_sent": 5046.4,
+        "translation_start": 5049,
+        "lang_render": 5843.6,
+        "tts_first_audio": 6366.8,
+        "audio_sent": 6370.4
+      },
+      "first_receive_ms": 6386.100000023842,
+      "decode_end_ms": 6393,
+      "first_start_ms": 6393.200000017881,
+      "stop_ms": 6427.600000023842,
+      "starts_at_stop": 3,
+      "last_ended_ms": 6434.100000023842,
+      "cancel_ack_ms": 6528.300000011921,
+      "cancel_server_settle_ms": 97.7,
+      "total_ms": 7943.5,
+      "late_starts": 0
+    }
+  ]
+}

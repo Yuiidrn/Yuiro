@@ -1,0 +1,128 @@
+{
+  "captured_at_utc": "2026-11-23T09:26:02.314984+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement; 2 normal samples + 1 stop",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 3,
+      "ended": 3,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "ms": 7533
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8788.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8824.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8824.40000000596
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 8880.5
+        }
+      ],
+      "sent_all": true,
+      "reply_ms": 7533,
+      "reply_chars": 4,
+      "decode_start_ms": 8788.300000011921,
+      "first_receive_ms": 8788.600000023842,
+      "decode_end_ms": 8826.600000023842,
+      "first_start_ms": 8826.90000000596,
+      "last_ended_ms": 9865.600000023842,
+      "total_ms": 9888.700000017881
+    },
+    {
+      "sample": 2,
+      "starts": 3,
+      "ended": 3,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "ms": 1095.4000000059605
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1653.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1795.5999999940395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1795.9000000059605
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 1907
+        }
+      ],
+      "sent_all": true,
+      "reply_ms": 1095.4000000059605,
+      "reply_chars": 4,
+      "decode_start_ms": 1653.4000000059605,
+      "first_receive_ms": 1653.5999999940395,
+      "decode_end_ms": 1660.2999999821186,
+      "first_start_ms": 1660.4000000059605,
+      "last_ended_ms": 2752,
+      "total_ms": 2775.5
+    },
+    {
+      "sample": 3,
+      "starts": 2,
+      "ended": 2,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:assistant",
+          "ms": 856
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1547.7999999821186
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1553.8999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1554
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 1667.0999999940395
+        }
+      ],
+      "sent_all": true,
+      "reply_ms": 856,
+      "reply_chars": 4,
+      "decode_start_ms": 1547.5999999940395,
+      "first_receive_ms": 1547.8999999761581,
+      "decode_end_ms": 1554.2999999821186,
+      "first_start_ms": 1554.2999999821186,
+      "stop_ms": 1564.699999988079,
+      "starts_at_stop": 2,
+      "last_ended_ms": 1577.5,
+      "total_ms": 3073.899999976158,
+      "late_starts": 0
+    }
+  ]
+}

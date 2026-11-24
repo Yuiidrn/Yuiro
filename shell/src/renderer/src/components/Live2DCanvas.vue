@@ -16,6 +16,7 @@ import { ExpressionBaseline } from '../avatar/expressionBaseline'
 import { IntentLease } from '../avatar/intentLease'
 import { modelAssetUrl } from '../avatar/modelUrl'
 import { gazeTarget, GazeActivity, applyGaze, followPose } from '../avatar/gaze'
+import { shouldAcknowledgeListening } from '../avatar/listeningReaction'
 import { useElectronRelativeMouse } from '../composables/useElectronRelativeMouse'
 import { useAvatarClickPref } from '../composables/useAvatarClickPref'
 import { motionKey } from '../avatar/clickFeedback'
@@ -247,7 +248,8 @@ function unloadModel(): void {
   restoreExpressionRequests();restoreExpressionRequests=()=>{}
   restoreExpressionBlink();restoreExpressionBlink=()=>{}
   finishReceipt('cancelled')
-  motionRequestRevision++;sdkMotionActive=false;speechGestureActive=false
+  motionRequestRevision++;sdkMotionActive=false;speechGestureActive=false;listeningGestureActive=false
+  lastListeningGestureAt=-Infinity
   modelRevision++
   expressionBaseline.reset()
   intentLease.reset()
@@ -597,6 +599,7 @@ function clearReleaseTimer(): void {
 let motionRequestRevision = 0
 let sdkMotionActive = false
 let speechGestureActive = false
+let listeningGestureActive = false
 function cancelPerformance():void{
   (model?.internalModel?.motionManager as any)?.stopAllMotions?.()
   finishReceipt('cancelled');completeAppearance()
@@ -606,6 +609,7 @@ function completeAppearance():void{
   motionRequestRevision++
   sdkMotionActive=false
   speechGestureActive=false;
+  listeningGestureActive=false;
   // 部分角色资源自带Loop=true；时长兜底回落也必须停止SDK循环，不能只清UI状态。
   (model?.internalModel?.motionManager as any)?.stopAllMotions?.()
   finishReceipt('finished')
@@ -736,21 +740,35 @@ function restorePresenceExpression():void{
   applyExpression(thinking?.name||expressionBaseline.current())
 }
 let lastSpeechGestureAt = 0
-watch([()=>props.presence,idlePref.reactiveEnabled],()=>{
+let lastListeningGestureAt = -Infinity
+watch([()=>props.presence,idlePref.reactiveEnabled],([presence],[previous])=>{
+  if(listeningGestureActive&&(!idlePref.reactiveEnabled.value||presence!=='thinking')){
+    (model?.internalModel?.motionManager as any)?.stopAllMotions?.()
+    finishReceipt('cancelled');completeAppearance()
+  }
   if(speechGestureActive&&(!idlePref.reactiveEnabled.value||props.presence!=='speaking')){
     (model?.internalModel?.motionManager as any)?.stopAllMotions?.()
     finishReceipt('cancelled');completeAppearance()
   }
   if(!model||avatarState.value.until>Date.now())return
   restorePresenceExpression()
-  if(!idlePref.reactiveEnabled.value||props.preview||props.presence!=='speaking')return
   const now=Date.now()
+  if(!props.preview&&shouldAcknowledgeListening(previous,presence,idlePref.reactiveEnabled.value,
+    avatarState.value.until>now,gazeOwns,now,lastListeningGestureAt,idlePref.gestureCooldownMs.value)){
+    const nod=resolveMotion(manifest.value,{motion_slot:'nod'})
+    if(nod&&nod.durationMs>0&&nod.durationMs<=idlePref.gestureMaxMs.value){
+      lastListeningGestureAt=now
+      applyAvatarIntent({motion:nod.group,motion_index:nod.index,duration_ms:nod.durationMs,priority:2,source:'listening-ack'})
+      return
+    }
+  }
+  if(!idlePref.reactiveEnabled.value||props.preview||props.presence!=='speaking')return
   if(now-lastSpeechGestureAt<idlePref.gestureCooldownMs.value)return
   const nod=resolveMotion(manifest.value,{motion_slot:'nod'})
   // 只使用已映射的短动作；未知时长或大动作不用于说话微反应。
   if(!nod||nod.durationMs<=0||nod.durationMs>idlePref.gestureMaxMs.value)return
   lastSpeechGestureAt=now
-  applyAvatarIntent({motion:nod.group,motion_index:nod.index,duration_ms:nod.durationMs,priority:2})
+  applyAvatarIntent({motion:nod.group,motion_index:nod.index,duration_ms:nod.durationMs,priority:2,source:'speech-gesture'})
 })
 function applyAvatarIntent(intent: AvatarIntentPayload): void {
   const expr = resolveExpression(manifest.value, intent)
@@ -764,7 +782,8 @@ function applyAvatarIntent(intent: AvatarIntentPayload): void {
   finishReceipt('cancelled')
   const request=++motionRequestRevision
   sdkMotionActive=false
-  speechGestureActive=priority===2&&intent.source!=='activity'
+  speechGestureActive=intent.source==='speech-gesture'
+  listeningGestureActive=intent.source==='listening-ack'
   let exprOk = true
   if (expr.from === 'reset') exprOk = applyExpression('')
   else if (expr.from !== 'none') exprOk = applyExpression(expr.name)

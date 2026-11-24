@@ -1,0 +1,367 @@
+{
+  "captured_at_utc": "2026-11-24T03:20:17.370372+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "8cb9778ad1324a97a539649932f4a421"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 17,
+      "ended": 17,
+      "received_segments": 17,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 932.3000000119209
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 939.5
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1142.5
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1172.6000000238419
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1173.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2434.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2550.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2768.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3409.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3415.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3415.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3604.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3605.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3844.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3971.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4633.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4654.200000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4654.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5211.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5211.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5223.200000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5223.600000023842
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 5336.300000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 5336.400000035763
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 563840,
+      "peak_decode_ahead_seconds": 2.4600000000000364,
+      "renderer_max_tick_gap_ms": 50.80000001192093,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.7,
+        "llm_first_token": 709.2,
+        "first_sentence": 924.3,
+        "tts_start": 925.1,
+        "translation_start": 925.5,
+        "bilingual_generation_end": 1166.2,
+        "reply_sent": 1167,
+        "lang_render": 1976.7,
+        "tts_first_audio": 2424,
+        "audio_sent": 2426.3
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "translation_calls": [
+          {}
+        ],
+        "usage": {
+          "completion_tokens": 20,
+          "prompt_tokens": 111,
+          "total_tokens": 131,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 111
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 29,
+        "session_id": "8cb9778ad1324a97a539649932f4a421",
+        "generation": 1,
+        "reply_request_id": "bce18287-a7ca-4cbe-bd8b-0a8b4119702f",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.7,
+          "llm_first_token": 709.2,
+          "first_sentence": 924.3,
+          "tts_start": 925.1,
+          "translation_start": 925.5,
+          "bilingual_generation_end": 1166.2
+        }
+      },
+      "trace_id": "cf0be563",
+      "reply_ms": 1173.5,
+      "reply_chars": 29,
+      "decode_start_ms": 2434.900000035763,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.042,
+        "rms_cpu_ms": 0.27,
+        "connect_task_enter_ms": 2.746,
+        "key_lookup_ms": 0.545,
+        "key_loaded_ms": 3.308,
+        "connection_start_ms": 3.719,
+        "connected_ms": 421.831,
+        "first_text_sent_ms": 1976.266,
+        "first_flush_sent_ms": 1976.326,
+        "raw_first_audio_ms": 2422.516,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2422.567
+      },
+      "wire_delivery_ms": 6.801025390625,
+      "first_receive_ms": 2435,
+      "decode_end_ms": 2440.100000023842,
+      "first_start_ms": 2440.2000000476837,
+      "first_graph_start_ms": 2460.2000000476655,
+      "last_ended_ms": 10534.300000011921,
+      "audio_experiment": {
+        "translation_calls": [
+          {
+            "usage": {
+              "completion_tokens": 10,
+              "prompt_tokens": 173,
+              "total_tokens": 183,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 173
+              }
+            },
+            "elapsed_ms": 1050.789
+          },
+          {
+            "usage": {
+              "completion_tokens": 12,
+              "prompt_tokens": 171,
+              "total_tokens": 183,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 171
+              }
+            },
+            "elapsed_ms": 1061.707
+          }
+        ],
+        "usage": {
+          "completion_tokens": 20,
+          "prompt_tokens": 111,
+          "total_tokens": 131,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 111
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 29,
+        "speech_sentences": [
+          "お疲れさま、こっちに来てちょっと休んで。",
+          "私がここでずっとそばにいるから、何も考えないで。"
+        ]
+      },
+      "completed": true,
+      "total_ms": 10546.600000023842,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 5.65,
+          "status": 200
+        },
+        {
+          "ms": 2.51,
+          "status": 200
+        },
+        {
+          "ms": 2.56,
+          "status": 200
+        },
+        {
+          "ms": 2.15,
+          "status": 200
+        },
+        {
+          "ms": 2.2,
+          "status": 200
+        },
+        {
+          "ms": 2.85,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.84,
+          "status": 200
+        },
+        {
+          "ms": 2.51,
+          "status": 200
+        },
+        {
+          "ms": 2.61,
+          "status": 200
+        },
+        {
+          "ms": 3.16,
+          "status": 200
+        },
+        {
+          "ms": 3.0,
+          "status": 200
+        },
+        {
+          "ms": 2.08,
+          "status": 200
+        },
+        {
+          "ms": 2.46,
+          "status": 200
+        },
+        {
+          "ms": 3.22,
+          "status": 200
+        },
+        {
+          "ms": 2.87,
+          "status": 200
+        },
+        {
+          "ms": 2.88,
+          "status": 200
+        },
+        {
+          "ms": 3.03,
+          "status": 200
+        },
+        {
+          "ms": 2.02,
+          "status": 200
+        },
+        {
+          "ms": 3.34,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 37697464,
+        "totalSize": 53035008
+      },
+      "heap_after": {
+        "usedSize": 41271388,
+        "totalSize": 55959552
+      }
+    }
+  ]
+}

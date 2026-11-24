@@ -1,0 +1,351 @@
+{
+  "captured_at_utc": "2026-11-24T03:20:29.225111+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今天有点累，陪我休息一下吧。请用两句简短回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "8cb9778ad1324a97a539649932f4a421"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 17,
+      "ended": 17,
+      "received_segments": 17,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1152.699999988079
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1162.199999988079
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1633.1000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1680.1000000238419
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1680.3999999761581
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1681.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1764.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1981.6000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2669.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2687.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2687.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2703.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2962.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3092.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3308.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4005.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4011
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4011.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4450.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4456
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4461.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4461.699999988079
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 4575.800000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 4581.100000023842
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 500488,
+      "peak_decode_ahead_seconds": 2.4493333333334704,
+      "renderer_max_tick_gap_ms": 57.80000001192093,
+      "observed_character": "hotaru",
+      "decode_start_ms": 1679.699999988079,
+      "trace_id": "5d88750d",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.4,
+        "llm_first_token": 737.6,
+        "bilingual_ja_ready": 902.1,
+        "bilingual_pair_ready": 1148.9,
+        "first_sentence": 1149.2,
+        "tts_start": 1150.4,
+        "tts_first_audio": 1649.5,
+        "audio_sent": 1653.4,
+        "bilingual_generation_end": 1655.1,
+        "reply_sent": 1656
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.074,
+        "rms_cpu_ms": 0.622,
+        "connect_task_enter_ms": 1.292,
+        "key_lookup_ms": 0.438,
+        "key_loaded_ms": 1.737,
+        "connection_start_ms": 1.97,
+        "connected_ms": 387.386,
+        "first_text_sent_ms": 1150.542,
+        "first_flush_sent_ms": 1150.614,
+        "raw_first_audio_ms": 1648.07,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1648.16
+      },
+      "wire_delivery_ms": 28.052978515625,
+      "first_receive_ms": 1680.199999988079,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "お疲れ様、今日はゆっくり休もうね。",
+            "zh": "辛苦啦，今天就好好休息一下吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心して目を閉じてね。",
+            "zh": "我会陪在你身边的，安心闭上眼睛吧。"
+          }
+        ],
+        "speech_sentences": [
+          "お疲れ様、今日はゆっくり休もうね。",
+          "私がそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 53,
+          "prompt_tokens": 152,
+          "total_tokens": 205,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 105,
+        "session_id": "8cb9778ad1324a97a539649932f4a421",
+        "generation": 2,
+        "reply_request_id": "d1eab3c6-f0d2-4c84-82e9-4c194db75cca",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.4,
+          "llm_first_token": 737.6,
+          "bilingual_ja_ready": 902.1,
+          "bilingual_pair_ready": 1148.9,
+          "first_sentence": 1149.2,
+          "tts_start": 1150.4,
+          "tts_first_audio": 1649.5,
+          "audio_sent": 1653.4,
+          "bilingual_generation_end": 1655.1
+        }
+      },
+      "reply_ms": 1681.800000011921,
+      "reply_chars": 32,
+      "decode_end_ms": 1691.5,
+      "first_start_ms": 1691.6000000238419,
+      "first_graph_start_ms": 1711.6000000238237,
+      "last_ended_ms": 9521.300000011921,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "ja": "お疲れ様、今日はゆっくり休もうね。",
+            "zh": "辛苦啦，今天就好好休息一下吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心して目を閉じてね。",
+            "zh": "我会陪在你身边的，安心闭上眼睛吧。"
+          }
+        ],
+        "speech_sentences": [
+          "お疲れ様、今日はゆっくり休もうね。",
+          "私がそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 53,
+          "prompt_tokens": 152,
+          "total_tokens": 205,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 105
+      },
+      "completed": true,
+      "total_ms": 9526.5,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 3.75,
+          "status": 200
+        },
+        {
+          "ms": 2.95,
+          "status": 200
+        },
+        {
+          "ms": 2.99,
+          "status": 200
+        },
+        {
+          "ms": 4.36,
+          "status": 200
+        },
+        {
+          "ms": 4.23,
+          "status": 200
+        },
+        {
+          "ms": 3.4,
+          "status": 200
+        },
+        {
+          "ms": 2.79,
+          "status": 200
+        },
+        {
+          "ms": 2.79,
+          "status": 200
+        },
+        {
+          "ms": 2.3,
+          "status": 200
+        },
+        {
+          "ms": 3.78,
+          "status": 200
+        },
+        {
+          "ms": 2.68,
+          "status": 200
+        },
+        {
+          "ms": 2.76,
+          "status": 200
+        },
+        {
+          "ms": 2.85,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 3.72,
+          "status": 200
+        },
+        {
+          "ms": 2.5,
+          "status": 200
+        },
+        {
+          "ms": 3.02,
+          "status": 200
+        },
+        {
+          "ms": 2.56,
+          "status": 200
+        },
+        {
+          "ms": 2.89,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 37949476,
+        "totalSize": 54386688
+      },
+      "heap_after": {
+        "usedSize": 33734236,
+        "totalSize": 55959552
+      }
+    }
+  ]
+}

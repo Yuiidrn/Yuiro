@@ -1,0 +1,105 @@
+{
+  "captured_at_utc": "2026-11-23T10:29:47.776827+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "请只回复“你好呀。”，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "c53cbaaaecc04ab9af4ec31ad8c4f46f"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 3425.5
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 3433
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 4017.7000000178814
+        }
+      ],
+      "sent_all": false,
+      "trace_id": "448c6d46",
+      "reply_ms": 3433,
+      "reply_chars": 4,
+      "stop_ms": 3449.9000000059605,
+      "starts_at_stop": 0,
+      "cancel_ack_ms": 4017.7000000178814,
+      "cancel_server_settle_ms": 554.8,
+      "total_ms": 4967.200000017881,
+      "late_starts": 0
+    },
+    {
+      "sample": 2,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1247.2000000178814
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1256.9000000059605
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1403.2000000178814
+        }
+      ],
+      "sent_all": false,
+      "stop_ms": 1255.800000011921,
+      "starts_at_stop": 0,
+      "trace_id": "12d8b2df",
+      "reply_ms": 1256.9000000059605,
+      "reply_chars": 4,
+      "cancel_ack_ms": 1403.2000000178814,
+      "cancel_server_settle_ms": 143.2,
+      "total_ms": 2775.2000000178814,
+      "late_starts": 0
+    },
+    {
+      "sample": 3,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 3900.5
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 3908.399999976158
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 4057.2999999821186
+        }
+      ],
+      "sent_all": false,
+      "stop_ms": 3907.2999999821186,
+      "starts_at_stop": 0,
+      "trace_id": "50945eb1",
+      "reply_ms": 3908.5,
+      "reply_chars": 4,
+      "cancel_ack_ms": 4057.2999999821186,
+      "cancel_server_settle_ms": 139.6,
+      "total_ms": 5452.799999982119,
+      "late_starts": 0
+    }
+  ]
+}

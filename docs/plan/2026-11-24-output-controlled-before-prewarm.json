@@ -1,0 +1,4845 @@
+{
+  "started_utc": "2026-11-24T02:56:47.302903+00:00",
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 17,
+      "ended": 17,
+      "received_segments": 17,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 2842
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 2848.399999976158
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 3028
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 3051.699999988079
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 3058.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4348.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4409.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4933.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5258.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5264.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5264.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5355.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5492
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5492.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5636.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5896.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6398.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6410.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6410.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6670.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6670.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6676.599999964237
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 6802.099999964237
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 6807.899999976158
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 1172480,
+      "peak_decode_ahead_seconds": 2.4493333333336977,
+      "renderer_max_tick_gap_ms": 42,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 34.7,
+        "llm_first_token": 2615.8,
+        "first_sentence": 2829.6,
+        "tts_start": 2831.8,
+        "translation_start": 2832.4,
+        "bilingual_generation_end": 3042.6,
+        "reply_sent": 3043.5,
+        "lang_render": 3829.8,
+        "tts_first_audio": 4326.7,
+        "audio_sent": 4329.1
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "translation_calls": [
+          {}
+        ],
+        "usage": {
+          "completion_tokens": 21,
+          "prompt_tokens": 111,
+          "total_tokens": 132,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 111
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 31,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 1,
+        "reply_request_id": "0a97bcda-dd1f-4f11-85dc-55d5e713fc5f",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 34.7,
+          "llm_first_token": 2615.8,
+          "first_sentence": 2829.6,
+          "tts_start": 2831.8,
+          "translation_start": 2832.4,
+          "bilingual_generation_end": 3042.6
+        }
+      },
+      "trace_id": "6708cfe3",
+      "reply_ms": 3058.399999976158,
+      "reply_chars": 31,
+      "decode_start_ms": 4348.199999988079,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.063,
+        "rms_cpu_ms": 0.311,
+        "connect_task_enter_ms": 1924.074,
+        "key_lookup_ms": 0.619,
+        "key_loaded_ms": 1924.711,
+        "connection_start_ms": 1925.021,
+        "connected_ms": 2647.27,
+        "first_text_sent_ms": 3795.404,
+        "first_flush_sent_ms": 3795.463,
+        "raw_first_audio_ms": 4291.51,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 4291.584
+      },
+      "wire_delivery_ms": 12.347900390625,
+      "first_receive_ms": 4348.300000011921,
+      "decode_end_ms": 4354.399999976158,
+      "first_start_ms": 4354.5,
+      "first_graph_start_ms": 4374.499999999982,
+      "audio_experiment": {
+        "translation_calls": [
+          {
+            "usage": {
+              "completion_tokens": 10,
+              "prompt_tokens": 173,
+              "total_tokens": 183,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 173
+              }
+            },
+            "elapsed_ms": 996.678
+          },
+          {
+            "usage": {
+              "completion_tokens": 12,
+              "prompt_tokens": 172,
+              "total_tokens": 184,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 172
+              }
+            },
+            "elapsed_ms": 823.042
+          }
+        ],
+        "usage": {
+          "completion_tokens": 21,
+          "prompt_tokens": 111,
+          "total_tokens": 132,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 111
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 31,
+        "speech_sentences": [
+          "お疲れさま、こっちに来てちょっと休んで。",
+          "ここで静かにそばにいるから、何も考えないで。"
+        ]
+      },
+      "last_ended_ms": 17441.099999964237,
+      "completed": true,
+      "total_ms": 17441.099999964237,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 8.12,
+          "status": 200
+        },
+        {
+          "ms": 1474.94,
+          "status": 200
+        },
+        {
+          "ms": 5.45,
+          "status": 200
+        },
+        {
+          "ms": 7.28,
+          "status": 200
+        },
+        {
+          "ms": 6.68,
+          "status": 200
+        },
+        {
+          "ms": 6.41,
+          "status": 200
+        },
+        {
+          "ms": 10.79,
+          "status": 200
+        },
+        {
+          "ms": 30.07,
+          "status": 200
+        },
+        {
+          "ms": 7.21,
+          "status": 200
+        },
+        {
+          "ms": 6.73,
+          "status": 200
+        },
+        {
+          "ms": 6.69,
+          "status": 200
+        },
+        {
+          "ms": 5.34,
+          "status": 200
+        },
+        {
+          "ms": 6.74,
+          "status": 200
+        },
+        {
+          "ms": 6.53,
+          "status": 200
+        },
+        {
+          "ms": 6.18,
+          "status": 200
+        },
+        {
+          "ms": 5.59,
+          "status": 200
+        },
+        {
+          "ms": 6.0,
+          "status": 200
+        },
+        {
+          "ms": 5.62,
+          "status": 200
+        },
+        {
+          "ms": 5.68,
+          "status": 200
+        },
+        {
+          "ms": 5.96,
+          "status": 200
+        },
+        {
+          "ms": 6.64,
+          "status": 200
+        },
+        {
+          "ms": 5.24,
+          "status": 200
+        },
+        {
+          "ms": 5.18,
+          "status": 200
+        },
+        {
+          "ms": 5.37,
+          "status": 200
+        },
+        {
+          "ms": 5.68,
+          "status": 200
+        },
+        {
+          "ms": 5.8,
+          "status": 200
+        },
+        {
+          "ms": 5.89,
+          "status": 200
+        },
+        {
+          "ms": 5.6,
+          "status": 200
+        },
+        {
+          "ms": 5.86,
+          "status": 200
+        },
+        {
+          "ms": 7.29,
+          "status": 200
+        },
+        {
+          "ms": 4.86,
+          "status": 200
+        },
+        {
+          "ms": 5.64,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 35354444,
+        "totalSize": 54177792
+      },
+      "heap_after": {
+        "usedSize": 37019908,
+        "totalSize": 54124544
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "baseline",
+      "round": 0,
+      "prompt_index": 0,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 16,
+      "ended": 16,
+      "received_segments": 16,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1011
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1016.8999999761581
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1432.5
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1469.1000000238419
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1469.8999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1507.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1620.6000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1720
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2398.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2404.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2405.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2529.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2530.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2681.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2965.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3568.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3574.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3580.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3827.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3833.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3833.800000011921
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 3960.899999976158
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 3966.600000023842
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 539736,
+      "peak_decode_ahead_seconds": 2.468000000000302,
+      "renderer_max_tick_gap_ms": 40.5,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.6,
+        "llm_first_token": 634.6,
+        "bilingual_ja_ready": 792,
+        "bilingual_pair_ready": 1007.3,
+        "first_sentence": 1007.6,
+        "tts_start": 1009.2,
+        "bilingual_generation_end": 1464.8,
+        "reply_sent": 1466.8,
+        "tts_first_audio": 1485.9,
+        "audio_sent": 1488.7
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "お疲れ様、今日はゆっくり休もうね。",
+            "zh": "辛苦啦，今天就好好休息一下吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心して目を閉じてね。",
+            "zh": "我就在这里陪着你，安心闭上眼睛吧。"
+          }
+        ],
+        "speech_sentences": [
+          "お疲れ様、今日はゆっくり休もうね。",
+          "私がそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 53,
+          "prompt_tokens": 152,
+          "total_tokens": 205,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 105,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 2,
+        "reply_request_id": "bd1c7f09-ceab-4d3d-9a3d-e5ca82027b70",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.6,
+          "llm_first_token": 634.6,
+          "bilingual_ja_ready": 792,
+          "bilingual_pair_ready": 1007.3,
+          "first_sentence": 1007.6,
+          "tts_start": 1009.2,
+          "bilingual_generation_end": 1464.8
+        }
+      },
+      "trace_id": "3d155285",
+      "reply_ms": 1469.8999999761581,
+      "reply_chars": 32,
+      "decode_start_ms": 1507.3999999761581,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.041,
+        "rms_cpu_ms": 0.3,
+        "connect_task_enter_ms": 1.488,
+        "key_lookup_ms": 0.395,
+        "key_loaded_ms": 1.893,
+        "connection_start_ms": 2.144,
+        "connected_ms": 371.35,
+        "first_text_sent_ms": 1009.067,
+        "first_flush_sent_ms": 1009.106,
+        "input_finished_ms": 1469.637,
+        "raw_first_audio_ms": 1484.576,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1484.628
+      },
+      "wire_delivery_ms": 19.10400390625,
+      "first_receive_ms": 1507.5,
+      "decode_end_ms": 1513.199999988079,
+      "first_start_ms": 1513.3999999761581,
+      "first_graph_start_ms": 1533.39999997614,
+      "last_ended_ms": 9019,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "ja": "お疲れ様、今日はゆっくり休もうね。",
+            "zh": "辛苦啦，今天就好好休息一下吧。"
+          },
+          {
+            "ja": "私がそばにいるから、安心して目を閉じてね。",
+            "zh": "我就在这里陪着你，安心闭上眼睛吧。"
+          }
+        ],
+        "speech_sentences": [
+          "お疲れ様、今日はゆっくり休もうね。",
+          "私がそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 53,
+          "prompt_tokens": 152,
+          "total_tokens": 205,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "ja_first",
+        "pairs": 2,
+        "generated_chars": 105
+      },
+      "completed": true,
+      "total_ms": 9045.600000023842,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 6.52,
+          "status": 200
+        },
+        {
+          "ms": 5.43,
+          "status": 200
+        },
+        {
+          "ms": 5.72,
+          "status": 200
+        },
+        {
+          "ms": 7.4,
+          "status": 200
+        },
+        {
+          "ms": 5.62,
+          "status": 200
+        },
+        {
+          "ms": 5.35,
+          "status": 200
+        },
+        {
+          "ms": 6.32,
+          "status": 200
+        },
+        {
+          "ms": 5.3,
+          "status": 200
+        },
+        {
+          "ms": 6.31,
+          "status": 200
+        },
+        {
+          "ms": 7.5,
+          "status": 200
+        },
+        {
+          "ms": 5.75,
+          "status": 200
+        },
+        {
+          "ms": 6.07,
+          "status": 200
+        },
+        {
+          "ms": 6.1,
+          "status": 200
+        },
+        {
+          "ms": 5.78,
+          "status": 200
+        },
+        {
+          "ms": 5.17,
+          "status": 200
+        },
+        {
+          "ms": 5.87,
+          "status": 200
+        },
+        {
+          "ms": 6.13,
+          "status": 200
+        },
+        {
+          "ms": 6.07,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 38522360,
+        "totalSize": 53600256
+      },
+      "heap_after": {
+        "usedSize": 37638148,
+        "totalSize": 54124544
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "ja_first",
+      "round": 0,
+      "prompt_index": 0,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 19,
+      "ended": 19,
+      "received_segments": 19,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1325.8999999761581
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1332.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1786.300000011921
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1839.800000011921
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1874.699999988079
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1881.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1899.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2095
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2741.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2747
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2747.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3294.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3308.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3308.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3431.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3437.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3606.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3795.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4395
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4401.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4401.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4573
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4579.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4579.300000011921
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 4692.699999988079
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 4697.800000011921
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 688656,
+      "peak_decode_ahead_seconds": 2.4413333333336595,
+      "renderer_max_tick_gap_ms": 41,
+      "observed_character": "hotaru",
+      "decode_start_ms": 1786.0999999642372,
+      "trace_id": "e746b0a7",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.6,
+        "llm_first_token": 647.8,
+        "bilingual_ja_ready": 1321.3,
+        "bilingual_pair_ready": 1321.3,
+        "first_sentence": 1321.7,
+        "tts_start": 1322.6,
+        "tts_first_audio": 1772.6,
+        "audio_sent": 1775.6,
+        "bilingual_generation_end": 1867.9,
+        "reply_sent": 1868.6
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.078,
+        "rms_cpu_ms": 0.456,
+        "connect_task_enter_ms": 1.928,
+        "key_lookup_ms": 0.345,
+        "key_loaded_ms": 2.284,
+        "connection_start_ms": 2.559,
+        "connected_ms": 377.685,
+        "first_text_sent_ms": 1322.442,
+        "first_flush_sent_ms": 1322.469,
+        "raw_first_audio_ms": 1771.23,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1771.32
+      },
+      "wire_delivery_ms": 11.1640625,
+      "first_receive_ms": 1786.300000011921,
+      "decode_end_ms": 1792.699999988079,
+      "first_start_ms": 1792.800000011921,
+      "first_graph_start_ms": 1812.8000000119027,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "zh": "嗯，今天辛苦了，快躺下来休息吧。",
+            "ja": "うん、今日はお疲れ様、ゆっくり横になって休んでね。"
+          },
+          {
+            "zh": "我会一直陪着你，安心闭上眼睛哦。",
+            "ja": "ずっとそばにいるから、安心して目を閉じてね。"
+          }
+        ],
+        "speech_sentences": [
+          "うん、今日はお疲れ様、ゆっくり横になって休んでね。",
+          "ずっとそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 61,
+          "prompt_tokens": 152,
+          "total_tokens": 213,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "zh_first",
+        "pairs": 2,
+        "generated_chars": 114,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 3,
+        "reply_request_id": "becfc2a9-d1c4-45ee-82d9-b7b91fd6a295",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.6,
+          "llm_first_token": 647.8,
+          "bilingual_ja_ready": 1321.3,
+          "bilingual_pair_ready": 1321.3,
+          "first_sentence": 1321.7,
+          "tts_start": 1322.6,
+          "tts_first_audio": 1772.6,
+          "audio_sent": 1775.6,
+          "bilingual_generation_end": 1867.9
+        }
+      },
+      "reply_ms": 1881.199999988079,
+      "reply_chars": 32,
+      "last_ended_ms": 10419.399999976158,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "zh": "嗯，今天辛苦了，快躺下来休息吧。",
+            "ja": "うん、今日はお疲れ様、ゆっくり横になって休んでね。"
+          },
+          {
+            "zh": "我会一直陪着你，安心闭上眼睛哦。",
+            "ja": "ずっとそばにいるから、安心して目を閉じてね。"
+          }
+        ],
+        "speech_sentences": [
+          "うん、今日はお疲れ様、ゆっくり横になって休んでね。",
+          "ずっとそばにいるから、安心して目を閉じてね。"
+        ],
+        "usage": {
+          "completion_tokens": 61,
+          "prompt_tokens": 152,
+          "total_tokens": 213,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 152
+          }
+        },
+        "order": "zh_first",
+        "pairs": 2,
+        "generated_chars": 114
+      },
+      "completed": true,
+      "total_ms": 10431,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 6.45,
+          "status": 200
+        },
+        {
+          "ms": 8.15,
+          "status": 200
+        },
+        {
+          "ms": 6.1,
+          "status": 200
+        },
+        {
+          "ms": 12.09,
+          "status": 200
+        },
+        {
+          "ms": 5.28,
+          "status": 200
+        },
+        {
+          "ms": 5.88,
+          "status": 200
+        },
+        {
+          "ms": 5.96,
+          "status": 200
+        },
+        {
+          "ms": 5.07,
+          "status": 200
+        },
+        {
+          "ms": 5.53,
+          "status": 200
+        },
+        {
+          "ms": 5.74,
+          "status": 200
+        },
+        {
+          "ms": 5.74,
+          "status": 200
+        },
+        {
+          "ms": 5.79,
+          "status": 200
+        },
+        {
+          "ms": 5.51,
+          "status": 200
+        },
+        {
+          "ms": 5.09,
+          "status": 200
+        },
+        {
+          "ms": 4.92,
+          "status": 200
+        },
+        {
+          "ms": 10.21,
+          "status": 200
+        },
+        {
+          "ms": 5.76,
+          "status": 200
+        },
+        {
+          "ms": 5.7,
+          "status": 200
+        },
+        {
+          "ms": 5.99,
+          "status": 200
+        },
+        {
+          "ms": 5.79,
+          "status": 200
+        },
+        {
+          "ms": 6.2,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 34325728,
+        "totalSize": 54124544
+      },
+      "heap_after": {
+        "usedSize": 36257032,
+        "totalSize": 54386688
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "zh_first",
+      "round": 0,
+      "prompt_index": 0,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 20,
+      "ended": 20,
+      "received_segments": 20,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 2319.699999988079
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 2319.899999976158
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 2350.899999976158
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 2351.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2723.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2907.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2996.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3553.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3560.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3560.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4723
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4737.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4744.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4745.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4745.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4755
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5601
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5611.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5612
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5617.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5617.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5617.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5618.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5618.199999988079
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 5744.399999976158
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 5744.600000023842
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 796296,
+      "peak_decode_ahead_seconds": 2.4413333333336595,
+      "renderer_max_tick_gap_ms": 40,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.5,
+        "llm_first_token": 1121.3,
+        "bilingual_ja_ready": 1844.7,
+        "bilingual_pair_ready": 2314.8,
+        "first_sentence": 2315.1,
+        "tts_start": 2316.2,
+        "bilingual_generation_end": 2346.8,
+        "reply_sent": 2347.5,
+        "tts_first_audio": 2711.2,
+        "audio_sent": 2713.8
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "やっとやり遂げたんだね、本当にお疲れさま。ずっと気になってたことが片付いて、私もすごく嬉しいよ。",
+            "zh": "终于完成了呢，真的辛苦你了。一直挂心的事情解决了，我也特别开心哦。"
+          }
+        ],
+        "speech_sentences": [
+          "やっとやり遂げたんだね、本当にお疲れさま。ずっと気になってたことが片付いて、私もすごく嬉しいよ。"
+        ],
+        "usage": {
+          "completion_tokens": 52,
+          "prompt_tokens": 155,
+          "total_tokens": 207,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 155
+          }
+        },
+        "order": "ja_first",
+        "pairs": 1,
+        "generated_chars": 98,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 4,
+        "reply_request_id": "dbc8505a-979c-4591-8b73-cb0a05a1b739",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.5,
+          "llm_first_token": 1121.3,
+          "bilingual_ja_ready": 1844.7,
+          "bilingual_pair_ready": 2314.8,
+          "first_sentence": 2315.1,
+          "tts_start": 2316.2,
+          "bilingual_generation_end": 2346.8
+        }
+      },
+      "trace_id": "cbf0e1c7",
+      "reply_ms": 2351.5,
+      "reply_chars": 33,
+      "decode_start_ms": 2723.199999988079,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.038,
+        "rms_cpu_ms": 0.25,
+        "connect_task_enter_ms": 1.446,
+        "key_lookup_ms": 0.38,
+        "key_loaded_ms": 1.835,
+        "connection_start_ms": 2.027,
+        "connected_ms": 371.785,
+        "first_text_sent_ms": 2316.021,
+        "first_flush_sent_ms": 2316.05,
+        "input_finished_ms": 2347.613,
+        "raw_first_audio_ms": 2709.856,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2709.902
+      },
+      "wire_delivery_ms": 9.868896484375,
+      "first_receive_ms": 2723.399999976158,
+      "decode_end_ms": 2729,
+      "first_start_ms": 2729.100000023842,
+      "first_graph_start_ms": 2749.1000000238237,
+      "last_ended_ms": 11813.199999988079,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "ja": "やっとやり遂げたんだね、本当にお疲れさま。ずっと気になってたことが片付いて、私もすごく嬉しいよ。",
+            "zh": "终于完成了呢，真的辛苦你了。一直挂心的事情解决了，我也特别开心哦。"
+          }
+        ],
+        "speech_sentences": [
+          "やっとやり遂げたんだね、本当にお疲れさま。ずっと気になってたことが片付いて、私もすごく嬉しいよ。"
+        ],
+        "usage": {
+          "completion_tokens": 52,
+          "prompt_tokens": 155,
+          "total_tokens": 207,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 155
+          }
+        },
+        "order": "ja_first",
+        "pairs": 1,
+        "generated_chars": 98
+      },
+      "completed": true,
+      "total_ms": 11834.699999988079,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.74,
+          "status": 200
+        },
+        {
+          "ms": 2.5,
+          "status": 200
+        },
+        {
+          "ms": 3.75,
+          "status": 200
+        },
+        {
+          "ms": 2.85,
+          "status": 200
+        },
+        {
+          "ms": 2.29,
+          "status": 200
+        },
+        {
+          "ms": 2.77,
+          "status": 200
+        },
+        {
+          "ms": 3.17,
+          "status": 200
+        },
+        {
+          "ms": 2.26,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        },
+        {
+          "ms": 2.53,
+          "status": 200
+        },
+        {
+          "ms": 11.63,
+          "status": 200
+        },
+        {
+          "ms": 3.21,
+          "status": 200
+        },
+        {
+          "ms": 2.46,
+          "status": 200
+        },
+        {
+          "ms": 3.36,
+          "status": 200
+        },
+        {
+          "ms": 2.82,
+          "status": 200
+        },
+        {
+          "ms": 2.37,
+          "status": 200
+        },
+        {
+          "ms": 2.81,
+          "status": 200
+        },
+        {
+          "ms": 3.57,
+          "status": 200
+        },
+        {
+          "ms": 2.61,
+          "status": 200
+        },
+        {
+          "ms": 2.6,
+          "status": 200
+        },
+        {
+          "ms": 3.89,
+          "status": 200
+        },
+        {
+          "ms": 2.23,
+          "status": 200
+        },
+        {
+          "ms": 2.43,
+          "status": 200
+        },
+        {
+          "ms": 2.76,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 37160820,
+        "totalSize": 53862400
+      },
+      "heap_after": {
+        "usedSize": 33515744,
+        "totalSize": 53862400
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "ja_first",
+      "round": 1,
+      "prompt_index": 1,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 34,
+      "ended": 34,
+      "received_segments": 34,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1775.7999999523163
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1776.2999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2229
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2352.099999964237
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 2387.7999999523163
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 2435.7999999523163
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 2436.2999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2466.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3069.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3081.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3082
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4075.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4091.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4091.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4091.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4096.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4097.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4860.799999952316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4866.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4867
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4867.299999952316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4879
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4879.299999952316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5375
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5381.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5381.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5382.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5516.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5522.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5669.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5836.299999952316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6316.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6322.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6327.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6999.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7005.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7005.799999952316
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7006.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7006.099999964237
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 7133
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 7133.299999952316
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 1955616,
+      "peak_decode_ahead_seconds": 2.4600000000007185,
+      "renderer_max_tick_gap_ms": 40,
+      "observed_character": "hotaru",
+      "decode_start_ms": 2228.899999976158,
+      "trace_id": "5ce9ef60",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.4,
+        "llm_first_token": 736.9,
+        "bilingual_ja_ready": 1773,
+        "bilingual_pair_ready": 1773,
+        "first_sentence": 1773.2,
+        "tts_start": 1774.1,
+        "tts_first_audio": 2213.6,
+        "audio_sent": 2215.9,
+        "bilingual_generation_end": 2431.3,
+        "reply_sent": 2432.3
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.039,
+        "rms_cpu_ms": 0.334,
+        "connect_task_enter_ms": 1.306,
+        "key_lookup_ms": 0.418,
+        "key_loaded_ms": 1.731,
+        "connection_start_ms": 1.951,
+        "connected_ms": 405.796,
+        "first_text_sent_ms": 1774.112,
+        "first_flush_sent_ms": 1774.142,
+        "raw_first_audio_ms": 2212.289,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2212.337
+      },
+      "wire_delivery_ms": 12.491943359375,
+      "first_receive_ms": 2229.099999964237,
+      "decode_end_ms": 2234.099999964237,
+      "first_start_ms": 2234.2999999523163,
+      "first_graph_start_ms": 2254.299999952298,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "zh": "太棒了，终于把拖了那么久的事做完啦，你真的很努力哦。",
+            "ja": "すごいね、ずっと先延ばしにしてたことをやっと終わらせたんだね、本当によく頑張ったよ。"
+          },
+          {
+            "zh": "现在可以好好放松一下了，我为你感到骄傲呢。",
+            "ja": "今はゆっくり休んでね、あなたのことが本当に誇らしいよ。"
+          }
+        ],
+        "speech_sentences": [
+          "すごいね、ずっと先延ばしにしてたことをやっと終わらせたんだね、本当によく頑張ったよ。",
+          "今はゆっくり休んでね、あなたのことが本当に誇らしいよ。"
+        ],
+        "usage": {
+          "completion_tokens": 83,
+          "prompt_tokens": 155,
+          "total_tokens": 238,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 155
+          }
+        },
+        "order": "zh_first",
+        "pairs": 2,
+        "generated_chars": 151,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 5,
+        "reply_request_id": "1b33d99f-8215-4d7c-9430-b2207fa0c369",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.4,
+          "llm_first_token": 736.9,
+          "bilingual_ja_ready": 1773,
+          "bilingual_pair_ready": 1773,
+          "first_sentence": 1773.2,
+          "tts_start": 1774.1,
+          "tts_first_audio": 2213.6,
+          "audio_sent": 2215.9,
+          "bilingual_generation_end": 2431.3
+        }
+      },
+      "reply_ms": 2436.399999976158,
+      "reply_chars": 47,
+      "last_ended_ms": 18155.5,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "zh": "太棒了，终于把拖了那么久的事做完啦，你真的很努力哦。",
+            "ja": "すごいね、ずっと先延ばしにしてたことをやっと終わらせたんだね、本当によく頑張ったよ。"
+          },
+          {
+            "zh": "现在可以好好放松一下了，我为你感到骄傲呢。",
+            "ja": "今はゆっくり休んでね、あなたのことが本当に誇らしいよ。"
+          }
+        ],
+        "speech_sentences": [
+          "すごいね、ずっと先延ばしにしてたことをやっと終わらせたんだね、本当によく頑張ったよ。",
+          "今はゆっくり休んでね、あなたのことが本当に誇らしいよ。"
+        ],
+        "usage": {
+          "completion_tokens": 83,
+          "prompt_tokens": 155,
+          "total_tokens": 238,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 155
+          }
+        },
+        "order": "zh_first",
+        "pairs": 2,
+        "generated_chars": 151
+      },
+      "completed": true,
+      "total_ms": 18166.099999964237,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.97,
+          "status": 200
+        },
+        {
+          "ms": 2.8,
+          "status": 200
+        },
+        {
+          "ms": 2.86,
+          "status": 200
+        },
+        {
+          "ms": 2.21,
+          "status": 200
+        },
+        {
+          "ms": 2.35,
+          "status": 200
+        },
+        {
+          "ms": 2.35,
+          "status": 200
+        },
+        {
+          "ms": 2.64,
+          "status": 200
+        },
+        {
+          "ms": 2.91,
+          "status": 200
+        },
+        {
+          "ms": 2.45,
+          "status": 200
+        },
+        {
+          "ms": 2.75,
+          "status": 200
+        },
+        {
+          "ms": 2.35,
+          "status": 200
+        },
+        {
+          "ms": 2.13,
+          "status": 200
+        },
+        {
+          "ms": 2.44,
+          "status": 200
+        },
+        {
+          "ms": 2.53,
+          "status": 200
+        },
+        {
+          "ms": 3.38,
+          "status": 200
+        },
+        {
+          "ms": 2.95,
+          "status": 200
+        },
+        {
+          "ms": 2.86,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.6,
+          "status": 200
+        },
+        {
+          "ms": 3.2,
+          "status": 200
+        },
+        {
+          "ms": 2.23,
+          "status": 200
+        },
+        {
+          "ms": 3.05,
+          "status": 200
+        },
+        {
+          "ms": 3.14,
+          "status": 200
+        },
+        {
+          "ms": 2.89,
+          "status": 200
+        },
+        {
+          "ms": 2.78,
+          "status": 200
+        },
+        {
+          "ms": 2.64,
+          "status": 200
+        },
+        {
+          "ms": 2.84,
+          "status": 200
+        },
+        {
+          "ms": 2.77,
+          "status": 200
+        },
+        {
+          "ms": 3.17,
+          "status": 200
+        },
+        {
+          "ms": 2.99,
+          "status": 200
+        },
+        {
+          "ms": 2.23,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 2.38,
+          "status": 200
+        },
+        {
+          "ms": 2.7,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 39375420,
+        "totalSize": 53862400
+      },
+      "heap_after": {
+        "usedSize": 39616988,
+        "totalSize": 54386688
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "zh_first",
+      "round": 1,
+      "prompt_index": 1,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 26,
+      "ended": 26,
+      "received_segments": 26,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 916.2000000476837
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 923.7000000476837
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1184.2000000476837
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1213
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1218.7000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2402.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2463.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2627.2000000476837
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3172
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3187.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3187.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4232.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4238.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4238.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4247.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4257.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4257.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4264.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4382
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4557.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5145.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5151.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5151.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5151.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6189.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6197.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6204.700000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6212.200000047684
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6212.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6212.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6220.600000023842
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 6328.800000011921
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 6336.100000023842
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 1334456,
+      "peak_decode_ahead_seconds": 2.4600000000002638,
+      "renderer_max_tick_gap_ms": 40.80000001192093,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.6,
+        "llm_first_token": 556,
+        "first_sentence": 911.1,
+        "tts_start": 912.6,
+        "translation_start": 913.3,
+        "bilingual_generation_end": 1209.8,
+        "reply_sent": 1210.5,
+        "lang_render": 1958.9,
+        "tts_first_audio": 2395.1,
+        "audio_sent": 2397.5
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "translation_calls": [
+          {}
+        ],
+        "usage": {
+          "completion_tokens": 24,
+          "prompt_tokens": 114,
+          "total_tokens": 138,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 114
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 41,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 6,
+        "reply_request_id": "bd88788e-11ad-4bf9-b091-fe1b8aca77a6",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.6,
+          "llm_first_token": 556,
+          "first_sentence": 911.1,
+          "tts_start": 912.6,
+          "translation_start": 913.3,
+          "bilingual_generation_end": 1209.8
+        }
+      },
+      "trace_id": "c760ae1d",
+      "reply_ms": 1218.7000000476837,
+      "reply_chars": 41,
+      "decode_start_ms": 2402.400000035763,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.05,
+        "rms_cpu_ms": 0.253,
+        "connect_task_enter_ms": 1.615,
+        "key_lookup_ms": 0.342,
+        "key_loaded_ms": 1.967,
+        "connection_start_ms": 2.238,
+        "connected_ms": 378.156,
+        "first_text_sent_ms": 1958.547,
+        "first_flush_sent_ms": 1958.61,
+        "raw_first_audio_ms": 2393.745,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2393.804
+      },
+      "wire_delivery_ms": 5.450927734375,
+      "first_receive_ms": 2402.5,
+      "decode_end_ms": 2407.600000023842,
+      "first_start_ms": 2407.7000000476837,
+      "first_graph_start_ms": 2427.7000000476655,
+      "last_ended_ms": 14726.800000011921,
+      "audio_experiment": {
+        "translation_calls": [
+          {
+            "usage": {
+              "completion_tokens": 12,
+              "prompt_tokens": 173,
+              "total_tokens": 185,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 173
+              }
+            },
+            "elapsed_ms": 1045.02
+          },
+          {
+            "usage": {
+              "completion_tokens": 25,
+              "prompt_tokens": 175,
+              "total_tokens": 200,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 175
+              }
+            },
+            "elapsed_ms": 1008.767
+          }
+        ],
+        "usage": {
+          "completion_tokens": 24,
+          "prompt_tokens": 114,
+          "total_tokens": 138,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 114
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 41,
+        "speech_sentences": [
+          "やっと終わったね、本当にすごいよ、お疲れさま。",
+          "その一歩を踏み出せただけで本当にすごいよ、今夜は自分にご褒美をあげようね。"
+        ]
+      },
+      "completed": true,
+      "total_ms": 14726.900000035763,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.28,
+          "status": 200
+        },
+        {
+          "ms": 2.55,
+          "status": 200
+        },
+        {
+          "ms": 2.91,
+          "status": 200
+        },
+        {
+          "ms": 3.26,
+          "status": 200
+        },
+        {
+          "ms": 2.34,
+          "status": 200
+        },
+        {
+          "ms": 2.06,
+          "status": 200
+        },
+        {
+          "ms": 3.78,
+          "status": 200
+        },
+        {
+          "ms": 2.26,
+          "status": 200
+        },
+        {
+          "ms": 3.21,
+          "status": 200
+        },
+        {
+          "ms": 2.42,
+          "status": 200
+        },
+        {
+          "ms": 14.59,
+          "status": 200
+        },
+        {
+          "ms": 2.45,
+          "status": 200
+        },
+        {
+          "ms": 19.92,
+          "status": 200
+        },
+        {
+          "ms": 3.03,
+          "status": 200
+        },
+        {
+          "ms": 3.56,
+          "status": 200
+        },
+        {
+          "ms": 3.0,
+          "status": 200
+        },
+        {
+          "ms": 2.61,
+          "status": 200
+        },
+        {
+          "ms": 2.37,
+          "status": 200
+        },
+        {
+          "ms": 2.7,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        },
+        {
+          "ms": 3.28,
+          "status": 200
+        },
+        {
+          "ms": 3.07,
+          "status": 200
+        },
+        {
+          "ms": 2.69,
+          "status": 200
+        },
+        {
+          "ms": 2.45,
+          "status": 200
+        },
+        {
+          "ms": 3.16,
+          "status": 200
+        },
+        {
+          "ms": 2.52,
+          "status": 200
+        },
+        {
+          "ms": 2.63,
+          "status": 200
+        },
+        {
+          "ms": 2.37,
+          "status": 200
+        },
+        {
+          "ms": 2.38,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 33426376,
+        "totalSize": 53862400
+      },
+      "heap_after": {
+        "usedSize": 40266392,
+        "totalSize": 54648832
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "baseline",
+      "round": 1,
+      "prompt_index": 1,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 37,
+      "ended": 37,
+      "received_segments": 37,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1256.699999988079
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1256.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1751.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1777.1000000238419
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1857.6000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1950.6000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2520.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2534.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2534.5
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 2542.600000023842
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 2923.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2945.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2945.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2951.300000011921
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 2961.699999988079
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 2966.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3084.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3232.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3420.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3427.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3961.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3966.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3966.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4453.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4463.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4468.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4615.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4766
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4975.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5566.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5572.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5572.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6130.400000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6136.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6136.900000035763
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6142
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6302.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6468.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6664.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7270.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7281.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7282
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7282.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7282.5
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 7404.199999988079
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 7409.300000011921
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 2186608,
+      "peak_decode_ahead_seconds": 2.4680000000005293,
+      "renderer_max_tick_gap_ms": 42.30000001192093,
+      "observed_character": "hotaru",
+      "decode_start_ms": 1751.1000000238419,
+      "trace_id": "0c3a408c",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.5,
+        "llm_first_token": 722.7,
+        "bilingual_ja_ready": 1250.4,
+        "bilingual_pair_ready": 1250.4,
+        "first_sentence": 1250.6,
+        "tts_start": 1251.2,
+        "tts_first_audio": 1740.5,
+        "audio_sent": 1742.9,
+        "bilingual_generation_end": 2958.9,
+        "reply_sent": 2960.2
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.038,
+        "rms_cpu_ms": 0.285,
+        "connect_task_enter_ms": 1.261,
+        "key_lookup_ms": 0.342,
+        "key_loaded_ms": 1.611,
+        "connection_start_ms": 1.781,
+        "connected_ms": 367.413,
+        "first_text_sent_ms": 1251.149,
+        "first_flush_sent_ms": 1251.199,
+        "raw_first_audio_ms": 1739.168,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1739.215
+      },
+      "wire_delivery_ms": 8.594970703125,
+      "first_receive_ms": 1751.300000011921,
+      "decode_end_ms": 1756.5,
+      "first_start_ms": 1756.699999988079,
+      "first_graph_start_ms": 1776.6999999880609,
+      "last_ended_ms": 19131,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "zh": "好呀，雨夜最适合安静待着了。",
+            "ja": "いいよ、雨の夜は静かに過ごすのにぴったりだね。"
+          },
+          {
+            "zh": "听着雨声，心也会慢慢平静下来呢。",
+            "ja": "雨音を聞いていると、心もだんだん落ち着いてくるよね。"
+          },
+          {
+            "zh": "这里没法帮你做什么，但陪你聊天没问题哦。",
+            "ja": "ここでは何もしてあげられないけど、おしゃべりなら大丈夫だよ。"
+          },
+          {
+            "zh": "今晚的雨，是什么声音呢？",
+            "ja": "今夜の雨は、どんな音がしてるのかな？"
+          }
+        ],
+        "speech_sentences": [
+          "いいよ、雨の夜は静かに過ごすのにぴったりだね。",
+          "雨音を聞いていると、心もだんだん落ち着いてくるよね。",
+          "ここでは何もしてあげられないけど、おしゃべりなら大丈夫だよ。",
+          "今夜の雨は、どんな音がしてるのかな？"
+        ],
+        "usage": {
+          "completion_tokens": 125,
+          "prompt_tokens": 154,
+          "total_tokens": 279,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 154
+          }
+        },
+        "order": "zh_first",
+        "pairs": 4,
+        "generated_chars": 230,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 7,
+        "reply_request_id": "33b98283-425b-421e-9a91-d04606d4c965",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.5,
+          "llm_first_token": 722.7,
+          "bilingual_ja_ready": 1250.4,
+          "bilingual_pair_ready": 1250.4,
+          "first_sentence": 1250.6,
+          "tts_start": 1251.2,
+          "tts_first_audio": 1740.5,
+          "audio_sent": 1742.9,
+          "bilingual_generation_end": 2958.9
+        }
+      },
+      "reply_ms": 2967,
+      "reply_chars": 62,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "zh": "好呀，雨夜最适合安静待着了。",
+            "ja": "いいよ、雨の夜は静かに過ごすのにぴったりだね。"
+          },
+          {
+            "zh": "听着雨声，心也会慢慢平静下来呢。",
+            "ja": "雨音を聞いていると、心もだんだん落ち着いてくるよね。"
+          },
+          {
+            "zh": "这里没法帮你做什么，但陪你聊天没问题哦。",
+            "ja": "ここでは何もしてあげられないけど、おしゃべりなら大丈夫だよ。"
+          },
+          {
+            "zh": "今晚的雨，是什么声音呢？",
+            "ja": "今夜の雨は、どんな音がしてるのかな？"
+          }
+        ],
+        "speech_sentences": [
+          "いいよ、雨の夜は静かに過ごすのにぴったりだね。",
+          "雨音を聞いていると、心もだんだん落ち着いてくるよね。",
+          "ここでは何もしてあげられないけど、おしゃべりなら大丈夫だよ。",
+          "今夜の雨は、どんな音がしてるのかな？"
+        ],
+        "usage": {
+          "completion_tokens": 125,
+          "prompt_tokens": 154,
+          "total_tokens": 279,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 154
+          }
+        },
+        "order": "zh_first",
+        "pairs": 4,
+        "generated_chars": 230
+      },
+      "completed": true,
+      "total_ms": 19135.80000001192,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.22,
+          "status": 200
+        },
+        {
+          "ms": 3.14,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.87,
+          "status": 200
+        },
+        {
+          "ms": 2.69,
+          "status": 200
+        },
+        {
+          "ms": 3.04,
+          "status": 200
+        },
+        {
+          "ms": 2.4,
+          "status": 200
+        },
+        {
+          "ms": 2.47,
+          "status": 200
+        },
+        {
+          "ms": 3.06,
+          "status": 200
+        },
+        {
+          "ms": 2.4,
+          "status": 200
+        },
+        {
+          "ms": 2.43,
+          "status": 200
+        },
+        {
+          "ms": 2.28,
+          "status": 200
+        },
+        {
+          "ms": 2.38,
+          "status": 200
+        },
+        {
+          "ms": 3.4,
+          "status": 200
+        },
+        {
+          "ms": 3.2,
+          "status": 200
+        },
+        {
+          "ms": 1.95,
+          "status": 200
+        },
+        {
+          "ms": 2.88,
+          "status": 200
+        },
+        {
+          "ms": 2.72,
+          "status": 200
+        },
+        {
+          "ms": 2.81,
+          "status": 200
+        },
+        {
+          "ms": 2.23,
+          "status": 200
+        },
+        {
+          "ms": 2.78,
+          "status": 200
+        },
+        {
+          "ms": 2.47,
+          "status": 200
+        },
+        {
+          "ms": 3.1,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 2.65,
+          "status": 200
+        },
+        {
+          "ms": 2.52,
+          "status": 200
+        },
+        {
+          "ms": 2.9,
+          "status": 200
+        },
+        {
+          "ms": 2.91,
+          "status": 200
+        },
+        {
+          "ms": 2.71,
+          "status": 200
+        },
+        {
+          "ms": 2.57,
+          "status": 200
+        },
+        {
+          "ms": 3.1,
+          "status": 200
+        },
+        {
+          "ms": 2.52,
+          "status": 200
+        },
+        {
+          "ms": 2.61,
+          "status": 200
+        },
+        {
+          "ms": 2.31,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 2.41,
+          "status": 200
+        },
+        {
+          "ms": 2.42,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 39222012,
+        "totalSize": 53862400
+      },
+      "heap_after": {
+        "usedSize": 37706420,
+        "totalSize": 54124544
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "zh_first",
+      "round": 2,
+      "prompt_index": 2,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 38,
+      "ended": 38,
+      "received_segments": 38,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 798.8000000119209
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 804.3999999761581
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1115.199999988079
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1376.199999988079
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1539.5
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 1568.800000011921
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1575.0999999642372
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2269.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2392.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2578.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3242.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3248.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3249.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3597.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3608.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3828.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3834.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3897.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4091.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4684.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4691.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4691.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4854.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4860.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5061.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5219.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5406.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6033
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6033.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6033.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6897.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6904.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6904.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6911.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6920.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6945.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6945.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7188.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7306.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7967.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7972.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7978.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8134.599999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8135.099999964237
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 8135.099999964237
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 8257.699999988079
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 8263.099999964237
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 2182024,
+      "peak_decode_ahead_seconds": 2.4600000000007185,
+      "renderer_max_tick_gap_ms": 40.80000001192093,
+      "observed_character": "hotaru",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.5,
+        "llm_first_token": 578.4,
+        "first_sentence": 794.7,
+        "tts_start": 796.6,
+        "translation_start": 796.9,
+        "bilingual_generation_end": 1565.3,
+        "reply_sent": 1566,
+        "lang_render": 1842.3,
+        "tts_first_audio": 2262.4,
+        "audio_sent": 2264.9
+      },
+      "experiment": {
+        "type": "experiment:metrics",
+        "translation_calls": [
+          {}
+        ],
+        "usage": {
+          "completion_tokens": 46,
+          "prompt_tokens": 113,
+          "total_tokens": 159,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 113
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 73,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 8,
+        "reply_request_id": "95d66622-8b8b-4376-bc52-920472351c9b",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.5,
+          "llm_first_token": 578.4,
+          "first_sentence": 794.7,
+          "tts_start": 796.6,
+          "translation_start": 796.9,
+          "bilingual_generation_end": 1565.3
+        }
+      },
+      "trace_id": "00c93d72",
+      "reply_ms": 1575.0999999642372,
+      "reply_chars": 73,
+      "decode_start_ms": 2269.800000011921,
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.061,
+        "rms_cpu_ms": 0.322,
+        "connect_task_enter_ms": 1.341,
+        "key_lookup_ms": 0.441,
+        "key_loaded_ms": 1.791,
+        "connection_start_ms": 2.09,
+        "connected_ms": 379.317,
+        "first_text_sent_ms": 1842.051,
+        "first_flush_sent_ms": 1842.134,
+        "raw_first_audio_ms": 2260.855,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2260.925
+      },
+      "wire_delivery_ms": 5.0439453125,
+      "first_receive_ms": 2270,
+      "decode_end_ms": 2274.899999976158,
+      "first_start_ms": 2275,
+      "first_graph_start_ms": 2294.999999999982,
+      "last_ended_ms": 20109.69999998808,
+      "audio_experiment": {
+        "translation_calls": [
+          {
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 172,
+              "total_tokens": 185,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 172
+              }
+            },
+            "elapsed_ms": 1043.632
+          },
+          {
+            "usage": {
+              "completion_tokens": 11,
+              "prompt_tokens": 172,
+              "total_tokens": 183,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 172
+              }
+            },
+            "elapsed_ms": 1005.039
+          },
+          {
+            "usage": {
+              "completion_tokens": 19,
+              "prompt_tokens": 174,
+              "total_tokens": 193,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 174
+              }
+            },
+            "elapsed_ms": 1343.338
+          },
+          {
+            "usage": {
+              "completion_tokens": 16,
+              "prompt_tokens": 173,
+              "total_tokens": 189,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 0,
+                "image_tokens": null,
+                "text_tokens": 173
+              }
+            },
+            "elapsed_ms": 1039.262
+          }
+        ],
+        "usage": {
+          "completion_tokens": 46,
+          "prompt_tokens": 113,
+          "total_tokens": 159,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 113
+          }
+        },
+        "order": "baseline",
+        "generated_chars": 73,
+        "speech_sentences": [
+          "雨の音って、聞いていると心が落ち着くよね。",
+          "今夜は何も考えずに、ゆっくり休んでね。",
+          "私はここであなたに寄り添い、雨の滴が落ちる音を聴いているよ。",
+          "寒くなったら、上着を羽織るのを忘れないでね。"
+        ]
+      },
+      "completed": true,
+      "total_ms": 20110,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.31,
+          "status": 200
+        },
+        {
+          "ms": 2.72,
+          "status": 200
+        },
+        {
+          "ms": 2.47,
+          "status": 200
+        },
+        {
+          "ms": 2.04,
+          "status": 200
+        },
+        {
+          "ms": 2.76,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 3.5,
+          "status": 200
+        },
+        {
+          "ms": 3.1,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 3.12,
+          "status": 200
+        },
+        {
+          "ms": 2.24,
+          "status": 200
+        },
+        {
+          "ms": 3.34,
+          "status": 200
+        },
+        {
+          "ms": 2.71,
+          "status": 200
+        },
+        {
+          "ms": 2.39,
+          "status": 200
+        },
+        {
+          "ms": 3.41,
+          "status": 200
+        },
+        {
+          "ms": 2.79,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.28,
+          "status": 200
+        },
+        {
+          "ms": 2.83,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.82,
+          "status": 200
+        },
+        {
+          "ms": 3.46,
+          "status": 200
+        },
+        {
+          "ms": 2.52,
+          "status": 200
+        },
+        {
+          "ms": 2.7,
+          "status": 200
+        },
+        {
+          "ms": 2.18,
+          "status": 200
+        },
+        {
+          "ms": 2.94,
+          "status": 200
+        },
+        {
+          "ms": 2.32,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 2.92,
+          "status": 200
+        },
+        {
+          "ms": 2.73,
+          "status": 200
+        },
+        {
+          "ms": 2.47,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.32,
+          "status": 200
+        },
+        {
+          "ms": 2.46,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 3.34,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 2.43,
+          "status": 200
+        },
+        {
+          "ms": 2.07,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 38120200,
+        "totalSize": 53600256
+      },
+      "heap_after": {
+        "usedSize": 33653412,
+        "totalSize": 54124544
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "baseline",
+      "round": 2,
+      "prompt_index": 2,
+      "cancel": false
+    },
+    {
+      "sample": 1,
+      "starts": 41,
+      "ended": 41,
+      "received_segments": 41,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1242.199999988079
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1242.3999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1688.5
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 1823.3999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1841.1000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2045.1000000238419
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 2370.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2602.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2621.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2621.600000023842
+        },
+        {
+          "type": "chat:sentence",
+          "ms": 2926.5
+        },
+        {
+          "type": "experiment:metrics",
+          "ms": 2951.800000011921
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 2957.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3081
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3094.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3094.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3272.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3273.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 3611.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4158.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4164
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4165
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4429.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4430.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4703.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4703.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 4841.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5023.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5869.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5874.600000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 5880.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6102.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6109.100000023842
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6109.399999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6114.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6278.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6490.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6605.800000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 6606.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7102.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7108.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7109.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7779.199999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7785.300000011921
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7791.5
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7791.699999988079
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 7791.800000011921
+        },
+        {
+          "type": "experiment:audio_metrics",
+          "ms": 7908.5
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 7908.5
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 2511976,
+      "peak_decode_ahead_seconds": 2.460000000000491,
+      "renderer_max_tick_gap_ms": 41.39999997615814,
+      "observed_character": "hotaru",
+      "decode_start_ms": 1688.3999999761581,
+      "trace_id": "9100d066",
+      "stages_ms": {
+        "turn_start": 0,
+        "llm_request": 0.6,
+        "llm_first_token": 687.3,
+        "bilingual_ja_ready": 1081.4,
+        "bilingual_pair_ready": 1237.9,
+        "first_sentence": 1238.2,
+        "tts_start": 1239.7,
+        "tts_first_audio": 1675.9,
+        "audio_sent": 1678.3,
+        "bilingual_generation_end": 2946.7,
+        "reply_sent": 2947.7
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.045,
+        "rms_cpu_ms": 0.336,
+        "connect_task_enter_ms": 1.472,
+        "key_lookup_ms": 0.546,
+        "key_loaded_ms": 2.027,
+        "connection_start_ms": 3.209,
+        "connected_ms": 378.12,
+        "first_text_sent_ms": 1239.598,
+        "first_flush_sent_ms": 1239.626,
+        "raw_first_audio_ms": 1674.653,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1674.707
+      },
+      "wire_delivery_ms": 10.5419921875,
+      "first_receive_ms": 1688.6000000238419,
+      "decode_end_ms": 1694.800000011921,
+      "first_start_ms": 1695.1000000238419,
+      "first_graph_start_ms": 1715.1000000238237,
+      "last_ended_ms": 20926.5,
+      "experiment": {
+        "type": "experiment:metrics",
+        "sentences": [
+          {
+            "ja": "雨の音を静かに聴くのって、心が落ち着きますよね。",
+            "zh": "静静听雨声，真的会让心安定下来呢。"
+          },
+          {
+            "ja": "私もこうしてあなたとお話しできて、とても嬉しいです。",
+            "zh": "能这样陪你聊天，我也很开心。"
+          },
+          {
+            "ja": "ここでは外の操作はできないけれど、ずっとそばにいますよ。",
+            "zh": "虽然这里不能做外部操作，但我会一直陪着你。"
+          },
+          {
+            "ja": "温かい飲み物でも用意して、ゆっくり夜を楽しみましょうね。",
+            "zh": "准备杯热饮，一起慢慢享受这个夜晚吧。"
+          }
+        ],
+        "speech_sentences": [
+          "雨の音を静かに聴くのって、心が落ち着きますよね。",
+          "私もこうしてあなたとお話しできて、とても嬉しいです。",
+          "ここでは外の操作はできないけれど、ずっとそばにいますよ。",
+          "温かい飲み物でも用意して、ゆっくり夜を楽しみましょうね。"
+        ],
+        "usage": {
+          "completion_tokens": 128,
+          "prompt_tokens": 154,
+          "total_tokens": 282,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 154
+          }
+        },
+        "order": "ja_first",
+        "pairs": 4,
+        "generated_chars": 247,
+        "session_id": "d23087bb4bcd442eab563595bda3b86d",
+        "generation": 9,
+        "reply_request_id": "43d4e8ed-e5b2-4fb4-8439-788984738167",
+        "stages_ms": {
+          "turn_start": 0,
+          "llm_request": 0.6,
+          "llm_first_token": 687.3,
+          "bilingual_ja_ready": 1081.4,
+          "bilingual_pair_ready": 1237.9,
+          "first_sentence": 1238.2,
+          "tts_start": 1239.7,
+          "tts_first_audio": 1675.9,
+          "audio_sent": 1678.3,
+          "bilingual_generation_end": 2946.7
+        }
+      },
+      "reply_ms": 2957.699999988079,
+      "reply_chars": 70,
+      "audio_experiment": {
+        "sentences": [
+          {
+            "ja": "雨の音を静かに聴くのって、心が落ち着きますよね。",
+            "zh": "静静听雨声，真的会让心安定下来呢。"
+          },
+          {
+            "ja": "私もこうしてあなたとお話しできて、とても嬉しいです。",
+            "zh": "能这样陪你聊天，我也很开心。"
+          },
+          {
+            "ja": "ここでは外の操作はできないけれど、ずっとそばにいますよ。",
+            "zh": "虽然这里不能做外部操作，但我会一直陪着你。"
+          },
+          {
+            "ja": "温かい飲み物でも用意して、ゆっくり夜を楽しみましょうね。",
+            "zh": "准备杯热饮，一起慢慢享受这个夜晚吧。"
+          }
+        ],
+        "speech_sentences": [
+          "雨の音を静かに聴くのって、心が落ち着きますよね。",
+          "私もこうしてあなたとお話しできて、とても嬉しいです。",
+          "ここでは外の操作はできないけれど、ずっとそばにいますよ。",
+          "温かい飲み物でも用意して、ゆっくり夜を楽しみましょうね。"
+        ],
+        "usage": {
+          "completion_tokens": 128,
+          "prompt_tokens": 154,
+          "total_tokens": 282,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": 154
+          }
+        },
+        "order": "ja_first",
+        "pairs": 4,
+        "generated_chars": 247
+      },
+      "completed": true,
+      "total_ms": 20945.399999976158,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.86,
+          "status": 200
+        },
+        {
+          "ms": 3.38,
+          "status": 200
+        },
+        {
+          "ms": 2.48,
+          "status": 200
+        },
+        {
+          "ms": 2.56,
+          "status": 200
+        },
+        {
+          "ms": 2.18,
+          "status": 200
+        },
+        {
+          "ms": 2.61,
+          "status": 200
+        },
+        {
+          "ms": 10.26,
+          "status": 200
+        },
+        {
+          "ms": 2.67,
+          "status": 200
+        },
+        {
+          "ms": 2.93,
+          "status": 200
+        },
+        {
+          "ms": 2.6,
+          "status": 200
+        },
+        {
+          "ms": 2.1,
+          "status": 200
+        },
+        {
+          "ms": 2.54,
+          "status": 200
+        },
+        {
+          "ms": 3.35,
+          "status": 200
+        },
+        {
+          "ms": 2.75,
+          "status": 200
+        },
+        {
+          "ms": 2.77,
+          "status": 200
+        },
+        {
+          "ms": 2.5,
+          "status": 200
+        },
+        {
+          "ms": 2.57,
+          "status": 200
+        },
+        {
+          "ms": 2.35,
+          "status": 200
+        },
+        {
+          "ms": 2.26,
+          "status": 200
+        },
+        {
+          "ms": 2.86,
+          "status": 200
+        },
+        {
+          "ms": 3.36,
+          "status": 200
+        },
+        {
+          "ms": 3.11,
+          "status": 200
+        },
+        {
+          "ms": 2.49,
+          "status": 200
+        },
+        {
+          "ms": 2.87,
+          "status": 200
+        },
+        {
+          "ms": 4.94,
+          "status": 200
+        },
+        {
+          "ms": 2.51,
+          "status": 200
+        },
+        {
+          "ms": 5.31,
+          "status": 200
+        },
+        {
+          "ms": 2.8,
+          "status": 200
+        },
+        {
+          "ms": 2.36,
+          "status": 200
+        },
+        {
+          "ms": 2.47,
+          "status": 200
+        },
+        {
+          "ms": 3.1,
+          "status": 200
+        },
+        {
+          "ms": 2.64,
+          "status": 200
+        },
+        {
+          "ms": 2.81,
+          "status": 200
+        },
+        {
+          "ms": 3.33,
+          "status": 200
+        },
+        {
+          "ms": 2.74,
+          "status": 200
+        },
+        {
+          "ms": 2.78,
+          "status": 200
+        },
+        {
+          "ms": 2.59,
+          "status": 200
+        },
+        {
+          "ms": 2.9,
+          "status": 200
+        },
+        {
+          "ms": 2.38,
+          "status": 200
+        },
+        {
+          "ms": 2.52,
+          "status": 200
+        },
+        {
+          "ms": 2.92,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 37484072,
+        "totalSize": 53862400
+      },
+      "heap_after": {
+        "usedSize": 36671044,
+        "totalSize": 53600256
+      },
+      "renderer_state": {
+        "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+        "ready": true,
+        "session": "d23087bb4bcd442eab563595bda3b86d"
+      },
+      "role": "hotaru",
+      "mode": "ja_first",
+      "round": 2,
+      "prompt_index": 2,
+      "cancel": false
+    }
+  ],
+  "snapshots": [
+    {
+      "sample": 1,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87781376,
+          "private_bytes": 13766656,
+          "threads": 11
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127533056,
+          "private_bytes": 94744576,
+          "threads": 49
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 318234624,
+          "private_bytes": 239349760,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 110850048,
+          "private_bytes": 81170432,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241491968,
+          "private_bytes": 446754816,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1896767488,
+          "private_bytes": 4435542016,
+          "threads": 47
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143798272,
+          "private_bytes": 159371264,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:57:14.235903+00:00"
+    },
+    {
+      "sample": 2,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87785472,
+          "private_bytes": 13770752,
+          "threads": 11
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127533056,
+          "private_bytes": 94744576,
+          "threads": 49
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 317571072,
+          "private_bytes": 238612480,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 110891008,
+          "private_bytes": 81211392,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241709056,
+          "private_bytes": 458825728,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1896812544,
+          "private_bytes": 4435419136,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143802368,
+          "private_bytes": 159375360,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:57:32.222747+00:00"
+    },
+    {
+      "sample": 3,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87785472,
+          "private_bytes": 13770752,
+          "threads": 11
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127537152,
+          "private_bytes": 94760960,
+          "threads": 50
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 317452288,
+          "private_bytes": 238256128,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 111026176,
+          "private_bytes": 81334272,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241139712,
+          "private_bytes": 448360448,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1898688512,
+          "private_bytes": 4437299200,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52076544,
+          "private_bytes": 21352448,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143802368,
+          "private_bytes": 159375360,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:57:51.928786+00:00"
+    },
+    {
+      "sample": 4,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87785472,
+          "private_bytes": 13770752,
+          "threads": 11
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127602688,
+          "private_bytes": 94834688,
+          "threads": 50
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 321290240,
+          "private_bytes": 242688000,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 110993408,
+          "private_bytes": 81301504,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 245821440,
+          "private_bytes": 457535488,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1898762240,
+          "private_bytes": 4437299200,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52142080,
+          "private_bytes": 21487616,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143806464,
+          "private_bytes": 159379456,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:58:12.591991+00:00"
+    },
+    {
+      "sample": 5,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87752704,
+          "private_bytes": 13705216,
+          "threads": 9
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127516672,
+          "private_bytes": 94740480,
+          "threads": 50
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 320282624,
+          "private_bytes": 241631232,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 110948352,
+          "private_bytes": 81190912,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241463296,
+          "private_bytes": 448163840,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1899048960,
+          "private_bytes": 4437262336,
+          "threads": 43
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143810560,
+          "private_bytes": 159383552,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:58:39.625218+00:00"
+    },
+    {
+      "sample": 6,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87752704,
+          "private_bytes": 13705216,
+          "threads": 9
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127520768,
+          "private_bytes": 94748672,
+          "threads": 50
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 318124032,
+          "private_bytes": 239316992,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 110985216,
+          "private_bytes": 81268736,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241537024,
+          "private_bytes": 448516096,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1899425792,
+          "private_bytes": 4438097920,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143810560,
+          "private_bytes": 159383552,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:59:03.509674+00:00"
+    },
+    {
+      "sample": 7,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87736320,
+          "private_bytes": 13672448,
+          "threads": 8
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127492096,
+          "private_bytes": 94687232,
+          "threads": 48
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 319393792,
+          "private_bytes": 240640000,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 111206400,
+          "private_bytes": 81506304,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241651712,
+          "private_bytes": 448364544,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1900523520,
+          "private_bytes": 4438736896,
+          "threads": 46
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143814656,
+          "private_bytes": 159387648,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T02:59:31.429264+00:00"
+    },
+    {
+      "sample": 8,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87736320,
+          "private_bytes": 13672448,
+          "threads": 8
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127496192,
+          "private_bytes": 94633984,
+          "threads": 48
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 286543872,
+          "private_bytes": 241385472,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 111128576,
+          "private_bytes": 81432576,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 245940224,
+          "private_bytes": 451923968,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1902743552,
+          "private_bytes": 4441186304,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143818752,
+          "private_bytes": 159391744,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T03:00:03.253377+00:00"
+    },
+    {
+      "sample": 9,
+      "processes": [
+        {
+          "pid": 63956,
+          "name": "electron.exe",
+          "rss_bytes": 87736320,
+          "private_bytes": 13672448,
+          "threads": 8
+        },
+        {
+          "pid": 68196,
+          "name": "electron.exe",
+          "rss_bytes": 127520768,
+          "private_bytes": 94666752,
+          "threads": 49
+        },
+        {
+          "pid": 69832,
+          "name": "electron.exe",
+          "rss_bytes": 287895552,
+          "private_bytes": 242515968,
+          "threads": 33
+        },
+        {
+          "pid": 78292,
+          "name": "electron.exe",
+          "rss_bytes": 111239168,
+          "private_bytes": 81530880,
+          "threads": 30
+        },
+        {
+          "pid": 79360,
+          "name": "electron.exe",
+          "rss_bytes": 241913856,
+          "private_bytes": 446722048,
+          "threads": 88
+        },
+        {
+          "pid": 81208,
+          "name": "python.exe",
+          "rss_bytes": 1904685056,
+          "private_bytes": 4442972160,
+          "threads": 44
+        },
+        {
+          "pid": 84060,
+          "name": "electron.exe",
+          "rss_bytes": 52080640,
+          "private_bytes": 21356544,
+          "threads": 17
+        },
+        {
+          "pid": 85636,
+          "name": "electron.exe",
+          "rss_bytes": 113561600,
+          "private_bytes": 67891200,
+          "threads": 31
+        },
+        {
+          "pid": 87692,
+          "name": "electron.exe",
+          "rss_bytes": 143818752,
+          "private_bytes": 159391744,
+          "threads": 30
+        },
+        {
+          "pid": 88732,
+          "name": "python.exe",
+          "rss_bytes": 4870144,
+          "private_bytes": 860160,
+          "threads": 1
+        }
+      ],
+      "observation": {
+        "pending": 0,
+        "peak": 0,
+        "failures": 0,
+        "closed": false
+      },
+      "utc": "2026-11-24T03:00:32.948583+00:00"
+    }
+  ],
+  "switches": [
+    {
+      "role": "hotaru",
+      "switch_ms": null,
+      "active_id": "hotaru"
+    },
+    {
+      "role": "hotaru",
+      "switch_ms": null,
+      "active_id": "hotaru"
+    },
+    {
+      "role": "hotaru",
+      "switch_ms": null,
+      "active_id": "hotaru"
+    },
+    {
+      "role": "hotaru",
+      "switch_ms": null,
+      "active_id": "hotaru"
+    }
+  ],
+  "roles": {
+    "hotaru": {
+      "provider": "fish",
+      "model": "s2.1-pro",
+      "reference_hash": "2d89c89be4a72276b2bc5e93808763d0dca5e1e0d988560e71bc1551fb764731",
+      "asset": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+      "speak_language": "ja"
+    },
+    "hiyori": {
+      "provider": "siliconflow",
+      "model": "s2.1-pro",
+      "reference_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "asset": "/live2d/hiyori/Hiyori.model3.json",
+      "speak_language": "zh"
+    }
+  },
+  "scope": "real configured LLM/Fish/renderer graph; matched experiment context, no memory/tools, baseline translation cache disabled; ordinary mode includes existing AgentLoop/memory/cache and is not a matched control",
+  "elapsed_seconds": 225.65,
+  "finished_utc": "2026-11-24T03:00:32.961341+00:00"
+}

@@ -1,0 +1,1 @@
+{"id": 1, "result": {"result": {"type": "object", "value": {"scope": "fresh AudioContext one second silence, no LLM/TTS", "ended_ms": 1008.5, "elapsed_ms": 1017.1999999880791, "clock_advance_ms": 1000, "base_latency": 0.01, "output_latency": 0.042, "state": "running"}}}}

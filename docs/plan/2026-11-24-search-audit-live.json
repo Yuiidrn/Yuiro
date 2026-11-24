@@ -1,0 +1,116 @@
+{
+  "captured_at_utc": "2026-11-24T04:07:51.677322+00:00",
+  "scope": "existing authenticated /api/search/test; three public queries; no config/role/chat/history/TTS changes",
+  "config": {
+    "provider": "deepseek",
+    "enabled": true,
+    "top_k": 3,
+    "timeout_s": 8.0,
+    "refine_results": false
+  },
+  "samples": [
+    {
+      "query": "DeepSeek Search API 官方文档",
+      "http_status": 200,
+      "wall_ms": 452.1,
+      "status": "ok",
+      "note": null,
+      "latency_ms": 448.7,
+      "count": 3,
+      "results": [
+        {
+          "title": "Search & Fetch | DeepSeek API Docs - The full suite of DeepSeek application APIs is now available: web search, file inpu",
+          "url": "https://api-docs.deepseek.com/guides/search/?trk=article-ssr-frontend-pulse_little-text-block#1",
+          "published_at": "",
+          "snippet": "The full suite of DeepSeek application APIs is now available: web search, file input, URL reading, model safety, ASR, TTS and more.\n...\n# Search & Fetch\n\nThe Search API and the Fetch API give agents and RAG applications access to live web content:\n\n- Search API finds web pages for a query and return",
+          "site_name": "DeepSeek"
+        },
+        {
+          "title": "Search & Fetch | DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/guides/search/",
+          "published_at": "",
+          "snippet": "The full suite of DeepSeek application APIs is now available: web search, file input, URL reading, model safety, ASR, TTS and more.\n...\n# Search & Fetch\n\nThe Search API and the Fetch API give agents and RAG applications access to live web content:\n\n- Search API finds web pages for a query and return",
+          "site_name": "DeepSeek"
+        },
+        {
+          "title": "Search | DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/api/search/",
+          "published_at": "",
+          "snippet": "The full suite of DeepSeek application APIs is now available: web search, file input, URL reading, model safety, ASR, TTS and more.\n...\n# Search\nPOST \n\n## https://api.deepseek.com/v1/tools/search\n\nSearch the web for a query and return a ranked list of structured results. See the Search & Fetch guide",
+          "site_name": "DeepSeek"
+        }
+      ]
+    },
+    {
+      "query": "Python 最新稳定版本 site:python.org",
+      "http_status": 200,
+      "wall_ms": 529.6,
+      "status": "ok",
+      "note": null,
+      "latency_ms": 526.6,
+      "count": 3,
+      "results": [
+        {
+          "title": "What’s new in Python 3.14",
+          "url": "https://docs.python.org/3.14/whatsnew/3.14.html",
+          "published_at": "2026-11-22T16:00:00+00:00",
+          "snippet": "### PEP 768: Safe external debugger interface\n\nPython 3.14 introduces a zero-overhead debugging interface that allows debuggers and profilers to safely attach to running Python processes without stopping or restarting them. This is a significant enhancement to Python’s debugging capabilities, meanin",
+          "site_name": "Python documentation"
+        },
+        {
+          "title": "Python Releases for Windows - Notice: This page displays a fallback because interactive scripts did not run",
+          "url": "https://www.python.org/getit/windows/#1",
+          "published_at": "",
+          "snippet": "# Python Releases for Windows\n\n## Stable Releases\n\n- Python 3.14.10 - Oct. 25, 2026",
+          "site_name": "Python.org"
+        },
+        {
+          "title": "Download Python",
+          "url": "https://www.python.org/downloads/?fw-lang=ruby#1",
+          "published_at": "",
+          "snippet": "## Active Python releases\n\nPython version Maintenance status First released End of support Release schedule\n\n- 3.16 pre-release Download 2027-10-06 (planned) 2032-10 PEP 826\n- 3.15 bugfix Download 2026-10-09 2031-10 PEP 790\n- 3.14 bugfix Download 2025-10-07 2030-10 PEP 745\n- 3.13 security Download 2",
+          "site_name": "Python.org"
+        }
+      ]
+    },
+    {
+      "query": "Python release after:2026-11-01 before:2026-11-25 site:python.org",
+      "http_status": 200,
+      "wall_ms": 356.8,
+      "status": "ok",
+      "note": null,
+      "latency_ms": 354.6,
+      "count": 3,
+      "results": [
+        {
+          "title": "Python Release Python 3.16.0a2 - Notice: This page displays a fallback because interactive scripts did not run",
+          "url": "https://www.python.org/downloads/release/python-3160a2/#1",
+          "published_at": "2026-11-09T16:00:00+00:00",
+          "snippet": "# Python 3.16.0a2\n\nRelease date: Nov. 10, 2026\n\nThis is an early developer preview of Python 3.16\n\n## What’s new in Python 3.16?\n\nPython 3.16.0a2 is ready to try! This is the second of seven planned alpha releases, with new features, bug fixes, and performance improvements to test.\n\nPython 3.16 is s",
+          "site_name": "Python.org"
+        },
+        {
+          "title": "What’s New in Python",
+          "url": "https://docs.python.org/3.14/whatsnew/index.html",
+          "published_at": "2026-11-23T16:00:00+00:00",
+          "snippet": "# What’s New in Python¶\n\nThe “What’s New in Python” series of essays takes tours through the most important changes between major Python versions. They are a “must read” for anyone wishing to stay up-to-date after a new release.\n\nThe “Changelog” is an HTML version of the file built from the contents",
+          "site_name": "Python documentation"
+        },
+        {
+          "title": "PEP 826 – Python 3.16 Release Schedule | peps.python.org",
+          "url": "https://peps.python.org/pep-0826/",
+          "published_at": "2026-11-09T16:00:00+00:00",
+          "snippet": "# Python Enhancement Proposals\n\n# PEP 826 – Python 3.16 Release Schedule\n\n- Author:\n- Savannah Ostrowski\n- Status:\n- Active\n- Type:\n- Informational\n- Topic:\n- Release\n- Created:\n- 23-Feb-2026\n- Python-Version:\n- 3.16\n\n## Abstract\n\nThis document describes the development and release schedule for Pyth",
+          "site_name": "Python Enhancement Proposals"
+        }
+      ]
+    }
+  ],
+  "availability": {
+    "status": "ok",
+    "enabled": true,
+    "available": true,
+    "hint": "",
+    "provider": "deepseek"
+  }
+}

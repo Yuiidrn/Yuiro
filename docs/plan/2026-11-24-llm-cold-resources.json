@@ -1,0 +1,35 @@
+{
+  "scope": "offline real installed SDK; fresh process each sample; no requests, initialization moved to existing provider construction, not removed",
+  "samples": [
+    {
+      "mode": "before",
+      "construction_ms": 107.677,
+      "first_turn_resource_ms": 1116.677
+    },
+    {
+      "mode": "after",
+      "construction_ms": 1166.017,
+      "first_turn_resource_ms": 0.001
+    },
+    {
+      "mode": "after",
+      "construction_ms": 1160.112,
+      "first_turn_resource_ms": 0.001
+    },
+    {
+      "mode": "before",
+      "construction_ms": 108.987,
+      "first_turn_resource_ms": 1090.317
+    },
+    {
+      "mode": "before",
+      "construction_ms": 109.916,
+      "first_turn_resource_ms": 1082.817
+    },
+    {
+      "mode": "after",
+      "construction_ms": 1193.644,
+      "first_turn_resource_ms": 0.001
+    }
+  ]
+}

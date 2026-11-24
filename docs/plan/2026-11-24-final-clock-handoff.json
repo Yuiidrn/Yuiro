@@ -1,0 +1,419 @@
+{
+  "captured_at_utc": "2026-11-24T03:37:19.156063+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "请只回复“你好呀。”，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "87dde4c547c742279c47768ef877a23c"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 3,
+      "ended": 3,
+      "received_segments": 3,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1089.0999999642372
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1102.2999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2510.7999999523163
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2590.899999976158
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 2651.399999976158
+        },
+        {
+          "type": "tts:reply_end",
+          "ms": 2758.5
+        }
+      ],
+      "sent_all": true,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 0,
+      "peak_decode_ahead_seconds": 1.0039455782312956,
+      "renderer_max_tick_gap_ms": 59.30000001192093,
+      "max_graph_stall_ms": 0,
+      "observed_character": "hotaru",
+      "trace_id": "7f5b7adf",
+      "reply_ms": 1102.2999999523163,
+      "reply_chars": 4,
+      "decode_start_ms": 2510.599999964237,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 1,
+        "memory_retrieve_start": 53.2,
+        "memory_retrieve": 168.1,
+        "llm_request_start": 171,
+        "llm_provider_first_token": 1014.1,
+        "llm_first_token": 1014.1,
+        "agent_end": 1083.1,
+        "first_sentence": 1083.5,
+        "tts_start": 1084.2,
+        "reply_sent": 1084.8,
+        "translation_start": 1085.5,
+        "lang_render": 1996.8,
+        "tts_first_audio": 2485.7,
+        "audio_sent": 2489.6
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.063,
+        "rms_cpu_ms": 0.618,
+        "connect_task_enter_ms": 1.108,
+        "key_lookup_ms": 0.397,
+        "key_loaded_ms": 1.513,
+        "connection_start_ms": 1.672,
+        "connected_ms": 368.943,
+        "first_text_sent_ms": 1996.78,
+        "first_flush_sent_ms": 1996.858,
+        "input_finished_ms": 1996.936,
+        "raw_first_audio_ms": 2483.07,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 2483.146
+      },
+      "wire_delivery_ms": 21.89697265625,
+      "first_receive_ms": 2510.7999999523163,
+      "decoded_buffers": [
+        {
+          "ms": 2521.699999988079,
+          "duration_s": 0.4,
+          "sample_rate": 44100,
+          "frames": 17640
+        },
+        {
+          "ms": 2601.2999999523163,
+          "duration_s": 0.48,
+          "sample_rate": 44100,
+          "frames": 21168
+        },
+        {
+          "ms": 2662.5,
+          "duration_s": 0.2345578231292517,
+          "sample_rate": 44100,
+          "frames": 10344
+        }
+      ],
+      "decode_end_ms": 2521.7999999523163,
+      "source_starts": [
+        {
+          "ms": 2522,
+          "context_s": 96.6704761904762,
+          "scheduled_s": 96.69047619047619,
+          "duration_s": 0.4,
+          "rate": 1
+        },
+        {
+          "ms": 2601.399999976158,
+          "context_s": 96.71981859410431,
+          "scheduled_s": 97.0904761904762,
+          "duration_s": 0.48,
+          "rate": 1
+        },
+        {
+          "ms": 2662.699999988079,
+          "context_s": 96.76916099773243,
+          "scheduled_s": 97.5704761904762,
+          "duration_s": 0.2345578231292517,
+          "rate": 1
+        }
+      ],
+      "first_start_ms": 2522.199999988079,
+      "first_graph_start_ms": 2542.199999988075,
+      "audio_context_drift_ms": 33.227210872428714,
+      "audio_context": {
+        "state": "running",
+        "base_latency": 0.01,
+        "output_latency": 0.041,
+        "sample_rate": 44100
+      },
+      "first_graph_progress_ms": 2570.399999976158,
+      "source_ends": [
+        {
+          "ms": 2989,
+          "context_s": 97.10004535147392
+        },
+        {
+          "ms": 3463.5,
+          "context_s": 97.57895691609977
+        },
+        {
+          "ms": 3697.5,
+          "context_s": 97.81115646258503
+        }
+      ],
+      "last_ended_ms": 3697.5,
+      "completed": true,
+      "total_ms": 3697.599999964237,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "engine_health_pings": [
+        {
+          "ms": 4.63,
+          "status": 200
+        },
+        {
+          "ms": 2.78,
+          "status": 200
+        },
+        {
+          "ms": 4.85,
+          "status": 200
+        },
+        {
+          "ms": 44.17,
+          "status": 200
+        },
+        {
+          "ms": 3.51,
+          "status": 200
+        },
+        {
+          "ms": 4.46,
+          "status": 200
+        },
+        {
+          "ms": 2.36,
+          "status": 200
+        },
+        {
+          "ms": 2.99,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 34556540,
+        "totalSize": 54910976
+      },
+      "heap_after": {
+        "usedSize": 40345244,
+        "totalSize": 55173120
+      }
+    },
+    {
+      "sample": 2,
+      "starts": 2,
+      "ended": 2,
+      "received_segments": 2,
+      "pending": 0,
+      "events": [
+        {
+          "type": "tts:reply_start",
+          "ms": 1103.800000011921
+        },
+        {
+          "type": "chat:assistant",
+          "ms": 1110.1000000238419
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1534.3999999761581
+        },
+        {
+          "type": "tts:reply_audio",
+          "ms": 1579
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1702.800000011921
+        }
+      ],
+      "sent_all": false,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 0,
+      "peak_decode_ahead_seconds": 0.8065759637188279,
+      "renderer_max_tick_gap_ms": 52.39999997615814,
+      "max_graph_stall_ms": 0,
+      "observed_character": "hotaru",
+      "trace_id": "a1136741",
+      "reply_ms": 1110.1000000238419,
+      "reply_chars": 4,
+      "decode_start_ms": 1534.199999988079,
+      "stages_ms": {
+        "turn_start": 0,
+        "agent_start": 3.1,
+        "memory_retrieve_start": 61.9,
+        "memory_retrieve": 118,
+        "llm_request_start": 120.1,
+        "llm_provider_first_token": 1033.2,
+        "llm_first_token": 1033.2,
+        "agent_end": 1096,
+        "first_sentence": 1096.4,
+        "tts_start": 1098.4,
+        "reply_sent": 1099.7,
+        "translation_start": 1100.5,
+        "lang_render": 1100.5,
+        "tts_first_audio": 1520.1,
+        "audio_sent": 1522.6
+      },
+      "tts_timing": {
+        "first_chunk_ms": 400,
+        "pcm_transcode_ms": 0,
+        "split_cpu_ms": 0.054,
+        "rms_cpu_ms": 0.368,
+        "connect_task_enter_ms": 3.485,
+        "key_lookup_ms": 0.51,
+        "key_loaded_ms": 4.019,
+        "connection_start_ms": 4.311,
+        "connected_ms": 376.714,
+        "first_text_sent_ms": 1098.382,
+        "first_flush_sent_ms": 1098.415,
+        "input_finished_ms": 1098.452,
+        "raw_first_audio_ms": 1517.194,
+        "raw_first_packet_bytes": 40960,
+        "first_playable_ms": 1517.262
+      },
+      "wire_delivery_ms": 11.760986328125,
+      "first_receive_ms": 1534.3999999761581,
+      "decoded_buffers": [
+        {
+          "ms": 1540.3999999761581,
+          "duration_s": 0.4,
+          "sample_rate": 44100,
+          "frames": 17640
+        },
+        {
+          "ms": 1585.699999988079,
+          "duration_s": 0.4359183673469388,
+          "sample_rate": 44100,
+          "frames": 19224
+        }
+      ],
+      "decode_end_ms": 1540.3999999761581,
+      "source_starts": [
+        {
+          "ms": 1540.5,
+          "context_s": 99.3901133786848,
+          "scheduled_s": 99.4101133786848,
+          "duration_s": 0.4,
+          "rate": 1
+        },
+        {
+          "ms": 1585.800000011921,
+          "context_s": 99.43074829931973,
+          "scheduled_s": 99.8101133786848,
+          "duration_s": 0.4359183673469388,
+          "rate": 1
+        }
+      ],
+      "first_start_ms": 1540.5,
+      "first_graph_start_ms": 1560.499999999996,
+      "audio_context_drift_ms": -2.5394558180755666,
+      "audio_context": {
+        "state": "running",
+        "base_latency": 0.01,
+        "output_latency": 0.042,
+        "sample_rate": 44100
+      },
+      "first_graph_progress_ms": 1591.1000000238419,
+      "stop_ms": 1591.1000000238419,
+      "starts_at_stop": 2,
+      "source_ends": [
+        {
+          "ms": 1602.300000011921,
+          "context_s": 99.45106575963719
+        },
+        {
+          "ms": 1602.300000011921,
+          "context_s": 99.45106575963719
+        }
+      ],
+      "last_ended_ms": 1602.300000011921,
+      "cancel_ack_ms": 1702.800000011921,
+      "cancel_server_settle_ms": 106.9,
+      "total_ms": 3120.300000011921,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 911296,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "late_starts": 0,
+      "engine_health_pings": [
+        {
+          "ms": 4.01,
+          "status": 200
+        },
+        {
+          "ms": 2.34,
+          "status": 200
+        },
+        {
+          "ms": 3.47,
+          "status": 200
+        },
+        {
+          "ms": 2.66,
+          "status": 200
+        },
+        {
+          "ms": 7.1,
+          "status": 200
+        },
+        {
+          "ms": 3.86,
+          "status": 200
+        },
+        {
+          "ms": 5.46,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 41033956,
+        "totalSize": 55173120
+      },
+      "heap_after": {
+        "usedSize": 37178140,
+        "totalSize": 55173120
+      }
+    }
+  ]
+}

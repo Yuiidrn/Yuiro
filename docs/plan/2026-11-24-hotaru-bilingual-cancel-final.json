@@ -1,0 +1,188 @@
+{
+  "captured_at_utc": "2026-11-24T03:20:40.016743+00:00",
+  "scope": "Real text UI to configured Engine/LLM/TTS/renderer AudioContext; no VAD/ASR or acoustic measurement",
+  "prompt": "今晚想安静看雨，陪我聊聊。请用四句简短回应，不要调用工具。",
+  "state": {
+    "model": "/live2d/Hotaru Shiomi/016_casual_spring_01/016_casual_spring_01.model3.json",
+    "ready": true,
+    "session": "8cb9778ad1324a97a539649932f4a421"
+  },
+  "samples": [
+    {
+      "sample": 1,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1093
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1103.800000011921
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1280.2000000476837
+        }
+      ],
+      "sent_all": false,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 0,
+      "peak_decode_ahead_seconds": 0,
+      "renderer_max_tick_gap_ms": 54.09999996423721,
+      "observed_character": "hotaru",
+      "stop_ms": 1139.300000011921,
+      "starts_at_stop": 0,
+      "cancel_ack_ms": 1280.2000000476837,
+      "cancel_server_settle_ms": 129.6,
+      "total_ms": 2654.100000023842,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "late_starts": 0,
+      "engine_health_pings": [
+        {
+          "ms": 4.41,
+          "status": 200
+        },
+        {
+          "ms": 3.36,
+          "status": 200
+        },
+        {
+          "ms": 3.79,
+          "status": 200
+        },
+        {
+          "ms": 4.26,
+          "status": 200
+        },
+        {
+          "ms": 4.82,
+          "status": 200
+        },
+        {
+          "ms": 4.9,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 40771416,
+        "totalSize": 55959552
+      },
+      "heap_after": {
+        "usedSize": 39934948,
+        "totalSize": 54386688
+      }
+    },
+    {
+      "sample": 2,
+      "starts": 0,
+      "ended": 0,
+      "received_segments": 0,
+      "pending": 0,
+      "events": [
+        {
+          "type": "chat:sentence",
+          "ms": 1139.199999988079
+        },
+        {
+          "type": "tts:reply_start",
+          "ms": 1147.8999999761581
+        },
+        {
+          "type": "interrupt:complete",
+          "ms": 1308.699999988079
+        }
+      ],
+      "sent_all": false,
+      "budget_before": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "peak_queued_bytes": 0,
+      "peak_decode_ahead_seconds": 0,
+      "renderer_max_tick_gap_ms": 54.40000003576279,
+      "observed_character": "hotaru",
+      "stop_ms": 1171.199999988079,
+      "starts_at_stop": 0,
+      "cancel_ack_ms": 1308.699999988079,
+      "cancel_server_settle_ms": 131.5,
+      "total_ms": 2684.7999999523163,
+      "budget_after": {
+        "queued_bytes": 0,
+        "queue_peak_bytes": 6530952,
+        "max_queued_bytes": 16777216,
+        "scheduled": 0,
+        "decode_ahead_seconds": 0,
+        "decode_waiters": 0,
+        "pending": 0,
+        "underruns": 0,
+        "underrun_gap_ms": 0
+      },
+      "late_starts": 0,
+      "engine_health_pings": [
+        {
+          "ms": 4.57,
+          "status": 200
+        },
+        {
+          "ms": 4.84,
+          "status": 200
+        },
+        {
+          "ms": 4.12,
+          "status": 200
+        },
+        {
+          "ms": 4.8,
+          "status": 200
+        },
+        {
+          "ms": 3.93,
+          "status": 200
+        },
+        {
+          "ms": 4.19,
+          "status": 200
+        }
+      ],
+      "heap_before": {
+        "usedSize": 33436244,
+        "totalSize": 54386688
+      },
+      "heap_after": {
+        "usedSize": 36282904,
+        "totalSize": 53600256
+      }
+    }
+  ]
+}
