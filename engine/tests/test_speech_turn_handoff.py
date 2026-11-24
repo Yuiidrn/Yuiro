@@ -18,7 +18,7 @@ def production(pipe, tasks, **state):
     names = {'_cancel_reply_speech', '_prepare_text_turn', '_cancel_turn', '_start_preconnected_reply'}
     nodes = [n for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))
              and n.name in names]
-    scope = {'asyncio':asyncio, '_reply_speak_tasks':tasks,
+    scope = {'asyncio':asyncio, '_reply_speak_tasks':tasks, '_reply_agent_tasks': {},
              'app':SimpleNamespace(state=SimpleNamespace(voice_pipeline=pipe, **state)),
              'AgentEvent':lambda **kwargs:kwargs, 'vlog':lambda *args:None}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), 'production handoff', 'exec'), scope)  # noqa: S102
@@ -135,7 +135,9 @@ async def test_handoff_parent_cancel_propagates_and_cleans_notification():
 
 
 @pytest.mark.asyncio
-async def test_real_chat_worker_waits_for_speech_handoff_before_agent():
+@pytest.mark.parametrize('stream_reply', [False, True])
+@pytest.mark.parametrize('invalidate_before_start', [False, True])
+async def test_real_chat_worker_waits_for_speech_handoff_before_agent(stream_reply, invalidate_before_start):
     tree = ast.parse(Path('yuiro/main.py').read_text(encoding='utf-8'))
     worker = next(n for n in ast.walk(tree) if isinstance(n, ast.AsyncFunctionDef)
                   and n.name == 'chat_worker')
@@ -149,13 +151,16 @@ async def test_real_chat_worker_waits_for_speech_handoff_before_agent():
             return asyncio.create_task(notify())
 
     async def agent(*args, **kwargs):
+        assert callable(kwargs['on_sentence']) is stream_reply
         agent_started.set()
         raise asyncio.CancelledError()  # 停在真实Agent调用边界，不请求供应商。
 
     queue = asyncio.Queue()
-    await queue.put({'type':'chat:user', 'text':'你好'})
+    await queue.put({'type':'chat:user', 'text':'你好', 'stream_reply':stream_reply})
     scope = production(Pipe(), {}, agent_loop=SimpleNamespace(_llm=None))
-    scope.update(chat_queue=queue, session_id='s', session=object(), ws=object(), time=time,
+    gate = asyncio.Event()
+    gate.set()
+    scope.update(chat_queue=queue, control_gate=gate, control_epoch=0, session_id='s', session=object(), ws=object(), time=time,
                  _agent_reply=agent, log_ring=SimpleNamespace(emit=lambda *args:None),
                  TraceContext=lambda **kwargs:SimpleNamespace(mark=lambda *args:None))
     exec(compile(ast.Module(body=[worker], type_ignores=[]), 'production chat_worker', 'exec'), scope)  # noqa: S102
@@ -163,7 +168,19 @@ async def test_real_chat_worker_waits_for_speech_handoff_before_agent():
     try:
         await asyncio.wait_for(entered.wait(), 1)
         assert not agent_started.is_set()
+        if invalidate_before_start:
+            scope['control_epoch'] = 1
         release.set()
+        if invalidate_before_start:
+            for _ in range(20):
+                await asyncio.sleep(0)
+            assert not agent_started.is_set(), '交接期间取消后，已取出的旧请求也不能启动'
+            await queue.put({'type':'chat:user','text':'新请求','stream_reply':stream_reply,
+                             '_queue_epoch':1})
+        await asyncio.wait_for(agent_started.wait(), 1)
+        await asyncio.sleep(0)
+        assert not task.done(), '单轮取消不能杀掉处理后续聊天的worker'
+        task.cancel()
         with pytest.raises(asyncio.CancelledError):
             await asyncio.wait_for(task, 1)
         assert agent_started.is_set()

@@ -13,6 +13,7 @@
 """
 from __future__ import annotations
 
+import asyncio
 from typing import Protocol, runtime_checkable
 
 
@@ -83,8 +84,28 @@ class RuntimeRegistry:
         return await self._broadcast("on_session_close", session_id)
 
     async def cancel_session(self, session_id: str, reason: str = "") -> dict[str, str]:
-        """统一取消：广播 ``cancel``（错误隔离）。"""
-        return await self._broadcast("cancel", session_id, reason)
+        """并发通知取消并等待收敛，慢清理不阻挡其它 Runtime 收到信号。"""
+        async def notify(name: str, rt: object) -> tuple[str, str]:
+            hook = getattr(rt, "cancel", None)
+            if hook is None:
+                return name, "skipped"
+            try:
+                await hook(session_id, reason)
+                return name, "ok"
+            except Exception as exc:  # noqa: BLE001 — 保持逐 Runtime 错误隔离
+                return name, f"error: {exc}"
+
+        # 固定本次接收者；热更新注册不改变已经开始的取消广播。
+        tasks = [asyncio.create_task(notify(name, rt))
+                 for name, rt in list(self._runtimes.items())]
+        try:
+            return dict(await asyncio.gather(*tasks))
+        finally:
+            # 父级取消/子钩子 CancelledError 都必须传播，且不遗留其它通知任务。
+            for task in tasks:
+                if not task.done():
+                    task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
 
     # ---- 状态视图 -----------------------------------------------------------
     def snapshot(self) -> dict:

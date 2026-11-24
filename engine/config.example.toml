@@ -34,6 +34,8 @@ local_model_path = ""         # SenseVoice 本地权重目录；留空走 ModelS
 provider = "cosyvoice"         # edge-tts（云端兜底）| cosyvoice（本地服务，见 docs/tts-local-upgrade.md）
 backend = "cosyvoice2"         # cosyvoice2（默认，~2GB 显存，与 SenseVoice 共存 3060）| cosyvoice3（预留，显存不足时明确报错指引）
 segment_streaming = true
+# Fish 首块积累时长（毫秒）；后续仍480。设480可回退原策略。
+fish_first_chunk_ms = 400
 # 本地 TTS 服务（provider=cosyvoice 时生效）
 tts_url = "http://127.0.0.1:5005"
 reference_wav = "../assets/voices/neuro_prompt.wav"   # 相对 engine/ 工作目录（跨平台）；来自 my-neuro 的肥牛.wav，复制为 neuro_prompt.wav

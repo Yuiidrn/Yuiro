@@ -718,7 +718,11 @@ class TTSTaskManager:
       并唤醒等待者（等待者由 ``_speak`` 的 task cancel 退出；manager 可继续复用）。
     """
 
-    def __init__(self, provider: TTSProvider, *, max_concurrency: int = 2) -> None:
+    def __init__(self, provider: TTSProvider, *, max_concurrency: int = 2,
+                 buffer_items: int = 4, buffer_bytes: int = 2 * 1024 * 1024,
+                 sequence_window: int = 4) -> None:
+        if min(max_concurrency, buffer_items, buffer_bytes, sequence_window) < 1:
+            raise ValueError('TTS budgets must be positive')
         self._provider = provider
         self._buffer: dict[int, deque[AudioSegment]] = {}
         self._completed: set[int] = set()
@@ -726,10 +730,33 @@ class TTSTaskManager:
         self._epoch = 0
         self._ready = asyncio.Event()
         self._lock = asyncio.Lock()
+        self._capacity = asyncio.Condition(self._lock)
+        self._buffer_items = buffer_items
+        self._buffer_bytes = buffer_bytes
+        # 预留队头的合成名额：翻译乱序返回时，后句不能占满全部并发槽。
+        self._sequence_window = min(sequence_window, max_concurrency)
+        self.buffer_peak_bytes = 0
         self._sem = asyncio.Semaphore(max_concurrency)
         # A1：上游是否已声明"不会再有新句子"。流式路径下句子总数事先未知，
         # 缺这个信号，wait_next 会永远等一个不会到来的 seq。
         self._done = False
+
+    async def _put(self, seq, segment, epoch):
+        size = len(segment.wav)
+        if size > self._buffer_bytes:
+            raise ValueError('TTS segment exceeds byte budget')
+        async with self._capacity:
+            await self._capacity.wait_for(lambda: epoch != self._epoch or (
+                len(self._buffer.get(seq, ())) < self._buffer_items and
+                sum(len(s.wav) for s in self._buffer.get(seq, ())) + size
+                <= self._buffer_bytes))
+            if epoch != self._epoch:
+                return False
+            self._buffer.setdefault(seq, deque()).append(segment)
+            self.buffer_peak_bytes = max(self.buffer_peak_bytes,
+                sum(len(s.wav) for q in self._buffer.values() for s in q))
+            self._ready.set()
+            return True
 
     async def enqueue(self, seq: int, text: str) -> None:
         from yuiro.audio.speech_text import speech_body
@@ -738,6 +765,12 @@ class TTSTaskManager:
         if not any(ch.isalnum() for ch in text):
             text = ""  # 引号/Markdown残片保留空序号，不占用远端合成名额。
         epoch = self._epoch
+        # 窗口先于合成信号量：后句不能占满名额，令首句永远无法进入。
+        async with self._capacity:
+            await self._capacity.wait_for(lambda: epoch != self._epoch or
+                seq < self._next_seq + self._sequence_window)
+            if epoch != self._epoch:
+                return
         async with self._sem:
             if epoch != self._epoch:
                 return
@@ -747,22 +780,15 @@ class TTSTaskManager:
                 if text and callable(stream):
                     async with contextlib.aclosing(stream(text)) as fragments:
                         async for segment in fragments:
-                            async with self._lock:
-                                if epoch != self._epoch:
-                                    return
-                                self._buffer.setdefault(seq, deque()).append(segment)
-                                delivered = True
-                                self._ready.set()
+                            if not await self._put(seq, segment, epoch):
+                                return
+                            delivered = True
                 else:
                     segment = (await self._provider.synthesize_segment(text) if text
                                else AudioSegment(wav=b"", sample_rate=0, volumes=[]))
-                    async with self._lock:
-                        if epoch != self._epoch:
-                            return
-                        self._buffer.setdefault(seq, deque()).append(segment)
-                        delivered = True
+                    delivered = await self._put(seq, segment, epoch)
             except Exception as exc:  # noqa: BLE001 — 单句失败不阻塞整条播放
-                vlog("voice", f"[TTS] 第 {seq} 句合成失败，跳过: {exc}")
+                vlog("voice", f"[TTS] 第 {seq} 句合成失败，跳过: {type(exc).__name__}")
         async with self._lock:
             if epoch != self._epoch:
                 return
@@ -783,11 +809,13 @@ class TTSTaskManager:
                         self._buffer.pop(self._next_seq, None)
                         self._completed.remove(self._next_seq)
                         self._next_seq += 1
+                    self._capacity.notify_all()
                     return segment
                 if self._next_seq in self._completed:
                     self._buffer.pop(self._next_seq, None)
                     self._completed.remove(self._next_seq)
                     self._next_seq += 1
+                    self._capacity.notify_all()
                     continue
                 if self._done:
                     return None
@@ -803,6 +831,7 @@ class TTSTaskManager:
         async with self._lock:
             self._done = True
             self._ready.set()
+            self._capacity.notify_all()
 
     async def interrupt(self) -> None:
         async with self._lock:
@@ -812,6 +841,7 @@ class TTSTaskManager:
             self._next_seq = 1
             self._done = False  # 复位：manager 可继续复用（见类说明）
             self._ready.set()
+            self._capacity.notify_all()
 
 
 class VoicePipeline:
@@ -1389,7 +1419,8 @@ class VoicePipeline:
             # ── A1：流式路径 —— 句子一到就送去合成，首句不必等整段回复 ────────
             # 队列既是句子通道，也是**背压点**：TTS 消费不过来时 LLM 侧会 await。
             if self._sentence_llm is not None:
-                queue: asyncio.Queue = asyncio.Queue()
+                from yuiro.audio.output import SentenceChannel
+                queue = SentenceChannel()
 
                 async def on_sentence(sentence: str) -> None:
                     check_owner(self, session_id)
@@ -1403,13 +1434,10 @@ class VoicePipeline:
                     try:
                         return await self._sentence_llm(text, session_id, on_sentence)
                     finally:
-                        await queue.put(None)  # 结束信号（正常/异常/取消都保证发出）
+                        await queue.finish()  # 满载时也可结束，不阻塞在哨兵入队。
 
                 async def _sentences():
-                    while True:
-                        item = await queue.get()
-                        if item is None:
-                            return
+                    async for item in queue:
                         yield item
 
                 turn = asyncio.create_task(_turn())
@@ -1601,7 +1629,6 @@ class VoicePipeline:
 
         async def ws_texts():
             nonlocal n
-            from yuiro.audio.speech_text import speech_body
 
             async def source():
                 if sentences is not None:
@@ -1611,17 +1638,12 @@ class VoicePipeline:
                     async for sentence in sentence_iter:
                         yield sentence
 
-            marked = False
-            async for sentence in source():
-                check_owner(self, session_id)
-                clean = speech_body(sentence)
-                if not any(ch.isalnum() for ch in clean):
-                    continue
-                value = clean if rendered else await self._render_text(clean, 'speak')
-                check_owner(self, session_id)
-                if trace is not None and not marked:
-                    marked = True
-                    trace.mark('lang_render')
+            from yuiro.audio.output import translated_sentences
+            async def render(clean):
+                return clean if rendered else await self._render_text(clean, 'speak')
+            async for value in translated_sentences(
+                source(), render, lambda: check_owner(self, session_id), trace
+            ):
                 if sentences is None:
                     n += 1
                 yield value
@@ -1634,7 +1656,10 @@ class VoicePipeline:
                 import contextlib
 
                 try:
-                    async with contextlib.aclosing(ws_session.stream(ws_texts())) as stream:
+                    from yuiro.audio.output import sentence_audio
+                    async with contextlib.aclosing(sentence_audio(
+                        pipeline._tts, ws_texts(), prepared=ws_session
+                    )) as stream:
                         async for part in stream:
                             yield part
                 except asyncio.CancelledError:
@@ -1651,13 +1676,16 @@ class VoicePipeline:
         async def _feed() -> None:
             """把句子喂进合成队列；**等所有合成完成才 finish**。
 
-            ⚠ ``enqueue`` 是 fire-and-forget 的 ``create_task``，而 ``finish`` 会让
+            ⚠ ``enqueue`` 在独立的有界窗口任务内执行，而 ``finish`` 会让
             ``wait_next`` 在 buffer 还空着时就返回 None → 主循环 break，正在合成的
             段被整体丢弃（**实测 0B 无声音**）。所以这里必须 gather 等它们完成后再
             finish，否则真实 TTS（几百 ms 合成）下首段还没合成完就被 finish 掐断。
             """
             nonlocal n
-            pending: list[asyncio.Task] = []
+            # 两路合成 + 最多两句翻译预取。限制创建中的任务，而非只在任务内限流。
+            # 不等整批完成：任一句完成即补位，保留首句先交付与并行翻译。
+            pending: set[asyncio.Task] = set()
+            feed_window = 4
             # S52：首个句子"渲染完成"只打一次 trace（落在 tts_start 之后、
             # tts_first_audio 之前，用来区分"慢在翻译"还是"慢在合成"）
             render_state = {"marked": False}
@@ -1693,10 +1721,15 @@ class VoicePipeline:
                      f"admission_wait_ms={(time.monotonic()-rendered_at)*1000:.0f}")
                 await mgr.enqueue(seq, speak_text)
 
-            def schedule(seq: int, sentence: str) -> None:
+            async def schedule(seq: int, sentence: str) -> None:
                 nonlocal previous_admission
+                if len(pending) >= feed_window:
+                    done, _ = await asyncio.wait(pending, return_when=asyncio.FIRST_COMPLETED)
+                    for task in done:
+                        pending.remove(task)
+                        task.result()
                 admitted = asyncio.Event()
-                pending.append(asyncio.create_task(
+                pending.add(asyncio.create_task(
                     _enqueue_one(seq, sentence, previous_admission, admitted)))
                 previous_admission = admitted
 
@@ -1705,11 +1738,11 @@ class VoicePipeline:
                     await mgr.enqueue(1, '单轮回复')
                 elif sentences is not None:
                     for i, sentence in enumerate(sentences, start=1):
-                        schedule(i, sentence)
+                        await schedule(i, sentence)
                 elif sentence_iter is not None:
                     async for sentence in sentence_iter:
                         n += 1
-                        schedule(n, sentence)
+                        await schedule(n, sentence)
                 if pending:
                     await asyncio.gather(*pending)
             finally:

@@ -1,5 +1,6 @@
 import { inputLevel as measureInputLevel } from '../utils/inputLevel'
 import { ref } from 'vue'
+import { PlaybackAdmission } from '../../../shared/playback-admission'
 import type { SpeechPlaybackIdentity, SpeechPlaybackReceipt } from '../../../shared/engine-protocol'
 import { describeMicError, useAudioDevices } from './useAudioDevices'
 
@@ -81,6 +82,7 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
   }>({ vad: '空闲', asr: '空闲', llm: '空闲', tts: '空闲' })
 
   let audioCtx: AudioContext | null = null
+  let resettingOutput:Promise<void>|null=null
   let mediaStream: MediaStream | null = null
   let sourceNode: MediaStreamAudioSourceNode | null = null
   let processor: ScriptProcessorNode | null = null
@@ -94,6 +96,14 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
   // 必须 FIFO 串行播放（decodeAudioData 异步，先解码完的段会先 start 导致乱序/重叠）。
   type PlayItem={wav:string;sampleRate:number;sliceMs:number;volumes:number[];identity?:SpeechPlaybackIdentity;streaming?:boolean}
   let playQueue:PlayItem[]=[]
+  const maxQueuedBytes=16*1024*1024
+  const maxDecodeAheadSeconds=2
+  const decodeWake=new Set<()=>void>()
+  let queuePeakBytes=0, underrunCount=0, underrunGapMs=0
+  function bufferedBytes():number {
+    return playQueue.reduce((n,item)=>n+item.wav.length*2+item.volumes.length*8,0)
+  }
+  const playbackAdmission = new PlaybackAdmission()
   type StreamEntry=PlayItem&{source:AudioBufferSourceNode;start:number;end:number;started:boolean;epoch:number}
   let streamEntries:StreamEntry[]=[]
   let streamCursor=0,streamStartTimer:ReturnType<typeof setTimeout>|undefined
@@ -248,21 +258,34 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
 
   async function ensureAudioCtxRunning(): Promise<void> {
     if(disposed)throw new Error('语音实例已释放')
+    if(resettingOutput)await resettingOutput
+    if(disposed)throw new Error('语音实例已释放')
     if (!audioCtx) audioCtx = new AudioContext()
     if (audioCtx.state === 'suspended') await audioCtx.resume()
   }
 
   /** 把一段 tts:audio 入队（FIFO），由后台串行播放器严格按顺序播放。 */
-  function enqueuePlay(wavBase64: string, sampleRate: number, sliceMs: number, volumes: number[],identity?:SpeechPlaybackIdentity,streaming=false,streamId=''): void {
+  function enqueuePlay(wavBase64: string, sampleRate: number, sliceMs: number, volumes: number[],identity?:SpeechPlaybackIdentity,streaming=false,streamId='',turn?:{session_id?:unknown;generation?:unknown}): void {
     if(disposed){playbackReceipt('audio:playback_finished',identity);return}
     if (!wavBase64) return
+    if (!playbackAdmission.accept(turn ?? identity)) {
+      playbackReceipt('audio:playback_finished',identity)
+      return
+    }
     if(streaming&&streamId&&streamId!==streamGroup){
       // 新句首块不受上一句的网络欠载惩罚，已有音频仍按原队列播完。
       streamGroup=streamId;streamLastEnd=0
       streamNeedsRebuffer=false;streamRebufferTarget=.96
       wakeRebuffer(true)
     }
+    if(bufferedBytes()+wavBase64.length*2+volumes.length*8>maxQueuedBytes){
+      stopPlayback()
+      playbackReceipt('audio:playback_finished',identity)
+      emit('tts:playback_error',{reason:'audio-buffer-budget'})
+      return
+    }
     playQueue.push({ wav: wavBase64, sampleRate, sliceMs, volumes,identity,streaming })
+    queuePeakBytes=Math.max(queuePeakBytes,bufferedBytes())
     pendingSegments++
     playedThisTurn = true
     wakeRebuffer()
@@ -301,6 +324,15 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
     try {
       await ensureAudioCtxRunning()
       if(epoch!==playbackEpoch)return
+      // 最多提前解码约2秒；压缩音频留在有界队列，停播立即唤醒等待者。
+      while(streamCursor-audioCtx!.currentTime>maxDecodeAheadSeconds){
+        await new Promise<void>(resolve=>{
+          const done=():void=>{clearTimeout(timer);decodeWake.delete(done);resolve()}
+          const timer=setTimeout(done,25)
+          decodeWake.add(done)
+        })
+        if(epoch!==playbackEpoch)return
+      }
       const raw=Uint8Array.from(atob(item.wav),c=>c.charCodeAt(0))
       const buffer=await audioCtx!.decodeAudioData(raw.buffer)
       if(epoch!==playbackEpoch)return
@@ -310,6 +342,7 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
       // 仅记录音频图上的供给缺口，不将网络首块时间误称为实际首音。
       if(streamLastEnd>0&&start-streamLastEnd>.03){
         const gapMs=Math.round((start-streamLastEnd)*1000)
+        underrunCount++;underrunGapMs+=gapMs
         console.warn('[voice] 流式音频缓冲欠载 gap_ms='+gapMs)
         emit('tts:playback_underrun',{gap_ms:gapMs})
         streamRebufferTarget=Math.min(1.92,streamRebufferTarget+.48)
@@ -404,8 +437,10 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
 
   /** S03：barge-in 立即停播 —— 清空队列 + 停止当前段 + 停口型（本地操作，不等引擎）。 */
   function stopPlayback(): void {
+    playbackAdmission.cancel()
     emit('tts:playback_cancelled', {})
     playbackEpoch++
+    for(const wake of [...decodeWake])wake()
     wakeRebuffer(true)
     streamNeedsRebuffer=false;streamRebufferTarget=.96
     streamGroup=''
@@ -454,8 +489,24 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
     emit('tts:playback_waiting', {})
   }
 
+  function resetPlaybackSession(): void {
+    stopPlayback()  // 旧解码/排期先作废，再接受权威新连接的低generation。
+    playbackAdmission.reset()
+    // 无采音时在权威会话交接释放旧音频图，避免跨角色复用已停顿的设备时钟。
+    // 普通stop/回合切换不关闭，开麦时也不能切断同一Context上的输入节点。
+    if(audioCtx&&!mediaStream&&!processor){
+      const previous=audioCtx
+      audioCtx=null
+      const closing=previous.close().catch(()=>console.warn('[voice] 旧会话音频图关闭失败'))
+      resettingOutput=closing
+      void closing.then(()=>{if(resettingOutput===closing)resettingOutput=null})
+    }
+  }
+
   /** 把控制通道下发的 tts:reply_audio 入队播放（复用语音链路的同一条 FIFO 队列）。 */
   function enqueueReplyAudio(payload: {
+    session_id?: unknown
+    generation?: unknown
     wav?: unknown
     sample_rate?: unknown
     slice_ms?: unknown
@@ -472,6 +523,7 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
       undefined,
       payload.streaming===true,
       typeof payload.stream_id==='string'?payload.stream_id:'',
+      payload,
     )
   }
 
@@ -809,10 +861,19 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
     socket?.close()
     const context=audioCtx
     audioCtx=null
-    closingAudio=context&&context.state!=='closed'?context.close().catch(()=>{
+    const currentClosing=context&&context.state!=='closed'?context.close().catch(()=>{
       console.warn('[voice] 音频图关闭失败')
     }):Promise.resolve()
+    closingAudio=Promise.all([currentClosing,resettingOutput]).then(()=>{})
     return closingAudio
+  }
+
+  function playbackBudgetState():Record<string,number> {
+    return {queued_bytes:bufferedBytes(),queue_peak_bytes:queuePeakBytes,
+      max_queued_bytes:maxQueuedBytes,scheduled:streamEntries.length,
+      decode_ahead_seconds:Math.max(0,streamCursor-(audioCtx?.currentTime??0)),
+      decode_waiters:decodeWake.size,pending:pendingSegments,
+      underruns:underrunCount,underrun_gap_ms:underrunGapMs}
   }
 
   return {
@@ -832,9 +893,11 @@ export function useVoiceInput(onEvent?: (type: string, payload: Record<string, u
     sendInterrupt,
     // 文字回复 TTS（控制通道 tts:reply_audio / tts:reply_end）的播放接入
     beginReplyPlayback,
+    resetPlaybackSession,
     enqueueReplyAudio,
     endReplyAudio,
     stopPlayback,
+    playbackBudgetState,
     dispose,
   }
 }

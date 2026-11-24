@@ -10,6 +10,7 @@ spec 要求 Event 是"可持久化、可回放"的一等实体（``docs/spec/REA
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import time
 from pathlib import Path
@@ -25,17 +26,26 @@ class EventLog:
         self._dir = Path(store_dir)
         self._max_lines = max(100, int(max_lines))
         self._counts: dict[str, int] = {}
+        self._write_lock = asyncio.Lock()
 
     async def sink(self, event: AgentEvent) -> None:
         """EventBus 的 async 订阅者入口（S12：``subscribe_all(sink)``）。"""
-        self.append(event)
+        async with self._write_lock:
+            write = asyncio.create_task(asyncio.to_thread(self.append, event))
+            try:
+                success = await asyncio.shield(write)
+                if success is False:
+                    raise OSError('event log append failed')
+            except asyncio.CancelledError:
+                await write  # 线程不可强杀；写完才释放锁，防止轮转并发串序。
+                raise
 
     def _path(self, session_id: str) -> Path:
         safe = (session_id or "global").replace("/", "_").replace("\\", "_")[:64]
         return self._dir / f"{safe}.jsonl"
 
     # ---- 写入 ---------------------------------------------------------------
-    def append(self, event: AgentEvent) -> None:
+    def append(self, event: AgentEvent) -> bool:
         """追加一条事件（失败静默：日志绝不能影响主链路）。"""
         try:
             self._dir.mkdir(parents=True, exist_ok=True)
@@ -60,8 +70,9 @@ class EventLog:
             # 每 max_lines/2 条检查一次（留出超限余量，确保能真正触发轮转）
             if n % max(1, self._max_lines // 2) == 0:
                 self._trim(path)
-        except Exception:  # noqa: BLE001, S110 — 落盘失败静默（不影响主链路）
-            pass
+            return True
+        except Exception:  # noqa: BLE001 — 同步append不抛异常，sink可观测失败
+            return False
 
     def _trim(self, path: Path) -> None:
         """超过上限时保留最近一半（行级轮转）。"""

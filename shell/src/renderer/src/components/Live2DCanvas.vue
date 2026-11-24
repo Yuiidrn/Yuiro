@@ -15,7 +15,7 @@ import type { Presence } from '../avatar/presence'
 import { ExpressionBaseline } from '../avatar/expressionBaseline'
 import { IntentLease } from '../avatar/intentLease'
 import { modelAssetUrl } from '../avatar/modelUrl'
-import { gazeTarget, GazeActivity, applyGaze } from '../avatar/gaze'
+import { gazeTarget, GazeActivity, applyGaze, followPose } from '../avatar/gaze'
 import { useElectronRelativeMouse } from '../composables/useElectronRelativeMouse'
 import { useAvatarClickPref } from '../composables/useAvatarClickPref'
 import { motionKey } from '../avatar/clickFeedback'
@@ -65,6 +65,9 @@ const idlePref = useAvatarIdlePref()
 const relativeMouse=useElectronRelativeMouse()
 const gazeActivity=new GazeActivity()
 let gazeOwns=false,gazeWeight=0
+let motionReturn: { values:Record<string,number> } | null = null
+let lastRenderedPose:Record<string,number> | null = null
+const returnParameterIds=['ParamAngleX','ParamAngleY','ParamAngleZ','ParamEyeBallX','ParamEyeBallY']
 let resizeObserver: ResizeObserver | null = null
 // 窗口贴合模型：仅首次量出真实尺寸后上报一次（避免循环）
 let fitReported = false
@@ -251,7 +254,7 @@ function unloadModel(): void {
   lastIdleMotion = ''
   lastSpeechGestureAt = 0
   lastClick='';lastClickAt=0
-  gazeActivity.reset();gazeOwns=false;gazeWeight=0
+  gazeActivity.reset();gazeOwns=false;gazeWeight=0;motionReturn=null;lastRenderedPose=null
   stopIdle()
   // 清单与模型绑定：换模型必须重新读，否则会拿旧模型的槽位去解析
   manifest.value = null
@@ -303,9 +306,10 @@ function ensureApp(): void {
     const was=gazeOwns
     gazeOwns=gazeActivity.step(mx,my,near,now,idlePref.gazeHoldMs.value)
     if(gazeOwns&&!was){
+      beginPoseReturn();
       (model?.internalModel?.motionManager as any)?.stopAllMotions?.()
       avatarState.value.motion='';avatarState.value.motionIndex=null
-    }else if(was&&!gazeOwns)startIdle(true)
+    }else if(was&&!gazeOwns){beginPoseReturn();startIdle(true)}
     const dt=app?.ticker.deltaMS??16
     gazeWeight=avatarState.value.until>now?0:gazeWeight+(Number(gazeOwns)-gazeWeight)*(1-Math.exp(-dt/120))
     const target=gazeOwns?gazeTarget(mx,my,rect!,idlePref.gazeStrength.value):[0,0]
@@ -395,17 +399,33 @@ async function loadModel(path?: string): Promise<void> {
     // 现在只播 idle 语义槽位、播完停顿数秒，表情固定在 neutral。
     const mm = model.internalModel?.motionManager as any
     const internal = model.internalModel as any
+    // SDK 默认会额外叠加同一 focus 到头、眼和身体；由本组件统一写入，避免双重控制。
+    internal.updateFocus=()=>{}
     restoreExpressionBlink=installExpressionBlinkOrder(internal)
     restoreExpressionRequests=installExpressionRequests(internal.motionManager?.expressionManager)
     const gazeIds=new Set<string>(internal.coreModel.getModel().parameters.ids)
     internal.on('beforeModelUpdate',()=>{
       if(revision!==modelRevision)return
       if(gazeWeight>.001)applyGaze(internal.coreModel,gazeIds,internal.focusController.x,internal.focusController.y,gazeWeight)
+      if(motionReturn){
+        let settled=true
+        for(const [id,from] of Object.entries(motionReturn.values)){
+          const target=internal.coreModel.getParameterValueById(id)
+          const eye=id.startsWith('ParamEye')
+          const next=followPose(from,target,app?.ticker.deltaMS??16,eye)
+          motionReturn.values[id]=next
+          internal.coreModel.setParameterValueById(id,next)
+          if(Math.abs(target-next)>(eye?.005:.15))settled=false
+        }
+        if(settled)motionReturn=null
+      }
+      lastRenderedPose={}
+      for(const id of returnParameterIds)if(gazeIds.has(id))lastRenderedPose[id]=internal.coreModel.getParameterValueById(id)
       const ids=mm.lipSyncIds as string[] | undefined
       if(ids?.length)applyLipSync(internal.coreModel,ids,props.mouthOpen)
     })
     mm?.on?.('motionFinish',()=>{
-      if(revision===modelRevision&&sdkMotionActive){sdkMotionActive=false;completeAppearance()}
+      if(revision===modelRevision&&sdkMotionActive)completeAppearance()
     })
     mm?.on?.('motionLoadError', (err: unknown) => {
       console.error('[live2d] motionLoadError:', err)
@@ -582,6 +602,7 @@ function cancelPerformance():void{
   finishReceipt('cancelled');completeAppearance()
 }
 function completeAppearance():void{
+  if(sdkMotionActive)beginPoseReturn()
   motionRequestRevision++
   sdkMotionActive=false
   speechGestureActive=false;
@@ -592,6 +613,9 @@ function completeAppearance():void{
   restorePresenceExpression()
   avatarState.value.motion='';avatarState.value.motionIndex=null
   startIdle()
+}
+function beginPoseReturn():void{
+  if(lastRenderedPose)motionReturn={values:{...lastRenderedPose}}
 }
 function scheduleRelease(durationMs: number): void {
   clearReleaseTimer()
@@ -652,6 +676,7 @@ function playMotion(group: string, index?: number | null, priority = 3 /* FORCE 
     return 0
   }
   try {
+    if(priority>=3)motionReturn=null
     const revision=modelRevision
     const request=motionRequestRevision,playback=++motionPlaybackRevision
     const settle=(ok:boolean)=>{

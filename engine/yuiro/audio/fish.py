@@ -40,7 +40,7 @@ class FishAudioProvider(TTSProvider):
     def __init__(self, *, reference_id: str, model: str = "s2.1-pro",
                  latency: str = "balanced", speed: float = 1.0,
                  segment_streaming: bool = True, key_loader=None, http_client=None,
-                 transport: str = "http"):
+                 transport: str = "http", first_chunk_ms: int = 400):
         super().__init__(segment_streaming=segment_streaming)
         from yuiro.keychain import load_fish_key
 
@@ -51,6 +51,9 @@ class FishAudioProvider(TTSProvider):
         if transport not in {'http', 'websocket'}:
             raise ValueError('Fish传输方式无效')
         self.transport = transport
+        if type(first_chunk_ms) is not int or not 80 <= first_chunk_ms <= 960:
+            raise ValueError('Fish首块时长超出范围')
+        self._first_chunk_ms = first_chunk_ms
         self._ws_session_factory = None
         if transport == 'websocket':
             # 模式装配时准备协议依赖，不在LLM/TTS首轮关键路径同步导入。
@@ -73,11 +76,13 @@ class FishAudioProvider(TTSProvider):
         if self.transport != 'websocket' or not self._segment_streaming:
             return None
         return self._ws_session_factory(key_loader=self._key_loader, reference_id=self._reference_id,
-            model=self._model, latency=self._latency, speed=self._speed)
+            model=self._model, latency=self._latency, speed=self._speed,
+            first_chunk_ms=self._first_chunk_ms)
 
     async def _websocket_stream(self, text):
         session = self._ws_session_factory(key_loader=self._key_loader, reference_id=self._reference_id,
-            model=self._model, latency=self._latency, speed=self._speed)
+            model=self._model, latency=self._latency, speed=self._speed,
+            first_chunk_ms=self._first_chunk_ms)
 
         async def texts():
             yield text
@@ -104,16 +109,21 @@ class FishAudioProvider(TTSProvider):
             raise RuntimeError("Fish API Key 未配置，请在语音安全设置中填写")
         if not self._reference_id:
             raise RuntimeError("当前角色未配置 Fish 音色 ID")
-        splitter = WavStreamSplitter()
+        splitter = WavStreamSplitter(first_chunk_ms=self._first_chunk_ms)
         started = time.perf_counter()
+        timings = {'first_chunk_ms': self._first_chunk_ms, 'pcm_transcode_ms': 0,
+                   'split_cpu_ms': 0.0, 'rms_cpu_ms': 0.0}
         count = 0
         stream_id = uuid4().hex  # 同一次合成的子块身份；不含朗读内容。
 
         def segment(wav):
+            before = time.perf_counter()
             samples = np.frombuffer(wav[44:], dtype='<i2').astype(np.float32) / 32768
+            volumes = self._slice_rms(samples, splitter.rate, 20)
+            timings['rms_cpu_ms'] += round((time.perf_counter()-before)*1000, 3)
             return AudioSegment(wav=wav, sample_rate=splitter.rate,
-                                volumes=self._slice_rms(samples, splitter.rate, 20),
-                                streaming=True, stream_id=stream_id)
+                                volumes=volumes, streaming=True, stream_id=stream_id,
+                                timings=dict(timings) if count == 1 else None)
 
         vlog('tts', f'Fish HTTP 流开始 chars={len(text)} model={self._model}')
         try:
@@ -124,14 +134,25 @@ class FishAudioProvider(TTSProvider):
                           'prosody': {'speed': self._speed}}) as response:
                 if response.status_code != 200:
                     raise RuntimeError(f'Fish HTTP {response.status_code}；未切换为其他音色')
+                timings['headers_ms'] = round((time.perf_counter()-started)*1000, 3)
                 async for raw in response.aiter_bytes():
-                    for wav in splitter.feed(raw):
+                    if raw:
+                        timings.setdefault('raw_first_audio_ms', round((time.perf_counter()-started)*1000, 3))
+                        timings.setdefault('raw_first_packet_bytes', len(raw))
+                    before = time.perf_counter()
+                    chunks = splitter.feed(raw)
+                    timings['split_cpu_ms'] += round((time.perf_counter()-before)*1000, 3)
+                    for wav in chunks:
                         count += 1
                         if count == 1:
+                            timings['first_playable_ms'] = round((time.perf_counter()-started)*1000, 3)
                             vlog('tts', f'Fish HTTP 首片 ms={(time.perf_counter()-started)*1000:.1f}')
                         yield segment(wav)
                 for wav in splitter.finish():
                     count += 1
+                    if count == 1:
+                        timings['first_playable_ms'] = round((time.perf_counter()-started)*1000, 3)
+                        timings['first_from_finish'] = True
                     yield segment(wav)
             if not count:
                 raise RuntimeError('Fish 返回空音频')
@@ -194,4 +215,5 @@ def build_fish_provider(tts):
     return FishAudioProvider(reference_id=tts.fish_reference_id, model=tts.fish_model,
                              latency=tts.fish_latency, speed=tts.fish_speed,
                              segment_streaming=tts.segment_streaming,
-                             transport=getattr(tts, 'fish_transport', 'http'))
+                             transport=getattr(tts, 'fish_transport', 'http'),
+                             first_chunk_ms=getattr(tts, 'fish_first_chunk_ms', 400))

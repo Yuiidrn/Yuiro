@@ -70,12 +70,13 @@ async def test_manager_orders_and_skips_failure() -> None:
     """按序交付；单句失败放空段占位，不阻塞后续段。"""
     tts = _RecordingTTS(fail_on="第二句。")
     mgr = TTSTaskManager(tts)
-    await asyncio.gather(
+    producers = asyncio.gather(
         mgr.enqueue(1, "第一句。"),
         mgr.enqueue(2, "第二句。"),
         mgr.enqueue(3, "第三句。"),
     )
     segs = [await asyncio.wait_for(mgr.wait_next(), timeout=1) for _ in range(3)]
+    await asyncio.wait_for(producers, timeout=1)
     assert segs[0].wav == "第一句。".encode()
     assert segs[1].wav == b""  # 失败占位（空段）
     assert segs[2].wav == "第三句。".encode()

@@ -34,7 +34,7 @@ class AudioSegment:
 
     def __init__(
         self, wav: bytes, sample_rate: int, volumes: list[float], slice_ms: int = 20,
-        streaming: bool = False, stream_id: str = "",
+        streaming: bool = False, stream_id: str = "", timings: dict | None = None,
     ) -> None:
         self.wav = wav
         self.sample_rate = sample_rate
@@ -42,6 +42,7 @@ class AudioSegment:
         self.slice_ms = slice_ms
         self.streaming = streaming
         self.stream_id = stream_id
+        self.timings = timings or {}
 
 
 class TTSProvider:

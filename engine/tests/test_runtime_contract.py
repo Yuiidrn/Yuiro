@@ -4,6 +4,7 @@
 """
 from __future__ import annotations
 
+import asyncio
 import os
 import tempfile
 
@@ -54,6 +55,65 @@ class _Bad:
 class _Partial:
     def runtime_name(self) -> str:
         return "partial"
+
+
+@pytest.mark.asyncio
+async def test_cancel_slow_runtime_does_not_block_speech_notification() -> None:
+    release, entered, speech = asyncio.Event(), asyncio.Event(), asyncio.Event()
+
+    class Slow:
+        async def cancel(self, *_):
+            entered.set()
+            await release.wait()
+
+    class Speech:
+        async def cancel(self, *_):
+            speech.set()
+
+    reg = RuntimeRegistry()
+    reg.register(Slow(), name="slow")
+    reg.register(Speech(), name="speech")
+    task = asyncio.create_task(reg.cancel_session("s1"))
+    try:
+        await asyncio.wait_for(entered.wait(), 1)
+        await asyncio.wait_for(speech.wait(), 1)
+        assert not task.done()  # 通知及时，但仍等待所有清理收敛。
+        release.set()
+        assert await task == {"slow": "ok", "speech": "ok"}
+    finally:
+        release.set()
+        await asyncio.gather(task, return_exceptions=True)
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("child_cancel", [False, True])
+async def test_cancel_broadcast_joins_children(child_cancel) -> None:
+    entered, cleaned = asyncio.Event(), asyncio.Event()
+
+    class Pending:
+        async def cancel(self, *_):
+            entered.set()
+            try:
+                await asyncio.Event().wait()
+            finally:
+                cleaned.set()
+
+    class Cancels:
+        async def cancel(self, *_):
+            await entered.wait()
+            raise asyncio.CancelledError()
+
+    reg = RuntimeRegistry()
+    reg.register(Pending(), name="pending")
+    if child_cancel:
+        reg.register(Cancels(), name="cancels")
+    task = asyncio.create_task(reg.cancel_session("s1"))
+    await asyncio.wait_for(entered.wait(), 1)
+    if not child_cancel:
+        task.cancel()
+    with pytest.raises(asyncio.CancelledError):
+        await asyncio.wait_for(task, 1)
+    assert cleaned.is_set()
 
 
 @pytest.mark.asyncio

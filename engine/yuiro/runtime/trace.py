@@ -39,6 +39,9 @@ _STAGE_ORDER: tuple[str, ...] = (
     "llm_first_token",
     "llm_final",
     "tts_start",
+    "first_sentence",
+    "translation_start",
+    "audio_sent",
     "lang_render",  # S52：首个句子完成语言渲染（仅非中文朗读/展示时出现）
     "tts_first_audio",
     "playback_started",

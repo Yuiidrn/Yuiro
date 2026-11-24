@@ -2,29 +2,30 @@
   "role": "hotaru",
   "scope": "native Windows pointer movement and hold expiry with current preferences; no click or microphone",
   "started": true,
-  "returnedToIdle": true,
+  "returnedToIdle": false,
   "active": {
     "owns": true,
-    "weight": 0.9994605713316068,
-    "focusX": -6.033184759126431e-05,
-    "focusY": -0.020447124589598527
+    "weight": 0.9995360961900381,
+    "focusX": -0.00020547179379053657,
+    "focusY": -0.06458687956176205
   },
   "quiet": {
     "gaze": {
       "owns": false,
-      "weight": 0.0011496090702239903,
-      "focusX": -2.8963208066054952e-05,
-      "focusY": -0.009815948748217018
+      "weight": 0.001151526682909516,
+      "focusX": -2.036677173750499e-05,
+      "focusY": -0.006401979605108791
     },
     "state": {
-      "expression": "exp_idle01",
-      "motion": "Motion",
-      "motionIndex": 19,
+      "expression": "",
+      "motion": "",
+      "motionIndex": null,
       "until": 0
     }
   },
   "holdMs": 2800,
+  "error": "{'role': 'hotaru', 'scope': 'native Windows pointer movement and hold expiry with current preferences; no click or microphone', 'started': True, 'returnedToIdle': False, 'active': {'owns': True, 'weight': 0.9995360961900381, 'focusX': -0.00020547179379053657, 'focusY': -0.06458687956176205}, 'quiet': {'gaze': {'owns': False, 'weight': 0.001151526682909516, 'focusX': -2.036677173750499e-05, 'focusY': -0.006401979605108791}, 'state': {'expression': '', 'motion': '', 'motionIndex': None, 'until': 0}}, 'holdMs': 2800}",
   "cursorRestored": true,
-  "restoredRole": "hotaru",
+  "restoredRole": "hiyori",
   "clickPoolRestored": true
 }

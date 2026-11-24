@@ -88,6 +88,7 @@ from yuiro.keychain import load_llm_key
 from yuiro.logger import vlog
 from yuiro.netease import ensure_daemon_ready
 from yuiro.runtime import AgentEvent, EventBus, SessionManager, TraceContext
+from yuiro.runtime.observation import OrderedObservation
 from yuiro.systemd.client import SystemDaemonClient
 
 app_config: AppConfig = load_config()
@@ -302,7 +303,7 @@ async def _interaction_reward() -> None:
 
 async def _agent_reply(
     text: str, session_id: str, trace: TraceContext | None = None, session=None,
-    on_sentence=None, web_search: bool | None = None,
+    on_sentence=None, web_search: bool | None = None, on_reset=None,
 ) -> str:
     """AgentLoop 聚合流式：拼接 token，工具调用/结果打日志。
 
@@ -408,6 +409,8 @@ async def _agent_reply(
                     if clean.strip():
                         await on_sentence(clean)
         elif chunk.kind == "reset":
+            if on_reset is not None:
+                await on_reset()
             # AgentLoop 判定"刚才那段文本是幻觉"（声称已执行但本轮零工具调用）——
             # 帧已发出无法撤回，故在此丢弃已收集的文本，后续重新累积。
             # ⚠ A1 已知限制：**已经交给 TTS 的句子收不回来**。好在 reset 是罕见
@@ -538,6 +541,7 @@ async def _play_audio(session_id: str, segment: AudioSegment) -> None:
         "sample_rate": segment.sample_rate,
         "streaming": segment.streaming,
         "stream_id": segment.stream_id,
+        "tts_timing": getattr(segment, 'timings', {}),
         "slice_ms": segment.slice_ms,
         "volumes": segment.volumes,
     }
@@ -927,6 +931,7 @@ async def lifespan(_app: FastAPI):
     finally:
         from yuiro.audio.fish_transport import close_fish_http_client
 
+        await _app.state.observation.close()
         await close_fish_http_client()
 
 
@@ -1086,8 +1091,11 @@ _role_data = Path("data") if _character_id == "hiyori" else Path("data/character
 app.state.event_log = EventLog(store_dir=_role_data / "events")
 
 async def _active_event_sink(event):
-    await app.state.event_log.sink(event)
+    # 回合恢复、会话与审批事实仍需等本条写完，不能把durable边界降级成仅入队。
+    durable = event.type.startswith(('turn.', 'task.', 'session.', 'approval.', 'transaction.'))
+    await app.state.observation.submit(event, app.state.event_log.sink, wait=durable)
 
+app.state.observation = OrderedObservation()
 app.state.events.subscribe_all(_active_event_sink)
 # S43：SessionManager 需要 event_log（复活被回收的会话 / 列出历史会话）——
 # 故装配顺序必须是 EventLog 在前（原先相反，那时 SessionManager 拿不到它）。
@@ -1326,6 +1334,7 @@ async def _render_display_text(text: str) -> str:
 
 # 统一「语音回复 TTS」：文字聊天回复的朗读任务表（按 session 记，新回合到来时取消旧任务）。
 _reply_speak_tasks: dict[str, asyncio.Task] = {}
+_reply_agent_tasks: dict[str, asyncio.Task] = {}
 
 
 async def _render_reply_sentence(sentence):
@@ -1352,12 +1361,15 @@ async def _synthesize_reply_sentence(tts, sentence, *, streaming=False):
 
 async def _speak_reply(
     ws: WebSocket, session_id: str, text: str, generation: int | None = None,
-    *, preconnected=None,
+    *, preconnected=None, sentence_iter=None, trace=None, reply_request_id='',
+    already_rendered=False,
+    render_speak=None,
+    experiment_metrics=None,
 ) -> None:
     """把文字聊天回复合成并下发前端播放（统一 TTS 开关**开启**时）。
 
-    chat:user 文字链路的"说出回复"是**附加步骤**：`chat:assistant` 文本已先发，
-    这里只补声音，合成失败/超时绝不阻塞文字、仅 vlog。复用 VoicePipeline 的
+    chat:user 的句子流可在完整 `chat:assistant` 前开始朗读；媒体等旧入口仍可
+    传入整段。合成失败/超时不伪造成功，复用 VoicePipeline 的
     TTS provider 与同一套分句策略（split_sentences），不另写一条合成路径。
 
     音频经 control WS 下发 `tts:reply_audio`（wav base64 + 口型 volumes），
@@ -1370,14 +1382,18 @@ async def _speak_reply(
     if not current():
         return
     identity = {"session_id": session_id, "generation": generation}
+    role = getattr(getattr(app.state, 'app_config', None), '_character_id', '')
+    if role:
+        identity['character_id'] = role
+    if reply_request_id:
+        identity['reply_request_id'] = reply_request_id
     cfg = getattr(app.state, "app_config", None)
     if cfg is None or not bool(getattr(cfg.tts, "reply_tts_enabled", True)):
         return
     pipe = getattr(app.state, "voice_pipeline", None)
     tts = getattr(pipe, "_tts", None)
-    if tts is None or not (text or "").strip():
+    if tts is None or (sentence_iter is None and not (text or "").strip()):
         return
-    renderer = getattr(app.state, "output_renderer", None)
     from yuiro.audio.speech_text import speech_body
 
     text = speech_body(text)
@@ -1387,6 +1403,18 @@ async def _speak_reply(
     import contextlib
     opener = getattr(tts, 'open_sentence_session', None)
     ws_session = preconnected if preconnected is not None else (opener() if callable(opener) else None)
+
+    async def source():
+        if sentence_iter is not None:
+            async for sentence in sentence_iter:
+                yield sentence
+        else:
+            for sentence in sentences:
+                yield sentence
+
+    def check():
+        if not current():
+            raise asyncio.CancelledError('旧回合译文失效')
 
     async def chunks(sentence):
         if callable(getattr(tts, 'synthesize_stream', None)):
@@ -1399,22 +1427,27 @@ async def _speak_reply(
             yield await _synthesize_reply_sentence(tts, sentence)
 
     async def ws_texts():
-        for sentence in sentences:
-            if not current():
-                raise asyncio.CancelledError('旧回合译文失效')
-            value = await _render_reply_sentence(sentence)
-            if not current():
-                raise asyncio.CancelledError('旧回合译文失效')
-            if any(ch.isalnum() for ch in value):
+        from yuiro.audio.output import translated_sentences
+        if already_rendered:
+            async for value in source():
+                check()
+                if experiment_metrics is not None:
+                    experiment_metrics.setdefault('speech_sentences', []).append(value)
                 yield value
+            return
+        async for value in translated_sentences(source(), render_speak or _render_reply_sentence, check, trace):
+            if experiment_metrics is not None:
+                experiment_metrics.setdefault('speech_sentences', []).append(value)
+            yield value
 
     async def segments():
-        if ws_session is not None:
-            async with contextlib.aclosing(ws_session.stream(ws_texts())) as stream:
+        if ws_session is not None or sentence_iter is not None:
+            from yuiro.audio.output import sentence_audio
+            async with contextlib.aclosing(sentence_audio(tts, ws_texts(), prepared=ws_session)) as stream:
                 async for part in stream:
                     yield part
         else:
-            for sentence in sentences:
+            async for sentence in source():
                 if not current():
                     return
                 try:
@@ -1425,6 +1458,10 @@ async def _speak_reply(
                     vlog('voice', f'文字回复单句合成失败: {type(exc).__name__}')
 
     try:
+        if sentence_iter is not None:
+            await ws.send_json({"type": "tts:reply_start", **identity})
+        if trace:
+            trace.mark('tts_start')
         async with contextlib.aclosing(segments()) as outputs:
             async for segment in outputs:
                 if not current():
@@ -1432,6 +1469,8 @@ async def _speak_reply(
                     return
                 if segment is None or not segment.wav:
                     continue
+                if trace:
+                    trace.mark('tts_first_audio')
                 try:
                     await ws.send_json({
                         "type": "tts:reply_audio", **identity,
@@ -1441,7 +1480,12 @@ async def _speak_reply(
                         "volumes": segment.volumes,
                         "streaming": segment.streaming,
                         "stream_id": segment.stream_id,
+                        "tts_timing": getattr(segment, 'timings', {}),
+                        "server_sent_unix_ms": round(time.time()*1000, 3),
+                        **({"trace_id": trace.trace_id, "stages_ms": dict(trace._marks)} if trace else {}),
                     })
+                    if trace:
+                        trace.mark('audio_sent')
                 except Exception:
                     aborted = True
                     vlog('chat', f'[{session_id[:8]}] 回复音频下发失败')
@@ -1458,9 +1502,15 @@ async def _speak_reply(
             await ws_session.close()
         if not aborted and current():
             try:
+                if experiment_metrics is not None:
+                    await ws.send_json({'type':'experiment:audio_metrics', **identity,
+                                        'metrics':experiment_metrics})
                 await ws.send_json({"type": "tts:reply_end", **identity})
             except Exception:  # noqa: BLE001 — 连接断开静默
                 pass
+        if trace:
+            trace.mark('tts_end')
+            trace.emit()
 
 
 def _start_preconnected_reply(ws, session_id):
@@ -1606,6 +1656,9 @@ async def _cancel_turn(session_id: str, reason: str) -> None:
     """
     gen = app.state.sessions.cancel(session_id, reason)
     previous_speech = _cancel_reply_speech(session_id)
+    previous_agent = _reply_agent_tasks.pop(session_id, None)
+    if previous_agent is not None:
+        previous_agent.cancel()
     # S15：统一广播取消到所有已注册 Runtime（voice/avatar/agent…各自响应；错误隔离）
     runtimes = getattr(app.state, "runtimes", None)
     if runtimes is not None:
@@ -1616,6 +1669,8 @@ async def _cancel_turn(session_id: str, reason: str) -> None:
             pipe.interrupt(session_id)
     if previous_speech is not None:
         await asyncio.gather(previous_speech, return_exceptions=True)
+    if previous_agent is not None:
+        await asyncio.gather(previous_agent, return_exceptions=True)
     await app.state.events.publish(AgentEvent(
         type="session.cancelled",
         source="SessionManager",
@@ -2029,17 +2084,29 @@ async def control_channel(ws: WebSocket) -> None:
 
     # 串行聊天工作队列：长任务（AgentLoop/工具/审批等待）不阻塞本协程的
     # receive 循环，保证 approval:resolve / interrupt 等控制消息能即时处理。
-    chat_queue: asyncio.Queue = asyncio.Queue()
+    chat_queue: asyncio.Queue = asyncio.Queue(maxsize=4)
+    control_gate = asyncio.Event()
+    control_gate.set()
+    control_epoch = 0
+    async def admit_chat(message):
+        try:
+            chat_queue.put_nowait({**message, '_queue_epoch': control_epoch})
+        except asyncio.QueueFull:
+            await ws.send_json({'type': 'chat:busy', 'message': '待处理消息已满，请稍后再发。'})
     search_task = None
     diary_quip_task = None
 
     async def chat_worker() -> None:
         while True:
             item = await chat_queue.get()
+            await control_gate.wait()
             if item is None:
                 return
+            if item.get('_queue_epoch', 0) != control_epoch:
+                continue
             if item.get('backend') == 'netease_client' or item.get('type') == 'media:control':
                 if item.get('type') == 'media:play':
+                    session.next_generation()
                     previous_speak = _reply_speak_tasks.pop(session_id, None)
                     if previous_speak is not None and not previous_speak.done():
                         previous_speak.cancel()
@@ -2048,6 +2115,7 @@ async def control_channel(ws: WebSocket) -> None:
             # S45：点选直连 —— **确定意图，不经过 LLM**（见 _direct_media_play 的说明）。
             # 走同一个串行队列，保证与聊天回合互斥，不会两边抢播放器。
             if item.get("type") == "media:play":
+                session.next_generation()
                 # 新回合（点选直连）也取消上一轮还在朗读的回复
                 _prev_speak = _reply_speak_tasks.pop(session_id, None)
                 if _prev_speak is not None and not _prev_speak.done():
@@ -2088,25 +2156,130 @@ async def control_channel(ws: WebSocket) -> None:
                 await _handle_diary_message(ws, session_id, item)
                 continue
             user_text = str(item.get("text", ""))
+            bilingual_order = item.get('bilingual_order')
+            if bilingual_order is not None:
+                import os
+
+                from yuiro.audio.bilingual import experiment_allowed
+                if not experiment_allowed(bilingual_order,
+                        os.environ.get('YUIRO_BILINGUAL_EXPERIMENT'),
+                        app.state.app_config.language.speak_language):
+                    await ws.send_json({'type': 'chat:busy', 'reason': 'bilingual_experiment_disabled',
+                                        'message': '双语实验未开启或当前角色未配置日语朗读。'})
+                    continue
+            streaming_reply = item.get('stream_reply') is True
+            if bilingual_order:
+                streaming_reply = True
+            reply_request_id = str(item.get('reply_request_id') or '')[:64]
             await _prepare_text_turn(session_id)
-            speech_ready = _start_preconnected_reply(ws, session_id)
+            await control_gate.wait()
+            if item.get('_queue_epoch', 0) != control_epoch:
+                continue
             # S01：每轮文字交互一条 trace（只观测，不改行为）
             trace = TraceContext(session_id=session_id, mode="chat")
             trace.mark("turn_start")
+            from yuiro.audio.output import ReplyStream
+            experiment_renderer = None
+            experiment_metrics = {} if bilingual_order else None
+            if bilingual_order == 'baseline':
+                from yuiro.audio.bilingual import MeasuredLLM
+                from yuiro.audio.render import OutputRenderer
+                _language = app.state.app_config.language
+                experiment_renderer = OutputRenderer(MeasuredLLM(app.state.agent_loop._llm, experiment_metrics),
+                    display_language=_language.display_language,
+                    speak_language=_language.speak_language, cache_size=0,
+                    timeout_s=_language.translate_timeout_s)
+
+            async def speak_sentences(channel, generation, prepared, _trace=trace,
+                                      _request=reply_request_id,
+                                      _bilingual=bilingual_order in ('ja_first', 'zh_first'),
+                                      _renderer=experiment_renderer, _metrics=experiment_metrics):
+                await _speak_reply(ws, session_id, '', generation=generation,
+                                   sentence_iter=channel, trace=_trace, preconnected=prepared,
+                                   reply_request_id=_request, already_rendered=_bilingual,
+                                   render_speak=_renderer.render_speak if _renderer else None,
+                                   experiment_metrics=_metrics)
+
+            _tts = getattr(app.state.voice_pipeline, '_tts', None)
+            _prepare = getattr(_tts, 'open_sentence_session', None)
+            speech = ReplyStream(speak_sentences,
+                                 lambda task: _reply_speak_tasks.__setitem__(session_id, task),
+                                 lambda: session.generation, trace,
+                                 prepare=_prepare if (callable(_prepare) and
+                                     app.state.app_config.tts.reply_tts_enabled) else None)
+
+            async def reset_speech(_speech=speech, _request=reply_request_id):
+                await _speech.abort()
+                await ws.send_json({'type': 'tts:reply_end', 'session_id': session_id,
+                                    'generation': session.generation, 'reason': 'agent_reset',
+                                    'reply_request_id': _request})
             log_ring.emit("INFO", "chat", f"用户: {user_text}")
             vlog("chat", f"[{session_id[:8]}] 处理 chat:user {user_text!r}")
             t0 = time.monotonic()
             # 标记即将调用 AgentLoop/LLM——若此后长时间无「LLM 首 token」日志即卡在 LLM 请求
             vlog("chat", f"[{session_id[:8]}] 调用 AgentLoop/LLM（backend={getattr(app.state.agent_loop, '_llm', None) is not None}）")
             try:
-                reply = await _agent_reply(
+                async def experimental_reply(_speech=speech, _trace=trace,
+                                             _order=bilingual_order, _text=user_text,
+                                             _request=reply_request_id, _metrics=experiment_metrics):
+                    from yuiro.audio.bilingual import generate_conventional, generate_pairs
+                    session.next_generation()
+                    generation = session.generation
+                    def check():
+                        if generation != session.generation:
+                            raise asyncio.CancelledError('bilingual stale generation')
+                    async def deliver(pair):
+                        check()
+                        await ws.send_json({'type': 'chat:sentence', 'text': pair['zh'],
+                                            'session_id': session_id, 'generation': generation,
+                                            'reply_request_id': _request})
+                        await _speech.send(pair.get('ja', pair['zh']))
+                    metrics = _metrics
+                    loop = app.state.agent_loop
+                    if _order == 'baseline':
+                        reply = await generate_conventional(loop._llm, loop._persona_prompt,
+                            _text, deliver, check, _trace, metrics)
+                    else:
+                        reply = await generate_pairs(loop._llm, loop._persona_prompt, _text,
+                                                     _order, deliver, check, _trace, metrics)
+                    await ws.send_json({'type': 'experiment:metrics', **metrics,
+                                        'session_id':session_id, 'generation':generation,
+                                        'reply_request_id': _request, 'stages_ms': dict(_trace._marks)})
+                    return reply
+                agent_task = asyncio.create_task(experimental_reply() if bilingual_order else _agent_reply(
                     user_text, session_id, trace, session,
                     web_search=item.get("web_search"),
-                )
+                    on_sentence=speech.send if streaming_reply else None,
+                    on_reset=reset_speech if streaming_reply else None,
+                ))
+                _reply_agent_tasks[session_id] = agent_task
+                reply = await agent_task
+            except asyncio.CancelledError:
+                await speech.abort()
+                if asyncio.current_task().cancelling():
+                    raise
+                continue
             except Exception as exc:  # noqa: BLE001 — AgentLoop/LLM 异常兜底
+                if bilingual_order:
+                    await speech.abort()
+                    await ws.send_json({'type':'tts:reply_end', 'session_id':session_id,
+                                        'generation':session.generation,
+                                        'reply_request_id':reply_request_id,
+                                        'reason':'experiment_failed'})
                 vlog("chat", f"[{session_id[:8]}] AgentLoop 异常: {traceback.format_exc(limit=4)}")
                 log_ring.emit("ERROR", "chat", f"AgentLoop 异常: {exc}")
-                reply = f"抱歉，处理出错了：{exc}"
+                reply = ('双语实验未完成，本轮后续朗读已停止，请用普通消息重试。'
+                         if bilingual_order else f"抱歉，处理出错了：{exc}")
+            finally:
+                if _reply_agent_tasks.get(session_id) is locals().get('agent_task'):
+                    _reply_agent_tasks.pop(session_id, None)
+            if streaming_reply:
+                await speech.finish(reply)
+            if speech.failure:
+                vlog('tts', f'[{session_id[:8]}] 朗读预算退出: {speech.failure}，文字继续')
+                await ws.send_json({'type': 'tts:reply_end', 'session_id': session_id,
+                                    'generation': session.generation, 'reason': speech.failure,
+                                    'reply_request_id': reply_request_id})
             vlog(
                 "chat",
                 f"[{session_id[:8]}] 回复 chat:assistant {reply!r}"
@@ -2118,20 +2291,19 @@ async def control_channel(ws: WebSocket) -> None:
             log_ring.emit("INFO", "chat", f"助手: {display_reply}")
             try:
                 await ws.send_json(
-                    {"type": "chat:assistant", "text": display_reply, "source_text": reply}
+                    {"type": "chat:assistant", "text": display_reply, "source_text": reply,
+                     "speech_streaming": streaming_reply and speech.task is not None,
+                     "trace_id": trace.trace_id, "reply_request_id": reply_request_id}
                 )
             except Exception:  # noqa: BLE001 — 连接断开时静默
                 return
             trace.mark("reply_sent")
             trace.emit()
+            if not streaming_reply:
+                await speech.finish(reply)  # 旧客户端保持先全文、后声音的顺序。
             # 统一「语音回复 TTS」：文本已发，声音作为后台任务补发（不阻塞下一轮）。
             # 记入 _reply_speak_tasks，下一轮 chat:user 到来时取消它（改口）。
-            if speech_ready is None:
-                _reply_speak_tasks[session_id] = asyncio.create_task(
-                    _speak_reply(ws, session_id, reply, generation=session.generation)
-                )
-            elif not speech_ready.done():
-                speech_ready.set_result((reply, session.generation))
+            # 音频已由同轮句子桥投喂，禁止在完整回复到达时再朗读一次。
             # S51：回复已发出 → 告诉整理调度器"本轮结束"（它据此开始计"会话间隙"）。
             # 刻意放在**回复发送之后**：整理永远不占用这一轮的回复时间。
             _note_memory_idle()
@@ -2155,7 +2327,20 @@ async def control_channel(ws: WebSocket) -> None:
                         pass
                 continue
             if mtype == "chat:user":
-                await chat_queue.put(msg)
+                await admit_chat(msg)
+            elif mtype == 'interrupt':
+                cancel_started = time.monotonic()
+                control_gate.clear()
+                control_epoch += 1
+                while not chat_queue.empty():
+                    chat_queue.get_nowait()
+                try:
+                    await _cancel_turn(session_id, 'control_interrupt')
+                finally:
+                    control_gate.set()
+                await ws.send_json({'type': 'interrupt:complete', 'session_id': session_id,
+                                    'generation': session.generation,
+                                    'settle_ms': round((time.monotonic()-cancel_started)*1000, 1)})
             elif mtype == 'media:control':
                 # 暂停/状态不排在长 LLM 回合后；适配器自己的锁与归属保证互斥。
                 control_task = asyncio.create_task(_reply_official_media(ws, msg, session_id))
@@ -2169,7 +2354,7 @@ async def control_channel(ws: WebSocket) -> None:
                 search_task.add_done_callback(_character_workers.discard)
             elif mtype == "media:play":
                 # S45：点选直连（确定意图，不经 LLM）—— 见 _direct_media_play。
-                await chat_queue.put(msg)
+                await admit_chat(msg)
             elif isinstance(mtype, str) and mtype.startswith("diary:"):
                 # 可选插话独立且可取消，不占用保存/撤销的串行队列。
                 if diary_quip_task is not None:
@@ -2181,7 +2366,7 @@ async def control_channel(ws: WebSocket) -> None:
                     _character_workers.add(diary_quip_task)
                     diary_quip_task.add_done_callback(_character_workers.discard)
                 elif mtype != "diary:quip_cancel":
-                    await chat_queue.put(msg)
+                    await admit_chat(msg)
             elif mtype == "approval:resolve":
                 # 即时处理：不排队，审批 future 立刻完成
                 resolve_approval(str(msg.get("request_id", "")), bool(msg.get("approved")))
@@ -2200,12 +2385,15 @@ async def control_channel(ws: WebSocket) -> None:
             await asyncio.gather(diary_quip_task, return_exceptions=True)
         if search_task is not None:
             search_task.cancel()
-        await chat_queue.put(None)
+            await asyncio.gather(search_task, return_exceptions=True)
         worker.cancel()
+        await asyncio.gather(worker, return_exceptions=True)
         # 连接关闭：取消还在朗读的回复任务（其音频已无处可发）
         _leftover = _reply_speak_tasks.pop(session_id, None)
         if _leftover is not None and not _leftover.done():
             _leftover.cancel()
+        if _leftover is not None:
+            await asyncio.gather(_leftover, return_exceptions=True)
         unregister_control_conn(session_id)
         app.state.sessions.detach_control(session_id)
         # S51：连接关闭 = "这一场聊完了" → 安排一次整理（延迟执行，等尾音落定）
@@ -2262,7 +2450,19 @@ async def audio_channel(ws: WebSocket) -> None:
 
     # 与 control 通道同理：PCM 帧进队列由 worker 串行处理（on_audio 可能
     # 长阻塞于 ASR/LLM/审批），主循环保持空闲以即时处理 interrupt / approval:resolve。
-    pcm_queue: asyncio.Queue = asyncio.Queue()
+    pcm_queue: asyncio.Queue = asyncio.Queue(maxsize=32)
+
+    async def admit_pcm(data):
+        if len(data) > 64000:
+            await ws.close(code=1009, reason='audio frame exceeds budget')
+            return False
+        try:
+            pcm_queue.put_nowait(data)
+            return True
+        except asyncio.QueueFull:
+            vlog('voice', f'[{session_id[:8]}] PCM积压超限，关闭音频连接而非静默丢帧')
+            await ws.close(code=1013, reason='audio backlog exceeds budget')
+            return False
 
     async def pcm_worker() -> None:
         while True:
@@ -2286,7 +2486,15 @@ async def audio_channel(ws: WebSocket) -> None:
                 return
             data = message.get("bytes")
             if data is not None:
-                await pcm_queue.put(data)
+                if not await admit_pcm(data):
+                    pipe = app.state.voice_pipeline
+                    producers = [getattr(pipe, attr, {}).get(session_id)
+                                 for attr in ('_turn_tasks', '_speak_tasks', '_pending_end')]
+                    notification = pipe.interrupt(session_id)
+                    pending = {task for task in (*producers, notification)
+                               if task is not None and task is not asyncio.current_task()}
+                    await asyncio.gather(*pending, return_exceptions=True)
+                    return
                 continue
             text = message.get("text")
             if text is not None:
@@ -2318,8 +2526,8 @@ async def audio_channel(ws: WebSocket) -> None:
     except WebSocketDisconnect:
         return
     finally:
-        await pcm_queue.put(None)
         worker.cancel()
+        await asyncio.gather(worker, return_exceptions=True)
         from yuiro.approval import get_audio_conn
         if get_audio_conn(session_id) is ws:
             app.state.voice_pipeline.playback.clear(session_id)

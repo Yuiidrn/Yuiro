@@ -1,5 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict')
 const ts=require('../../shell/node_modules/typescript')
+const admission={}
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('shell/src/shared/playback-admission.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,{exports:admission})
 const events=[],sources=[],contexts=[],rafCallbacks=[];let stopped=0,cancelledRaf=0,closed=0,decodeGate=null
 class AudioContext {
  state='running';destination={};currentTime=0
@@ -10,7 +12,7 @@ class AudioContext {
 }
 const context={exports:{},window:{yuiro:{getEngineSecret:async()=> 'fixture'}},localStorage:{getItem:()=> 'hotaru'},fetch:async()=>({ok:true,json:async()=>({sections:{vad:{barge_in_enabled:true}}})}),AudioContext,performance:{now:()=>0},atob:()=>String.fromCharCode(0),Uint8Array,setTimeout,clearTimeout,
  requestAnimationFrame:cb=>{rafCallbacks.push(cb);return rafCallbacks.length},cancelAnimationFrame:()=>cancelledRaf++,console,
- require:name=>name==='vue'?{ref:value=>({value})}:name.includes('useAudioDevices')?{useAudioDevices:()=>({}),describeMicError:String}:{inputLevel:()=>0}}
+ require:name=>name==='vue'?{ref:value=>({value})}:name.includes('playback-admission')?admission:name.includes('useAudioDevices')?{useAudioDevices:()=>({}),describeMicError:String}:{inputLevel:()=>0}}
 vm.runInNewContext(ts.transpileModule(fs.readFileSync('shell/src/renderer/src/composables/useVoiceInput.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,context)
 const voice=context.exports.useVoiceInput(type=>events.push(type)),flush=()=>new Promise(resolve=>setImmediate(resolve))
 ;(async()=>{

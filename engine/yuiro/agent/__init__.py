@@ -140,6 +140,9 @@ class OpenAIProvider(LLMProvider):
             timeout=openai.Timeout(connect=10.0, read=30.0, write=30.0, pool=10.0),
             max_retries=0,
         )
+        # 公有SDK资源是惰性导入；Windows实测首轮同步初始化约1秒。
+        # 在装配期完成，不发网络请求，避免阻塞首轮事件循环/WS预连接/取消。
+        _ = self._client.chat.completions
         self._model = model
         self._temperature = temperature
         self._base_url = base_url

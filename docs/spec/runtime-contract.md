@@ -353,6 +353,35 @@ NOT corrupt current state
 
 ## 13. 现状基线（2026-09 审计结论）
 
+### 输出与观测增量契约 2026-11-23
+
+冷请求增量：OpenAIProvider 在既有构造期间触达SDK公有 `client.chat.completions`，将一次性同步资源导入移出首轮事件循环，不发网络请求、不预先生成文本、不缓存或另存凭证。测量须区分成本前移与总启动耗时下降；控制取消与WS预连接不能被首轮约1秒的资源导入阻塞。
+
+输出设备生命周期增量：权威Session重置时先失效旧播放epoch；仅在没有mediaStream/processor时关闭旧AudioContext，后续创建等待关闭完成并再次检查disposed。普通停麦/普通回合更替不关闭输出图，活动输入不得被重置切断，dispose必须join在途关闭。已观察到running状态音频图的时钟停顿，start调用/排期预测不能当物理首音；诊断另记录图时钟开始推进、JS tick、每段duration/ended及消息投递，独立保留renderer/native慢例。
+
+2026-11-24 输出增量：延续现有 Runtime 与进程职责，仅在既有 provider / manager / renderer 内修改预算和观测。Fish 首块默认400ms、后续480ms，可用角色级 `tts.fish_first_chunk_ms=480` 回退；范围80–960ms。首个原始音频包、握手、文本/flush发送、首个可播放块和RMS/封装CPU时间分开记录，不能把网络TTFB称为本地转码，也不能凭历史10.50s汇总断定供应商或客户端根因。renderer排期时刻不是物理扬声器首音。
+
+TTSTaskManager 的实际准入窗口不超过合成并发数，默认2；每seq缓存最多4项、WAV负载2MiB，总排队WAV默认上限4MiB（不包括provider当前分块及正在交付的段）。满载等待消费者，不淘汰未播放的句子；单段超预算按既有单句失败语义跳过并记录类型。interrupt清空缓存、唤醒容量/序号等待者；生产者与消费者必须并行，不能先等待所有enqueue完成再开始消费。renderer排队估算音频/base64/音量负载上限16MiB，超限显式结束并通过control取消当前回合；预解码在已排期时长超过2秒时等待，故峰值容许2秒加当前单块，停播立即唤醒。不新增跨回合音频复用缓存，不以换角色时复用旧音色换取命中。
+
+双语句对为默认关闭的只读实验。必须同时由服务端 `YUIRO_BILINGUAL_EXPERIMENT=1` 和单次请求 `bilingual_order=ja_first|zh_first` 显式开启；角色既有朗读语言须为ja，不能隐式改Hiyori中文语音设置。`baseline`仅为同上下文中文分句及独立翻译对照，实验翻译缓存关闭。三者都借用既有LLM adapter、Session/generation及reply任务/取消表，不执行工具，不写Agent history或Memory。普通请求继续现有AgentLoop/检索/权限链路。
+
+双语输出只接收有序ja/zh字段的完整JSON对象；日语字段闭合仅用于观测，完整句对校验后才显示中文并交付日语，闭合不等待下一换行。每对象4096字符、总32768字符、最多16对、生成60秒；拒绝重复字段、类型/语言不符、工具chunk、控制标签、前缀及残句。失败停止本轮剩余声音，不把结构标记或错误回复作为日语兜底朗读。解析器每轮新建，翻译完成、TTS投喂和UI显示沿用旧代屏障与request ID；切角/打断必须取消并关闭LLM流及TTS连接。实验用量与句对仅在显式实验帧中返回，最后恢复服务端实验关闭。
+
+- 不新增总 Runtime。新UI通过可选请求字段stream_reply=true启用既有 `_agent_reply.on_sentence` 交付完整句；旧客户端未声明时仍先全文后声音。ReplyStream 仅桥接现有 reply task 表与 SentenceChannel，不能重新执行工具或修改内部历史。完整回答不得重复朗读；Agent reset 取消本轮剩余声音，不重发已经播放的句子。
+- 文字/语音 WS 共用逐句清洗、语言转换前后身份检查及 provider 持续输入协调。VoicePipeline/Presence 继续共用现有 TTS manager，HTTP 并发投喂窗口沿用4项；不是另建播放器或一次删除所有旧适配器。
+- SentenceChannel 默认容量4、put等待5秒、单句16000字符。结束用状态和条件通知，不往满队列塞终止哨兵。文字输出超时可终止本轮声音，继续返回文字，并发送明确终态；语音链路错误不得无限等待。聊天待处理队列4条，满载明确返回chat:busy；PCM待处理32帧，每帧最多64000字节，超限关闭音频通道1013/1009，不静默丢帧。断线必须取消并join工作任务。
+- 控制通道接受interrupt，先使generation失效，再取消/等待已登记的Agent与输出任务；单轮取消不杀掉后续聊天worker，控制取消完成前不启动下一队列项。interrupt:complete给出服务端settle_ms，不代表物理声学停播。
+- renderer停播除了使解码/排期epoch失效，还须拒收取消后新到达的同会话旧代音频；beginReplyPlayback不得清除此屏障，后继generation可正常播放。无身份本地试听保留兼容，上层仍负责会话/角色绑定校验。
+- 新文字请求携带可选reply_request_id，音频/终态/完整文字原样绑定该ID；本地取消立即作废活动请求ID，防止首音频尚未到达时的取消也被旧帧恢复。旧无ID客户端保持兼容；请求ID不替代Session/generation/角色校验。
+- 文字首句、翻译起止、TTS首块、发送与既有Agent阶段使用同轮TraceContext；音频帧携带trace_id与阶段快照，renderer测量通过该ID关联自己的接收/解码/start时钟。不同进程单调时间不得直接相减。
+- 业务EventBus订阅保持同步顺序；仅事件落盘进入128项有界单消费者观测队列，满载等待而不丢事件。入队时深复制事件并冻结目标角色的sink。EventLog.sink在线程中写盘并用锁保序，取消必须等本次写入结束再释放锁。普通观测发布返回表示已入队，不代表已持久化；turn/task/session/approval/transaction前缀仍等待本条写完，保留既有回合恢复与审批事实的完成边界。读取事件API及正常关闭先flush，正常关闭drain并join，不宣称强杀/崩溃不丢数据。失败计数与队列峰值在runtime API可见；既有同步append仍可用于需立即完成的路径。
+
+### 取消广播增量（2026-11-23）
+
+语音 HTTP/普通 provider 投喂增量：VoicePipeline._speak_impl 的翻译到合成在途任务最多 4 个（两路合成及两句翻译预取），创建前等待窗口，不以任务内部 semaphore 代替创建预算。任一任务完成即可补位，既有 seq 准入与有序交付不变；退出时取消并 join 自己的窗口任务。WS 单轮流继续依 provider 顺序拉取，不改其协议。此预算只覆盖投喂任务，不代表音频缓存、LLM 文本队列、renderer 预解码已全部有界。
+
+RuntimeRegistry.cancel_session 对本次注册表快照并发分发取消，逐项隔离普通异常，等待所有钩子结束再返回原有状态字典。钩子不得依赖其它 Runtime 的注册顺序；generation 失效仍由调用者先完成。父任务取消或钩子 CancelledError 向上传播，并取消、等待本次通知任务，禁止 fire-and-forget。并发只消除异步清理等待造成的通知串行阻塞，不抢占同步阻塞代码，不承诺所有清理有界或物理停播时延。close_session 保持顺序广播，避免改变关闭依赖；不增加 Runtime、协议或供应商配置。
+
 | 维度 | 现有（局部有实现） | 缺口（全局无契约） |
 |---|---|---|
 | **Session** | WS 建连即 `uuid4().hex`；各模块用 `dict[session_id, …]` 分桶；tool/approval 已带 session_id | 无 Session 实体/注册表/生命周期；control 与 audio 的 id 互不相关（同一前端两个会话，history 割裂）；前端不可续用 session；记忆层 `del session_id` 无会话隔离 |

@@ -680,7 +680,11 @@ async def get_runtime_state(request: Request) -> dict:
     registry = getattr(request.app.state, "runtimes", None)
     if registry is None:
         return {"status": "warn", "detail": "RuntimeRegistry 未装配"}
-    return {"status": "ok", "runtimes": registry.names(), "state": registry.snapshot()}
+    observation = getattr(request.app.state, 'observation', None)
+    return {"status": "ok", "runtimes": registry.names(), "state": registry.snapshot(),
+            "observation": ({'pending': observation.queue.qsize(), 'peak': observation.peak,
+                             'failures': observation.failures, 'closed': observation.closed}
+                            if observation is not None else None)}
 
 
 @router.get("/events")
@@ -690,6 +694,9 @@ async def list_events(request: Request, session_id: str = "", limit: int = 200,
 
     不带 session_id 时返回已有事件日志的会话列表与统计（供调试台浏览）。
     """
+    observation = getattr(request.app.state, 'observation', None)
+    if observation is not None:
+        await observation.flush()
     log = getattr(request.app.state, "event_log", None)
     if log is None:
         return {"status": "warn", "detail": "EventLog 未初始化"}

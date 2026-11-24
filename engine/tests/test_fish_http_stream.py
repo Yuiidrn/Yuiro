@@ -39,6 +39,16 @@ def test_network_fragmentation_preserves_every_pcm_sample(fragment):
     assert len(chunks) > 1
 
 
+@pytest.mark.parametrize('first_ms', [240, 400, 480])
+def test_first_chunk_budget_changes_only_first_output_preserving_pcm(first_ms):
+    raw, pcm = wav_data()
+    splitter = WavStreamSplitter(first_chunk_ms=first_ms)
+    chunks = splitter.feed(raw) + splitter.finish()
+    assert len(chunks[0]) - 44 == 16000 * 2 * first_ms // 1000
+    assert len(chunks[1]) - 44 == 16000 * 2 * 480 // 1000
+    assert b''.join(c[44:] for c in chunks) == pcm
+
+
 def test_placeholder_header_and_unknown_metadata_are_supported():
     raw, pcm = wav_data()
     raw = raw[:36] + b'JUNK' + struct.pack('<I', 3) + b'abc\0' + raw[36:]

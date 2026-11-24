@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { notifySpeechSettings, watchSpeechSettings } from './utils/speechSettingsSignal'
 import { acceptsReplySpeech } from './avatar/replyIdentity'
+import { acceptsReplyRequest } from '../../shared/playback-admission'
 
 import { presenceAfter, type Presence } from './avatar/presence'
 import { contourBands } from './utils/contourBands'
@@ -84,6 +85,8 @@ let speechTimer = 0
 let speechHeldForPlayback = false   // 本条气泡是否在等语音播完
 let speechGraceTimer = 0            // "这轮到底有没有语音"的宽限计时
 let speechTtsActive = false         // 本轮是否出现过 TTS 活动（按回合复位，见 asr:start）
+let replyStreamFinished = false
+let activeReplyRequest = ''
 const SPEECH_GRACE_MS = 2500        // 宽限期内没有任何音频 → 认定无声，退回估算
 const SPEECH_TAIL_MS = 200          // 播完后再留一口气，别让末字刚落文字就消失
 const SPEECH_HARD_CAP_MS = 60000    // 兜底上限：等不到"播完"也不能让气泡永久挂着
@@ -158,7 +161,13 @@ function presenceEvent(type:string,state?:string){
   if(next==='thinking'||next==='listening')presenceTimer=window.setTimeout(()=>{presence.value='idle'},60000)
 }
 const { theme, toggleTheme } = useTheme()
-const { inputLevel:micInputLevel, start, stop, sendInterrupt, turnBusy, bargeInEnabled, loadBargeIn:loadVoiceBargeIn, mouthOpen, pipelineState, pipelineLoading, loadingStage, loadingProgress, beginReplyPlayback, enqueueReplyAudio, endReplyAudio, stopPlayback, dispose: disposeVoice } = useVoiceInput((type, payload) => {
+const { inputLevel:micInputLevel, start, stop, sendInterrupt, turnBusy, bargeInEnabled, loadBargeIn:loadVoiceBargeIn, mouthOpen, pipelineState, pipelineLoading, loadingStage, loadingProgress, beginReplyPlayback, resetPlaybackSession, enqueueReplyAudio, endReplyAudio, stopPlayback, playbackBudgetState, dispose: disposeVoice } = useVoiceInput((type, payload) => {
+  if (type === 'tts:playback_cancelled') activeReplyRequest = ''
+  if (type === 'tts:playback_error' && payload.reason === 'audio-buffer-budget') {
+    log('[voice] 音频缓冲超出预算，已停止本轮播放并回收生成')
+    if(socket?.readyState===WebSocket.OPEN)socket.send(JSON.stringify({type:'interrupt'}))
+    else sendInterrupt()
+  }
   presenceEvent(type,String(payload.state??''))
   // 语音链路事件 → 日志面板，让用户看到识别/LLM/TTS 全过程反馈
   if (type === 'vad:state') log(`[voice] VAD ${payload.state}${payload.prob !== undefined ? ` (${payload.prob})` : ''}`)
@@ -287,6 +296,7 @@ usePetDrag(getModelRect, hitModelContour,()=>{if(!resultCharacterSwitching)petCo
 
 // ── WebSocket ──
 let socket: WebSocket | null = null
+let controlReady = false
 // S02：control 通道断线重连定时器（带 session_id 重连 → 引擎进程内 resume）
 let reconnectTimer = 0
 
@@ -599,6 +609,7 @@ async function connectControl(): Promise<void> {
   const url = sessionId.value
     ? `${base}${base.includes('?') ? '&' : '?'}session=${encodeURIComponent(sessionId.value)}`
     : base
+  controlReady = false
   socket = new WebSocket(url)
   const connectionSocket = socket
   socket.onopen = () => {
@@ -618,6 +629,7 @@ async function connectControl(): Promise<void> {
   }
   socket.onclose = (event) => {
     if (connectionSocket !== socket) return
+    controlReady = false
     presenceEvent('control:closed')
     officialPending.value=false
     mediaRequestId++
@@ -640,6 +652,9 @@ async function connectControl(): Promise<void> {
     if (connectionSocket !== socket) return
     try {
       const msg = JSON.parse(ev.data as string)
+      if ((msg.type === 'chat:assistant' || msg.type === 'chat:sentence' ||
+           String(msg.type).startsWith('tts:reply_')) &&
+          !acceptsReplyRequest(msg, activeReplyRequest)) return
       if (msg.type === 'character:switching') {
         agentReactions.reset()
         presenceEvent('avatar:reset')
@@ -653,13 +668,19 @@ async function connectControl(): Promise<void> {
       } else if (msg.type === 'character:changed') {
         void loadModelPath()
       } else if (msg.type === 'session:ready') {
+        resetPlaybackSession()
         resultCharacterSwitching = false
         // S02：引擎下发会话身份 —— 供 audio 通道绑定同一 AgentSession
         sessionId.value = String(msg.session_id ?? '')
         avatarGeneration.value=Number(msg.generation)||0
+        controlReady = true
         // S43：写回本地 —— 刷新 / 热重载后仍带同一个 id 连上来（否则每次都是新会话）
         try { window.localStorage.setItem(SESSION_KEY, sessionId.value) } catch { /* 隐私模式等忽略 */ }
         log(`[ws] 会话已就绪: ${sessionId.value.slice(0, 8)}（gen=${msg.generation ?? 0}）`)
+      } else if (msg.type === 'chat:sentence') {
+        if(!acceptsReplySpeech(msg,sessionId.value,avatarGeneration.value))return
+        avatarGeneration.value=msg.generation
+        showSpeech(String(msg.text??''),replyTtsEnabled.value)
       } else if (msg.type === 'chat:assistant') {
         presenceEvent('chat:assistant')
         // 回复走漫画说话云框（只显示当前一条，不堆叠）
@@ -672,12 +693,22 @@ async function connectControl(): Promise<void> {
         }
         // 语音回复 TTS 开关开启 → 这轮文字回复也会出声：气泡等到播完再收
         if (replyTtsEnabled.value) {
-          beginReplyPlayback()
-          speechTtsActive = true  // 音频即将到来，别让宽限期误判成"没语音"
-          showSpeech(String(msg.text ?? ''), true)
+          if (!msg.speech_streaming) beginReplyPlayback()
+          const waiting = !msg.speech_streaming || !replyStreamFinished
+          speechTtsActive = waiting
+          showSpeech(String(msg.text ?? ''), waiting)
         } else {
           showSpeech(String(msg.text ?? ''))
         }
+      } else if (msg.type === 'chat:busy') {
+        log(`[chat] ${String(msg.message ?? '待处理消息已满')}`)
+        showSpeech(String(msg.message ?? '待处理消息已满，请稍后再发。'))
+      } else if (msg.type === 'tts:reply_start') {
+        if(!acceptsReplySpeech(msg,sessionId.value,avatarGeneration.value))return
+        avatarGeneration.value=msg.generation
+        beginReplyPlayback()
+        replyStreamFinished = false
+        speechTtsActive = true
       } else if (msg.type === 'tts:reply_audio') {
         if(!acceptsReplySpeech(msg,sessionId.value,avatarGeneration.value))return
         avatarGeneration.value=msg.generation
@@ -687,6 +718,7 @@ async function connectControl(): Promise<void> {
       } else if (msg.type === 'tts:reply_end') {
         if(!acceptsReplySpeech(msg,sessionId.value,avatarGeneration.value))return
         avatarGeneration.value=msg.generation
+        replyStreamFinished = true
         // 文字回复音频全部下发完；若本轮根本没出过声（合成失败/开关中途关），
         // 退回按字数估算收起气泡（宽限期因 speechTtsActive=true 已失效，需手动兜底）。
         const hadAudio = endReplyAudio()
@@ -883,9 +915,10 @@ function openDev(section: 'settings' | 'logs' | 'status'): void {
 }
 
 // ── 消息 ──
-function sendText(text: string): void {
+function sendText(text: string, bilingualOrder?:'ja_first'|'zh_first'|'baseline'): void {
   const t = text.trim()
   if (!t) return
+  if (!controlReady) { showSpeech('(引擎正在就绪，请稍后重发)'); return }
   clearSourceCard()
   const music=/^\/(?:搜歌|music)\s+(.+)$/i.exec(t)
   const daily=/^\/(?:推荐|日推|recommend)$/i.test(t)
@@ -901,7 +934,9 @@ function sendText(text: string): void {
   //   这里显式打断，让新一轮真正接替。
   if (turnBusy.value) {
     log('[voice] 发送新消息 → 打断当前回合（改口）')
-    sendInterrupt()
+    if (socket && socket.readyState === WebSocket.OPEN) {
+      socket.send(JSON.stringify({type:'interrupt'}))
+    } else sendInterrupt()
   }
   // 文字回复音频正在播时发新消息 → 本地立即停播（改口；引擎侧新回合会取消旧朗读任务）
   stopPlayback()
@@ -911,7 +946,10 @@ function sendText(text: string): void {
     // （关闭时工具不放进 schema，模型看不到它，自然不会去调）。
     advanceAvatarGeneration()
     presenceEvent('chat:sent')
-    socket.send(JSON.stringify({ type: 'chat:user', text: t, web_search: webSearchOn.value }))
+    activeReplyRequest = crypto.randomUUID()
+    socket.send(JSON.stringify({ type: 'chat:user', text: t, web_search: webSearchOn.value,
+      stream_reply: true, reply_request_id: activeReplyRequest,
+      ...(bilingualOrder?{bilingual_order:bilingualOrder}:{}) }))
     log(`[chat] 发送: ${t}`)
   } else {
     showSpeech('(引擎未连接)')

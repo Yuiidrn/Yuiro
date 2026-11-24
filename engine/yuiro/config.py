@@ -137,6 +137,7 @@ class TTSConfig:
     fish_latency: str = "balanced"
     fish_speed: float = 1.0
     fish_transport: str = "http"
+    fish_first_chunk_ms: int = 400  # 首包40960B≈464ms；400ms首块，后续仍480ms。
     # 克隆用参考音频（绝对路径或相对引擎工作目录）；留空则用模型内置音色
     siliconflow_reference_wav: str = "../assets/voices/Model/Neuro/参考音频.wav"
     siliconflow_reference_text: str = ""                        # 参考音频转写文本（克隆保真度关键）
@@ -698,6 +699,9 @@ FIELD_META: dict[str, dict[str, dict]] = {
         "fish_latency": {"label": "Fish 延迟模式", "type": "select",
                          "options": ["normal", "balanced", "low"]},
         "fish_speed": {"label": "Fish 语速", "type": "float", "min": 0.5, "max": 2.0},
+        "fish_first_chunk_ms": {"label": "Fish 首块时长（毫秒）", "type": "int",
+                                "min": 80, "max": 960,
+                                "hint": "默认400；仅调整首块积累，后续仍480。可设480回退。"},
         "fish_transport": {"label": "Fish 传输方式", "type": "select", "options": ["http", "websocket"],
                            "hint": "HTTP连接池为默认；WebSocket为单轮持续文本流试验路径，新回合生效。失败不自动重试，可切回HTTP。"},
         "segment_streaming": {"label": "分段流式", "type": "bool"},

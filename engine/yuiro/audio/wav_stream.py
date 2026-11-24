@@ -5,11 +5,15 @@ import wave
 
 
 class WavStreamSplitter:
-    def __init__(self, chunk_ms=480):
+    def __init__(self, chunk_ms=480, *, first_chunk_ms=None):
         self._header = bytearray()
         self._pcm = bytearray()
         self.rate = 0
         self._chunk_ms = chunk_ms
+        self._first_chunk_ms = first_chunk_ms if first_chunk_ms is not None else chunk_ms
+        if not 40 <= self._first_chunk_ms <= 2000 or not 40 <= chunk_ms <= 2000:
+            raise ValueError('WAV分块时长超出预算')
+        self._emitted = False
         self._remaining = None
         self._ready = False
 
@@ -50,11 +54,15 @@ class WavStreamSplitter:
             data = data[:self._remaining]
             self._remaining -= len(data)
         self._pcm.extend(data)
-        size = max(1, self.rate * self._chunk_ms // 1000) * 2
         chunks = []
-        while len(self._pcm) >= size:
+        while True:
+            duration = self._chunk_ms if self._emitted else self._first_chunk_ms
+            size = max(1, self.rate * duration // 1000) * 2
+            if len(self._pcm) < size:
+                break
             chunks.append(self._wrap(bytes(self._pcm[:size])))
             del self._pcm[:size]
+            self._emitted = True
         return chunks
 
     def finish(self) -> list[bytes]:

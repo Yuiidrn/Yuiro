@@ -2,6 +2,7 @@
 import ast
 import asyncio
 import base64
+import time
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -25,7 +26,7 @@ def harness():
             frames.append(frame)
 
     namespace = {
-        "WebSocket": object, "asyncio": asyncio, "base64": base64,
+        "WebSocket": object, "asyncio": asyncio, "base64": base64, "time": time,
         "app": SimpleNamespace(state=SimpleNamespace(
             app_config=SimpleNamespace(tts=SimpleNamespace(reply_tts_enabled=True)),
             voice_pipeline=SimpleNamespace(_tts=object()),
@@ -44,6 +45,89 @@ async def test_reply_frames_carry_frozen_generation():
     await ns["_speak_reply"](ws, "session", "你好。", generation=1)
     assert [f["type"] for f in frames] == ["tts:reply_audio", "tts:reply_end"]
     assert all(f["session_id"] == "session" and f["generation"] == 1 for f in frames)
+
+
+@pytest.mark.asyncio
+async def test_reply_request_identity_is_carried_on_audio_and_terminal():
+    ns, _generation, frames, ws = harness()
+    await ns['_speak_reply'](ws, 'session', '你好。', generation=1,
+                             reply_request_id='turn-1')
+    assert len(frames) == 2
+    assert all(f['reply_request_id'] == 'turn-1' for f in frames)
+
+
+@pytest.mark.asyncio
+async def test_validated_bilingual_speech_bypasses_translation_once():
+    ns, _generation, frames, ws = harness()
+    spoken = []
+    class Provider:
+        async def synthesize_segment(self, text):
+            spoken.append(text)
+            return AudioSegment(wav=b'wave', sample_rate=24000, volumes=[])
+    async def invalid_translation(text):
+        raise AssertionError('双语日文不可再次翻译')
+    async def source():
+        yield 'こんにちは。'
+    ns['app'].state.voice_pipeline._tts = Provider()
+    ns['_render_reply_sentence'] = invalid_translation
+    await ns['_speak_reply'](ws, 'session', '', generation=1, sentence_iter=source(),
+                             already_rendered=True)
+    assert spoken == ['こんにちは。']
+    assert [f['type'] for f in frames] == ['tts:reply_start', 'tts:reply_audio', 'tts:reply_end']
+
+
+@pytest.mark.asyncio
+async def test_real_reply_stream_delivers_before_tail_and_has_single_end():
+    ns, _generation, frames, ws = harness()
+    first, tail = asyncio.Event(), asyncio.Event()
+
+    class Provider:
+        async def synthesize_segment(self, text):
+            first.set()
+            return AudioSegment(wav=text.encode(), sample_rate=24000, volumes=[])
+
+    async def render(text):
+        return text
+
+    async def sentences():
+        yield '完整首句。'
+        await tail.wait()
+        yield '后文。'
+
+    ns['app'].state.voice_pipeline._tts = Provider()
+    ns['_render_reply_sentence'] = render
+    task = asyncio.create_task(ns['_speak_reply'](
+        ws, 'session', '', generation=1, sentence_iter=sentences()))
+    try:
+        await asyncio.wait_for(first.wait(), 1)
+        await asyncio.sleep(0)
+        assert not task.done()
+        assert [f['type'] for f in frames] == ['tts:reply_start', 'tts:reply_audio']
+        tail.set()
+        await task
+        assert [f['type'] for f in frames].count('tts:reply_end') == 1
+        assert len([f for f in frames if f['type'] == 'tts:reply_audio']) == 2
+    finally:
+        tail.set()
+        task.cancel()
+        await asyncio.gather(task, return_exceptions=True)
+
+
+@pytest.mark.asyncio
+async def test_streaming_translation_invalidated_before_provider_is_not_synthesized():
+    ns, generation, frames, ws = harness()
+
+    async def render(text):
+        generation['value'] = 2
+        return text
+
+    async def source():
+        yield '旧回合。'
+
+    ns['_render_reply_sentence'] = render
+    with pytest.raises(asyncio.CancelledError):
+        await ns['_speak_reply'](ws, 'session', '', generation=1, sentence_iter=source())
+    assert [f['type'] for f in frames] == ['tts:reply_start']
 
 
 @pytest.mark.asyncio

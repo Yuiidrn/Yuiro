@@ -47,6 +47,46 @@ def session(socket, **kwargs):
 
 
 @pytest.mark.asyncio
+@pytest.mark.parametrize('first_ms', [400, 480])
+async def test_vendor_40960_byte_first_packet_exposes_accumulation(first_ms):
+    release = asyncio.Event()
+    first_packet = asyncio.Event()
+    class PacketSocket(Socket):
+        async def send(self, packet):
+            event = msgpack.unpackb(packet, raw=False)
+            if event['event'] == 'flush':
+                await self.queue.put(msgpack.packb({'event': 'audio', 'audio': b'\0' * 40960}))
+                first_packet.set()
+            elif event['event'] == 'stop':
+                await release.wait()
+                await self.queue.put(msgpack.packb({'event': 'audio', 'audio': b'\0' * 40960}))
+                await self.queue.put(msgpack.packb({'event': 'finish', 'reason': 'stop'}))
+    sock = PacketSocket()
+    ws = session(sock, first_chunk_ms=first_ms)
+    async def texts():
+        yield 'こんにちは。'
+    stream = ws.stream(texts())
+    task = asyncio.create_task(anext(stream))
+    try:
+        await asyncio.wait_for(first_packet.wait(), 1)
+        await asyncio.sleep(.02)
+        assert task.done() == (first_ms == 400)
+        release.set()
+        first = await asyncio.wait_for(task, 1)
+        assert first.timings['raw_first_packet_bytes'] == 40960
+        if first_ms == 400:
+            assert first.timings['first_playable_ms']-first.timings['raw_first_audio_ms'] < 10
+        remaining = [part async for part in stream]
+        assert b''.join(part.wav[44:] for part in [first, *remaining]) == b'\0' * 81920
+    finally:
+        release.set()
+        task.cancel()
+        await asyncio.gather(task, return_exceptions=True)
+        await stream.aclose()
+        await ws.close()
+
+
+@pytest.mark.asyncio
 async def test_stream_before_input_complete_exact_pcm_and_single_identity():
     sock = Socket()
     ws = session(sock)
